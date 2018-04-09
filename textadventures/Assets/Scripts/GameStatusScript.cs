@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.IO;
 using JsonFx.Json;
+using UnityEngine.UI;
 
 public class Logic
 {
@@ -57,39 +58,28 @@ public class Logic
 
 public class GameStatusScript : MonoBehaviour
 {
-	public UIPanel quitView;
-	public UIPanel scrollView;
-	public UILabel gameViewTitle;
-	public UILabel gameViewText;
-	public UILabel gameViewHeroStatusText;
-	public UIButton[] buttons;
-	public UISprite[] pictures;
+	public Image quitView;
+	public Image scrollView;
+	public Text gameViewTitle;
+	public Text gameViewText;
+	public Text gameViewHeroStatusText;
+	public Button[] buttons;
+	public Image[] pictures;
 	private Logic logic = null;
 	
 	public static void trackEvent(string category, string action) {
-	    if (GoogleAnalytics.instance == null)
-	    {
-            return;
-	    }
-	    GAEvent myEvent = new GAEvent(category, action);
-		GoogleAnalytics.instance.Add(myEvent);
-		GoogleAnalytics.instance.Dispatch();
+
 	}
 	
 	private static void resetDraggablePanelPosition (Transform view)
 	{
-		UIDraggablePanel panel = view.GetComponentInChildren<UIDraggablePanel> ();
-		UIPanel p = panel.gameObject.GetComponent<UIPanel> ();
-		Vector4 v4 = p.clipRange;
-		panel.ResetPosition ();
-		p.clipRange = new Vector4 (v4.x, p.clipRange.y, v4.z, v4.w);
+
 	}
 	
 	void procced ()
 	{
 		if (logic != null) {
 			if (logic.currentItemIndex > -1 && logic.currentItemIndex < logic.items.Length) {
-				AdMobAndroid.hideBanner( false );
 				resetDraggablePanelPosition(scrollView.gameObject.transform);
 				
 				Logic.Item item = logic.items [logic.currentItemIndex];
@@ -117,10 +107,10 @@ public class GameStatusScript : MonoBehaviour
 				
 				for (int i = 0; i < item.buttonsTexts.Length; i++) {
 					if (i < buttons.Length) {
-						ButtonScript bs = buttons [i].GetComponent<ButtonScript> ();
-						bs.label.text = item.buttonsTexts [i];
-						buttons [i].isEnabled = item.goIndexes [i] != -1;
-						NGUITools.SetActive (buttons [i].gameObject, item.goIndexes [i] != -1);
+						Button bs = buttons [i];
+						bs.transform.Find("Text").GetComponent<Text>().text = item.buttonsTexts [i];
+						buttons [i].enabled = item.goIndexes [i] != -1;
+						buttons [i].gameObject.SetActive(item.goIndexes [i] != -1);
 					}
 				}
 				
@@ -133,17 +123,17 @@ public class GameStatusScript : MonoBehaviour
 						}
 					}
 				
-					if (buttons [buttons.Length - 1].isEnabled) {
-						NGUITools.SetActive (buttons [buttons.Length - 1].gameObject, conditionOk);
+					if (buttons [buttons.Length - 1].enabled) {
+						buttons [buttons.Length - 1].gameObject.SetActive(conditionOk);
 					}
 				}
 				
 				if (item.picturesSpriteNames != null) {
 					for (int i = 0; i < item.picturesSpriteNames.Length; i++) {
 						if (i < pictures.Length) {
-							pictures [i].spriteName = item.picturesSpriteNames [i];
+							//pictures [i].sprite.name = item.picturesSpriteNames [i];
 						
-							NGUITools.SetActive (pictures [i].gameObject, !item.picturesSpriteNames [i].Equals (string.Empty));
+							pictures [i].gameObject.SetActive (!item.picturesSpriteNames [i].Equals (string.Empty));
 						}
 					}
 				}
@@ -171,7 +161,7 @@ public class GameStatusScript : MonoBehaviour
 		}
 		
 		int i = 0;
-		foreach (UIButton b in buttons) {
+		foreach (Button b in buttons) {
 			if (b.gameObject == button) {
 				logic.nextItem (i);
 				procced ();
@@ -186,7 +176,7 @@ public class GameStatusScript : MonoBehaviour
 	void Update ()
 	{
 		if (Input.GetKeyDown(KeyCode.Escape)) {
-			NGUITools.SetActive(quitView.gameObject, true);
+			quitView.gameObject.SetActive(true);
 		}
 	}
 	
@@ -202,7 +192,7 @@ public class GameStatusScript : MonoBehaviour
 	
 	public void load ()
 	{
-		var textAsset = Resources.Load ("Data/TextGameWeb") as TextAsset;
+		var textAsset = Resources.Load ("Data/FateCookies") as TextAsset;
 		logic = JsonReader.Deserialize<Logic> (textAsset.text);
 		
 		trackEvent("Book", "Loaded");
