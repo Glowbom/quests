@@ -104,6 +104,10 @@ public class GameStatusScript : MonoBehaviour
 				gameViewHeroStatusText.text = statusString;
 				
 				gameViewText.text = item.description;
+
+				for (int i = 0; i < buttons.Length; i++) {
+					buttons [i].gameObject.SetActive(false);
+				}
 				
 				for (int i = 0; i < item.buttonsTexts.Length; i++) {
 					if (i < buttons.Length) {
