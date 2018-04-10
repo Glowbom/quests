@@ -35,3 +35,7 @@ sysinfo.txt
 *.unitypackage
 
 *.meta
+
+textadventures/Assets/Resources/Textures/back.jpg
+
+textadventures/Assets/Resources/Textures/front.jpg
