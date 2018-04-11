@@ -66,6 +66,8 @@ public class GameStatusScript : MonoBehaviour
 	public Button[] buttons;
 	public Image[] pictures;
 	private Logic logic = null;
+
+	public Image front;
 	
 	public static void trackEvent(string category, string action) {
 
@@ -151,9 +153,12 @@ public class GameStatusScript : MonoBehaviour
 	{	
 		
 		load ();
-		
 		procced ();
 		
+	}
+
+	public void openPressed() {
+		front.gameObject.SetActive(false);
 	}
 	
 	public void buttonPressed (GameObject button)
@@ -199,28 +204,7 @@ public class GameStatusScript : MonoBehaviour
 		var textAsset = Resources.Load ("Data/FateCookies") as TextAsset;
 		logic = JsonReader.Deserialize<Logic> (textAsset.text);
 		
-		trackEvent("Book", "Loaded");
-		
-		//try {
-		//	text = Application.dataPath + "/TextGameWeb.txt";
-		//	printText ();
-		//		using (StreamReader sr = new StreamReader (Application.dataPath + "/TextGameWeb.txt")) {
-		//			logic = JsonReader.Deserialize<Logic> (sr.ReadToEnd ());
-		//		}
-		//	} catch (IOException e) {
-		//		text = e.Message;
-		//		Invoke ("printText", 2);
-		//	}
-		
-		
-		//string url = Application.dataPath + @"/TextGameWeb.txt";
-
-		//WWW request = new WWW(url);
-
-		//while(!request.isDone) {
-		//}
-
-		//logic = JsonReader.Deserialize<Logic> (request.data);        
+		trackEvent("Book", "Loaded");     
 	}
 	
 	string text;
