@@ -68,6 +68,8 @@ public class GameStatusScript : MonoBehaviour
 	private Logic logic = null;
 
 	public Image front;
+
+	public GameObject about;
 	
 	public static void trackEvent(string category, string action) {
 
@@ -151,14 +153,25 @@ public class GameStatusScript : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{	
-		
 		load ();
 		procced ();
 		
 	}
 
 	public void aboutPressed() {
-		
+		about.SetActive(true);
+	}
+
+	public void aboutBackPressed() {
+		about.SetActive(false);
+	}
+
+	public void openGlowbomLink() {
+		Application.OpenURL("https://glowbom.com/");
+	}
+
+	public void openAboutLink() {
+		Application.OpenURL("https://photos.icons8.com/half-eaten-oatmel-cookie-5a8bf2a08b658800019f1d7a");
 	}
 
 	public void openPressed() {
