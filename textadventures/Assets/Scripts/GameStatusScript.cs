@@ -3,6 +3,7 @@ using System.Collections;
 using System.IO;
 using JsonFx.Json;
 using UnityEngine.UI;
+using UnityEngine.Advertisements;
 
 public class Logic
 {
@@ -150,12 +151,18 @@ public class GameStatusScript : MonoBehaviour
 		}
 	} 
 
+#if UNITY_IOS
+private string gameId = "";
+#elif UNITY_ANDROID
+private string gameId = "";
+#endif
+
 	// Use this for initialization
 	void Start ()
 	{	
 		load ();
 		procced ();
-		
+		Advertisement.Initialize(gameId);
 	}
 
 	public void aboutPressed() {
@@ -177,9 +184,16 @@ public class GameStatusScript : MonoBehaviour
 	public void openPressed() {
 		front.gameObject.SetActive(false);
 	}
+
+	private int buttonPressedCounter = 0;
 	
 	public void buttonPressed (GameObject button)
 	{
+		++buttonPressedCounter;
+		if (buttonPressedCounter % 9 == 0) {
+			Advertisement.Show();
+		}
+
 		if (logic.pleaseRestart) {
 			load ();
 			procced ();
