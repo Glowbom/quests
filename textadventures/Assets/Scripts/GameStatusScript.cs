@@ -157,6 +157,10 @@ public class GameStatusScript : MonoBehaviour
 		
 	}
 
+	public void aboutPressed() {
+		
+	}
+
 	public void openPressed() {
 		front.gameObject.SetActive(false);
 	}
