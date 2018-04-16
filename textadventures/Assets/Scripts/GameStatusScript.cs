@@ -190,7 +190,7 @@ private string gameId = "";
 	public void buttonPressed (GameObject button)
 	{
 		++buttonPressedCounter;
-		if (buttonPressedCounter % 9 == 0) {
+		if (buttonPressedCounter % 17 == 0) {
 			Advertisement.Show();
 		}
 
@@ -232,7 +232,7 @@ private string gameId = "";
 	
 	public void load ()
 	{
-		var textAsset = Resources.Load ("Data/FateCookies") as TextAsset;
+		var textAsset = Resources.Load ("Data/FortuneCookie") as TextAsset;
 		logic = JsonReader.Deserialize<Logic> (textAsset.text);
 		
 		trackEvent("Book", "Loaded");     
