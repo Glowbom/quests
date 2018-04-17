@@ -73,7 +73,7 @@
 	{
 	"title":"8",
 	"description":"
-	Nothing suspicious found in the kitchen. So you decided to grab some food for your guest. Unfortunately, your fridge is empty. Jessica came in the kitchen. She tells you she got some cookies. So you grab some tea and went to the guest room.",
+	Nothing suspicious found in the kitchen. So you decided to grab some food for your guest. Unfortunately, your fridge is empty. Jessica came in. She tells you she got some cookies. So you grab some tea and went to the guest room.",
 	"buttonsTexts":["Next","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[14,-1,-1]
@@ -81,24 +81,24 @@
 	{
 	"title":"9",
 	"description":"
-	Вы готовите гостевую комнату и одновременно думаете об этой девушке. Что-то в ней кажется вам очень странным. Но это что-то очень неуловимо, поэтому непонятно. Из дум вас выводит какой-то шум. Вдруг из зала доносятся крики. Вы быстро спускаетесь вниз, и вашим глазам представляется очень интересная картина. На полу, прямо посередине комнаты, лежит человек, связанный по рукам и ногам. Над ним стоит ваша гостья и еще один незнакомец. О чем вы спросите?",
-	"buttonsTexts":["Что произошло?","Кто лежит на полу?","Кто этот незнакомец?"],
+	You are preparing a guest room. You're thinking about your new guest... Something awkward about this situation. Suddenly somebody screams in the hall. You run over there and see a bound man on the floor, right in the middle of the room. Jessica stays above him right near another stranger. What do you ask?",
+	"buttonsTexts":["What happened?","Who is lying on the floor?","Who is the stranger?"],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[15,16,17]
 	},
 	{
 	"title":"10",
 	"description":"
-	Комната с камином, пожалуй, самая уютная. Вы решаете, что здесь девушке будет комфортнее. Пока вы возитесь с простынями, одеялом и прочим, она сидит у огня и читает книгу. Приглядевшись, вы увидели ее название: «1000 и 1 способ манипулирования сознанием человека». Вот так номер. Вы уже начали было жалеть, что впустили девушку, но быстро успокоились: она же всего на одну ночь. Что может случиться за одну ночь? Вы желаете ей приятных снов, выпиваете чашку чая и идете спать.",
-    "buttonsTexts":["Далее","",""],
+	The living room is very comfortable. You think Jessica will like it a lot. While you are busy with sheets and blankets, she sits by the fireplace and reads the book. Looking closely, you saw the book title: '1000 ways to manipulate people.' Holy cow... You already began to regret that you let her in, but quickly calmed down as she's here for one night only. What can happen overnight? You wish her sweet dreams, drink a cup of tea and go to sleep.",
+    "buttonsTexts":["Next","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[18,-1,-1]
 	},
 	{
 	"title":"11",
 	"description":"
-	Вы остаетесь за стеной, чтобы иметь возможность слышать разговор. Совесть начала было бунтовать, но вы ее успокоили. Ведь мало ли, что на уме у этой особы. Вот, кажется, послышался голос, и вы стали одним большим ухом. Вы слышите не все, а только обрывки: «Они еще не приходили», «Он не знает», «Не пускает», «Я знаю, что делаю, не беспокойся», «Достань пистолет на всякий случай». Тут вам стало плохо. Девушка повесила трубку и вернулась в прихожую. Увидев ваш стеклянный взгляд, она все поняла: вы подслушивали. Ее голубые глаза превратились в синие. Кажется, она злится. Правда, глаза еще темнеют, когда человек влюблен. Но вы как-то не уверены, что это именно тот случай. Вы извинитесь перед ней или будете ждать дальнейшего развития событий?",
-    "buttonsTexts":["Извинюсь","Буду ждать",""],
+	You stay behind the wall to be able to hear the conversation. It's kinda silly but you never know what a stranger has in mind. You don't hear everything, only random scraps like 'They didn't come yet... He doesn't know... He doesn't let me... I know what I'm doing, don't worry... Get the gun just in case...' Wow! You didn't expect this. She just hung up the phone and went back to the hall. By looking at you, she understood that you've heard the conversation. She looks angry. Will you apologize to her or wait?",
+    "buttonsTexts":["Apologize","Wait",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
     "goIndexes":[19,20,-1]
 	},
@@ -106,7 +106,7 @@
 	"title":"12",
 	"description":"
 	Вы уходите на кухню, чтобы не подслушивать чужие разговоры. Пока незнакомка говорит по телефону, вы смотрите в окно. На улице горят фонари, кругом ни души. Вдруг вы замечаете джип, припаркованный недалеко от вашего дома. Раньше вы его не видели. Вы пытаетесь его получше рассмотреть, но темная ночь и льющийся дождь не позволяют вам это сделать. К тому же, девушка уже закончила свою беседу и зовет вас из прихожей. Вы возвращаетесь. Она благодарит вас за телефон и прощается. Закрыв за ней дверь, вы идете в комнату и достаете бинокль, чтобы поближе посмотреть на машину. Но ее уже не было. Вдруг раздается звонок. Вы берете трубку и слышите: «Твоя девушка у нас. Если хочешь, чтобы она осталась живой и невредимой, и сам не желаешь остаток дней провести в больнице, отдай нам последнюю часть ребуса. Через полчаса жди звонка. Тебе будет сказано, куда ее принести». Короткие гудки, потемнение в глазах, учащенное сердцебиение. Кажется, вы куда-то вляпались.",
-	"buttonsTexts":["Далее","",""],
+	"buttonsTexts":["Next","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[21,-1,-1]
 	},
