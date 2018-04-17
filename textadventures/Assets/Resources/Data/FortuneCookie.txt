@@ -17,64 +17,64 @@
 	{
 	"title":"1",
     "description":"
-	Перед вами стоит девушка. С виду вполне безобидная. Вы впускаете ее в дом и спрашиваете, что ее сюда привело. Всхлипывая, она говорит, что опоздала на поезд. Ее номер в гостинице уже заняли. Она просит у вас разрешения на ночлег. Как вы поступите?",
-    "buttonsTexts":["Пущу","Откажу",""],
+	You see a woman. She looks harmless. You ask what brought her here. She says she's late for the train. There are no rooms in the hotel nearby. She asks if you can host her for a night. What will you do?",
+    "buttonsTexts":["Agree to host","Refuse to get in",""],
     "picturesSpriteNames":["IconPromotionPR","","","","","",""],
     "goIndexes":[2,3,-1]
     },
     {
     "title":"2",
     "description":"
-	Вы проявляете сочувствие и разрешаете несчастной девушке остаться. Она озирается по сторонам так, будто что-то высматривает. Или так только кажется? Раздается телефонный звонок. Пока вы разговариваете, незнакомка проходит в гостиную, где пылает камин. Ее взгляд падает на картину, висящую рядом. Что привлекло ее внимание? Та картина не представляет собой ничего особенного, это обычный пейзаж. Но она не сводит с него глаз. Вы подходите к ней и …",
-	"buttonsTexts":["Предлагаете чай","Говорите о картине",""],
+	You let her stay. She looks around like if she is looking for something. You're getting a phone call. While you are talking, she goes into the living room. For some reason, she started staring at the painting on the wall. You come to her and...",
+	"buttonsTexts":["Offer a cup of tea","Talk about the painting",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[4,5,-1]
 	},
 	{
 	"title":"3",
 	"description":"
-	Вы долго смотрите на таинственную незнакомку и приходите к выводу, что оставлять на ночь в доме чужого человека очень небезопасно. Вы говорите, что не можете приютить ее, так как уезжаете буквально через полчаса и вернетесь нескоро. Девушка погрустнела. Она просит вас разрешить ей воспользоваться домашним телефоном.",
-    "buttonsTexts":["Разрешите","Не разрешите",""],
+	You look at her and come to the conclusion that leaving a stranger in the house for the night is not a good idea. You say that you won't be able to host her because you leave in half an hour and will not return soon. The girl became sad. She asks you to let her use a phone.",
+    "buttonsTexts":["Allow","Do not allow",""],
     "picturesSpriteNames":["IconPromotionPR","","","","","",""],
     "goIndexes":[6,7,-1]
     },
     {
     "title":"4",
     "description":"
-	Вы предлагаете гостье горячий чай. Она с радостью соглашается. Пока в чайнике греется вода, вы знакомитесь. Девушку зовут Кира. Она живет с родителями в Казани. В Москву приехала к подруге. Тут снова ее взгляд обращается к картине. Вы хотели было спросить, откуда такой интерес к явно сомнительному изделию, но засвистел чайник. Нужно идти на кухню.",
-    "buttonsTexts":["Далее","",""],
+	Her name is Jessica. You offer her a cup of tea. She lives in Phoenix and came to San Diego to visit friends. She looks at the painting again. You're curious why she's so interested. You hear a weird noise in the kitchen. You go there to understand what's going on.",
+    "buttonsTexts":["Next","",""],
     "picturesSpriteNames":["IconPromotionPR","","","","","",""],
     "goIndexes":[8,-1,-1]
     },
     {
     "title":"5",
     "description":"
-	Вы замечаете неподдельный интерес в глазах девушки и спрашиваете, почему она так пристально смотрит на пейзаж. Улыбнувшись, она отвечает, что эта картина очень похожа на ее детский рисунок. Почти копия. И спрашивает вас, как она попала сюда. Вы вспоминаете, что купили это произведение искусства на рынке у какого-то старика. Что ж, время уже позднее. Вы решаете, что пора бы пойти спать. Надо только устроить вашу гостью. Где вы дадите ей возможность отдохнуть?",
-    "buttonsTexts":["В гостевой","В комнате с камином",""],
+	You ask her why she is staring at the painting. She says that it looks exactly like one of her childhood drawings. She asks you how you got this painting. You tell her that you bought it at the swap meet. It's getting late. You want to sleep. You need to decide where your guest will be sleeping.",
+    "buttonsTexts":["Guest room","Living room",""],
     "picturesSpriteNames":["IconPromotionPR","","","","","",""],
     "goIndexes":[9,10,-1]
     },
     {
     "title":"6",
     "description":"
-	Девушка проходит в зал. Окидывая быстрым взглядом комнату, она снимает телефонную трубку и набирает номер. Вы останетесь за стеной, чтобы иметь возможность слышать разговор и видеть незнакомку, или уйдете на кухню?",
-    "buttonsTexts":["Останусь","Уйду",""],
+	She goes into the living room and dials a phone number. Will you stay behind the wall to be able to hear the conversation or will you go to the kitchen?",
+    "buttonsTexts":["Stay behind the wall","Go to the kitchen",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[11,12,-1]
 	},
 	{
 	"title":"7",
 	"description":"
-	Вы не разрешаете девушке воспользоваться телефоном. Она еще больше погрустнела. Сказав: «До встречи», она развернулась в обратную сторону. Вы закрыли дверь. Но что-то вас встревожило. Слова девушки: «до встречи». Почему до встречи? Почему она решила, что вы еще встретитесь? Так и не поняв, что она имела в виду, вы отправляетесь спать. Утром вас опять разбудил стук.",
-	"buttonsTexts":["Далее","",""],
+	You do not allow her to use a phone. She looks very disappointed. She turns around and starts walking out saying: 'See you soon...'. You close the door. But something worries you. Those words: 'see you soon...' Why did she say that? How come did she decide that you would meet again? So without realizing what she meant, you go to sleep. In the morning you were awakened by a knock on the door.",
+	"buttonsTexts":["Next","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[13,-1,-1]
 	},
 	{
 	"title":"8",
 	"description":"
-	Вы разливаете по бокалам чай и решаете, что неплохо бы еще чем-то перекусить. С надеждой заглядываете в буфет. Может, остались конфеты, или вафельные трубочки, или зефир. Но там оказалась только обертка от шоколадки и половина маковой булочки. Негусто. Тут заходит Кира. Увидев ваше расстроенное лицо и содержимое буфета, она улыбается и достает из сумочки печенье. Взяв поднос с чаем и сдобными изделиями, вы отправляетесь в зал.",
-	"buttonsTexts":["Далее","",""],
+	Nothing suspicious found in the kitchen. So you decided to grab some food for your guest. Unfortunately, your fridge is empty. Jessica came in the kitchen. She tells you she got some cookies. So you grab some tea and went to the guest room.",
+	"buttonsTexts":["Next","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[14,-1,-1]
 	},
