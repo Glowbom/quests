@@ -73,7 +73,7 @@
 	{
 	"title":"8",
 	"description":"
-	Nothing suspicious found in the kitchen. So you decided to grab some food for your guest. Unfortunately, your fridge is empty. Jessica came in. She tells you she got some cookies. So you grab some tea and went to the guest room.",
+	Nothing suspicious found in the kitchen. So you decided to grab some food for your guest. Unfortunately, your fridge is empty. You guest came in. She tells you she got some cookies. So you grab some tea and went to the guest room.",
 	"buttonsTexts":["Next","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[14,-1,-1]
@@ -81,7 +81,7 @@
 	{
 	"title":"9",
 	"description":"
-	You are preparing a guest room. You're thinking about your new guest... Something awkward about this situation. Suddenly somebody screams in the hall. You run over there and see a bound man on the floor, right in the middle of the room. Jessica stays above him right near another stranger. What do you ask?",
+	You are preparing a guest room. You're thinking about your new guest... Something awkward about this situation. Suddenly somebody screams in the hall. You run over there and see a bound man on the floor, right in the middle of the room. Your guest stays above him right next to another stranger. What do you ask?",
 	"buttonsTexts":["What happened?","Who is lying on the floor?","Who is the stranger?"],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[15,16,17]
@@ -89,7 +89,7 @@
 	{
 	"title":"10",
 	"description":"
-	The living room is very comfortable. You think Jessica will like it a lot. While you are busy with sheets and blankets, she sits by the fireplace and reads the book. Looking closely, you saw the book title: '1000 ways to manipulate people.' Holy cow... You already began to regret that you let her in, but quickly calmed down as she's here for one night only. What can happen overnight? You wish her sweet dreams, drink a cup of tea and go to sleep.",
+	The living room is very comfortable. You think your guest will like it a lot. While you are busy with sheets and blankets, she sits by the fireplace and reads the book. Looking closely, you saw the book title: '1000 ways to manipulate people.' Holy cow... You already began to regret that you let her in, but quickly calmed down as she's here for one night only. What can happen overnight? You wish her sweet dreams, drink a cup of tea and go to sleep.",
     "buttonsTexts":["Next","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[18,-1,-1]
@@ -105,7 +105,7 @@
 	{
 	"title":"12",
 	"description":"
-	Вы уходите на кухню, чтобы не подслушивать чужие разговоры. Пока незнакомка говорит по телефону, вы смотрите в окно. На улице горят фонари, кругом ни души. Вдруг вы замечаете джип, припаркованный недалеко от вашего дома. Раньше вы его не видели. Вы пытаетесь его получше рассмотреть, но темная ночь и льющийся дождь не позволяют вам это сделать. К тому же, девушка уже закончила свою беседу и зовет вас из прихожей. Вы возвращаетесь. Она благодарит вас за телефон и прощается. Закрыв за ней дверь, вы идете в комнату и достаете бинокль, чтобы поближе посмотреть на машину. Но ее уже не было. Вдруг раздается звонок. Вы берете трубку и слышите: «Твоя девушка у нас. Если хочешь, чтобы она осталась живой и невредимой, и сам не желаешь остаток дней провести в больнице, отдай нам последнюю часть ребуса. Через полчаса жди звонка. Тебе будет сказано, куда ее принести». Короткие гудки, потемнение в глазах, учащенное сердцебиение. Кажется, вы куда-то вляпались.",
+	You don't want to hear the conversation and you're going to the kitchen. While your guest is speaking on the phone, you look out the window. Not a soul around. Suddenly you notice a jeep you didn't see before parked not far from your house. You try to see it better, but the dark night and the pouring rain don't allow you to do that. In addition, your guest has already finished her conversation and is calling you from the hall. You are coming back. She thanks you for letting her to make a phone call and says goodbye. Closing the door behind her, you go into the living room and take out your binoculars to look closer at the car. But the jeep was gone. Suddenly your phone rings. You pick up the phone and you hear: 'Your girlfriend is with us. If you want her to remain alive, give us the last part of the puzzle. Wait for the call in 30 minutes. You will be told where to bring it.' Oh boy... It seems you got into some trouble.",
 	"buttonsTexts":["Next","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[21,-1,-1]
@@ -113,96 +113,96 @@
 	{
 	"title":"13",
 	"description":"
-	На пороге стоит сотрудник наркоконтроля. Он говорит, что ищет опасную преступницу. Вчера ее видели на этой улице. И протягивает вам ее фотографию. На ней вы видите белокурую, с красивыми голубыми глазами девушку, приходившую к вам прошлым днем. Вы переводите взгляд на стоящего перед вами человека. Что вы скажете? Что она приходила, или что вы никогда раньше ее не видели?",
-	"buttonsTexts":["Приходила","Не было ее",""],
+	You open the door and see the FBI agent looking for a dangerous criminal. Yesterday she was seen near your house. The agent gives you her photo. You saw her before. It's the stranger from yesterday. You look at the FBI agent in front of you. What do you say?",
+	"buttonsTexts":["I saw her","I never saw her",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[22,23,-1]
 	},
 	{
 	"title":"14",
 	"description":"
-	Вы сидите в зале и пьете чай с необыкновенно вкусным печеньем. Кажется, вы не ели такого уже давно. Вы интересуетесь у гостьи, где она его взяла. На что она вам отвечает, что испекла сама. Вы внимательно смотрите на девушку: красивая, вроде воспитанная, потрясающе готовит. Вы думаете про себя, что жениться является неплохой идеей. Мама постоянно капает вам на мозги, что пора обзавестись семьей. Вы так задумались, что чуть не проглотили бумагу. Оказывается, среди печений есть необычные. С предсказаниями. В Китае их называют «печенье судьбы». Вы разворачиваете бумажку и видите свое предсказание: «Берегите себя и … кстати! Вы плиту выключили? А газ в печке для барбекю? Заднюю дверь заперли? Ручку на всякий случай дернули? Забыть такое нетрудно; вдруг прямо сейчас кто-то ломится в ваш дом. Какой-нибудь псих. С ножом. Тут уж плевать, синдром навязчивых состояний у вас или нет. Лучше перепроверить, не так ли? ». Вы поднимаете глаза на девушку и вдруг видите перед собой пистолет. Кажется, женитьба отменяется.",
-	"buttonsTexts":["Далее","",""],
+	You are sitting in the hall and drinking tea with a tasty cookie. It's delicious. 'Where did you get the cookie from?' - you asked. 'I baked it myself with love.' - she responded. It's weird but you're getting to the conclusion that you would marry her. She looks gorgeous and cooks well... And your mom constantly reminds you of her wishes to have grandkids. Maybe, that's why you're getting to the conclusion so fast. You dip into thoughts and almost swallowed a small piece of paper. Yes, it's unusual 'fortune cookies' with predictions. You unfold the piece of paper and read your prediction: 'Please take care of yourself... By the way, did you turn off the stove? Did you lock the back door? Someone is breaking into your house right now. Some psycho with a knife. It's better to double-check, right?'. You look up at your guest and see the gun in front of you.",
+	"buttonsTexts":["Next","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[24,-1,-1]
 	},
 	{
 	"title":"15",
 	"description":"
-	Вы смотрите на все это и спрашиваете, что здесь произошло. Ответом стала гробовая тишина. Взгляды трех пар глаз устремлены к вам: этой, казалось бы, милой и беззащитной девушки, незнакомого мужчины рядом с ней и связанного человека с татуировкой. Он же первый решается нарушить молчание, сказав, что очень рад вас видеть. К сожалению, вы не можете ответить ему тем же. Ваша гостья, наконец, сказала, что ее зовут Кира, рядом ее отец, а на полу лежит опасный бандит. Но легче вам от этого почему-то не стало. О чем вы спросите?",
-	"buttonsTexts":["Об отце","О бандите",""],
+	'What happened?' - you asked. Nobody says anything but all are looking at you. 'Very glad to see you,' - said the bound man on the floor. You don't feel the same way. Finally, your guest said that her name is Jessica, she is excited to introduce you to her father next to her, and the guy on the floor is a dangerous gangster. You're very confused. What do you ask?",
+	"buttonsTexts":["Ask about her father","Ask about the gangster",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[25,26,-1]
 	},
 	{
 	"title":"16",
 	"description":"
-	Вы обращаетесь к девушке с просьбой объяснить, что за человек лежит посредине гостиной. На ваш вопрос она отвечает, что это преступник. Он долгое время охотился за ней и ее отцом с целью похищения ребуса, в котором зашифровано кодовое слово. Оно нужно для открытия сейфа. Вы не понимаете, о чем идет речь. Что за сейф, что за ребус, откуда здесь взялись бандит и отец? Но вы не успеваете озвучить ни один из этих вопросов, так как неожиданно на вас обрушивается тяжелый удар по голове. Вы теряете сознание.",
-	"buttonsTexts":["Далее","",""],
+	'Who's on the floor?' - you asked. 'It is a criminal,' - your guest responded. - 'He had been hunting for me and my father to steal a puzzle. There is a code encrypted in the puzzle. He needs the code for opening a safe.' You're very confused. Puzzle? What kind of safe? Where did the gangster come from? But you didn't get time to ask any of these questions... Suddenly someone hits your head. You lose consciousness.",
+	"buttonsTexts":["Next","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[27,-1,-1]
 	},
 	{
 	"title":"17",
 	"description":"
-	Первое, что вы спрашиваете у девушки: кто этот незнакомец рядом. Немного подумав, она отвечает, что это ее помощник. Вы интересуетесь, по какому вопросу. Она явно не знает, что вам сказать. Воспользовавшись всеобщим замешательством, лежащий на полу человек быстро освобождается от веревок. Никто не успевает опомниться, как он срывает со стены злополучную картину и через окно покидает ваш дом. Буквально секунда, и незнакомый мужчина бросается следом за ним. Ваша гостья тоже было устремилась к выходу, но в спешке запуталась в веревках и упала, ударившись головой о камин. Вы подбегаете к ней и видите серьезную рану. Она просит вас помочь своему другу поймать беглеца, но вам страшно оставить ее одну в таком состоянии. Как вы поступите?",
-    "buttonsTexts":["Помогу поймать беглеца","Останусь с девушкой",""],
+	'Who is this man next to you?' - you asked. 'This is my assistant,' - she says. 'What kind of assistant?' - you asked. She obviously does not know what to tell you. Taking advantage of the general confusion, the bound man is quickly released from the ropes, grabs the painting from the wall and escapes the room through the window. The so-called assistant runs after him in a second. A woman is attempted to run as well but entangled in the ropes and fell down the floor hitting her head against the fireplace. You ran up to her and saw a serious wound. She asked you to help the assistant to catch a fugitive, but you're scared to leave her alone under these conditions. What will you do?",
+    "buttonsTexts":["Help to catch the fugitive","Stay with a woman",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[28,29,-1]
 	},
 	{
 	"title":"18",
 	"description":"
-	Вы лежите в постели и пытаетесь заснуть, но тревожные мысли не дают вам покоя. Что-то неладное происходит с этой девушкой. Она не просто странно себя ведет, она ведет себя так, будто скрывает страшную тайну. Вся ситуация вдруг представляется вам в мрачном свете. Может, ей что-то нужно от вас? Может, она здесь появилась не случайно? Постепенно воображение возвело ваше беспокойство в степень бесконечности. Для своего успокоения, вы решаете проверить, спит ли ваша гостья. Или все же останетесь?",
-	"buttonsTexts":["Проверю","Останусь в постели",""],
+	You're trying to sleep, but troubling thoughts do not leave you. Something is wrong with this woman. She is hiding something. The whole situation feels weird. Maybe she needs something from you? Gradually, the imagination has developed some anxiety. Will you check if your guest is asleep or will you stay in bed and try to sleep?",
+	"buttonsTexts":["Check","Stay in bed",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[30,31,-1]
 	},
 	{
 	"title":"19",
 	"description":"
-	Вы спешите извиниться за свой отвратительный поступок. Вы говорите незнакомке, что не должны были этого делать. Но раз уж так вышло, пусть это останется тайной. Вы клянетесь, что никто и никогда не узнает об этом разговоре. Но любопытство и страх все же не дают покоя. В той беседе явно касались вашей персоны. И пистолета. Такое соседство явно не к добру. Что вы сделаете: спросите, о чем была речь, или решите, что лучше не рисковать?",
-	"buttonsTexts":["Спрошу","Не буду рисковать",""],
+	You are trying to apologize. You tell her that you shouldn't have listened to the conversation. You said that you didn't get the sense of it, so you don't care. But curiosity and fear still don't leave you. You feel like the conversation was about you and the gun. It's very suspicious. Will you ask her about it or not?",
+	"buttonsTexts":["Ask","Don't ask",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[32,33,-1]
 	},
 	{
 	"title":"20",
 	"description":"
-	Вы решаете ничего не говорить, и ждете, что будет дальше. А дальше происходит то, чего вы никак не могли ожидать: внезапно злость на лице девушки сменяется слезами. Тут вы совсем растерялись. Плача, она говорит, что ей надоело держать все в себе, что ей необходимо с кем-то поделиться. Раз такая ситуация, делиться, видимо, она решила с вами. Вы усаживаете ее в удобное кресло, наливаете крепкий сладкий чай и принимаетесь выслушивать исповедь своей странной гостьи.",
-	"buttonsTexts":["Далее","",""],
+	You decided to say nothing and wait for what will happen next. Suddenly the anger on her face gives way to tears. You are very confused. She said she is tired of keeping a secret locked inside, and she needs to share it with someone. So you sat next to her and started listening to the confession of your guest.",
+	"buttonsTexts":["Next","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[34,-1,-1]
 	},
 	{
 	"title":"21",
 	"description":"
-	Вы долго смотрите на телефон. Что сейчас было? Может, шутка? Да нет, не похоже. Эта девица вас куда-то втянула. И добром это не кончится. Хотя бы потому, что вы не в курсе, чего хотят те странные люди. Что за ребус? Вдруг вы замечаете у столика с телефоном маленькую бумажку. Это оказалась записка: «Спаси меня. Кира». Что ж, могла не просить. Другого выхода все равно нет. Правда, плана действий тоже нет. И тут одновременно раздались стук в дверь и телефонный звонок. Вы сначала откроете или снимете трубку?",
-	"buttonsTexts":["Открою","Сниму трубку",""],
+	What just happened? Is it a joke? No, it doesn't. This story is not gonna end well. What kind of puzzle did they want from you? Suddenly you notice a small piece of paper with a note saying 'Save me. Jessica.' Oh boy... Unexpectedly somebody knocks at the door and the phone rings at the same time. Do you want to open the door or pick up the phone first?",
+	"buttonsTexts":["Open the door","Pick up the phone",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[35,36,-1]
 	},
 	{
 	"title":"22",
 	"description":"
-	Вы говорите, что эта девушка приходила вчера. Попросилась на ночлег. А когда вы отказали, захотела позвонить. И этого вы ей не разрешили. Она ушла. Про слова «до встречи» вы промолчали. Незнакомец оставил свой номер телефона и попросил сообщить, если вам станет известно о ее местонахождении. Развернувшись, он пошел к другому дому. Вы уже хотели закрыть дверь, но заметили на крыльце какую-то карточку. Видимо, тот человек случайно выронил ее, когда доставал свою визитку. Вы поднимаете ее: это клубная карта. Она дает право на посещение некого клуба под названием «Ты – следующий». На обороте нарисована венецианская маска. И указан адрес этого заведения. Вам становится очень любопытно, что это за место, и вы решаете наведаться туда вечером.",
-	"buttonsTexts":["Далее","",""],
+	'She came yesterday and asked to stay a night,' - you said. - 'I didn't allow her to stay. She asked me to use my phone to give someone a call but I refused. So she left.' You didn't say anything about her words 'See you soon'. The stranger left his business card with a phone number and asked you to call if you see her again. He turned around and went towards a neighbor's house. You already wanted to close the door but noticed a postcard on the floor. It seems like that person accidentally dropped it when he gave you his business card. You picked it up and it was a VIP club card to access the club called 'You're next'. You are very curious and decided to visit the place in the evening.",
+	"buttonsTexts":["Next","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[37,-1,-1]
 	},
 	{
 	"title":"23",
     "description":"
-	Вы говорите, что никогда не видели эту девушку. Но незнакомец вам не верит. Вы не можете убедить его. Он настойчиво просит вас сказать правду. Иначе будет хуже. Тем не менее, вы продолжаете настаивать на своем. Вдруг из квартиры раздается звонок. Вы заходите внутрь, а следом и ваш собеседник. Он закрывает дверь и достает из кармана белый платок. Вы чувствуете какой-то странный запах, но не успеваете среагировать: хлороформ действует очень быстро. Вы теряете сознание.",
-	"buttonsTexts":["Далее","",""],
+	You say that you never saw her before. But the stranger does not believe you. You can't convince him. He asks you to tell the truth... But you continue to pursue your line. Suddenly, you hear a phone's buzz from the apartment. You go inside to pick up the phone. The stranger follows you. He closes the door and takes out a white hanky from his pocket. You feel some strange smell but don't have time to react since chloroform acts very quickly. You lose consciousness.",
+	"buttonsTexts":["Next","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[38,-1,-1]
 	},
 	{
 	"title":"24",
 	"description":"
-	Вот так разбиваются мечты. Девушка из милой и прекрасной превратилась в серьезную и опасную. Вы хотите спросить, что происходит, но направленное в ваше лицо дуло пистолета немного вас пугает и не совсем располагает к общению. После непродолжительного молчания кое-что начинает проясняться. Гостья вкратце рассказала свою историю: совсем недавно, буквально два месяца назад, убили ее отца. Причастным к его смерти людям очень нужно то, что лежит в его сейфе. Они пытались взломать систему, но безрезультатно. Открыть замок может кодовое слово, которое известно только покойному. Но в его вещах была обнаружена записка, адресованная дочери. Там было сказано, что в случае его смерти необходимо открыть тайный сейф и уничтожить его содержимое. Кодовое слово он зашифровал в виде ребуса, разрезал на пять кусков и спрятал в картинах. Девушка нашла эти картины, но поступила иначе. Смерть отца не давала ей покоя, ей хотелось поймать убийц. Но они скрылись. Нужна была приманка. Она пустила слух о том, что ключ зашифрован, разбит на части и хранится в пяти картинах. Затем устроила продажу. Все «шедевры» искусства были отправлены на рынок. Старику-торговцу были даны фотографии бандитов. Приманка сработала. Уже четыре картины ушли, как появились вы. Продавец перепутал вас с преступником и настойчиво предлагал купить пейзаж. Под его напором вы согласились. Позже ошибка выяснилась, но было уже поздно. И на вас началась охота с обеих сторон. Девушка нашла первой. Теперь у вас нет другого выхода, как помочь ей в поимке убийц. Иначе вам все равно придется с ними увидеться, но эта встреча может оказаться последней в вашей жизни.",
-	"buttonsTexts":["Далее","",""],
+	She broke your heart... The woman from being sweet and beautiful turned into a dangerous person. You wanna ask what's happening, but the gun pointed at your face makes you speechless. After a short silence, she started to speak. She said that her father was murdered two months ago. The people involved in his death need something from his safe. They failed to break the safe. In order to open the lock, they need the code. Only her father knew it. After father's death, she found a note saying how to open the safe and destroy everything inside. Her father encrypted the code in the form of a puzzle, cut the puzzle into five pieces and put them inside the paintings. She found these paintings and decided to catch the killers. So she needed a bait. She spread the rumor that the code is encrypted, broken up into five pieces and put inside the paintings. Then she arranged the sales. The seller was given photos of the killers. The bait worked. Already four paintings have left, as you have appeared. The seller persistently offered you to buy the paintings because he mistakenly thought you're the killer. Later the mistake was found out, but it was already late. The killers are looking for you, but she found you first. Now you have no other option than to help her in catching the criminals. Otherwise, you still have to see them, but this meeting could be the last in your life.",
+	"buttonsTexts":["Next","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[39,-1,-1]
 	},
