@@ -113,7 +113,7 @@
 	{
 	"title":"13",
 	"description":"
-	You open the door and see the FBI agent looking for a dangerous criminal. Yesterday she was seen near your house. The agent gives you her photo. You saw her before. It's the stranger from yesterday. You look at the FBI agent in front of you. What do you say?",
+	You open the door and see the DEA agent looking for a dangerous criminal. Yesterday she was seen near your house. The agent gives you her photo. You saw her before. It's the stranger from yesterday. You look at the DEA agent in front of you. What do you say?",
 	"buttonsTexts":["I saw her","I never saw her",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[22,23,-1]
@@ -209,216 +209,216 @@
 	{
 	"title":"25",
 	"description":"
-	Вы интересуетесь, откуда здесь взялся отец. И ответ, что он вошел через дверь, вас не устраивает. Кира говорит, что он ждал около дома, а когда вы ушли, влез через окно. На ваш логичный вопрос: «Зачем?» вразумительного объяснения не последовало. Вы пытаетесь добиться правды, но безрезультатно. Похоже, легче разговорить покойника. Вдруг гаснет свет. Вы слышите крики, топот и выстрелы. Вы направляетесь к двери, но, к сожалению, не успеваете. Пуля оказалась быстрее. Тайна так и останется неразгаданной.",
-	"buttonsTexts":["К предисловию","",""],
+	'Where your father came from?' - you asked. Jessica says that he was waiting around the house, and when you left, he climbed through the window. 'But why?' - you asked. She wasn't able to give you any rational explanation. Suddenly the lights go out. You hear screams and shots. You are heading for the door, but, unfortunately, don't have time. The bullet is faster. The mystery will remain unsolved.",
+	"buttonsTexts":["Start over again","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[0,-1,-1]
 	},
 	{
 	"title":"26",
 	"description":"
-	Вы интересуетесь, что это за бандит, откуда он здесь взялся и в чем провинился. Ответить решился сам преступник. Он говорит, что по ошибке забрался в чужой дом, а тут на него налетели эти двое. Ничего себе ошибка, думаете вы. Воспользовавшись тем, что внимание поймавших его переключилось на вас, он изловчился и выпутался из веревок. Далее события стали развиваться молниеносно: бандит вытащил нож и кинулся на мужчину. Тот не успел увернуться, и удар пришелся на горло. Одним противником стало меньше. Девушка попыталась ударить сзади, но эта попытка тоже оказалась роковой. Что ж, остались вы. Он уже приближается к вам. Вы думаете, как оказать сопротивление: ударить в подбородок или в солнечное сплетение. Времени на обдумывание нет, решайте.",
-	"buttonsTexts":["В подбородок","В солнечное сплетение",""],
+	'Where did he come from? How do you know if he is a criminal? What did he do?' - you asked. The person on the floor decided to answer your questions himself. He says that he mistakenly climbed into someone else's house, and then these two individuals caught him. 'Hmm... interesting mistake...' - you thought. Unexpectedly, the person on the floor pulled himself out of the ropes, pulled out a knife and stabbed the man next to the lady. The woman tried to protect herself and hit the criminal but failed, so the offender killed her as well. He is already approaching you. You could hit the chin or the solar plexus. There is no time for thinking. Decide!",
+	"buttonsTexts":["Hit the chin","Hit the solar plexus",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[40,41,-1]
     },
 	{
 	"title":"27",
 	"description":"
-	Очнулись вы уже в больничной палате. Около вас сидит медсестра. Она увидела, что вы открыли глаза. Она спрашивает ваше имя. Вы хотели что-то сказать, но слова застряли в горле. С ужасом вы понимаете, что не помните своего имени. Не помните, как оказались здесь. Медсестра ушла за врачом, а вы вдруг обращаете внимание на небольшой столик рядом. На нем стоят цветы, и лежит записка: «Прости. Кира». Вы пытаетесь вспомнить, кто это. Бесполезно. Амнезия не позволяет этого сделать. В таком состоянии вы уже не сможете ничего узнать.",
-	"buttonsTexts":["К предисловию","",""],
+	You woke up in the hospital room. A nurse is sitting beside you. She saw that you opened your eyes. She asks your name. You wanted to say something, but the words got stuck in your throat. With horror, you realize that you don't remember your name. The nurse called the doctor, and you suddenly pay attention to the small table nearby. There are flowers on it, and there is a note saying 'Sorry. Jessica.' You try to remember who is Jessica, but amnesia does not allow you to do that. In this condition, you won't be able to find out the truth.",
+	"buttonsTexts":["Start over again","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[0,-1,-1]
 	},
 	{
 	"title":"28",
 	"description":"
-	Вы решаете, что с девушкой все будет в порядке, и бежите на помощь в поимке преступника. Пока погоня не пропала из виду, вы, не смотря по сторонам, стремглав несетесь следом. В спешке вы не заметили, как попали на оживленную дорогу. Водитель грузовика, в свою очередь, тоже не заметил, как вы умудрились выбежать на проезжую часть. Яростные сигналы, резкий визг тормозов, удар. Кто-то вызывает скорую. Но она вам уже не поможет. И никто не поможет.",
-	"buttonsTexts":["К предисловию","",""],
+	You decide that the woman will be ok, and run in order to catch the criminal. In a hurry, you didn't notice how you got on the busy highway. The truck driver didn't notice how you appeared in front of his car. Someone is calling an ambulance. But it won't help you anymore. And no one will help.",
+	"buttonsTexts":["Start over again","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[0,-1,-1]
 	},
 	{
 	"title":"29",
 	"description":"
-	Вы смотрите на разбитую голову девушки и решаете остаться. От вызова скорой несчастная наотрез отказалась. Но рана требует обработки. Вы идете на кухню за аптечкой. Но необходимых вам медикаментов вы не находите. Предупредив девушку, что сейчас вернетесь, вы направляетесь в ближайшую аптеку на углу. Купив то, что нужно, идете назад к дому. Заходите в комнату, но, похоже, ваша помощь больше не требуется: на полу лежит бездыханное тело красивой молодой девушки. Травма оказалась смертельной. К сожалению, вы никогда не узнаете тайну этой прекрасной незнакомки. Она унесла ее с собой в могилу.",
-    "buttonsTexts":["К предисловию","",""],
+	You looked at her broken head and decided to stay. You tried to call an ambulance but she didn't allow you to do that. But the wound requires some treatment and you don't have any medicine in the house. You said that you'll be back and went to the nearest pharmacy at the corner. Having bought the first aid medicine, you went back to the house. It seems that your help is no longer required. The trauma was fatal. She died. Unfortunately, you will never know the secret.",
+    "buttonsTexts":["Start over again","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[0,-1,-1]
 	},
 	{
 	"title":"30",
 	"description":"
-	Решив, что лучше проверить гостью, вы спускаетесь вниз и слышите приглушенный голос, доносящийся из кухни. Укрепившись в своих подозрениях, вы направляетесь туда, заходите и застываете на пороге. Прямо на столе, в позе лотоса сидит эта милая девушка. Ее большой и средний пальцы соединены на обеих руках, а сама она напевает что-то невразумительное. Что вы сделаете: уйдете, чтобы не мешать, или спросите, чем она тут занимается?",
-	"buttonsTexts":["Уйду","Спрошу",""],
+	You decided to check her, went down and heard a muffled voice coming from the kitchen. You went there and froze on the doorstep. You guest is sitting right on the table in the lotus pose, her big and middle fingers are connected on both hands, and she sings something unintelligible. Do you want to leave and don't disturb her or ask what she is doing?",
+	"buttonsTexts":["Leave","Ask",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[42,43,-1]
 	},
 	{
 	"title":"31",
 	"description":"
-	Вы остаетесь в постели. Несмотря на беспокойство, вам удается заснуть. Вам снится прекрасная девушка. Она чем-то отдаленно напоминает вашу гостью. Вы разговариваете о жизни, о рождении, о смерти. Вдруг она говорит вам, что у нее не было другого выхода, ее вынудили погрузить вас в вечный сон. Вы смеетесь, думая, что она шутит. Но скоро улыбка сменяется непониманием. Девушка пытается что-то объяснить, что вы оказались втянуты в какую-то игру, что вы лишний человек. Ее прислали сюда, чтобы устранить вас. Она дождалась, пока вы отойдете, и подсыпала сильнодействующее средство вам в чай, который вы пили перед сном. К сожалению, вы уже не сможете узнать, кому перешли дорогу. Прощаясь, девушка уходит. А вы навечно останетесь в царстве мертвых.",
-	"buttonsTexts":["К предисловию","",""],
+	You stay in bed. Despite the anxiety, you manage to fall asleep. You see a beautiful lady in your dream. She looks exactly like your guest. You talk about life and death. Suddenly she tells you that she had no other choice, and you will never wake up. You laugh thinking that she is joking. But soon the smile gives way to misunderstanding. The lady is trying to explain that you got involved in a kind of game, and she didn't want to hurt you. She was sent here to eliminate you. She waited until you left and poured poison into a cup of tea you drank before going to bed. Unfortunately, you will no longer be able to find out the truth. Saying goodbye, she leaves. And you will always remain dead.",
+	"buttonsTexts":["Start over again","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[0,-1,-1]
 	},
 	{
 	"title":"32",
 	"description":"
-	Вы все-таки решаетесь спросить, в чем дело. Что она имела ввиду и с кем разговаривала. Девушка нахмурилась, и только собралась вам что-то ответить, как у нее зазвонил телефон. Вы удивленно смотрите, как она достает его из сумки и отвечает. Если у нее был мобильный, почему она не позвонила с него? Наверное, кончились деньги, решаете вы. Она долго разговаривает. Только вы ни слова не понимаете, общение идет на арабском языке. Видимо, что-то не ладится, собеседники перешли на повышенные тона. Не обращая на вас никакого внимания, не попрощавшись, девушка уходит из вашего дома. За ней захлопнулась дверь, и вы никогда больше ее не увидите. Но и до конца истории не дойдете, поэтому",
-	"buttonsTexts":["К предисловию","",""],
+	You decided to ask what is going on and why she's talking to somebody about the gun. Suddenly you hear a phone buzz coming from her bag. You are surprised to see how she pulls him out and starts talking. If she had a phone in the bag, why she asked you to give her a phone to call? She talks for a long time. Unfortunately, you don't understand a word and you can't recognize the language she speaks. Apparently, something doesn't go well, she screams on the phone and leaves your house without saying goodbye. The door slammed behind her, and you'll never see her again. That's why you'll never know the end of the story.",
+	"buttonsTexts":["Start over again","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[0,-1,-1]
 	},
 	{
 	"title":"33",
 	"description":"
-	Вы решаете, что лучше не рисковать. Пусть это останется ее тайной. Девушка, приняв ваши извинения, просит у вас стакан воды. Вы идете на кухню, выливаете остатки минеральной воды в бокал и возвращаетесь. Но пить ее уже некому. Девушка ушла. Что ж, отлично. С надеждой спокойно провести остаток вечера вы отправляетесь в зал. Зажигаете успевший погаснуть камин, садитесь в кресло, накрываетесь пледом и замечаете, что пропала картина. Несомненно, ее прихватила с собой таинственная незнакомка. Зачем? Этот вопрос останется без ответа. В полицию вы заявлять не собираетесь, ценность экспоната просто смешная. Но теперь вместе с исчезнувшей девушкой и пропавшей картиной, исчезла возможность разгадать историю.",
-	"buttonsTexts":["К предисловию","",""],
+	You decided not to take risks and apologize. Everyone has secrets, right? The woman, accepting your apology, asks you for a glass of water. You go to the kitchen and come back with a glass of water. But there is nobody. She left. Well, great. With the hope of quietly spending the rest of the evening, you go to the hall and light up the fireplace. Suddenly you notice that the painting is gone. She stole it. But why? This question will remain unanswered. You are not going to report to the police since the value of the painting is close to zero. But now, you won't be able to know the end of the story.",
+	"buttonsTexts":["Start over again","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[0,-1,-1]
 	},
 	{
 	"title":"34",
 	"description":"
-	Вы выслушиваете долгую, очень долгую историю. Вперемешку со слезами, всхлипами и прочими выражениями эмоций. Оказывается, эта милая особа связалась с опасными людьми. Теперь она вынуждена работать на них. И единственной причиной отойти от дел может стать только смерть. Вы считаете, что девушка сама виновата, но ее все равно жалко. Чем же вы можете помочь? Тягаться с мафией? Нет уж. Жить на этом свете иногда тяжеловато, но, все же, интересно. И обрывать свое существование на этой прекрасной планете не входит в ваши планы. Вдруг девушка достает из сумочки пистолет. Вы отпрянули назад, но направлен он оказался не в вашу сторону. Видимо, ей жить уже надоело. Вы первый раз в такой ситуации и не знаете, как вести себя в подобном случае. Ваш робкий возглас: «Может, не надо?» никак не подействовал. Приходится принимать другие меры. Вы пытаетесь выхватить пистолет, но девушка вцепилась в него мертвой хваткой. Раздался выстрел, и хватка в буквальном смысле стала мертвой. Ваше путешествие закончилось, так и не начавшись.",
-	"buttonsTexts":["К предисловию","",""],
+	You listen to a very long story mixed with tears and sobs. She said she started working with very dangerous people. And there is no way to get away from it. You feel sorry for her. But how can you help? Fight with the mafia? No, thank you. Suddenly the woman pulled a gun from the bag. You jumped back, but the gun isn't pointed at you. She pointed the gun at herself. 'Don't do it,' - you said. But it didn't work. She accidentally shot herself. The story has ended leaving fear, uncertainty, and doubts. You won't be able to find out the truth.",
+	"buttonsTexts":["Start over again","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[0,-1,-1]
 	},
 	{
 	"title":"35",
 	"description":"
-	Вы открываете дверь. На пороге стоит похищенная девушка. Только она выглядит вполне свободной. Она просит вас впустить ее. Уже дома она рассказывает, как сбежала от преступников. Вы задаете вполне логичный вопрос, почему сюда? Ведь они уже знают про это место. Она подняла на вас свои большие, красивые голубые глаза и сказала: «А вы разве меня не защитите?» Вы онемели, не зная, что ответить. В детстве вы мечтали стать охранником, но чтобы так. Правильно говорят, нужно быть осторожнее со своими желаниями. Они могут исполниться когда угодно, в самый неподходящий момент и самым неподходящим образом. Как сейчас. Будете исполнять мечту всей своей детской жизни?",
-	"buttonsTexts":["Буду","Не буду",""],
+	You open the door and see the kidnapped woman. She doesn't look like a victim though. She asks you to come in. She said she escaped from the criminals. 'Why did you come here?' - you asked. - 'They know about this place already.' She looked at you and said: 'Will  you protect me?' You were speechless, not knowing what to say. As a child, you dreamed of becoming a bodyguard. Yep... You've gotta be very careful with your own wishes even though you're a kid. They could be fulfilled at any time, at the most random moment and in the most inappropriate way. Like now. Will you fulfill the dream of being a bodyguard?",
+	"buttonsTexts":["Yes, I will","No, I won't",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[44,45,-1]
 	},
 	{
 	"title":"36",
 	"description":"
-	Вы отвечаете на телефонный звонок. Из трубки доносится голос Киры. Она просит прощения за причиненные неудобства и просит вас забыть обо всем, как о страшном сне. И прекращает разговор. Простить-то вы ее простили, а вот забыть, вероятно, уже не сможете. Как и не сможете пройти эту историю.",
-	"buttonsTexts":["К предисловию","",""],
+	You answer the phone and hear Jessica's voice. She asks you to forget everything as a terrible dream and hangs up the phone. You definitely can forgive her but not forget. And you won't be able to complete this history.",
+	"buttonsTexts":["Start over again","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[0,-1,-1]
 	},
 	{
 	"title":"37",
 	"description":"
-	Вечером вы отправляетесь в тот клуб. Оказалось, что он находится в очень неблагоприятном городском квартале. Обстановка не внушает вам доверия, но все же вы хотите войти внутрь. У входа дорогу преграждает секьюрити. Он спрашивает ваш пропуск. Вы предъявляете найденный документ и проходите. Вы оказались в огромном помещении. На стенах старинные картины, на полу роскошные ковры, это уже интересно. Вы присматриваетесь к людям. Мужчины одеты преимущественно во фраки, женщины в вечерние платья. Играет легкая музыка. И еще вы начинаете улавливать очень странный сладковатый запах. К вам подходит дама и приглашает танцевать. Вы соглашаетесь. Кружась в ритме вальса и погружаясь в атмосферу, царящую здесь, вы хотите остаться навсегда в этом месте, окутанном дымкой беспечности и наслаждения. И вы забываете обо всем, о девушке, приходившей ранее, и о сотруднике наркоконтроля. Есть только здесь и сейчас. В таком состоянии трудно что-то исследовать. Увы, но приключение придется начать сначала.",
-	"buttonsTexts":["К предисловию","",""],
+	It looks like the club is in the ghetto area. You still decided to go there in the evening. You drove to the club and see the security guard asking for the club card. So you show it and get inside. It's a huge room with the paintings on the walls and luxurious carpets on the floor. People are dressed up. Smooth jazz is playing. You're starting to catch a funny sweetish smell. A lady approaches you and invites you to dance. You agree. Dancing with a beautiful lady and listening to smooth jazz music, you forget about everything that happened today. In this condition, it is difficult to investigate something. So you have to start over again.",
+	"buttonsTexts":["Start over again","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[0,-1,-1]
 	},
 	{
 	"title":"38",
 	"description":"
-	Вы очнулись в темном сыром помещении. Вокруг ни души. Пытаетесь открыть дверь, ведущую на выход, но она заперта. Вдруг в проеме вы видите бумагу и вынимаете ее. Вы думаете, что это записка, и оказываетесь совершенно правы. На ней черным по белому написано: «Вы не уйдете отсюда, пока не скажете правду. Иначе останетесь здесь навсегда». Видимо, вашим показаниям относительно девушки не поверили. И пока из вас не вытащат «нужную» правду, не выпустят. Если вообще выпустят.",
-	"buttonsTexts":["К предисловию","",""],
+	You woke up in a dark room. Not a soul is around. Trying to open the door, but it's locked from the outside. Suddenly you found the note written on a small piece of paper saying: 'You won't be able to leave the room until you tell us the truth. ' That's scary. You don't know the truth yet, so you have to start over again.",
+	"buttonsTexts":["Start over again","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[0,-1,-1]
 	},
 	{
 	"title":"39",
 	"description":"
-	Что ж, приключения только начинаются. Теперь вам нужно принять первое важное решение: на чем ехать в Петербург. Там должна произойти встреча с помощником Киры. Как вы поедете?",
-	"buttonsTexts":["На машине Киры","На своей машине",""],
+	This is just the beginning. The plan is to meet Jessica's assistant in San Francisco. You'll drive from San Diego to San Franciso. What car to choose?",
+	"buttonsTexts":["Jessica's car","Your car",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[46,47,-1]
 	},
 	{
 	"title":"40",
 	"description":"
-	Вы хотели ударить противника в подбородок, но не успеваете этого сделать. Он оказался быстрее вас. Вы чувствуете, как вас покидают жизненные силы. Последнее, что вы видели, было жестокое лицо бандита и мертвая девушка. К сожалению, на этом ваш путь подошел к концу.",
-	"buttonsTexts":["К предисловию","",""],
+	You tried to hit the opponent in the chin but failed to do that. He was faster than you. The last thing you saw was the cruel face of the criminal. Unfortunately, your story has come to an end. But you can start over again.",
+	"buttonsTexts":["Start over again","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[0,-1,-1]
 	},
 	{
 	"title":"41",
 	"description":"
-	Вы выбираете удачное место для удара, солнечное сплетение. Противник упал. Вы ждете, когда он встанет, чтобы продолжить борьбу. Но этого не происходит. Он не двигается. Вы проверяете его пульс. Кажется, вы не рассчитали силу удара. Теперь ваш дом заляпан кровью, а на полу лежит три покойника. За окном слышна полицейская сирена. Все. На этом приключения закончились. В следующий раз будьте осторожнее в своем выборе.",
-	"buttonsTexts":["К предисловию","",""],
+	You choose the right place to hit, the solar plexus. The enemy fell. You wait when he gets up to continue the fight. But this does not happen. He doesn't move. You check his pulse. It seems you killed him. Suddenly you hear 'Police! Let me see your hands!'. It seems you've gotta explain what just happened to the police officers. But it's already a different story. So you have to start over again.",
+	"buttonsTexts":["Start over again","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[0,-1,-1]
 	},
 	{
 	"title":"42",
 	"description":"
-	Вы решаете не мешать девушке. Ведь в медитации рождается мудрость. А ей это очень необходимо … Утром вы хотели спросить, как все прошло. Но дома оказались только вы. Видимо, гостья набралась достаточно мудрости и ушла. Но она забрала с собой и возможность продолжить игру. К сожалению, этот путь оказался ошибочным …",
-	"buttonsTexts":["К предисловию","",""],
+	You decided not to interrupt her. The calm mind can't be bought, it has to be earned through meditation. In the morning you wanted to ask her about that but she left and took the opportunity to continue the game. Unfortunately, you have to start over again.",
+	"buttonsTexts":["Start over again","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[0,-1,-1]
 	},
 	{
 	"title":"43",
 	"description":"
-	Вы долго смотрите на девушку и все же решаетесь спросить, что она тут делает. Она выходит из транса, окидывает вас недовольным взглядом и спрашивает, откуда вы здесь взялись. Хороший вопрос от гостя. Вы говорите, что было незаперто. Она отвечает, что в следующий раз нужно стучаться. Затем выходит из кухни и, даже забыв обуться, из дома. Вы еще долго смотрите ей вслед: босая девушка в легком платье посреди ночи идет по улице и напевает что-то себе под нос. Да, вы ее нескоро забудете. А путешествие, к сожалению, придется начать сначала.",
-	"buttonsTexts":["К предисловию","",""],
+	'What are you doing?' - you asked. 'What are you doing here? You've gotta respect my privacy. Next time, please knock first.' - she responded. Then she goes out of the house forgetting her shoes. You keep looking out at the city lights after she left. Yes, you won't forget it for a while. Unfortunately, you have to start over again.",
+	"buttonsTexts":["Start over again","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[0,-1,-1]
 	},
 	{
 	"title":"44",
 	"description":"
-	После долгих раздумий вы соглашаетесь побыть временным телохранителем. Девушка радостно вскрикнула и захлопала в ладоши. Вы смотрите на нее и понимаете, что зря ввязались в эту авантюру. Но отступать уже поздно, было дано согласие. Скоро ваши опасения усилились еще больше: ваша подопечная предложила поиграть в прятки. Вы немного ошарашены. Прятки?! Хотя, не такая уж плохая идея. Можно спрятаться где-нибудь в уютном кафе, попивая чай и слушая приятную музыку. Но нет. Девушка захотела, чтобы искали ее. Вы закрываете глаза, считаете до десяти, открываете глаза и идете на кухню. Пить кофе. Включаете телевизор, а там идет ваш любимый фильм. Вы не замечаете, как летит время. Когда пошли финальные титры, вы вспоминаете, что должны были что-то сделать. Ах да, прятки. Ну что ж, эта милая особа наверняка уже спит. Поэтому вы тоже отправляетесь смотреть сны. Утром вы не обнаруживаете ее. Видимо, она ушла. Раздается стук в дверь. Вы открываете – на пороге стоит полиция. Они ищут девушку, заходившую к вам вчера. Вы говорите, что она приходила играть в прятки. И так хорошо спряталась, что больше вы ее не видели. На этом беседу можно считать законченной. Больше вас никто не тревожил. А вы еще долго опасались впускать в свой дом лиц женского пола.",
-	"buttonsTexts":["К предисловию","",""],
+	You agreed to become a bodyguard. The woman clapped her hands and offered you to play hide-and-seek first. You are a little bit confused. Hide and seek?! It could be a good idea to hide somewhere in a cozy cafe sipping coffee and listening to smooth jazz. But no. She wanted you to look for her. You close your eyes and count to ten. When you open your eyes, you go to the kitchen to drink some coffee and start watching your favorite movie. Time flies... When the final credits came, you remember that you had to do something. Oh yes, hide and seek... You've gotta find the woman. Well, this dear lady must be asleep already. So you went to sleep. In the morning you didn't find her. Apparently, she left. Then somebody knocked at the door. It was the police. They were looking for the woman who came to you yesterday. You said that she came to play hide-and-seek. So she hid so well that you didn't see her again. The police left. There is no way to find out what the lady actually wanted from you. So you have to start over again.",
+	"buttonsTexts":["Start over again","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[0,-1,-1]
 	},
 	{
 	"title":"45",
 	"description":"
-	Внимательно посмотрев на девушку и подумав, во что вам может вылиться это приключение, вы отказываете ей в помощи. Она опустила глаза и, попрощавшись, ушла. Прошло несколько дней, вы уже забыли о тех событиях. Но вдруг на экране телевизора вы увидели знакомое лицо. Да-да, это она. Вы вздохнули с облегчением. Значит, все хорошо. Но спустя пару минут ваше настроение диаметрально поменялось: передача называлась «Криминальная хроника». Всю оставшуюся жизнь вас мучила совесть. Кто знает, может, с вашей помощью ей удалось бы спастись. Ну, или вас вместе показали бы по телевизору.",
-	"buttonsTexts":["К предисловию","",""],
+	You refused to help her. She said goodbye and left. A few days later, you saw a familiar face on TV. Yes! It was her. It means everything is Ok. But after a couple of minutes, your mood had changed dramatically. She was actually murdered. The rest of your life you felt guilty. Maybe you had to help her out somehow.",
+	"buttonsTexts":["Start over again","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[0,-1,-1]
 	},
 	{
 	"title":"46",
 	"description":"
-	Вы отправляетесь в путь и примерно через шесть часов оказываетесь в Петербурге. Погода не радует: небо затянуто тучами, моросит дождь. Вы едете в гостиницу. Там вас встречает приветливая девушка и говорит, что свободных номеров нет. Вы поедете искать другую гостиницу или попытаетесь уговорить, чтобы вам все-таки выделили места для ночлега?",
-	"buttonsTexts":["Искать","Уговорить",""],
+	You drove to San Francisco for about seven hours. It's raining. You are going to the hotel. The lady at the reception said that there are no vacant rooms at the moment. Will you look for another hotel or try to ask again?",
+	"buttonsTexts":["Look for another hotel","Ask again",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[48,49,-1]
 	},
 	{   
 	"title":"47",
 	"description":"
-	Вы решаете ехать на своей машине. Но не успели вы отъехать, как случилось непредвиденное: взрывчатка, установленная в вашем автомобиле одним из тех, кто не хочет вас видеть в качестве соперника, сработала сразу при запуске двигателя. Если уж вы переходите дорогу опасным и чокнутым людям, будьте аккуратнее и почаще прислушивайтесь к интуиции. В следующий раз.",
-	"buttonsTexts":["К предисловию","",""],
+	You decided to drive your car. When you start the engine, the bomb had exploded. There are some dangerous people in the world. Be careful and listen to your intuition more often. Next time.",
+	"buttonsTexts":["Start over again","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[0,-1,-1]
 	},
 	{   
 	"title":"48",
 	"description":"
-	Вы решаете, что легче найти другую гостиницу. Но это оказывается не так-то просто. Среди огромного разнообразия отелей вы не можете отыскать свободные номера, что кажется вам очень странным. Вы звоните Кире, чтобы об этом сказать. А, может, она сама нашла что-нибудь? Но на ваши звонки никто не отвечает. Проходит полчаса, час, два, шесть. Вы не знаете, где она. Спустя три дня вы обратились в полицию. Результатов это не дало. Девушка пропала. А в одиночку вы не справитесь, поэтому",
-	"buttonsTexts":["К предисловию","",""],
+	You decided to find another hotel. But this is not easy. There is a big software development conference in San Francisco, so all the hotels are booked. You called Jessica to tell her about it but nobody answered about six hours. You didn't know where she is. Later you called the police. But you weren't able to find her. She was gone. Unfortunately, you can't continue without her, so you have to start over again.",
+	"buttonsTexts":["Start over again","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[0,-1,-1]
 	},
 	{   
 	"title":"49",
 	"description":"
-	Вы пытаетесь уговорить девушку выделить два свободных номера, но это оказывается не так-то просто. Вдруг у стены вы замечаете маленький цветочный отдел. Может, букет смягчит ее сердце? Свежее всех выглядят лилии и розы. Что выберете?",
-	"buttonsTexts":["Лилии","Розы",""],
+	You are trying to convince the reception lady to give you a room but it's very hard. Suddenly you notice a small flower store next to the reception. So you decided to buy flowers as an additional argument. What flowers will you choose?",
+	"buttonsTexts":["Lilies","Roses",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[54,50,-1]
 	},
 	{   
 	"title":"50",
 	"description":"
-	Купив небольшой букетик роз, вы дарите его девушке. Но она не то, что не обрадовалась, а закрыла свое лицо руками и выбежала прочь из комнаты. Оказывается, у нее аллергия на эти цветы. На ее место встал другой человек, который ясно дал вам понять, что мест нет, и не будет в ближайшее время. На улице Кира вам сказала, что нашла подходящую гостиницу. Подъехав к ее зданию, вы удивленно заметили, что вокруг ни души. Но доверившись своей спутнице, вы проходите вслед за ней и бронируете номер.",
-	"buttonsTexts":["Далее","",""],
+	Having bought a small bouquet of roses, you gifted it to the reception lady. But she wasn't happy at all! She covered her face with her hands and ran out of the hall. It turns out that she is allergic to these flowers. A different person replaced her at the reception. And he made it clear to you that there are no rooms for you under any circumstances. In meantime, Jessica found a hotel with available rooms. So you drove there and booked a room.",
+	"buttonsTexts":["Next","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[51,-1,-1]
 	},
 	{   
 	"title":"51",
 	"description":"
-	Ближе к вечеру в вашем номере раздался стук в дверь, который с некоторых пор вас очень напрягает. На пороге вы нашли конверт. Тот, кто его положил, явно обладал хорошей скоростью, ведь вокруг никого не было. В распечатанном конверте вы обнаружили записку: «Бросай все и беги отсюда. Здесь очень небезопасно. У выхода стоит девятка вишневого цвета. Садись в нее и езжай из города». Человек подписался как тайный доброжелатель. Итак, что предпримете?",
-	"buttonsTexts":["Проигнорирую","Расскажу Кире","Уеду"],
+	In the evening somebody knocked the door. You opened the door and found just an envelope. No one is around. You opened the envelope and found the note: 'Run as soon as possible! It's very unsafe here! There is a Lambo at the entrance. Sit in it and drive out of the city.  Best regards, anonymous.' So, what are you going to do?",
+	"buttonsTexts":["Ignore","Talk to Jessica","Run"],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[52,53,96]
 	},
