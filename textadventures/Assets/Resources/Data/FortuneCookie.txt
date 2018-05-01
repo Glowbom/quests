@@ -393,7 +393,7 @@
 	{   
 	"title":"48",
 	"description":"
-	You decided to find another hotel. But this is not easy. There is a big software development conference in San Francisco, so all the hotels are booked. You called Jessica to tell her about it but nobody answered about six hours. You didn't know where she is. Later you called the police. But you weren't able to find her. She was gone. Unfortunately, you can't continue without her, so you have to start over again.",
+	You decided to find another hotel. But it's hard to do. There is a big software development conference in San Francisco, so all the hotels are booked. You called Jessica to tell her about it but nobody answered for about six hours. You didn't know where she is. Later you called the police. But you weren't able to find her. She was gone. Unfortunately, you can't continue without her, so you have to start over again.",
 	"buttonsTexts":["Start over again","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[0,-1,-1]
@@ -425,271 +425,271 @@
 	{   
 	"title":"52",
 	"description":"
-	Вы игнорируете данное послание. Утром Кира сообщает, что номера нужно освободить. Но теперь поиск гостиницы не проблема, она нашла еще один вариант. Вы переезжаете в другое место. К вечеру у вас назначена деловая встреча. А пока вы решаете прогуляться по городу и заодно поискать книжную лавку «Fatum». Вы много о ней слышали и давно мечтали там побывать.",
-	"buttonsTexts":["Далее","",""],
+	You ignored this message. In the morning, Jessica said you have to change the hotel, she found another option. In the evening you'll have a business meeting. In the meantime, you decided to walk around San Francisco and look for the bookstore called 'Alex Books'. You heard good things about the place and wanted to see for yourself.",
+	"buttonsTexts":["Next","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[55,-1,-1]
 	},
 	{
 	"title":"53",
 	"description":"
-	Вы решаете рассказать об этой таинственной записке Кире. Неужели вы ей так доверяете? Как только вы показали ей послание, она разорвала бумагу в мелкие клочья. Кажется, на мгновение выражение ее лица приобрело злой окрас, но она быстро взяла себя в руки. Она сказала, чтобы вы не обращали на это никакого внимания, что это преступники пытаются убрать вас с дороги. Вы отправляетесь в свой номер и глубокой ночью после долгих раздумий засыпаете. Утром вы обнаруживаете, что девушка съехала. На звонки она не отвечает, а где ее искать, вы не знаете. Больше вы ее не видели. Ваше приключение закончилось в глухой гостинице на окраине города.",
-    "buttonsTexts":["К предисловию","",""],
+	You decided to tell Jessica about this mysterious note. As soon as you showed the note, she tore up the paper into little bits. She said that you shouldn't pay attention to this, and these criminals are trying to screw you. You went to your room and fell asleep. In the morning you discovered that Jessica has moved out. She didn't answer calls, and you didn't know where to look for her. You never saw her again. Your adventure ended in a hotel in the suburbs of San Francisco.",
+    "buttonsTexts":["Start over again","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[0,-1,-1]
 	},
 	{
 	"title":"54",
 	"description":"
-	Вы считаете, что именно лилия способна решить ваши проблемы. И действительно, девушка покраснела и улыбнулась. Она сказала, что ей уже давно не дарили такие красивые цветы. Она согласилась выделить вам два номера на полтора дня. Вы соглашаетесь. Что ж, у вас впереди целый день. Встреча назначена на семь часов. Есть время прогуляться по улицам города, насладиться его атмосферой. Кира решила пройтись по магазинам. А вы выбираете между некой книжной лавкой и небольшим антикварным салоном, о которых вы много слышали. Куда направитесь?",
-	"buttonsTexts":["В книжную лавку","В антикварный салон",""],
+	You assume the lilies can solve all your problems with the hotel. The reception lady smiled. She agreed to give you two rooms for a day and a half. You agreed. The meeting is scheduled for 7pm. So you've got some time to explore the streets of San Francisco and enjoy the city. Jessica decided to go shopping. You're trying to decide between a bookstore and an antique salon. Where will you go?",
+	"buttonsTexts":["Bookstore","Antique Salon",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[55,97,-1]
 	},
 	{
 	"title":"55",
 	"description":"
-	Вы долго искали это место. Прошли дюжину улиц, опросили, как минимум, двадцать прохожих. В конце концов, перед вами оказалась вывеска: «Fatum». Кажется, вы пришли. Толкнув дверь, вы заходите внутрь и видите крутую лестницу, поднимающуюся наверх. Добравшись туда и открыв еще одну дверь, обитую темным бархатом, вы оказываетесь непосредственно в самой лавке. Вокруг стен стоят огромные стеллажи с книгами, в центре комнаты расположено несколько читальных столиков. На них стоят лампы и лежат очки, ручки, карандаши, закладки, а сбоку придвинуты глубокие кресла. На полах расстелены ковры. У окна вы замечаете кофеварку. Кажется, что здесь все продумано до мелочей. В помещении находится около пяти человек. Кто-то стоит у книжной полки, кто-то читает уже приглянувшееся произведение. Вы тоже решаете посмотреть, что здесь есть, и направляетесь к стеллажу. Вам приглянулись две книги: «Бойцовский клуб» (автор Чак Паланик) и «Кэрри» (автор Стивен Кинг). Какую вы выберете?",
-	"buttonsTexts":["Бойцовский клуб","Кэрри",""],
+	You were using the maps app to navigate the route to 'Alex Books'. It took 20 minutes of walking. You get inside. There are about five people in the room. Someone is standing by the bookshelf, someone is reading at the table. You went to the bookshelf. You liked two books: 'Fight Club' and 'Carrie'. Which book will you choose?",
+	"buttonsTexts":["Fight Club","Carrie",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[56,103,-1]
 	},
 	{
 	"title":"56",
 	"description":"
-	Усаживаясь в свободное кресло, вы начинаете читать и вскоре понимаете, что не в силах оторваться. Время от времени вы поглядываете на часы, чтобы успеть к назначенному времени. Перевернув очередную страницу, вы обнаруживаете свернутый листок бумаги. Внутри оказались адрес и телефон. Внизу кривым почерком стоит подпись: «Если нужен ответ, просто найди меня. Я смогу тебе помочь». На всякий случай вы положили записку в карман. Что ж, стрелки часов приближаются к семи. Пора идти. Жаль, что вы так и не познакомились с владельцем этой лавки. Должно быть, это очень интересный человек. Встреча с Кирой и ее помощником назначена в китайском ресторане. Как вы будете туда добираться: вызовете такси или поймаете частника?",
-	"buttonsTexts":["Такси","Частник",""],
+	You began to read and soon realized that it's difficult to tear yourself away from the book. Turning over the next page, you found a business card with the address and a phone number. At the bottom, there is the crooked handwriting saying 'If you need an answer, just find me. I can help you.' You put the note in your pocket. It's time to head to the meeting at 7pm. The meeting with Jessica and her assistant is scheduled in a Chinese restaurant. How will you get there? A regular taxi or a rideshare service?",
+	"buttonsTexts":["Taxi","Rideshare",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[57,104,-1]
 	},
 	{
 	"title":"57",
 	"description":"
-	Вы вызываете такси. Машину обещают прислать через десять минут. А пока вы стоите на улице и наблюдаете за людьми. Все куда-то спешат: мужчина в строгом костюме, женщина в розовом пальто, девушка в черном плаще. Раздается автомобильный сигнал. Такси уже ждет. Вы садитесь, говорите адрес, и водитель мчит со скоростью света: вы уже опаздываете. Высадив вас напротив ресторана, он уезжает. А вы заходите внутрь. Ищете взглядом Киру, но, похоже, ее еще нет. А вы так торопились. Вы выбираете столик. Официант предлагает сделать заказ. Что будете есть?",
-	"buttonsTexts":["Утку","Жареный рис","Черепаховый суп"],
+	You caught a taxi and got to the restaurant on time. You got inside. Looking for Jessica, but she is not here yet. You chose a table. What will you eat?",
+	"buttonsTexts":["Duck","Fried rice","Turtle soup"],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[105,58,106]
 	},
 	{
 	"title":"58",
 	"description":"
-	Официант принес жареный рис и спросил, что вам угодно пить. Увидев, что вы затрудняетесь в выборе, он предлагает вам попробовать байцзю или настойку на змеях. Чему отдадите предпочтение?",
-	"buttonsTexts":["Байцзю","Настойке на змеях",""],
+	The waiter brought fried rice and asked what you want to drink. He suggested you the Baijiu or Snake vodka. What do you choose?",
+	"buttonsTexts":["Baijiu","Snake vodka",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[59,107,-1]
 	},
 	{
 	"title":"59",
 	"description":"
-	Выбрав байцзю, вы откидываетесь на спинку стула и читаете журнал, лежащий на столике. Наконец, появляется Кира. Одна. Присаживаясь к вам, она говорит, что помощник придет чуть позже. А пока можно расслабиться.",
-	"buttonsTexts":["Далее","",""],
+	Choosing Baijiu, you lean back in the chair and read the magazine. Finally, Jessica shows up. Alone. When she sits down, she says that the assistant will be here in a little bit. In the meantime, you can relax.",
+	"buttonsTexts":["Next","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[60,-1,-1]
 	},
 	{
 	"title":"60",
 	"description":"
-	Официант принес байцзю. Это оказалась прозрачная жидкость со специфическим запахом. Кира изумленно смотрит на вас и спрашивает, действительно ли вы собираетесь это пить. Ведь это очень крепкий напиток, а его вкус даже алкоголиков пугает. Но ее слова только раззадоривают вас. Уверив себя, что теперь вы обязательно должны это попробовать, вы залпом выпиваете небольшую пиалку и содрогаетесь от неожиданных ощущений. Как такое вообще можно пить, думаете вы. В этот момент к вашему столику подходит парень лет двадцати пяти. Похоже, это тот помощник. Вы хотели было поздороваться,  но ваше перекошенное от байцзю лицо еще не пришло в норму. Он подсаживается к Кире и протягивает ей какие-то бумаги. Она, в свою очередь, протягивает их вам. Это брошюра и досье. Что вы изучите в первую очередь?",
-	"buttonsTexts":["Брошюру","Досье",""],
+	The waiter brought Baijiu. It turned out to be a transparent liquid with a specific smell. Jessica looks at you and asks if you are really going to drink it. After all, this is a very strong drink. Her words doesn't stop you, so you drink it. At that moment the assistant shows up. You wanted to say hello, but the Baijiu after effect didn't allow you to do that. He sits down and gives Jessica some papers. She gives them to you. There are two papers brochure and dossier. What will you read first?",
+	"buttonsTexts":["Brochure","Dossier",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[108,61,-1]
 	},
 	{
 	"title":"61",
 	"description":"
-	Досье оказалось на имя Степного Иннокентия Станиславовича. Мужчина 1975 года рождения из города Улан-Удэ. Как оказалось, этот человек причастен к убийству Аристарха, отца Киры. Вы смотрите на приложенную к досье фотографию и чувствуете, что где-то видели это лицо раньше. Отбросив безуспешные попытки вспомнить его, вы возвращаете досье, интересуясь у своих новоиспеченных «друзей» дальнейшим планом. А план такой: вы едете в Сибирь. В Улан-Удэ. Там нужно будет найти старый особняк, в котором проживает Иннокентий.",
-	"buttonsTexts":["Далее","",""],
+	The dossier was about a man from San Antonio named Phillip Stevens who involved in the murder of Jessica's father, Mason. The face on the photo looks really familiar as if you saw him somewhere before. 'What's our plan?' - you asked. And the plan is to go to San Antonio, Texas to find the house of Phillip Stevens.",
+	"buttonsTexts":["Next","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[62,-1,-1]
 	},
 	{
 	"title":"62",
 	"description":"
-	Добравшись до Сибири, вы стали сомневаться в положительном исходе. Сложно сказать, чего вы боитесь больше: того, что вам удастся найти это злосчастное место, или не удастся. У вас есть карта местности. Особняк находится за пределами старого леса на окраине. Пешком идти далековато. Нужна машина. Кира предлагает взять напрокат, помощник по имени Святослав предлагает угнать. Они не могут договориться между собой и предлагают вам решить этот вопрос.",
-	"buttonsTexts":["Напрокат","Угон",""],
+	You all got to San Antonio International Airport, looked at the map and realized that the house is located in the ghetto area. You need a car. Jessica suggests renting it, the assistant Jake proposes to steal it. They can't agree with each other and ask you to resolve this issue.",
+	"buttonsTexts":["Rent","Steal",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[109,63,-1]
 	},
 	{
 	"title":"63",
 	"description":"
-	Спустя каких-то полчаса вы мчитесь на огромной скорости на серебристом роллс-ройсе. Доехав до леса, вы бросаете машину у обочины и идете пешком.  Тесно расположенные сосны едва пропускают солнечный свет. У вас есть карта, но это не слишком облегчает поиски. Здесь достаточно канав, трясин и мерзких насекомых. Уже через два часа исследования закоулков лесной цивилизации вы и ваши спутники устали настолько, что готовы были прилечь прямо посреди дороги. Начинает казаться, что найти особняк можно только со встроенным в мозги навигатором. Спустя еще час перед вами оказалась развилка.",
-	"buttonsTexts":["Налево","Направо",""],
+	You stole a silver Rolls-Royce, drove to the ghetto and left the car two blocks from the bad neighborhood. You decided to walk to the house from here. Suddenly, according to the map app, it's not clear which way to go. Left or right?",
+	"buttonsTexts":["Left","Right",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[110,93,-1]
 	},
 	{
 	"title":"64",
 	"description":"
-	Вы идете дальше. Всего лишь полчаса, и вы стоите у кирпичного строения в готическом стиле. Отсутствие забора позволяет беспрепятственно подойти к двери и проверить, тот ли это особняк. Да, это он, убеждаетесь вы, когда видите печать на замке. Печать в форме рулетки. Видимо, хозяин этого дома азартен. По расчетам, сегодня его здесь быть не должно. В эти выходные он развлекается на охоте. Вы толкаете дверь, и она оказалась незапертой.",
-	"buttonsTexts":["Входите, пожалуйста","",""],
+	You went further and reached the Gothic style brick building in 30 minutes. You went to the door to check whether it's the house you're looking for. Yes, this is it! You are convinced when you see the roulette seal on the lock. Apparently, the house owner is a gambler. Today he shouldn't be here. This weekend he supposed to have fun on the hunt. You pushed the door. The door was open.",
+	"buttonsTexts":["Get inside","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[65,-1,-1]
 	},
 	{
 	"title":"65",
 	"description":"
-	Входная комната тоже оказалась оформлена в готическом стиле. Стены покрыты искусственным камнем и украшены гобеленами, потолок украшает кованая люстра, пол покрыт тяжелым ковром. Витражные окна, украшенные розой ветров, выходят на кладбище. Не хватает только домашнего призрака, думаете вы. Пока Кира и Святослав оглядывают это помещение, вы поднимаетесь наверх по крутой винтовой лестнице. Второй этаж явно оформлял другой дизайнер: везде золото, драгоценные камни, дорогие ковры. Перед вами две комнаты: прямо и справа. В какую войдете?",
-	"buttonsTexts":["Прямо","Справа",""],
+	You enter the hall decorated in a Gothic style. While Jessica and Jake are looking around, you climb up the spiral stairs. Clearly, the second floor was designed by another designer. You see a lot of gold, stones, and expensive carpets. There are two rooms. Which one will you open first?",
+	"buttonsTexts":["In fron of you","To the right",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[66,114,-1]
 	},
 	{
 	"title":"66",
 	"description":"
-	Вы оказываетесь в ванной комнате. Тут, очевидно, поработал третий дизайнер. Такому обилию розового цвета позавидует даже Барби. Розовые шкафчики, розовый пол, розовый потолок и черная занавеска. Удивившись такому странному оформлению, вы отодвигаете ее и чуть не выпускаете наружу весь свой завтрак. В ванне лежит молодой мужчина с зажатым в руке пистолетом. Вместо воды кровь. Вы искали совершенно не это. В другой руке вы замечаете клочок бумаги. Это, должно быть, предсмертная записка, думаете вы. Любой благовоспитанный самоубийца прежде, чем отойти в мир иной, должен оставить сообщение. Что-то вроде «Я никого не виню в своей смерти», или «Похороните меня в аквариуме», или «Все мои деньги и документы находятся в сейфе, код прилагается». Но нет. К вашему недоразумению, это оказалась фотография. На ней трое молодых парней. У одного в руках футбольный мяч, другой во вратарских перчатках, а третий – вы.",
-	"buttonsTexts":["Далее","",""],
+	It's a bathroom. The room is designed in a completely different way. Pink floor, pink ceiling, and black curtain. Surprised by the strange design, you push the curtain back and almost throw up your breakfast. There is a dead man with a gun in his hand. You're shocked. You notice a piece of paper in the left hand. It must be a suicide note, you think. But it's not. It was a photo of three young guys. One gentleman has a soccer ball in his hand, the other guy with the goalkeeper's gloves and the third person is you.",
+	"buttonsTexts":["Next","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[67,-1,-1]
 	},
 	{
 	"title":"67",
-	"description":"Вы уже внимательно вглядываетесь в человека, лишившего себя жизни. Подняв ему веки, вы чуть было не упали без сознания к нему в ванну. Это Арсений, ваш одноклассник. И у него ваша фотография. Почему? Кроме Арсения и вас на снимке есть Степан. Выше всех, сильнее, смелее, он был первым всегда и во всем. На вас нахлынули воспоминания. Вы вспоминаете, что не виделись уже пять лет. Из них два года не созванивались. По спине пробежал холодок: вдруг, и с ним что-то случилось. У вас есть его номер. Позвоните сейчас или отгоните эту нелепую мысль?",
-	"buttonsTexts":["Позвоню","Это нелепая мысль!",""],
+	"description":"OMG! You know this guy! This is Michael, your classmate. There is another classmate in the photo, Steven. You haven't seen each other for five years. You have Steven's phone number. Call him?",
+	"buttonsTexts":["Call Steven","Don't call him",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[68,116,-1]
 	},
 	{
 	"title":"68",
 	"description":"
-	Вы находите нужный номер и нажимаете на кнопку вызова. Пять секунд длинных гудков тянутся целую вечность. Вдруг раздается голос. \n Артур, это ты? Здорово! Давно не виделись. \n Привет. /Oтвечаете вы/ Давненько. Может, как-нибудь встретимся? \n Давай. Можно прямо сейчас. Ты в городе? \n Не совсем. Я в сибирской деревушке, /с ходу выпалили вы/. \n Вот как. Как же тебя туда занесло? \n Вы отвечаете, что приехали к другу, и сворачиваете разговор, договорившись встретиться этой осенью. Что-то в его голосе напрягло вас. Из приятельского он превратился в ледяной. Снизу доносится какой-то шум. Вы спуститесь или зайдете в другую комнату, соседнюю?",
-	"buttonsTexts":["Спущусь","Пойду в другую комнату",""],
+	You find the phone number and tap on the call button. Five seconds of long beeps and you hear his voice: \n'Joe, is that you? Great! Long time no see.' \n 'Hey! What's up man?' - you respond. - 'Let's meet sometime!' \n 'Let's do it now. Are you in town?' \n 'Nope. I'm actually in Austin, Texas.' - you said. \n 'Wow. Why are you in Austin now?' \n You answer that you came to visit a friend, and turn off the conversation. Something was wrong with his voice. You thought the voice was icy. A noise comes from the hall. Will you go down or go into another room next door?",
+	"buttonsTexts":["Go down","Another room",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[117,69,-1]
 	},
 	{
 	"title":"69",
 	"description":"
-	Другая комната оказалась спальней. В стиле минимализма. Белые стены, белый потолок, белый пол. У окна белая кровать с красным балдахином. В противоположную от нее стену встроен шкаф.",
-	"buttonsTexts":["Пойду к кровати, хоть отдохну","Пойду к шкафу, может, что найду",""],
+	The other room was a bedroom designed with minimalism. White walls, white ceiling, white floor. There is a white bed at the window. There's also a built-in closet.",
+	"buttonsTexts":["Rest on the bed","Check the closet",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[118,70,-1]
 	},
 	{
 	"title":"70",
 	"description":"
-	Вы подходите к шкафу. По крайней мере, вы надеетесь, что это шкаф, а не кладбище ваших бывших одноклассников. Перед вами две дверцы с изображениями девушек. На левой брюнетка в белом костюме, на правой блондинка в черном костюме. Выбор, как всегда, за вами.",
-	"buttonsTexts":["Брюнетка","Блондинка",""],
+	You come to the closet with two doors. There are two fashion model photos on the doors. On the left is a brunette in a white suit, on the right is a blonde in a black suit. Your choice?",
+	"buttonsTexts":["Brunette","Blonde",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[71,73,-1]
 	},
 	{
 	"title":"71",
 	"description":"
-	Вы открываете дверцу с изображением брюнетки. Внутри пять полок. На верхней одежда, на нижней книги, а на средних оружие. Винтовки, гранаты, пистолеты, ножи. Даже газовые баллончики. Засунув один себе за пазуху, вы перебираете книги. Стивен Кинг, Артур Конан-Дойл, Агата Кристи, Альфред Хичкок (собранные им рассказы американских писателей), и еще много других. Есть даже книга, вышедшая из-под пера Макса Фрая. Вы вспоминаете, что раньше любили гадать по книгам. Может, погадаем?",
-	"buttonsTexts":["Конечно","Я не верю в подобную чушь, идем дальше",""],
+	You open the door with a brunette. There are some clothes on the top shelves, some books on the bottom shelves and a lot of weapons in the middle like rifles, grenades, pistols, knives, even gas cartridges. Taking one of the gas cartridges, you go through books. You remember that you used books in divination. Do you want to try predicting the future with books again?",
+	"buttonsTexts":["Let's do it!","I don't belive in this",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[72,121,-1]
 	},
 	{
 	"title":"72",
 	"description":"
-	Вы открываете книгу наугад. Вот ваше предсказание: «Все уже так хреново, что хуже быть не может. Следовательно, может быть только лучше. Логично?» Логично. Но что-то вам подсказывает, что хуже быть все-таки может. И довольно скоро вы в этом убедитесь. А пока можно продолжать исследования. Заглянете за другую дверцу, пойдете к кровати или спуститесь вниз?",
-	"buttonsTexts":["А что за другой дверцой?","Кровать!","Вниз"],
+	You open the book on the random page. Here's your prediction: 'Everything's bad. It can't get worse. So it can only get better. Does it make sense?' Yes, it does. But something tells you that it can get much worse. In the meantime, you could continue exploring the room. Will you look behind the other door, explore the bed or go downstairs?",
+	"buttonsTexts":["The other door","Bed!","Downstairs"],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[73,118,74]
 	},
 	{
 	"title":"73",
 	"description":"
-	А за блондинкой в черном оказалось зеркало в красной оправе. Конечно, оно здесь не просто так, думаете вы. Это либо потайной ход, либо потайной шкаф. В любом случае, это что-то потайное. Вы дергаете зеркало на себя. Из открывшейся ниши посыпались куклы. Вы взяли в руки первую попавшуюся. Это оказалась кукла в светло-голубом платье, белыми волосами и глазами, наводящими дикий ужас. Эдакая невеста Чаки. Из-под кукольного платья выпала маленькая фотография. Без сомнения, вы уже видели девушку с этого фото. Вы приехали сюда вместе с ней. Звонит ваш мобильный. Кира спрашивает, куда вы пропали? Вы говорите, что уже идете, и спускаетесь вниз.",
-	"buttonsTexts":["Далее","",""],
+	You open the door with the blonde and see a mirror. It seems like it's a mirror with a secret. You pull the mirror and dolls fell from the opening area. You picked up the first one that came across. It was a doll in a light blue dress. You found a small photo under the doll's dress. No doubt, you've already seen the lady in the photo. Your phone is ringing. Jessica asks you to go down. You say you're going down in a minute.",
+	"buttonsTexts":["Next","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[74,-1,-1]
 	},
 	{
 	"title":"74",
 	"description":"
-	Внизу вас ожидает сюрприз. Вот правильно говорят: «Если тебе плохо, улыбнись. Завтра может быть еще хуже». Это завтра настало так неожиданно, что кажется, будто и не жил вовсе. В центре комнаты стоят четыре стула. К ним привязаны Кира, Святослав и незнакомая девушка. Вы не успеваете достать свой газовый баллончик, как оказываетесь на пустующем стуле. Вы вглядываетесь в лица товарищей по несчастью, но это ничего вам не дает. У всех одно и то же выражение. Ничего не понятно. Понятно лишь то, что теперь вы окончательно вляпались. Вдруг раздался голос: \n Я догадываюсь, что вам здесь нужно. Догадываюсь, чего вы боитесь. Но также я знаю, что один из присутствующих здесь людей водит за нос всех остальных. Я предлагаю восстановить справедливость. Вас четверо. Один из вас не тот, за кого себя выдает. Вычислите его и уйдете. Не с миром, но, хотя бы, живые. Теперь правила игры. Обратите внимание, что к вам прикреплены проводки. Это детектор лжи. Под каждым стулом есть закрытое отверстие. Если вы говорите неправду, то летите вниз, к голодным крысам. Надеюсь, все понятно. \n Игра под названием «Говори правду, или крысы жаждут твоей плоти» началась. Первый вопрос задает Кира. Он адресован вам. \n Ты нашел то, что искал наверху?",
-	"buttonsTexts":["Да","Нет",""],
+	Surprise! You see four chairs in the middle of the room. Jessica, Jake, and an unfamiliar woman are tied with ropes and attached to the chairs. In a second you find yourself attached to the empty chair. You look at the faces, nobody understands what's going on. Only one thing is clear, now you are in trouble. Suddenly you hear the voice: \n 'I know what you want here. I know what you are afraid of. And also I know that one of you is a liar. Let's play the game. Find a liar and I'll let you leave alive. The rules are simple. You can see the wires attached to your body. It's a lie detector. There is a closed hole under each chair. The hole remains closed when you say the truth. Otherwise, you fly down to hungry rats. I hope everything is clear.' \n The game has started. The first question is asked by Jessica. It is addressed to you. \n Did you find what you were looking for upstairs?",
+	"buttonsTexts":["Yep","Nope",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[122,75,-1]
 	},
 	{
 	"title":"75",
 	"description":"
-	Разумеется, вы отвечаете «нет». Теперь ваша очередь. Отвечать будет незнакомая девушка с черными волосами и довольно костлявой фигурой. У вас к ней только один вопрос.",
-	"buttonsTexts":["Знаете ли вы кого-то из присутствущих?","",""],
+	You say no. Now it's your turn. The unfamiliar girl will answer. You have only one question for her.",
+	"buttonsTexts":["Do you know anyone here?","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[76,-1,-1]
 	},
 	{
 	"title":"76",
 	"description":"
-	Девушка подняла голову и посмотрела на вас. У нее оказались очень красивые карие глаза. Даже не карие, а почти черные. Но очень теплые. Пока вы любуетесь ей, она отвечает на вопрос: \n Я знаю Киру. Знаю на протяжении всей жизни. \n Кира чуть дернулась. Похоже, ей не понравился ответ. Она покраснела. Либо от излишнего внимания, либо от злости. Далее последовали вопросы-ответы других членов партии «Найди виноватого». Из них вы уяснили, что официант уже подготовил все в поместье, Святослав расчистил туда дорогу, а Кира нашла то, что искала. Ничего вразумительного. \n Нет, так не пойдет, /вновь раздается голос/ вы прикрываете друг друга. Отвяжи его. /Приказывает он бандиту, стоящему неподалеку/. \n Пока вас отвязывали, голос дал четкие рекомендации. Вы должны прямо сейчас указать на предателя и спустить вниз. Иначе туда отправитесь вы. Другого выбора нет. Но вы уже почти на сто процентов уверены, кто это. Главное, не ошибиться. Итак, кто?",
-	"buttonsTexts":["Кира","Святослав",""],
+	She looked at you. She had very beautiful brown eyes. She answers the question: \n 'I know Jessica. I know her all my life.' \n Jessica twitched a little. It seems she didn't like the answer. She blushed. \n 'No, it won't work like that,' - you hear the voice again. - 'You cover each other! You have to find the liar.' The voice orders to untie you. \n While you were untied, the voice gave you clear recommendations. You must point out the liar right now. Otherwise, you will fall down into the hole. There is no other choice. But you are almost 100% sure who it is. It's important not to make a mistake. Who is the liar?",
+	"buttonsTexts":["Jessica","Jake",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[77,123,-1]
 	},
 	{
 	"title":"77",
 	"description":"
-	Вы указываете на Киру. Кажется, она не удивлена. Вы замечаете жестокую ухмылку на ее лице. Кто-то нажимает кнопку, и она летит вниз. В комнате воцарилось молчание. Наконец, голос опять заговорил: \n Что ж, обещания надо исполнять. Вы можете идти. Не советую оставаться и искать то, до чего вам никогда не добраться. \n Вас отвязали и выставили прочь. Вы добрались до ближайшего оврага и проспали в нем до рассвета. Сил не было даже на разговоры. Утром вы стали терзаться, правильный ли выбор сделали. Ведь вы даже не знаете, кто ваши спутники. Вы стали оглядываться и увидели их: Святослав (если это вообще его настоящее имя) ходит кругами и вглядывается в глубину леса. Девушка следует за ним как тень. Вы подходите и требуете рассказать, что здесь происходит, кто они, и что теперь делать.",
-    "buttonsTexts":["Далее","",""],
+	You point to Jessica. She's not surprised. You notice a cruel grin on her face. Someone presses the button, and she falls down. After a long pause, the voice spoke again: \n 'Promises must be fulfilled. Now you're free to go. I don't recommend you to stay longer and look for the truth.' \n You ran out of the house, got to the nearest ravine and slept there until dawn. In the morning you began to worry, whether you made the right choice. You began to look around and saw Jake walks in circles. The unfamiliar girl follows him like a shadow. You asked them what's happening here, who they really are, and what to do now.",
+    "buttonsTexts":["Next","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[78,-1,-1]
 	},
 	{
 	"title":"78",
 	"description":"
-	История оказалась проста, как грабли. Девушку зовут Карина. Они со Святославом сестра и брат. Кира тоже сестра, правда, сводная. Их отцы разные. Мать умерла двенадцать лет назад. Тогда Киру забрал ее родной отец. Они не знали, кем является бывший мамин муж, чем он занимается. Когда умер Аристарх, их отец, было распечатано завещание. \n «Дорогие мои, Карина и Святослав. Если вы читаете это, значит, меня уже нет на свете. Я всегда старался быть для вас хорошим отцом. Надеюсь, у меня это получилось. Теперь будьте и вы примерными детьми: срочно достаньте из моего сейфа все, уничтожьте без следов и уезжайте как можно дальше. Вы не должны пострадать из-за меня. С любовью, ваш папа». \n Но когда дети были примерными? Это утопия. Поэтому Карина и Святослав возомнили себя сыщиками. И пригласили Киру, что было огромной ошибкой. Только здесь, в этом доме, они все  поняли, узнав тот таинственный голос, голос отца Киры.",
-	"buttonsTexts":["Далее","",""],
+	The story was complecated. The girl's name is Sarah. Jake and Sarah are sister and brother. Jessica is a step-sister of Sarah. Sarah has a different father. Her mother died twelve years ago. Then Jessica was taken away by her own father. When their father Mason died, they got the will. \n 'Dear Sarah and Jake. If you read this, then I'm no longer alive. I always tried to be a good father. I would like to ask you a favor. Please remove and destroy everything from my safe as soon as possible, and leave as far as possible. You shouldn't suffer because of me. Love you, your dad.' \n But they didn't listen to him and decided to catch the killers. Inviting Jessica was a huge mistake. Only there, in this house, they recognized that mysterious voice, the voice of Jessica's father.",
+	"buttonsTexts":["Next","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[79,-1,-1]
 	},
 	{
 	"title":"79",
 	"description":"
-	Зачем он отпустил вас? Ответ прост: финал будет более захватывающим там, где и началась вся эта история. Скорее всего, преступники доберутся туда первыми. Опередить их практически нереально. Нужно для начала выбраться из леса.",
-	"buttonsTexts":["Поворачиваем","",""],
+	Why did he let you go? Did they challenge you to find the place where the whole story began? Most likely, the criminals will get there first. It's almost impossible to understand who they are. We need to get out of the forest first.",
+	"buttonsTexts":["Turn!","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[80,-1,-1]
 	},
 	{
 	"title":"80",
 	"description":"
-	Вы поворачиваете, идете по широкой удобной дороге. Становится все светлее, лес начинает редеть. Кажется, вы на верном пути.  Через час вы уже на трассе. Но ни одна проезжающая мимо машина не останавливается. Конечно, вы бы себя видели со стороны. Вдруг одна машина все же остановилась. Но едет немного не туда. Придется потом еще кого-то ловить. Вы поедете или нет?",
-	"buttonsTexts":["Конечно, поедем","Нет, я кое-что вспомнил!",""],
+	You turn left and go along a wide road. The day breaks. It seems you're on the right path. An hour later you reached the highway. You're trying to hitchhike, but the cars don't stop. Suddenly one car stopped. Are you going or not?",
+	"buttonsTexts":["Yes!","Hold on! I just remembered something!",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[124,81,-1]
 	},
 	{
 	"title":"81",
 	"description":"
-	Да, вы кое-что вспомнили. Записка из книги. В ней сказано, что если будут проблемы, звонить по такому-то телефону. За проблемами не заржавело, они тут как тут, можно звонить. Ответил некто по имени Глеб. Дослушав ваш сбивчивый рассказ об истории в целом и о данной ситуации в частности, он не задал ни единого вопроса и сказал, что уже летит. Примерно через полчаса над вами закружил вертолет. Вам спустили веревочную лестницу. Уже в кабине выясняются новые факты. Глеб приходится дядей вашим спутникам. Вы в очередной раз выслушиваете рассказ о родственниках своих новоиспеченных товарищей, о дяде, потерянном и вновь найденном, о фамильных ценностях и реликвиях и так далее. Как все оказывается просто. Осталось только добраться до поместья и сжечь все, что есть в этом дурацком сейфе.",
-	"buttonsTexts":["Далее","",""],
+	You just remembered something. A note from the book saying that if you ever have a problem, just call the phone number. So you did. Someone named Josh has answered your call. After hearing about your situation, he didn't ask a single question and said that he'll appear in a minute. Approximately in 30 minutes, you hear the helicopter. You got the rope ladder down. Already in the helicopter, you discovered some new facts. Josh is the uncle of Jake and Sarah.  Once again, you listen to the story about the relatives. Everything turns out to be really simple. All you need to do is to get to the father's house and burn everything in this stupid safe.",
+	"buttonsTexts":["Next","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[82,-1,-1]
 	},
 	{
 	"title":"82",
 	"description":"
-	Теперь вас четверо. Вы, Карина, Святослав и их дядя. Если это действительно их дядя, в чем вы уже сомневаетесь. Так уж все запутано в этой семейке. Вы добрались до Москвы, нашли поместье и увидели четыре припаркованные машины у входа. Вас опередили.  Воспользоваться можно тремя входами: главным, черным, по пожарной лестнице на третий этаж. Каким воспользуетесь?",
-	"buttonsTexts":["Конечно, главным","Только черным","По лесенке"],
+	Now you have a gang of four: you, Sarah, Jake and uncle Josh. You have some doubts that he's a real uncle though. Everything is confusing in this family. You got to San Diego, found the house and noticed four parked cars at the entrance. Someone else got ahead of you! You have three options to enter the building: the main entrance, the back entrance and the fire escape to the third floor. Your choice?",
+	"buttonsTexts":["The main entrance","The back entrance","The fire escape"],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[125,126,83]
 	},
 	{
 	"title":"83",
 	"description":"
-	Да, мы легких путей не ищем. Пока вы карабкаетесь, замечаете странную вещь: газоны ухожены, ограда выглядит так, будто ее только покрасили. Кто это мог сделать? Но вам сейчас не до этого. Вы забрались на второй этаж. Лестница привела в коридор. Ничего необычного вы не замечаете. Полосатые обои, вдоль стен – цветы, на полу ковер. Сейф находится на третьем этаже, в левом крыле, в кабинете. Ваши спутники на всякий случай предлагают разделиться. С кем пойдете?",
-	"buttonsTexts":["Карина","Святослав","Дядя"],
+	You got to the second floor. The ladder led to the corridor. You see nothing unusual. You decided to split into groups. With whom do you want to be in the same group?",
+	"buttonsTexts":["Sarah","Jake","Uncle"],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[127,128,84]
 	},
 	{
 	"title":"84",
 	"description":"
-	Ну, правильно, дядя же мудрее. И опытнее. Вдруг его навыки морского пехотинца вам пригодятся. Вы вместе проходите по этажу и поднимаетесь наверх. Осталось найти ту комнату. Но долго искать не приходится: перед вами внезапно возникли пятеро здоровых ребят. Они вас проводят.",
-	"buttonsTexts":["Далее","",""],
+	Right choice! The uncle should be wiser and seems to be more experienced. You got upstairs. You're looking for the room. Suddenly you saw five strong men. They looked very dangerous. 'We know the way!' - one of them said.",
+	"buttonsTexts":["Next","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[85,-1,-1]
 	},
 	{
 	"title":"85",
 	"description":"
-	Вот вы и попали в таинственную комнату, на место встречи, которое нельзя было изменить. Вас подвели к письменному столу. За ним сидит седовласый старик. Позади вас стоит двое ребят, из провожатых. У выхода еще трое. А где дядя? Видимо, дядю проводили в другое место. \n Ну что, пришел. Не побоялся. /Ухмыльнулся старик/ Знаешь хоть, во что ввязался?",
-	"buttonsTexts":["Кто вы такой?","",""],
+	You got to the room. A gray-haired old man is sitting behind the table. There are two bodyguards behind you and three more at the exit. And where's the uncle? You can't see him. \n 'That's interesting. You're not even afraid.' - the old man said. - 'Do you know what you got into?'",
+	"buttonsTexts":["Who are you?","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[86,-1,-1]
 	},
