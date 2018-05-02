@@ -731,13 +731,13 @@
 	You chose the left card. This is a peak lady. In horror, Jessica looked at the old man. A smile played on his face.\n\n 'Oh, I'm sorry for you. I thought you'd stay. Sorry, but the game is over for you. Now you'll go to your mother. Say hi to her. Buy.'\n\nThe bodyguard takes a gun and shoots a bullet.",
 	"buttonsTexts":["Next","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
-	"goIndexes":[91,-1,-1]
+	"goIndexes":[92,-1,-1]
 	},
 	{
 	"title":"91",
 	"description":"
-	Вы сидите за праздничным столом, поедаете уже пятую куриную ножку и ждете десерт. На десерт обещали торт-мороженое. После утомительного футбольного матча хочется наесться до отвала, чтобы восполнить запасы энергии. Рядом с вами болтают девушки. Стоящие поодаль мужчины смеются над девчушкой лет пяти. Она пытается поймать рыжего кота, укравшего у нее кусок пирога. На противоположном конце стола сидит седовласый старик с пронзительными голубыми глазами и любуется происходящим. \n Дедушка, я его поймала, поймала! /Прибегает к нему девчушка и тащит за собой кота/ Деда, что с тобой? \n Старик из последних сил улыбнулся внучке, смахнул с морщинистой щеки слезу, и его ясные глаза закрылись. Навсегда.",
-	"buttonsTexts":["Тремя днями ранее","",""],
+	You are sitting at the table and waiting for the dessert. For the dessert, they promised an ice cream cake. Girls are chatting next to you. On the opposite end of the table sat a gray-haired old man with piercing blue eyes and admires what is happening. The old man smiled at his granddaughter with the last of his strength, brushed a tear from his wrinkled cheek, and his clear eyes closed. Forever.",
+	"buttonsTexts":["Three days earlier","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[92,-1,-1]
 	},
@@ -1043,7 +1043,7 @@
 	Вы указываете на левый пистолет. Старик улыбнулся. \n Ну, вперед. /Махнул он рукой палачу/ \n Тот берет пистолет, взводит курок и стреляет.",
 	"buttonsTexts":["Далее","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
-	"goIndexes":[91,-1,-1]
+	"goIndexes":[92,-1,-1]
 	},
 	{
 	"title":"130",
@@ -1051,7 +1051,7 @@
 	Вы выбираете карту и переворачиваете ее. Это оказался туз. Старик усмехнулся. \n Повезло тебе. Своей удачей ты доказала, что имеешь право на наследство. /Обратился он к Кире. Тут же он дал команду палачу/ \n А от остальных нужно избавиться, действуй. \n Тот выхватил пистолет, и мгновенно раздался громкий выстрел.",
 	"buttonsTexts":["Далее","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
-	"goIndexes":[91,-1,-1]
+	"goIndexes":[92,-1,-1]
 	}
   ]
 }
