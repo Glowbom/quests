@@ -696,40 +696,40 @@
 	{
 	"title":"86",
 	"description":"
-	Я-то? Я старый друг Аристарха. Мы с ним условились, что когда он отойдет в мир иной, я буду за его детками приглядывать. И за домом. Разве ты не заметил ухоженного газона, свежевыкрашенного забора? Ладно, ты, я вижу, неглупый. Дам тебе шанс уйти отсюда живым. Насчет невредимого, это уж как получится. Заводи. /Махнул он рукой одному из своих шкафоподобных мрачных охранников/ \n Через минуту перед вами стояла целая делегация: Карина, Святослав, дядя, Кира, официант из китайского ресторана, какой-то неизвестный мужик, еще один неизвестный мужик в погонах и тот, кого вы меньше всего ожидали здесь увидеть: ваш одноклассник. С той фотографии. Нет, не тот, который в ванне мертвый лежал, другой. \n Видишь, сколько наследников? Вот никак не могу выбрать, кому же достанется все состояние. Уж слишком их много, ты не считаешь? Я вот думаю, что нужно оставить самых везучих. И ты мне в этом поможешь.",
-	"buttonsTexts":["Далее","",""],
+	'Me? I'm an old friend of Mason. We agreed with him that when he dies, I'll look after the children and the house. Did you notice a freshly painted fence? Okay,  I see you are a smart guy. I'll give you a chance to leave alive.'\n\n A minute later you saw a whole delegation in front of you: Sarah, Jake, Uncle, Jessica, a waiter from the Chinese restaurant, someone unknown, a navy man and your classmate from that photo. \n\n 'Do you see how many candidates for the inheritance? I just can't choose who will get it. I think we need to distribute wealth among the luckiest. And you are going to help me in that.'",
+	"buttonsTexts":["Next","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[87,-1,-1]
 	},
 	{
 	"title":"87",
 	"description":"
-	Первой на удачливость решено проверить Карину. Перед вами выложили два пистолета. Один заряжен боевыми патронами, а другой холостыми. Вам нужно выбрать, из какого будет застрелена эта милая девушка. Или не застрелена. Зависит от вашей интуиции. Вперед.",
-	"buttonsTexts":["Левый","Правый",""],
+	Let's check Sarah first if she's lucky or not. There are two guns in front of you. One gun is loaded, the other one is blank. Her life, your choice. Go ahead!",
+	"buttonsTexts":["Left","Right",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[129,88,-1]
 	},
 	{
 	"title":"88",
 	"description":"
-	Человек в маске взял правый пистолет, поднес к виску Карины и нажал на курок. Отсутствие крови, криков и лежащего на полу тела показывает, что вы угадали. Пистолет оказался холостым. Повезло. Следующий Святослав. Пистолеты убрали. Достали две ампулы. В одной обычные витамины, в другой быстродействующий яд. Вы знаете, что делать.",
-	"buttonsTexts":["Левая","Правая",""],
+	A bodyguard took the right gun and pulled the trigger. It was blank. She's lucky. Jake is the next. Now you've gotta choose between two pills. One pill is a vitamin and another is poison. You know what to do.",
+	"buttonsTexts":["Left","Right",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[89,89,-1]
 	},
 	{
 	"title":"89",
 	"description":"
-	Тот же человек набирает в шприц содержимое указанной вами ампулы и впрыскивает его в Святослава. Лицо Святослава из бледного превратилось в розовое, взгляд стал чище, и он перестал чихать. Витамины действуют. Что ж, вы опять угадали. Следующая на очереди Кира. Теперь перед вами лежат две игральные карты рубашкой вверх. Из них одна пиковая дама, другая пиковый туз. Какая карта окажется смертельной?",
-	"buttonsTexts":["Правая карта","Левая карта",""],
+	Jakes takes the pill. His face turned pink. The vitamins seem to be working well. Jessica is the next. You have to choose between two face-down cards a peak lady or a peak ace. What card do you choose?",
+	"buttonsTexts":["Right card","Left card",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[130,90,-1]
 	},
 	{
 	"title":"90",
 	"description":"
-	Вы выбираете левую карту. Это дама. Кира в ужасе посмотрела на старика. На его лице заиграла улыбка. \n Эх, жалко мне тебя, дочка. А я-то думал, ты останешься. Прости, но игра есть игра. Ты исполнила свое предназначение и помогла мне. Теперь ты отправишься к своей маме. Передавай ей привет. Давай. /Махнул он рукой палачу/ \n Мужчина достает из-за пазухи пистолет, разворачивается и пускает пулю.",
-	"buttonsTexts":["Далее","",""],
+	You chose the left card. This is a peak lady. In horror, Jessica looked at the old man. A smile played on his face.\n\n 'Oh, I'm sorry for you. I thought you'd stay. Sorry, but the game is over for you. Now you'll go to your mother. Say hi to her. Buy.'\n\nThe bodyguard takes a gun and shoots a bullet.",
+	"buttonsTexts":["Next","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[91,-1,-1]
 	},
