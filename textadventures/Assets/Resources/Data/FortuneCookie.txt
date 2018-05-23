@@ -728,7 +728,7 @@
 	{
 	"title":"90",
 	"description":"
-	You chose the left card. This is a peak lady. In horror, Jessica looked at the old man. A smile played on his face.\n\n 'Oh, I'm sorry for you. I thought you'd stay. Sorry, but the game is over for you. Now you'll go to your mother. Say hi to her. Buy.'\n\nThe bodyguard takes a gun and shoots a bullet.",
+	You chose the left card. This is a peak lady. In horror, Jessica looked at the old man. A smile played on his face.\n\n 'Oh, I'm sorry for you. I thought you'd stay. Sorry, but the game is over for you. Now you'll go to your mother. Say hi to her. Buy.'\n\nThe bodyguard grabs the gun and...",
 	"buttonsTexts":["Next","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[92,-1,-1]
@@ -744,312 +744,312 @@
 	{
 	"title":"92",
 	"description":"
-	Мужчина выхватил пистолет, развернулся и выстрелил в мерзко улыбающегося старика, сидящего за дубовым столом. Сорвав с себя маску, он обернулся лицом ко всем, стоящим в этой комнате. В возникшей гробовой тишине было слышно даже, как у девушек колотится сердце. \n Так и не обнимете своего старика, а? /Устало улыбнулся он/ \n Далее последовали объятия, слезы, крики, смех, еще какие-то странные звуки. А вы смирно стоите и ждете, пока вам кто-нибудь что-нибудь объяснит. Позже все стало ясно. Из уст Аристарха вы услышали рассказ о том, как он перешел дорогу отцу Киры, как тот стал угрожать жизни его детей и внучки, как он инсценировал гибель. Правда, не ожидал от детей такого азарта в поимке преступников. Они чуть было все не испортили. Да еще и вас втянули. И, конечно, не ожидал, что Иннокентий настолько тронулся головой, что готов был убить свою родную дочь. Хотя, ему бы это все равно не удалось. Аристарх незадолго до вашего появления в этом доме убрал с дороги личного палача безумца и поменял все боевые пистолеты и ампулы на холостые и безболезненные. \n Вы человек, который попал в эту историю совершенно случайно. /Сказал Аристарх/ Тем не менее, с достоинством дошли до ее конца. Я не знал, кто вы, и можно ли вам доверять. Теперь знаю, что можно. И в доказательство этому предоставляю вам код от своего сейфа. Тогда в спешке про него все забыли. Сейчас самое время вспомнить. Откройте его и принесите содержимое сюда. \n Вы поднимаетесь в дом, находите сейф и без труда открываете его. Внутри оказалась деревянная коробка с печеньем. Но не с обычным, а «судебным». И это сокровище, думаете вы. Старик явно лишился рассудка, если прятал именно это. Целый спектакль из-за хлебобулочного изделия! Печений оказалось ровно восемь. По одному на каждого гостя. Вы приносите его вниз. Старик кивает и просит раздать всем по штуке. Все посмотрели на него как на безумного, но сочли своим долгом промолчать. Не медлите, открывайте.",
-	"buttonsTexts":["И в чем же моя судьба?","",""],
+	The bodyguard grabbed the gun, turned around and fired at the ugly old man sitting at the table. Tearing off his mask, he turned around and looked at Jessica. \n\n 'Don't you want to hug your father, huh?' - He smiled tiredly.  \n\n In a few seconds, you saw hugs, tears, screams, laughter and some strange sounds. You're confused. Later everything became clear. Mason explained that he had a conflict with Jessica's father, and when he began to threaten the children, Mason staged the death. Mason didn't expect that the children will take the actions to catch the criminals. They almost spoiled everything by involving you. And, of course, Mason didn't expect Steven to be so crazy. Steven was ready to kill his own daughter. This is insane! Steven wouldn't be able to do that anyways. Right before you showed up, Mason got rid of Steven's personal bodyguard and discharged all the guns. \n\n 'You got involved in this story completely by accident.' - Mason said. - 'Despite the circumstances, you reached the end. I didn't know who you are and whether I can trust you or not. Now I know I can trust you. Let me give you the code from my safe. Please open it and bring what is inside.' \n\n You went upstairs, found the safe and opened it easily. Inside was a box of fortune cookies. The old man obviously lost his mind putting it in the safe. All of this happened because of cookies! That's crazy!\n\nThere were exactly eight cookies. One for each guest. You brought it down. The old man asks everyone to take the cookies. Everyone looked at him as if he was insane, but they didn't say a word. Let's try cookies!",
+	"buttonsTexts":["Next","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[94,-1,-1]
 	},
 	{
 	"title":"93",
 	"description":"
-	Правильно, налево ходить опасно. Тем более, правая дорога более широкая и удобная. Вскоре на вашем пути встретилась группа ребят лет четырнадцати. Они заблудились, и просят вас помочь найти выход. Вы можете показать им карту или сказать, что сами не знаете обратной дороги.",
-	"buttonsTexts":["Покажу карту","Не знаю дороги, ищите сами",""],
+	That's right! It looks dangerous to turn left. Moreover, the right road is wider and more convenient. Suddenly you see the group of kids of fourteen years old. They are lost and ask you to help them to find the way. Do you want to show them the map or to say that you don't know de wae?",
+	"buttonsTexts":["Show the map","I don't know de wae!",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[113,64,-1]
 	},
 	{
 	"title":"94",
 	"description":"
-	«Я вас поздравляю. Если вы читаете эту записку, значит, история подошла к концу. Вам, наверное, интересно, почему в сейфе оказалось только печенье. Почему столько усилий потрачено на то, чтобы прочитать маленькую записочку? \n А я вам отвечу: я старый, выживший из ума дед, которому не хватало в жизни приключений. Когда-то, лет двадцать назад, я похвастался лучшему другу своим несметным богатством. Которого у меня не было. Но, видимо, я был очень убедителен. Слухи о том, что я сплю на кровати из золота, а в моем сейфе лежит огромное состояние, разнеслись очень далеко. Я и не стал никого разубеждать. Но эта маленькая ложь вышла боком. Отец Киры, человек не самый приятный, вдруг решил, что я должен с ним поделиться. И очень яростно на этом настаивал. А делиться надо тем, чем ты богат. Я и поделился с ним своей ложью. Он гонялся за пустым мифом. Наверное, он был очень зол, когда зашифрованный ключ оказался неправильным, и сейф остался намертво закрыт». \n Дальше было написано что-то еще, но буквы оказались сильно расплывчатыми и невозможными для прочтения. Вы медленно подняли голову и увидели, что взоры всех присутствующих уставлены на Аристарха. \n Что? Теперь вам все ясно. А я, с вашего позволения, пойду приму ванну. Последние события несколько вывели меня из равновесия. \n Напевая песню, он вышел из комнаты. Все остальные, не проронив ни слова, последовали его примеру. Кроме Степана. Он стал объяснять вам, как они с Арсением умудрились ввязаться в такую историю. (Кстати, если вы не в курсе, кто такие Степан и Арсений, можете узнать это, пройдя игру по несколько другому пути). Вы еще долгое время пытались осознать то, что произошло, но потом решили поберечь свой рассудок. В конце концов, вы остались в живых и дошли до счастливого финала. Это главное.",
-	"buttonsTexts":["Эпилог","",""],
+	'Congratulations! This is the end of the story. You probably wonder why there were only cookies in the safe. \n And I'll tell you: I'm an old man, who is missing life adventure. Twenty years ago, I told to my best friend about the wealth I don't actually have. But, apparently, I was very conclusive. Jessica's father believed in the lie and suddenly decided that I should share the wealth with him. He was chasing the empty safe though. I think, he was very angry when he found the wrong key, and the safe remained tightly closed.' \n You saw that everyone was staring at Mason. The story didn't make sense to anyone in the room. \nYou looked very confused as well but then decided not to take it personally. At the end of the day, you survived and reached the happy ending. This is important.",
+	"buttonsTexts":["Epilogue","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[95,-1,-1]
 	},
 	{
-	"title":"Эпилог",
+	"title":"Epilogue",
 	"description":"
-	Старик прожил еще три дня и умер на празднике по случаю его «воскрешения». Кира сбежала из страны, а потом и с континента. Ее след потерялся где-то в Никарагуа. Кстати, вы уже наверное догадались, что в том поместье отец Иннокентий отправил ее не в подвал к крысам. Под ее стулом находилась вполне себе удобная комната, куда она и провалилась. Карина и Святослав после смерти Аристарха продали поместье и все его содержимое. Теперь они со своими семьями (да-да, оказалось, что у них есть свои семьи) живут в пригороде Гринвич. Дядя тоже вскоре покинул страну. Кстати, это именно он владелец книжной лавки «Fatum». Уезжая, он предложил вам возглавить ее. Дела там идут хорошо, нужно только следить за порядком. Вы с радостью согласились. \n Спустя два года вы перестали мучиться от ночных кошмаров, вздрагивать от каждого стука в дверь, и зажили нормальной жизнью. Вы стали успешным предпринимателем и примерным семьянином. \n Спустя шестьдесят лет вас не стало. Среди завещания и прочих многочисленных бумаг вашей семьей был обнаружен конверт с надписью: «Здесь находится секрет спокойной и счастливой жизни». Ваши родные открыли его в ожидании мудрых изречений и наставлений. Но внутри лежал лишь маленький листочек с одной единственной фразой: «Никогда не доверяйте подозрительным блондинкам».",
-	"buttonsTexts":["Конец","",""],
+	Mason lived three more days and died from heart attack. Jessica left America for Poland. By the way, you probably already guessed that Phillip didn't send her to the rats. Under her chair was a comfortable room, where she fell through. Sarah and Jake sold the house after Mason's death and moved to the UK. \n Two years later, you stopped suffering from nightmares and shuddering from every knock at the door. You have become a successful entrepreneur and an exemplary family man. \n You lived sixty more years. After your death, among the testament and other papers, your family found an envelope titled 'The secret of a calm and happy life'. Your family opened it expecting some wisdom but found a single phrase inside: 'Never trust people knocking your door at night'.",
+	"buttonsTexts":["The end","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[0,-1,-1]
 	},
 	{
 	"title":"96",
 	"description":"
-	Поддавшись накатившей панике, вы в спешке хватаете документы и мчитесь вниз. У входа действительно стоит вишневая девятка, как оказалось, без сигнализации. Вы садитесь и уезжаете. Бензина хватило, чтобы доехать до Москвы. \n Дома вы закрыли дверь на все возможные замки, отключили телефон. Осталось только окна заколотить. Но никто и не собирался к вам ломиться. \n Еще примерно три месяца вы вздрагивали от каждого стука. Со временем вы успокоились и зажили нормальной жизнью. Но так и не узнали, что за тайну скрывала та девушка. Значит, миссия не выполнена.",
-	"buttonsTexts":["К предисловию","",""],
+	You had a panic attack and went down. You saw a Lambo at the entrance. You sat down in the car and left. You had enough gasoline to get to San Diego. \n When you got home, you closed all the doors to all possible locks and turned off the phone. \n For about three months, you shuddered at every knock. Over time, you have calmed down and have begun to live a normal life. But you didn't find out what the mystery was hidden by that girl. So, the mission is not completed.",
+	"buttonsTexts":["Start over again","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[0,-1,-1]
 	},
 	{
 	"title":"97",
 	"description":"
-	Антикварный салон не пришлось долго искать. Он оказался гораздо ближе, чем вы думали, буквально в пятидесяти метрах от гостиницы. Приоткрыв дверь, вы зашли внутрь. Помещение небольшое, уютное и напоминает музей. Среди многочисленных предметов старины вас заинтересовала лампа, похожая на ту, что была в «Алладине»,  и шахматы. Чему уделите внимание?",
-	"buttonsTexts":["Лампе","Шахматам",""],
+	You found the antique boutique fast. Opening the door, you went inside. The room is small, cozy and looks like a museum. You are interested in the lamp, similar to the one you saw in the Aladdin movie. You also liked the chess. What do you pay attention to?",
+	"buttonsTexts":["Lamp","Chess",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[98,99,-1]
 	},
 	{
 	"title":"98",
 	"description":"
-	Вы потерли лампу, но чуда не произошло. Вместо джинна перед вами возник старичок. Видимо, владелец этого салона. Он интересуется, что вас сюда привело: чистое любопытство или что-то конкретное.",
-	"buttonsTexts":["Чистое любопытство","Что-то конкретное","Конкретное любопытство"],
+	You rubbed the lamp, but nothing happened. Instead of a genie, the owner of this salon appeared before you. He wondered what brought you here: pure curiosity or something specific.",
+	"buttonsTexts":["Curiosity","Something specific","Specific curiosity"],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[100,101,102]
 	},
 	{
 	"title":"99",
 	"description":"
-	Шахматы оказались сделаны из слоновой кости и бивней. Если бы не баснословная цена, вы бы с удовольствием приобрели их себе. Вдруг из коробки выпала записка: «Если встанет выбор между байцзю и змеями, выбирай байцзю». Пока непонятно, к чему это. Но на всякий случай запомните, вдруг пригодится. А пока у вас есть время, чтобы посетить еще и книжную лавку.",
-	"buttonsTexts":["В книжную лавку","",""],
+	Chess was made of ivory and tusks. You would buy it but the price is high. Suddenly, a note dropped out of the box: 'If there is a choice between Baijiu and snakes, choose Baijiu'. You didn't get what it is for. But just in case, remember that for the future. In the meantime, you have time to visit a bookshop as well.",
+	"buttonsTexts":["To bookshop","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[55,-1,-1]
 	},
 	{
 	"title":"100",
 	"description":"
-	Чистое любопытство. /Отвечаете вы/ \n Старик потерял к вам интерес и ушел назад. А вы еще немного походили по салону и затем отправились искать книжный магазин.",
-	"buttonsTexts":["Далее","",""],
+	'Pure curiosity.' - you said. \n The owner lost interest in you and walked away. And you walked around the boutique a little more and then went to look for a bookstore.",
+	"buttonsTexts":["Next","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[55,-1,-1]
 	},
 	{
 	"title":"101",
 	"description":"
-	Вы сказали, что ищете часы. Хозяин салона показал вам все часы, которые у него были. Надо заметить, что коллекция оказалась весьма богатая. Тут его отвлек телефонный звонок, и он ушел в соседнюю комнату. А вы остались рассматривать очень интересную модель: часы в форме свернутой в клубок змеи. Сейчас они не работали. Но рядом вы увидели надпись, которая гласила, что для завода часов нужно повернуть жало змеи. Сами решайте, что вас дернуло дотронуться до этого жала: любопытство или что-то еще, но это явно оказалась плохая идея. Как только вы коснулись жала, оно укололо вас. Теперь вы знаете, что змеи в часах тоже бывают ядовитые. Вы не узнаете, как яд попал туда. К сожалению, он подействовал моментально, и никто не успел вам помочь.",
-	"buttonsTexts":["К предисловию","",""],
+	You said that you are looking for a watch. The owner showed you all the watches he had. It should be noted that the collection was very rich. Then he got a phone call and went into the next room. You looked at a clock in the shape of a coiled snake. Clearly, they didn't work. However, you saw the note saying that you have to touch the snake's sting in order to make it work again. So you touched the sting. It was a bad idea. As soon as you touched the sting, it pierced you. Now you know that snakes in a clock are poisoned as well. Unfortunately, the poison worked quickly, and no one had time to help you.",
+	"buttonsTexts":["Start over again","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[0,-1,-1]
 	},
 	{
 	"title":"102",
 	"description":"
-	Вы отвечаете, что вас привело конкретное любопытство. Старик улыбается и говорит, что знает, что вам нужно. Затем берет в стеллаже какую-то книгу, протягивает ее вам и уходит. Вы смотрите на обложку. На ней ровным счетом ничего нет: ни надписи, ни картинки. Внутри пустые страницы. И зачем вам это? Вдруг вы заметили надпись, в уголке последнего листа. К вашему изумлению, она содержала адрес книжной лавки, которую вы хотели найти, и наименование книги, «Бойцовский клуб». Выйдя из салона, вы нашли этот магазин. Адрес оказался правильным. А среди огромного разнообразия книг вы выбрали «Бойцовский клуб» Чака Паланика.",
-	"buttonsTexts":["Далее","",""],
+	You're saying that you have a specific curiosity. The owner smiles and says that he knows what you need. Then he takes a book on the shelf, gives it to you and leaves. You look at the cover. There is absolutely nothing. Inside are blank pages. Why do you need this? Suddenly you noticed the note at the corner of the last page. It contained the address of the bookshop you wanted to find, and the name of the book 'Fight Club'. After leaving the boutique, you found this bookshop. The address was correct. And you also found 'Fight Club' book quickly.",
+	"buttonsTexts":["Next","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[56,-1,-1]
 	},
 	{
 	"title":"103",
 	"description":"
-	Вы хотели взять «Кэрри», но книга оказалась вся в отметинах и зачеркиваниях. Вам перехотелось ее читать, и вы остановили свой выбор на «Бойцовском клубе».",
-	"buttonsTexts":["Далее","",""],
+	You wanted to take 'Carrie', but the book was all in marks and strikethroughs. You have lost the desire to read it, and you have chosen the Fight Club.",
+	"buttonsTexts":["Next","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[56,-1,-1]
 	},
 	{
 	"title":"104",
 	"description":"
-	Вы сели в машину первого же откликнувшегося водителя. И через пять минут поняли, что зря. Вы мчались на такой огромной скорости, что вас впечатало в кресло. Осталось проехать буквально пару кварталов, но, видимо, попасть сегодня на встречу вам не судьба. Из-за угла резко выскочил грузовой автомобиль, столкновения избежать не удалось. То, что от вас осталось, отвезли на скорой в больницу. К сожалению, вы не сможете продолжить свой путь, даже если выкарабкаетесь. Соберитесь с силами и постарайтесь больше не ошибаться.",
-	"buttonsTexts":["К предисловию","",""],
+	Hitchhiking for a little bit, you got into a car with a random driver. And five minutes later you realized that it was a bad idea. The driver was going twice the speed limit and crashed the car into the wall. The ambulance wasn't able to help you. Unfortunately, you won't be able to continue the journey. Please try not to make these mistakes next time.",
+	"buttonsTexts":["Start over again","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[0,-1,-1]
 	},
 	{
 	"title":"105",
 	"description":"
-	Вы заказываете утку. На ваше счастье (или несчастье) принесли ее очень быстро. Блюдо выглядело так аппетитно, что вы достаточно быстро с ним расправились. И почувствовали что-то неладное. Пришлось сидеть в уборной до тех пор, пока ваш желудок не успокоился. Когда вы вернулись в зал, увидели за своим столиком Киру и какого-то парня. Вы извинились за свое долгое отсутствие и присоединились к изучению досье, которое лежало на столике.",
-	"buttonsTexts":["Какое досье?","",""],
+	You order duck. The dish looked so appetizing, so you ate it quickly. Unfortunately, something was wrong with the dish. You had to go to the restroom until your stomach calmed down. When you came back, you saw Jessica and a guy that you never saw before. You apologized for the long absence and joined the dossier reading.",
+	"buttonsTexts":["The dossier?","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[61,-1,-1]
 	},
 	{
 	"title":"106",
 	"description":"
-	Извините, но сейчас с черепахами очень сложно. Недавно у нас был скандал, в черепаховом супе нашли бычий хвост. Поэтому временно мы это блюдо не готовим. Пожалуйста, выберите что-нибудь другое.",
-	"buttonsTexts":["Утку","Жареный рис",""],
+	Sorry, but we're out of the turtles right now. Please choose something else.",
+	"buttonsTexts":["Duck","Fried rice",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[105,58,-1]
 	},
 	{
 	"title":"107",
 	"description":"
-	Настойка на змеях? Вы уверены? Что ж, право выбора за вами. Через пятнадцать минут официант принес вам сосуд с желто-бурой жидкостью, откупорил его и пожелал крепкого здоровья. Вы долго смотрели на напиток, прежде чем решиться его попробовать. И лучше бы вы этого не делали. Скорее всего, у вас непереносимость каких-либо составляющих его компонентов. С диагнозом «острое отравление» вы немедленно были доставлены в больницу, откуда выберетесь нескоро. Очень жаль, но тяга к экзотической кухне лишила вас возможности идти дальше. В следующий раз будьте осторожнее.",
-	"buttonsTexts":["К предисловию","",""],
+	Snakes vodka? Are you sure? Well... Fifteen minutes later the waiter brought you a bottle with some yellow-brown liquid. You looked at the drink for a long time before deciding to try it. And it would be better if you didn't do it. Most likely, you have an intolerance of one of the drink components. With the diagnosis of 'acute poisoning', you were immediately taken to the hospital, where you will stay for quite some time. We're sorry, but the craving for exotic alcohol has prevented you from getting ahead in the story. Next time be more careful.",
+	"buttonsTexts":["Start over again","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[0,-1,-1]
 	},
 	{
 	"title":"108",
 	"description":"
-	Кира протягивает вам брошюру. Внутри находится карта местности. Похоже, это какой-то лес. Пока ничего не понятно, поэтому взгляните на досье.",
-	"buttonsTexts":["Далее","",""],
+	Jessica gives you a brochure.  There is a map inside. It looks like some kind of forest. While nothing is clear, so take a look at the dossier.",
+	"buttonsTexts":["Next","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[61,-1,-1]
 	},
 	{
 	"title":"109",
 	"description":"
-	Вы решаете, что угон это слишком рискованно. Вы и так в приключениях по уши. Не хватало еще, чтобы помимо преступников, вас преследовали органы правопорядка. Выбрав машину, вы поехали к лесу, но по пути закончился бензин. А рядом оказался пустой автомобиль. Теперь выбор очевиден.",
-	"buttonsTexts":["Угон","",""],
+	You decide that stealing is too risky. Having chosen the car, you went to the forest but ran out of gas quickly. You see an empty car next to you. Now the choice is obvious.",
+	"buttonsTexts":["Steal","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[63,-1,-1]
 	},
 	{
 	"title":"110",
 	"description":"
-	Недолго думая, вы решили пойти налево. Но чем дальше вы шли, тем хуже становилась дорога, и тем хуже ее было видно. Вы решили разделиться. Может, кто найдет верный путь. Вы заходите в самую глушь. Дорога закончилась, идти становится все сложнее. Вдруг вы замечаете, что под деревом что-то блестит. Вы посмотрите, что это, или пойдете дальше?",
-	"buttonsTexts":["Посмотрю","Пойду дальше",""],
+	Without thinking twice, you decided to go left. But the further you went, the worse the road became, and it started to be dark. You decided to split up. Maybe someone will find the right way. The road is over, so it's getting harder to walk. Suddenly you notice that something is shining under the tree. Do you want to see what it is?",
+	"buttonsTexts":["Yes","No",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[111,112,-1]
 	},
 	{
 	"title":"111",
 	"description":"
-	Вы подходите к дереву и видите, что блестит стекло. Кажется, на нем что-то нацарапано. Внимательно приглядевшись, вы узнали карту местности. Той местности, где вы сейчас находитесь. На ней четко был указан нужный дом. Вы позвали своих спутников и уверенным шагом пошли к особняку.",
-	"buttonsTexts":["Далее","",""],
+	You're coming to the tree and see a piece of glass. It looks like something has been scrawled on it. Carefully looking closely, you see the map of the area where you are now. One particular house was clearly indicated on it. So you started walking towards the house.",
+	"buttonsTexts":["Next","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[64,-1,-1]
 	},
 	{ 
 	"title":"112",
 	"description":"
-	Вы идете еще дальше. Деревья становятся все теснее. Интуиция подсказывает, что вы зашли слишком далеко. И оказывается права. Не заметив опасности, вы проваливаетесь в трясину. Она засасывает вас все глубже и глубже. Вы можете кричать сколько влезет, но никто вас не услышит, а болото не отпустит свою добычу. В следующий раз доверьтесь своей интуиции.",
-	"buttonsTexts":["К предисловию","",""],
+	You go further. The trees are getting tighter. Intuition suggests you turning around. But you don't listen to your intuition. Not noticing the danger, you fall into a swamp. It sucks you deeper and deeper. Once the swamp sucks you in, it's almost impossible to get back out. Trust your intuition next time.",
+	"buttonsTexts":["Start over again","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[0,-1,-1]
 	},
 	{
 	"title":"113",
 	"description":"
-	Вы дали ребятам карту. Они долго ее рассматривали, попеременно о чем-то договариваясь между собой. Вы сказали, что вам уже пора идти. Они быстро переглянулись и убежали прочь. Вместе с картой. Схема была нарисована очень запутанно, но она хотя бы указывала направление. Теперь у вас и этого нет. На счастье, вы все же сумели найти обратную дорогу. Попытайтесь еще раз, но не повторяйте прежних ошибок.",
-	"buttonsTexts":["Хорошо","",""],
+	You gave these guys the map. They looked into it for a long time. You said that it's time to go. They quickly exchanged glances and ran away. Fortunately, you managed to find the way back. Unfortunately, you won't be able to continue the story because you don't know what to do next without these guys or the map. Try again, but don't repeat the same mistakes.",
+	"buttonsTexts":["Ok","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[63,-1,-1]
 	},
 	{ 
 	"title":"114",
 	"description":"
-	Комната оказалась спортзалом. Практически все свободное пространство занимают тренажеры. На стенах развешаны плакаты с изображениями знаменитых бодибилдеров. На столике возле окна расположены многочисленные награды: кубки, медали, почетные грамоты. Кажется, искать здесь нечего. Разве что, попробовать поднять штангу.",
-	"buttonsTexts":["Подниму-ка я штангу","Нет, лучше в другую комнату",""],
+	The room was a gym with the images of famous bodybuilders on the walls. There are numerous awards on the table like cups, medals, and diplomas. There is nothing to look for here except doing bench press.",
+	"buttonsTexts":["Bench press","Go to another room",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[115,66,-1]
 	},
 	{
 	"title":"115",
 	"description":"
-	Вы захотели вспомнить, что такое быть спортсменом. Но совершенно забыли, что уже очень давно не тренировались. Поэтому совершенно неудивительно, что еле подняв штангу, вы ее не удержали и уронили на себя. Теперь вы у нее в плену. Самостоятельно высвободиться вам не удается, и вы зовете на помощь. Которая пришла, откуда не ждали и повела вас вниз. Не тех вы на помощь звали, не тех.",
-	"buttonsTexts":["Далее","",""],
+	You decided to do bench press. You hadn't practiced for a very long time.  So you dropped the bar on yourself. You called for help. People that you never saw before appeared out of nowhere, helped you with the bar and led you downstairs.",
+	"buttonsTexts":["Next","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[74,-1,-1]
 	},
 	{
 	"title":"116",
 	"description":"
-	Вы отгоняете эту глупую идею и отправляетесь исследовать следующую комнату.",
-	"buttonsTexts":["Далее","",""],
+	You thought that this is a stupid idea and went to explore the next room.",
+	"buttonsTexts":["Next","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[69,-1,-1]
 	},
 	{
 	"title":"117",
 	"description":"
-	Вы уверены, что хотите спуститься и оказаться в гуще событий? А вы рисковый человек.",
-	"buttonsTexts":["Далее","",""],
+	Are you sure you want this? You're such a risky person.",
+	"buttonsTexts":["Next","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[74,-1,-1]
 	},
 	{
 	"title":"118",
 	"description":"
-	Вы решили, что устали, и пора передохнуть. А кровать с виду такая удобная. С какой стороны вы к ней подойдете?",
-	"buttonsTexts":["Слева","Справа",""],
+	It's time to rest. The bed looks so comfortable. On which side do you approach the bed?",
+	"buttonsTexts":["Left","Right",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[119,120,-1]
 	},
 	{
 	"title":"119",
 	"description":"
-	Вы пролежали на кровати примерно минут пятнадцать, и, кажется, вздремнули. Сил у вас значительно прибавилось, и теперь можно исследовать шкаф.",
-	"buttonsTexts":["Далее","",""],
+	You lay on the bed for about fifteen minutes. Now you can explore the closet.",
+	"buttonsTexts":["Next","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[70,-1,-1]
 	},
 	{
 	"title":"120",
     "description":"
-	Внезапно пол ускользает из-под ваших ног, и вы оказываетесь под землей. Под землей, где мрачно, сыро, жутко холодно, и бегают огромные голодные крысы. Кричать здесь бесполезно, никто вас не услышит. Пожалуй, вы сами догадываетесь, какой вам уготован конец.",
-	"buttonsTexts":["К предисловию","",""],
+	Suddenly, the floor slips out from under your feet, and you find yourself under the ground. It's gloomy, damp, terribly cold, and huge hungry rats run around. Screaming here is useless, no one will hear you. Please start over again.",
+	"buttonsTexts":["Start over again","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[0,-1,-1]
 	},
 	{
 	"title":"121",
 	"description":"
-	Правильно, зачем растрачиваться на пустые гадания. Вы и так знаете, что вас ждет: либо вам удастся обойти преступников и остаться в живых, либо никакое гадание вас уже не спасет, потому что мертвецам оно ни к чему. Звонит Кира. Она интересуется, когда вы спуститесь. Вы говорите, что уже спускаетесь.",
-	"buttonsTexts":["Далее","",""],
+	You decided to skip divination. Jessica calls you and asks when you're coming downstairs. You're saying that you are coming now.",
+	"buttonsTexts":["Next","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[74,-1,-1]
 	},
 	{
 	"title":"122",
 	"description":"
-	Вас в детстве не учили, что врать нехорошо? Мало того, что это нехорошо. Это еще и опасно. Вы ведь не нашли то, что искали. По сути, вы сами толком не знали, что ищете. За вранье последовало незамедлительное наказание. На этот раз вы сами виноваты.",
-	"buttonsTexts":["Далее","",""],
+	It's not good to lie. This is also dangerous. For lying, an immediate punishment followed.",
+	"buttonsTexts":["Next","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[120,-1,-1]
 	},
 	{
 	"title":"123",
 	"description":"
-	Вы указываете на Святослава. Палач нажимает кнопку, но ничего не происходит. Кажется, механизм дал сбой. Воспользовавшись сложившейся ситуацией, парень умудрился высвободиться. Незнакомка продемонстрировала чудеса владения пилочкой для ногтей и тоже выпуталась. А вы умудрились в это время достать из-за пазухи припасенный газовый баллончик. Каким-то чудом вам втроем удалось обезвредить преступников и бежать. Примерно через час вы наконец-то почувствовали себя почти в безопасности и решили передохнуть. Заодно Святослав рассказал вам всю правду.",
-	"buttonsTexts":["Далее","",""],
+	You point to Jake. The executioner presses the button, but nothing happens. It seems the mechanism failed. Taking advantage of the situation, Jake managed to free himself. The stranger lady also got out somehow. And you managed to get a gas cartridge from behind your bosom. By some miracle, the three of you managed to neutralize the criminals and run away. After about an hour you finally felt almost safe and decided to rest. At the same time, Jake told you the truth.",
+	"buttonsTexts":["Next","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[78,-1,-1]
 	},
 	{
 	"title":"124",
 	"description":"
-	Вы сели в машину и расслабились. Наконец можно чуть-чуть отдохнуть. По пути вы разговорились о случившемся и стали делиться дальнейшими планами. Вдруг движение прекратилось. Водитель обернулся и со словами: «Пусть грузовик вам будет пухом, ребятки» выстрелил каждому в голову. Приехали, что называется. Кто же знал, что человек за рулем окажется членом той банды, которую вы недавно обвели вокруг пальца. Очень грустно перед самым финалом попасться в такую ловушку.",
-	"buttonsTexts":["К предисловию","",""],
+	You got into the car and relaxed. Finally, you can rest for a little bit. On the way, you talked about what happened and began to share further plans. Suddenly, the car stopped. The driver turned and shot you in the head. It's very sad to get caught in such a trap before the end of the story.",
+	"buttonsTexts":["Start over again","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[0,-1,-1]
 	},
 	{
 	"title":"125",
 	"description":"
-	Совершенно забыв о безопасности, вы направляетесь к главному входу. На удивление, он оказался пуст. Поднявшись на второй этаж, вы решили разделиться. С кем пойдете?",
-	"buttonsTexts":["Карина","Святослав","Дядя"],
+	Completely forgetting about safety, you are headed to the main entrance. Opening to the second floor, you decided to split up. With whom will you go?",
+	"buttonsTexts":["Jessica","Jake","Uncle"],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[127,128,84]
 	},
 	{
 	"title":"126",
 	"description":"
-	Черным-черным ходом вы идете по черному-черному коридору. В этом черном-черном коридоре стоят черные-черные скульптуры. Одну черную-черную скульптуру вы случайно задеваете и роняете на черный-черный пол. Вскоре по этому черному-черному полу застучали черные-черные ботинки. Владельцы этих черных-черных ботинок устроили вам черную-черную пальбу. И теперь вы лежите в белой-белой одежде в цинковом гробу. Какая досада.",
-	"buttonsTexts":["К предисловию","",""],
+	You went to the dark corridor and saw a stranger who shot you in the head. What an annoyance.",
+	"buttonsTexts":["Start over again","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[0,-1,-1]
 	},
 	{
 	"title":"127",
 	"description":"
-	Вы захотели пойти с Кариной, но она, почему-то, побоялась с вами идти.",
-    "buttonsTexts":["Ладно, Святослав","Тогда дядя",""],
+	You wanted to go with Jessica, but she was afraid to go with you for some reason.",
+    "buttonsTexts":["Then Jake","Then Uncle",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[128,84,-1]
 	},
 	{
 	"title":"128",
 	"description":"
-	Это парень, конечно, смелый. Но больно активный. Вместо того, чтобы аккуратно разведать обстановку и выждать подходящий момент, он ринулся по всем комнатам. И вы следом, раз уж пошли вместе. Но скоро в вас победил инстинкт самосохранения, и вы стали искать дядю.",
-	"buttonsTexts":["Далее","",""],
+	Jake is brave and super energetic. He was running around and wanted to check all the rooms. And you tried to follow Jake but soon decided to look for your uncle instead.",
+	"buttonsTexts":["Next","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[84,-1,-1]
 	},
 	{
 	"title":"129",
 	"description":"
-	Вы указываете на левый пистолет. Старик улыбнулся. \n Ну, вперед. /Махнул он рукой палачу/ \n Тот берет пистолет, взводит курок и стреляет.",
-	"buttonsTexts":["Далее","",""],
+	You point to the left gun. The old man smiled. \n 'Well, go ahead.' - he said to the executioner. \n The executioner takes the gun and fires.",
+	"buttonsTexts":["Next","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[92,-1,-1]
 	},
 	{
 	"title":"130",
 	"description":"
-	Вы выбираете карту и переворачиваете ее. Это оказался туз. Старик усмехнулся. \n Повезло тебе. Своей удачей ты доказала, что имеешь право на наследство. /Обратился он к Кире. Тут же он дал команду палачу/ \n А от остальных нужно избавиться, действуй. \n Тот выхватил пистолет, и мгновенно раздался громкий выстрел.",
-	"buttonsTexts":["Далее","",""],
+	You selected a card and flipped it over. It turned out to be an ace. The old man started laughing. \n 'Lucky you. You proved that you have the right to inherit everything.' - he said to Jessica.\n 'And the rest of you should be dead.' \n The bodyguard grabbed the gun and...",
+	"buttonsTexts":["Next","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[92,-1,-1]
 	}
