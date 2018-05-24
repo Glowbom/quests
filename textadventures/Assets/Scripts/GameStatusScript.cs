@@ -171,7 +171,56 @@ private string gameId = "";
 		sprites.Clear();
 		Sprite sprite = Resources.Load("Textures/default", typeof(Sprite)) as Sprite;
 		sprites.Add("default", sprite);
+
+		string key = "sd1";
+		sprite = Resources.Load("Textures/" + key, typeof(Sprite)) as Sprite;
+		sprites.Add(key, sprite);
+
+		key = "sd2";
+		sprite = Resources.Load("Textures/" + key, typeof(Sprite)) as Sprite;
+		sprites.Add(key, sprite);
+
+		key = "sd3";
+		sprite = Resources.Load("Textures/" + key, typeof(Sprite)) as Sprite;
+		sprites.Add(key, sprite);
 		sprites.Add("IconPromotionPR", sprite);
+
+		key = "sf1";
+		sprite = Resources.Load("Textures/" + key, typeof(Sprite)) as Sprite;
+		sprites.Add(key, sprite);
+
+		key = "sf2";
+		sprite = Resources.Load("Textures/" + key, typeof(Sprite)) as Sprite;
+		sprites.Add(key, sprite);
+
+		key = "sf3";
+		sprite = Resources.Load("Textures/" + key, typeof(Sprite)) as Sprite;
+		sprites.Add(key, sprite);
+
+		key = "sf4";
+		sprite = Resources.Load("Textures/" + key, typeof(Sprite)) as Sprite;
+		sprites.Add(key, sprite);
+
+		key = "sa";
+		sprite = Resources.Load("Textures/" + key, typeof(Sprite)) as Sprite;
+		sprites.Add(key, sprite);
+
+
+		key = "end";
+		sprite = Resources.Load("Textures/" + key, typeof(Sprite)) as Sprite;
+		sprites.Add(key, sprite);
+
+		key = "afterend";
+		sprite = Resources.Load("Textures/" + key, typeof(Sprite)) as Sprite;
+		sprites.Add(key, sprite);
+
+		key = "deadend";
+		sprite = Resources.Load("Textures/" + key, typeof(Sprite)) as Sprite;
+		sprites.Add(key, sprite);
+
+		key = "ph";
+		sprite = Resources.Load("Textures/" + key, typeof(Sprite)) as Sprite;
+		sprites.Add(key, sprite);
 	}
 
 	public void aboutPressed() {

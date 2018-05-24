@@ -19,7 +19,7 @@
     "description":"
 	You see a woman. She looks harmless. You ask what brought her here. She says she's late for the train. There are no rooms in the hotel nearby. She asks if you can host her for a night. What will you do?",
     "buttonsTexts":["Agree to host","Refuse to get in",""],
-    "picturesSpriteNames":["IconPromotionPR","","","","","",""],
+    "picturesSpriteNames":["sd1","","","","","",""],
     "goIndexes":[2,3,-1]
     },
     {
@@ -27,7 +27,7 @@
     "description":"
 	You let her stay. She looks around like if she is looking for something. You're getting a phone call. While you are talking, she goes into the living room. For some reason, she started staring at the painting on the wall. You come to her and...",
 	"buttonsTexts":["Offer a cup of tea","Talk about the painting",""],
-	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
+	"picturesSpriteNames":["sd2","","","","","",""],
 	"goIndexes":[4,5,-1]
 	},
 	{
@@ -35,7 +35,7 @@
 	"description":"
 	You look at her and come to the conclusion that leaving a stranger in the house for the night is not a good idea. You say that you won't be able to host her because you leave in half an hour and will not return soon. The girl became sad. She asks you to let her use a phone.",
     "buttonsTexts":["Allow","Do not allow",""],
-    "picturesSpriteNames":["IconPromotionPR","","","","","",""],
+    "picturesSpriteNames":["sd2","","","","","",""],
     "goIndexes":[6,7,-1]
     },
     {
@@ -43,7 +43,7 @@
     "description":"
 	Her name is Jessica. You offer her a cup of tea. She lives in Phoenix and came to San Diego to visit friends. She looks at the painting again. You're curious why she's so interested. You hear a weird noise in the kitchen. You go there to understand what's going on.",
     "buttonsTexts":["Next","",""],
-    "picturesSpriteNames":["IconPromotionPR","","","","","",""],
+    "picturesSpriteNames":["ph","","","","","",""],
     "goIndexes":[8,-1,-1]
     },
     {
@@ -227,7 +227,7 @@
 	"description":"
 	You woke up in the hospital room. A nurse is sitting beside you. She saw that you opened your eyes. She asks your name. You wanted to say something, but the words got stuck in your throat. With horror, you realize that you don't remember your name. The nurse called the doctor, and you suddenly pay attention to the small table nearby. There are flowers on it, and there is a note saying 'Sorry. Jessica.' You try to remember who is Jessica, but amnesia does not allow you to do that. In this condition, you won't be able to find out the truth.",
 	"buttonsTexts":["Start over again","",""],
-	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
+	"picturesSpriteNames":["deadend","","","","","",""],
 	"goIndexes":[0,-1,-1]
 	},
 	{
@@ -235,7 +235,7 @@
 	"description":"
 	You decide that the woman will be ok, and run in order to catch the criminal. In a hurry, you didn't notice how you got on the busy highway. The truck driver didn't notice how you appeared in front of his car. Someone is calling an ambulance. But it won't help you anymore. And no one will help.",
 	"buttonsTexts":["Start over again","",""],
-	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
+	"picturesSpriteNames":["deadend","","","","","",""],
 	"goIndexes":[0,-1,-1]
 	},
 	{
@@ -243,7 +243,7 @@
 	"description":"
 	You looked at her broken head and decided to stay. You tried to call an ambulance but she didn't allow you to do that. But the wound requires some treatment and you don't have any medicine in the house. You said that you'll be back and went to the nearest pharmacy at the corner. Having bought the first aid medicine, you went back to the house. It seems that your help is no longer required. The trauma was fatal. She died. Unfortunately, you will never know the secret.",
     "buttonsTexts":["Start over again","",""],
-	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
+	"picturesSpriteNames":["deadend","","","","","",""],
 	"goIndexes":[0,-1,-1]
 	},
 	{
@@ -259,7 +259,7 @@
 	"description":"
 	You stay in bed. Despite the anxiety, you manage to fall asleep. You see a beautiful lady in your dream. She looks exactly like your guest. You talk about life and death. Suddenly she tells you that she had no other choice, and you will never wake up. You laugh thinking that she is joking. But soon the smile gives way to misunderstanding. The lady is trying to explain that you got involved in a kind of game, and she didn't want to hurt you. She was sent here to eliminate you. She waited until you left and poured poison into a cup of tea you drank before going to bed. Unfortunately, you will no longer be able to find out the truth. Saying goodbye, she leaves. And you will always remain dead.",
 	"buttonsTexts":["Start over again","",""],
-	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
+	"picturesSpriteNames":["deadend","","","","","",""],
 	"goIndexes":[0,-1,-1]
 	},
 	{
@@ -267,7 +267,7 @@
 	"description":"
 	You decided to ask what is going on and why she's talking to somebody about the gun. Suddenly you hear a phone buzz coming from her bag. You are surprised to see how she pulls him out and starts talking. If she had a phone in the bag, why she asked you to give her a phone to call? She talks for a long time. Unfortunately, you don't understand a word and you can't recognize the language she speaks. Apparently, something doesn't go well, she screams on the phone and leaves your house without saying goodbye. The door slammed behind her, and you'll never see her again. That's why you'll never know the end of the story.",
 	"buttonsTexts":["Start over again","",""],
-	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
+	"picturesSpriteNames":["deadend","","","","","",""],
 	"goIndexes":[0,-1,-1]
 	},
 	{
@@ -275,7 +275,7 @@
 	"description":"
 	You decided not to take risks and apologize. Everyone has secrets, right? The woman, accepting your apology, asks you for a glass of water. You go to the kitchen and come back with a glass of water. But there is nobody. She left. Well, great. With the hope of quietly spending the rest of the evening, you go to the hall and light up the fireplace. Suddenly you notice that the painting is gone. She stole it. But why? This question will remain unanswered. You are not going to report to the police since the value of the painting is close to zero. But now, you won't be able to know the end of the story.",
 	"buttonsTexts":["Start over again","",""],
-	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
+	"picturesSpriteNames":["deadend","","","","","",""],
 	"goIndexes":[0,-1,-1]
 	},
 	{
@@ -283,7 +283,7 @@
 	"description":"
 	You listen to a very long story mixed with tears and sobs. She said she started working with very dangerous people. And there is no way to get away from it. You feel sorry for her. But how can you help? Fight with the mafia? No, thank you. Suddenly the woman pulled a gun from the bag. You jumped back, but the gun isn't pointed at you. She pointed the gun at herself. 'Don't do it,' - you said. But it didn't work. She accidentally shot herself. The story has ended leaving fear, uncertainty, and doubts. You won't be able to find out the truth.",
 	"buttonsTexts":["Start over again","",""],
-	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
+	"picturesSpriteNames":["deadend","","","","","",""],
 	"goIndexes":[0,-1,-1]
 	},
 	{
@@ -299,7 +299,7 @@
 	"description":"
 	You answer the phone and hear Jessica's voice. She asks you to forget everything as a terrible dream and hangs up the phone. You definitely can forgive her but not forget. And you won't be able to complete this history.",
 	"buttonsTexts":["Start over again","",""],
-	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
+	"picturesSpriteNames":["deadend","","","","","",""],
 	"goIndexes":[0,-1,-1]
 	},
 	{
@@ -307,7 +307,7 @@
 	"description":"
 	It looks like the club is in the ghetto area. You still decided to go there in the evening. You drove to the club and see the security guard asking for the club card. So you show it and get inside. It's a huge room with the paintings on the walls and luxurious carpets on the floor. People are dressed up. Smooth jazz is playing. You're starting to catch a funny sweetish smell. A lady approaches you and invites you to dance. You agree. Dancing with a beautiful lady and listening to smooth jazz music, you forget about everything that happened today. In this condition, it is difficult to investigate something. So you have to start over again.",
 	"buttonsTexts":["Start over again","",""],
-	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
+	"picturesSpriteNames":["deadend","","","","","",""],
 	"goIndexes":[0,-1,-1]
 	},
 	{
@@ -315,7 +315,7 @@
 	"description":"
 	You woke up in a dark room. Not a soul is around. Trying to open the door, but it's locked from the outside. Suddenly you found the note written on a small piece of paper saying: 'You won't be able to leave the room until you tell us the truth. ' That's scary. You don't know the truth yet, so you have to start over again.",
 	"buttonsTexts":["Start over again","",""],
-	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
+	"picturesSpriteNames":["deadend","","","","","",""],
 	"goIndexes":[0,-1,-1]
 	},
 	{
@@ -323,7 +323,7 @@
 	"description":"
 	This is just the beginning. The plan is to meet Jessica's assistant in San Francisco. You'll drive from San Diego to San Franciso. What car to choose?",
 	"buttonsTexts":["Jessica's car","Your car",""],
-	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
+	"picturesSpriteNames":["sf1","","","","","",""],
 	"goIndexes":[46,47,-1]
 	},
 	{
@@ -331,7 +331,7 @@
 	"description":"
 	You tried to hit the opponent in the chin but failed to do that. He was faster than you. The last thing you saw was the cruel face of the criminal. Unfortunately, your story has come to an end. But you can start over again.",
 	"buttonsTexts":["Start over again","",""],
-	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
+	"picturesSpriteNames":["deadend","","","","","",""],
 	"goIndexes":[0,-1,-1]
 	},
 	{
@@ -339,7 +339,7 @@
 	"description":"
 	You choose the right place to hit, the solar plexus. The enemy fell. You wait when he gets up to continue the fight. But this does not happen. He doesn't move. You check his pulse. It seems you killed him. Suddenly you hear 'Police! Let me see your hands!'. It seems you've gotta explain what just happened to the police officers. But it's already a different story. So you have to start over again.",
 	"buttonsTexts":["Start over again","",""],
-	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
+	"picturesSpriteNames":["deadend","","","","","",""],
 	"goIndexes":[0,-1,-1]
 	},
 	{
@@ -347,7 +347,7 @@
 	"description":"
 	You decided not to interrupt her. The calm mind can't be bought, it has to be earned through meditation. In the morning you wanted to ask her about that but she left and took the opportunity to continue the game. Unfortunately, you have to start over again.",
 	"buttonsTexts":["Start over again","",""],
-	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
+	"picturesSpriteNames":["deadend","","","","","",""],
 	"goIndexes":[0,-1,-1]
 	},
 	{
@@ -355,7 +355,7 @@
 	"description":"
 	'What are you doing?' - you asked. 'What are you doing here? You've gotta respect my privacy. Next time, please knock first.' - she responded. Then she goes out of the house forgetting her shoes. You keep looking out at the city lights after she left. Yes, you won't forget it for a while. Unfortunately, you have to start over again.",
 	"buttonsTexts":["Start over again","",""],
-	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
+	"picturesSpriteNames":["deadend","","","","","",""],
 	"goIndexes":[0,-1,-1]
 	},
 	{
@@ -363,7 +363,7 @@
 	"description":"
 	You agreed to become a bodyguard. The woman clapped her hands and offered you to play hide-and-seek first. You are a little bit confused. Hide and seek?! It could be a good idea to hide somewhere in a cozy cafe sipping coffee and listening to smooth jazz. But no. She wanted you to look for her. You close your eyes and count to ten. When you open your eyes, you go to the kitchen to drink some coffee and start watching your favorite movie. Time flies... When the final credits came, you remember that you had to do something. Oh yes, hide and seek... You've gotta find the woman. Well, this dear lady must be asleep already. So you went to sleep. In the morning you didn't find her. Apparently, she left. Then somebody knocked at the door. It was the police. They were looking for the woman who came to you yesterday. You said that she came to play hide-and-seek. So she hid so well that you didn't see her again. The police left. There is no way to find out what the lady actually wanted from you. So you have to start over again.",
 	"buttonsTexts":["Start over again","",""],
-	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
+	"picturesSpriteNames":["deadend","","","","","",""],
 	"goIndexes":[0,-1,-1]
 	},
 	{
@@ -371,7 +371,7 @@
 	"description":"
 	You refused to help her. She said goodbye and left. A few days later, you saw a familiar face on TV. Yes! It was her. It means everything is Ok. But after a couple of minutes, your mood had changed dramatically. She was actually murdered. The rest of your life you felt guilty. Maybe you had to help her out somehow.",
 	"buttonsTexts":["Start over again","",""],
-	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
+	"picturesSpriteNames":["deadend","","","","","",""],
 	"goIndexes":[0,-1,-1]
 	},
 	{
@@ -379,7 +379,7 @@
 	"description":"
 	You drove to San Francisco for about seven hours. It's raining. You are going to the hotel. The lady at the reception said that there are no vacant rooms at the moment. Will you look for another hotel or try to ask again?",
 	"buttonsTexts":["Look for another hotel","Ask again",""],
-	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
+	"picturesSpriteNames":["sf2","","","","","",""],
 	"goIndexes":[48,49,-1]
 	},
 	{   
@@ -387,7 +387,7 @@
 	"description":"
 	You decided to drive your car. When you start the engine, the bomb had exploded. There are some dangerous people in the world. Be careful and listen to your intuition more often. Next time.",
 	"buttonsTexts":["Start over again","",""],
-	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
+	"picturesSpriteNames":["deadend","","","","","",""],
 	"goIndexes":[0,-1,-1]
 	},
 	{   
@@ -395,7 +395,7 @@
 	"description":"
 	You decided to find another hotel. But it's hard to do. There is a big software development conference in San Francisco, so all the hotels are booked. You called Jessica to tell her about it but nobody answered for about six hours. You didn't know where she is. Later you called the police. But you weren't able to find her. She was gone. Unfortunately, you can't continue without her, so you have to start over again.",
 	"buttonsTexts":["Start over again","",""],
-	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
+	"picturesSpriteNames":["sf3","","","","","",""],
 	"goIndexes":[0,-1,-1]
 	},
 	{   
@@ -427,7 +427,7 @@
 	"description":"
 	You ignored this message. In the morning, Jessica said you have to change the hotel, she found another option. In the evening you'll have a business meeting. In the meantime, you decided to walk around San Francisco and look for the bookstore called 'Alex Books'. You heard good things about the place and wanted to see for yourself.",
 	"buttonsTexts":["Next","",""],
-	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
+	"picturesSpriteNames":["sf4","","","","","",""],
 	"goIndexes":[55,-1,-1]
 	},
 	{
@@ -435,7 +435,7 @@
 	"description":"
 	You decided to tell Jessica about this mysterious note. As soon as you showed the note, she tore up the paper into little bits. She said that you shouldn't pay attention to this, and these criminals are trying to screw you. You went to your room and fell asleep. In the morning you discovered that Jessica has moved out. She didn't answer calls, and you didn't know where to look for her. You never saw her again. Your adventure ended in a hotel in the suburbs of San Francisco.",
     "buttonsTexts":["Start over again","",""],
-	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
+	"picturesSpriteNames":["sf1","","","","","",""],
 	"goIndexes":[0,-1,-1]
 	},
 	{
@@ -443,7 +443,7 @@
 	"description":"
 	You assume the lilies can solve all your problems with the hotel. The reception lady smiled. She agreed to give you two rooms for a day and a half. You agreed. The meeting is scheduled for 7pm. So you've got some time to explore the streets of San Francisco and enjoy the city. Jessica decided to go shopping. You're trying to decide between a bookstore and an antique salon. Where will you go?",
 	"buttonsTexts":["Bookstore","Antique Salon",""],
-	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
+	"picturesSpriteNames":["sf2","","","","","",""],
 	"goIndexes":[55,97,-1]
 	},
 	{
@@ -499,7 +499,7 @@
 	"description":"
 	The dossier was about a man from San Antonio named Phillip Stevens who involved in the murder of Jessica's father, Mason. The face on the photo looks really familiar as if you saw him somewhere before. 'What's our plan?' - you asked. And the plan is to go to San Antonio, Texas to find the house of Phillip Stevens.",
 	"buttonsTexts":["Next","",""],
-	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
+	"picturesSpriteNames":["sa","","","","","",""],
 	"goIndexes":[62,-1,-1]
 	},
 	{
@@ -507,7 +507,7 @@
 	"description":"
 	You all got to San Antonio International Airport, looked at the map and realized that the house is located in the ghetto area. You need a car. Jessica suggests renting it, the assistant Jake proposes to steal it. They can't agree with each other and ask you to resolve this issue.",
 	"buttonsTexts":["Rent","Steal",""],
-	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
+	"picturesSpriteNames":["sa","","","","","",""],
 	"goIndexes":[109,63,-1]
 	},
 	{
@@ -762,7 +762,7 @@
 	"description":"
 	'Congratulations! This is the end of the story. You probably wonder why there were only cookies in the safe. \n And I'll tell you: I'm an old man, who is missing life adventure. Twenty years ago, I told to my best friend about the wealth I don't actually have. But, apparently, I was very conclusive. Jessica's father believed in the lie and suddenly decided that I should share the wealth with him. He was chasing the empty safe though. I think, he was very angry when he found the wrong key, and the safe remained tightly closed.' \n You saw that everyone was staring at Mason. The story didn't make sense to anyone in the room. \nYou looked very confused as well but then decided not to take it personally. At the end of the day, you survived and reached the happy ending. This is important.",
 	"buttonsTexts":["Epilogue","",""],
-	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
+	"picturesSpriteNames":["end","","","","","",""],
 	"goIndexes":[95,-1,-1]
 	},
 	{
@@ -770,7 +770,7 @@
 	"description":"
 	Mason lived three more days and died from heart attack. Jessica left America for Poland. By the way, you probably already guessed that Phillip didn't send her to the rats. Under her chair was a comfortable room, where she fell through. Sarah and Jake sold the house after Mason's death and moved to the UK. \n Two years later, you stopped suffering from nightmares and shuddering from every knock at the door. You have become a successful entrepreneur and an exemplary family man. \n You lived sixty more years. After your death, among the testament and other papers, your family found an envelope titled 'The secret of a calm and happy life'. Your family opened it expecting some wisdom but found a single phrase inside: 'Never trust people knocking your door at night'.",
 	"buttonsTexts":["The end","",""],
-	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
+	"picturesSpriteNames":["afterend","","","","","",""],
 	"goIndexes":[0,-1,-1]
 	},
 	{
@@ -778,7 +778,7 @@
 	"description":"
 	You had a panic attack and went down. You saw a Lambo at the entrance. You sat down in the car and left. You had enough gasoline to get to San Diego. \n When you got home, you closed all the doors to all possible locks and turned off the phone. \n For about three months, you shuddered at every knock. Over time, you have calmed down and have begun to live a normal life. But you didn't find out what the mystery was hidden by that girl. So, the mission is not completed.",
 	"buttonsTexts":["Start over again","",""],
-	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
+	"picturesSpriteNames":["deadend","","","","","",""],
 	"goIndexes":[0,-1,-1]
 	},
 	{
@@ -786,7 +786,7 @@
 	"description":"
 	You found the antique boutique fast. Opening the door, you went inside. The room is small, cozy and looks like a museum. You are interested in the lamp, similar to the one you saw in the Aladdin movie. You also liked the chess. What do you pay attention to?",
 	"buttonsTexts":["Lamp","Chess",""],
-	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
+	"picturesSpriteNames":["sd3","","","","","",""],
 	"goIndexes":[98,99,-1]
 	},
 	{
@@ -794,7 +794,7 @@
 	"description":"
 	You rubbed the lamp, but nothing happened. Instead of a genie, the owner of this salon appeared before you. He wondered what brought you here: pure curiosity or something specific.",
 	"buttonsTexts":["Curiosity","Something specific","Specific curiosity"],
-	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
+	"picturesSpriteNames":["sd3","","","","","",""],
 	"goIndexes":[100,101,102]
 	},
 	{
@@ -802,7 +802,7 @@
 	"description":"
 	Chess was made of ivory and tusks. You would buy it but the price is high. Suddenly, a note dropped out of the box: 'If there is a choice between Baijiu and snakes, choose Baijiu'. You didn't get what it is for. But just in case, remember that for the future. In the meantime, you have time to visit a bookshop as well.",
 	"buttonsTexts":["To bookshop","",""],
-	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
+	"picturesSpriteNames":["sd3","","","","","",""],
 	"goIndexes":[55,-1,-1]
 	},
 	{
@@ -818,7 +818,7 @@
 	"description":"
 	You said that you are looking for a watch. The owner showed you all the watches he had. It should be noted that the collection was very rich. Then he got a phone call and went into the next room. You looked at a clock in the shape of a coiled snake. Clearly, they didn't work. However, you saw the note saying that you have to touch the snake's sting in order to make it work again. So you touched the sting. It was a bad idea. As soon as you touched the sting, it pierced you. Now you know that snakes in a clock are poisoned as well. Unfortunately, the poison worked quickly, and no one had time to help you.",
 	"buttonsTexts":["Start over again","",""],
-	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
+	"picturesSpriteNames":["deadend","","","","","",""],
 	"goIndexes":[0,-1,-1]
 	},
 	{
@@ -842,7 +842,7 @@
 	"description":"
 	Hitchhiking for a little bit, you got into a car with a random driver. And five minutes later you realized that it was a bad idea. The driver was going twice the speed limit and crashed the car into the wall. The ambulance wasn't able to help you. Unfortunately, you won't be able to continue the journey. Please try not to make these mistakes next time.",
 	"buttonsTexts":["Start over again","",""],
-	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
+	"picturesSpriteNames":["deadend","","","","","",""],
 	"goIndexes":[0,-1,-1]
 	},
 	{
@@ -866,7 +866,7 @@
 	"description":"
 	Snakes vodka? Are you sure? Well... Fifteen minutes later the waiter brought you a bottle with some yellow-brown liquid. You looked at the drink for a long time before deciding to try it. And it would be better if you didn't do it. Most likely, you have an intolerance of one of the drink components. With the diagnosis of 'acute poisoning', you were immediately taken to the hospital, where you will stay for quite some time. We're sorry, but the craving for exotic alcohol has prevented you from getting ahead in the story. Next time be more careful.",
 	"buttonsTexts":["Start over again","",""],
-	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
+	"picturesSpriteNames":["deadend","","","","","",""],
 	"goIndexes":[0,-1,-1]
 	},
 	{
@@ -906,7 +906,7 @@
 	"description":"
 	You go further. The trees are getting tighter. Intuition suggests you turning around. But you don't listen to your intuition. Not noticing the danger, you fall into a swamp. It sucks you deeper and deeper. Once the swamp sucks you in, it's almost impossible to get back out. Trust your intuition next time.",
 	"buttonsTexts":["Start over again","",""],
-	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
+	"picturesSpriteNames":["deadend","","","","","",""],
 	"goIndexes":[0,-1,-1]
 	},
 	{
@@ -970,7 +970,7 @@
     "description":"
 	Suddenly, the floor slips out from under your feet, and you find yourself under the ground. It's gloomy, damp, terribly cold, and huge hungry rats run around. Screaming here is useless, no one will hear you. Please start over again.",
 	"buttonsTexts":["Start over again","",""],
-	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
+	"picturesSpriteNames":["deadend","","","","","",""],
 	"goIndexes":[0,-1,-1]
 	},
 	{
@@ -1002,7 +1002,7 @@
 	"description":"
 	You got into the car and relaxed. Finally, you can rest for a little bit. On the way, you talked about what happened and began to share further plans. Suddenly, the car stopped. The driver turned and shot you in the head. It's very sad to get caught in such a trap before the end of the story.",
 	"buttonsTexts":["Start over again","",""],
-	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
+	"picturesSpriteNames":["deadend","","","","","",""],
 	"goIndexes":[0,-1,-1]
 	},
 	{
@@ -1018,7 +1018,7 @@
 	"description":"
 	You went to the dark corridor and saw a stranger who shot you in the head. What an annoyance.",
 	"buttonsTexts":["Start over again","",""],
-	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
+	"picturesSpriteNames":["deadend","","","","","",""],
 	"goIndexes":[0,-1,-1]
 	},
 	{
