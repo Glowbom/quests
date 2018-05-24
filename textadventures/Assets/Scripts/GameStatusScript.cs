@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 using JsonFx.Json;
 using UnityEngine.UI;
@@ -140,8 +141,9 @@ public class GameStatusScript : MonoBehaviour
 				if (item.picturesSpriteNames != null) {
 					for (int i = 0; i < item.picturesSpriteNames.Length; i++) {
 						if (i < pictures.Length) {
-							//pictures [i].sprite.name = item.picturesSpriteNames [i];
-						
+							if (sprites.ContainsKey(item.picturesSpriteNames [i])) {
+								pictures [i].sprite = sprites[item.picturesSpriteNames [i]];
+							}			
 							pictures [i].gameObject.SetActive (!item.picturesSpriteNames [i].Equals (string.Empty));
 						}
 					}
@@ -157,12 +159,19 @@ private string gameId = "";
 private string gameId = "";
 #endif
 
+	Dictionary<string, Sprite> sprites = new Dictionary<string, Sprite>();
+
 	// Use this for initialization
 	void Start ()
 	{	
 		load ();
 		procced ();
 		Advertisement.Initialize(gameId);
+
+		sprites.Clear();
+		Sprite sprite = Resources.Load("Textures/default", typeof(Sprite)) as Sprite;
+		sprites.Add("default", sprite);
+		sprites.Add("IconPromotionPR", sprite);
 	}
 
 	public void aboutPressed() {

@@ -11,7 +11,7 @@
 		"description":"
 	Today is a beautiful day. Things are good. You don't feel any danger. You are sitting in a cozy room. It's rainy outside. But the weather does not bother you. Being wrapped in a warm blanket, you drink hot tea and watch your favorite movie. There is a fireplace in the living room. The atmosphere is so relaxing that you slowly fall asleep. You hear a knock on your door. It's already midnight. You are very surprised. Who could it be? You go to open the door very carefully.",
 	"buttonsTexts":["Next","",""],
-	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
+	"picturesSpriteNames":["default","","","","","",""],
 	"goIndexes":[1,-1,-1]
 	},
 	{
