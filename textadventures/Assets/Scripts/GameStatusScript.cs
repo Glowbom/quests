@@ -72,6 +72,10 @@ public class GameStatusScript : MonoBehaviour
 	public Image front;
 
 	public GameObject about;
+
+	public Image frontRu;
+
+	public GameObject aboutRu;
 	
 	public static void trackEvent(string category, string action) {
 
@@ -221,6 +225,17 @@ private string gameId = "";
 		key = "ph";
 		sprite = Resources.Load("Textures/" + key, typeof(Sprite)) as Sprite;
 		sprites.Add(key, sprite);
+
+		//This checks if your computer's operating system is in the French language
+        if (Application.systemLanguage == SystemLanguage.Russian)
+        {
+            //Outputs into console that the system is French
+            Debug.Log("This system is in Russian. ");
+			front.gameObject.SetActive(false);
+			frontRu.gameObject.SetActive(true);
+			front = frontRu;
+			about = aboutRu;
+        }
 	}
 
 	public void aboutPressed() {
@@ -248,7 +263,7 @@ private string gameId = "";
 	public void buttonPressed (GameObject button)
 	{
 		++buttonPressedCounter;
-		if (buttonPressedCounter % 17 == 0) {
+		if (buttonPressedCounter % 25 == 0) {
 			Advertisement.Show();
 		}
 
@@ -291,6 +306,14 @@ private string gameId = "";
 	public void load ()
 	{
 		var textAsset = Resources.Load ("Data/FortuneCookie") as TextAsset;
+		//This checks if your computer's operating system is in the French language
+        if (Application.systemLanguage == SystemLanguage.Russian)
+        {
+            //Outputs into console that the system is French
+            Debug.Log("This system is in Russian. ");
+			textAsset = Resources.Load ("Data/FortuneCookieRussian") as TextAsset;
+        }
+
 		logic = JsonReader.Deserialize<Logic> (textAsset.text);
 		
 		trackEvent("Book", "Loaded");     
