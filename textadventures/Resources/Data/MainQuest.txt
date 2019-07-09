@@ -11,13 +11,13 @@
 		"description":"
 	Today is a beautiful day. Things are good. You don't feel any danger. You are sitting in a cozy room. It's rainy outside. But the weather does not bother you. Being wrapped in a warm blanket, you drink hot tea and watch your favorite movie. There is a fireplace in the living room. The atmosphere is so relaxing that you slowly fall asleep. You hear a knock on your door. It's already midnight. You are very surprised. Who could it be? You go to open the door very carefully.",
 	"buttonsTexts":["Next","",""],
-	"picturesSpriteNames":["default","","","","","",""],
+	"picturesSpriteNames":["sd1","","","","","",""],
 	"goIndexes":[1,-1,-1]
 	},
 	{
 	"title":"1",
     "description":"
-	You see a woman. She looks harmless. You ask what brought her here. She says she's late for the train. There are no rooms in the hotel nearby. She asks if you can host her for a night. What will you do?",
+	You see a {question0}. She looks harmless. You ask what brought her here. She says she's late for the train. There are no rooms in the hotel nearby. She asks if you can host her for a night. What will you do?",
     "buttonsTexts":["Agree to host","Refuse to get in",""],
     "picturesSpriteNames":["sd1","","","","","",""],
     "goIndexes":[2,3,-1]
@@ -145,15 +145,15 @@
 	{
 	"title":"17",
 	"description":"
-	'Who is this man next to you?' - you asked. 'This is my assistant,' - she says. 'What kind of assistant?' - you asked. She obviously does not know what to tell you. Taking advantage of the general confusion, the bound man is quickly released from the ropes, grabs the painting from the wall and escapes the room through the window. The so-called assistant runs after him in a second. A woman is attempted to run as well but entangled in the ropes and fell down the floor hitting her head against the fireplace. You ran up to her and saw a serious wound. She asked you to help the assistant to catch a fugitive, but you're scared to leave her alone under these conditions. What will you do?",
-    "buttonsTexts":["Help to catch the fugitive","Stay with a woman",""],
+	'Who is this man next to you?' - you asked. 'This is my assistant,' - she says. 'What kind of assistant?' - you asked. She obviously does not know what to tell you. Taking advantage of the general confusion, the bound man is quickly released from the ropes, grabs the painting from the wall and escapes the room through the window. The so-called assistant runs after him in a second. A {question0} is attempted to run as well but entangled in the ropes and fell down the floor hitting her head against the fireplace. You ran up to her and saw a serious wound. She asked you to help the assistant to catch a fugitive, but you're scared to leave her alone under these conditions. What will you do?",
+    "buttonsTexts":["Help to catch the fugitive","Stay with a {question0}",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[28,29,-1]
 	},
 	{
 	"title":"18",
 	"description":"
-	You're trying to sleep, but troubling thoughts do not leave you. Something is wrong with this woman. She is hiding something. The whole situation feels weird. Maybe she needs something from you? Gradually, the imagination has developed some anxiety. Will you check if your guest is asleep or will you stay in bed and try to sleep?",
+	You're trying to sleep, but troubling thoughts do not leave you. Something is wrong with this {question0}. She is hiding something. The whole situation feels weird. Maybe she needs something from you? Gradually, the imagination has developed some anxiety. Will you check if your guest is asleep or will you stay in bed and try to sleep?",
 	"buttonsTexts":["Check","Stay in bed",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[30,31,-1]
@@ -201,7 +201,7 @@
 	{
 	"title":"24",
 	"description":"
-	She broke your heart... The woman from being sweet and beautiful turned into a dangerous person. You wanna ask what's happening, but the gun pointed at your face makes you speechless. After a short silence, she started to speak. She said that her father was murdered two months ago. The people involved in his death need something from his safe. They failed to break the safe. In order to open the lock, they need the code. Only her father knew it. After father's death, she found a note saying how to open the safe and destroy everything inside. Her father encrypted the code in the form of a puzzle, cut the puzzle into five pieces and put them inside the paintings. She found these paintings and decided to catch the killers. So she needed a bait. She spread the rumor that the code is encrypted, broken up into five pieces and put inside the paintings. Then she arranged the sales. The seller was given photos of the killers. The bait worked. Already four paintings have left, as you have appeared. The seller persistently offered you to buy the paintings because he mistakenly thought you're the killer. Later the mistake was found out, but it was already late. The killers are looking for you, but she found you first. Now you have no other option than to help her in catching the criminals. Otherwise, you still have to see them, but this meeting could be the last in your life.",
+	She broke your heart... The {question0} from being sweet and beautiful turned into a dangerous person. You wanna ask what's happening, but the gun pointed at your face makes you speechless. After a short silence, she started to speak. She said that her father was murdered two months ago. The people involved in his death need something from his safe. They failed to break the safe. In order to open the lock, they need the code. Only her father knew it. After father's death, she found a note saying how to open the safe and destroy everything inside. Her father encrypted the code in the form of a puzzle, cut the puzzle into five pieces and put them inside the paintings. She found these paintings and decided to catch the killers. So she needed a bait. She spread the rumor that the code is encrypted, broken up into five pieces and put inside the paintings. Then she arranged the sales. The seller was given photos of the killers. The bait worked. Already four paintings have left, as you have appeared. The seller persistently offered you to buy the paintings because he mistakenly thought you're the killer. Later the mistake was found out, but it was already late. The killers are looking for you, but she found you first. Now you have no other option than to help her in catching the criminals. Otherwise, you still have to see them, but this meeting could be the last in your life.",
 	"buttonsTexts":["Next","",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[39,-1,-1]
@@ -217,7 +217,7 @@
 	{
 	"title":"26",
 	"description":"
-	'Where did he come from? How do you know if he is a criminal? What did he do?' - you asked. The person on the floor decided to answer your questions himself. He says that he mistakenly climbed into someone else's house, and then these two individuals caught him. 'Hmm... interesting mistake...' - you thought. Unexpectedly, the person on the floor pulled himself out of the ropes, pulled out a knife and stabbed the man next to the lady. The woman tried to protect herself and hit the criminal but failed, so the offender killed her as well. He is already approaching you. You could hit the chin or the solar plexus. There is no time for thinking. Decide!",
+	'Where did he come from? How do you know if he is a criminal? What did he do?' - you asked. The person on the floor decided to answer your questions himself. He says that he mistakenly climbed into someone else's house, and then these two individuals caught him. 'Hmm... interesting mistake...' - you thought. Unexpectedly, the person on the floor pulled himself out of the ropes, pulled out a knife and stabbed the man next to the lady. The {question0} tried to protect herself and hit the criminal but failed, so the offender killed her as well. He is already approaching you. You could hit the chin or the solar plexus. There is no time for thinking. Decide!",
 	"buttonsTexts":["Hit the chin","Hit the solar plexus",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[40,41,-1]
@@ -233,7 +233,7 @@
 	{
 	"title":"28",
 	"description":"
-	You decide that the woman will be ok, and run in order to catch the criminal. In a hurry, you didn't notice how you got on the busy highway. The truck driver didn't notice how you appeared in front of his car. Someone is calling an ambulance. But it won't help you anymore. And no one will help.",
+	You decide that the {question0} will be ok, and run in order to catch the criminal. In a hurry, you didn't notice how you got on the busy highway. The truck driver didn't notice how you appeared in front of his car. Someone is calling an ambulance. But it won't help you anymore. And no one will help.",
 	"buttonsTexts":["Start over again","",""],
 	"picturesSpriteNames":["deadend","","","","","",""],
 	"goIndexes":[0,-1,-1]
@@ -273,7 +273,7 @@
 	{
 	"title":"33",
 	"description":"
-	You decided not to take risks and apologize. Everyone has secrets, right? The woman, accepting your apology, asks you for a glass of water. You go to the kitchen and come back with a glass of water. But there is nobody. She left. Well, great. With the hope of quietly spending the rest of the evening, you go to the hall and light up the fireplace. Suddenly you notice that the painting is gone. She stole it. But why? This question will remain unanswered. You are not going to report to the police since the value of the painting is close to zero. But now, you won't be able to know the end of the story.",
+	You decided not to take risks and apologize. Everyone has secrets, right? The {question0}, accepting your apology, asks you for a glass of water. You go to the kitchen and come back with a glass of water. But there is nobody. She left. Well, great. With the hope of quietly spending the rest of the evening, you go to the hall and light up the fireplace. Suddenly you notice that the painting is gone. She stole it. But why? This question will remain unanswered. You are not going to report to the police since the value of the painting is close to zero. But now, you won't be able to know the end of the story.",
 	"buttonsTexts":["Start over again","",""],
 	"picturesSpriteNames":["deadend","","","","","",""],
 	"goIndexes":[0,-1,-1]
@@ -281,7 +281,7 @@
 	{
 	"title":"34",
 	"description":"
-	You listen to a very long story mixed with tears and sobs. She said she started working with very dangerous people. And there is no way to get away from it. You feel sorry for her. But how can you help? Fight with the mafia? No, thank you. Suddenly the woman pulled a gun from the bag. You jumped back, but the gun isn't pointed at you. She pointed the gun at herself. 'Don't do it,' - you said. But it didn't work. She accidentally shot herself. The story has ended leaving fear, uncertainty, and doubts. You won't be able to find out the truth.",
+	You listen to a very long story mixed with tears and sobs. She said she started working with very dangerous people. And there is no way to get away from it. You feel sorry for her. But how can you help? Fight with the mafia? No, thank you. Suddenly the {question0} pulled a gun from the bag. You jumped back, but the gun isn't pointed at you. She pointed the gun at herself. 'Don't do it,' - you said. But it didn't work. She accidentally shot herself. The story has ended leaving fear, uncertainty, and doubts. You won't be able to find out the truth.",
 	"buttonsTexts":["Start over again","",""],
 	"picturesSpriteNames":["deadend","","","","","",""],
 	"goIndexes":[0,-1,-1]
@@ -289,7 +289,7 @@
 	{
 	"title":"35",
 	"description":"
-	You open the door and see the kidnapped woman. She doesn't look like a victim though. She asks you to come in. She said she escaped from the criminals. 'Why did you come here?' - you asked. - 'They know about this place already.' She looked at you and said: 'Will  you protect me?' You were speechless, not knowing what to say. As a child, you dreamed of becoming a bodyguard. Yep... You've gotta be very careful with your own wishes even though you're a kid. They could be fulfilled at any time, at the most random moment and in the most inappropriate way. Like now. Will you fulfill the dream of being a bodyguard?",
+	You open the door and see the kidnapped {question0}. She doesn't look like a victim though. She asks you to come in. She said she escaped from the criminals. 'Why did you come here?' - you asked. - 'They know about this place already.' She looked at you and said: 'Will  you protect me?' You were speechless, not knowing what to say. As a child, you dreamed of becoming a bodyguard. Yep... You've gotta be very careful with your own wishes even though you're a kid. They could be fulfilled at any time, at the most random moment and in the most inappropriate way. Like now. Will you fulfill the dream of being a bodyguard?",
 	"buttonsTexts":["Yes, I will","No, I won't",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[44,45,-1]
@@ -361,7 +361,7 @@
 	{
 	"title":"44",
 	"description":"
-	You agreed to become a bodyguard. The woman clapped her hands and offered you to play hide-and-seek first. You are a little bit confused. Hide and seek?! It could be a good idea to hide somewhere in a cozy cafe sipping coffee and listening to smooth jazz. But no. She wanted you to look for her. You close your eyes and count to ten. When you open your eyes, you go to the kitchen to drink some coffee and start watching your favorite movie. Time flies... When the final credits came, you remember that you had to do something. Oh yes, hide and seek... You've gotta find the woman. Well, this dear lady must be asleep already. So you went to sleep. In the morning you didn't find her. Apparently, she left. Then somebody knocked at the door. It was the police. They were looking for the woman who came to you yesterday. You said that she came to play hide-and-seek. So she hid so well that you didn't see her again. The police left. There is no way to find out what the lady actually wanted from you. So you have to start over again.",
+	You agreed to become a bodyguard. The {question0} clapped her hands and offered you to play hide-and-seek first. You are a little bit confused. Hide and seek?! It could be a good idea to hide somewhere in a cozy cafe sipping coffee and listening to smooth jazz. But no. She wanted you to look for her. You close your eyes and count to ten. When you open your eyes, you go to the kitchen to drink some coffee and start watching your favorite movie. Time flies... When the final credits came, you remember that you had to do something. Oh yes, hide and seek... You've gotta find the {question0}. Well, this dear lady must be asleep already. So you went to sleep. In the morning you didn't find her. Apparently, she left. Then somebody knocked at the door. It was the police. They were looking for the {question0} who came to you yesterday. You said that she came to play hide-and-seek. So she hid so well that you didn't see her again. The police left. There is no way to find out what the lady actually wanted from you. So you have to start over again.",
 	"buttonsTexts":["Start over again","",""],
 	"picturesSpriteNames":["deadend","","","","","",""],
 	"goIndexes":[0,-1,-1]
@@ -600,7 +600,7 @@
 	{
 	"title":"74",
 	"description":"
-	Surprise! You see four chairs in the middle of the room. Jessica, Jake, and an unfamiliar woman are tied with ropes and attached to the chairs. In a second you find yourself attached to the empty chair. You look at the faces, nobody understands what's going on. Only one thing is clear, now you are in trouble. Suddenly you hear the voice: \n 'I know what you want here. I know what you are afraid of. And also I know that one of you is a liar. Let's play the game. Find a liar and I'll let you leave alive. The rules are simple. You can see the wires attached to your body. It's a lie detector. There is a closed hole under each chair. The hole remains closed when you say the truth. Otherwise, you fly down to hungry rats. I hope everything is clear.' \n The game has started. The first question is asked by Jessica. It is addressed to you. \n Did you find what you were looking for upstairs?",
+	Surprise! You see four chairs in the middle of the room. Jessica, Jake, and an unfamiliar {question0} are tied with ropes and attached to the chairs. In a second you find yourself attached to the empty chair. You look at the faces, nobody understands what's going on. Only one thing is clear, now you are in trouble. Suddenly you hear the voice: \n 'I know what you want here. I know what you are afraid of. And also I know that one of you is a liar. Let's play the game. Find a liar and I'll let you leave alive. The rules are simple. You can see the wires attached to your body. It's a lie detector. There is a closed hole under each chair. The hole remains closed when you say the truth. Otherwise, you fly down to hungry rats. I hope everything is clear.' \n The game has started. The first question is asked by Jessica. It is addressed to you. \n Did you find what you were looking for upstairs?",
 	"buttonsTexts":["Yep","Nope",""],
 	"picturesSpriteNames":["IconPromotionPR","","","","","",""],
 	"goIndexes":[122,75,-1]
@@ -968,7 +968,7 @@
 	{
 	"title":"120",
     "description":"
-	Suddenly, the floor slips out from under your feet, and you find yourself under the ground. It's gloomy, damp, terribly cold, and huge hungry rats run around. Screaming here is useless, no one will hear you. Please start over again.",
+	Suddenly, the floor slips out from under your feet, and you find yourself under the ground. It's gloomy, damp, terribly {question3}, and huge hungry rats run around. Screaming here is useless, no one will hear you. Please start over again.",
 	"buttonsTexts":["Start over again","",""],
 	"picturesSpriteNames":["deadend","","","","","",""],
 	"goIndexes":[0,-1,-1]

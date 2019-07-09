@@ -1,0 +1,183 @@
+{
+	"heroValues": [],
+	"currentItemIndex": 0,
+	"deadValue": 0,
+	"deadLevel": 0,
+	"deadItemIndex": 2,
+	"items": [{
+			"title": "Foreword",
+			"description": "[newline]You are getting a phone call. A {question0} is speaking. You are trying to {question1} what happened this {question2}. You are trying to find out the details, but the room is so {question3}. You find it difficult to bring thoughts together. Since you decided to {question4}, you boldly open the closet to get dressed up, so you can go {question5}. But recent events worried you, and you decided to {question6} first.[newline][newline]The phone rings again. Three messages appeared. The senders' names showed up on the screen. Whose message should you read first?",
+			"buttonsTexts" : ["From {question7}", "From {question8}", "From {question9}"],
+			"picturesSpriteNames": ["default", "", "", "", "", "", ""],
+			"goIndexes": [1, 13, 14]
+		},
+		{
+			"title": "1",
+			"description": "[newline]You open the message. {question7} says that you are in danger because of the events happened this night and you have to leave the city now. Where would you like to go?",
+			"buttonsTexts" : ["London", "Paris", "Madrid"],
+			"picturesSpriteNames": ["sd1", "", "", "", "", "", ""],
+			"goIndexes": [2, 3, 4]
+		},
+		{
+			"title": "2",
+			"description": "[newline]London is a good choice! How do you want to get there?",
+			"buttonsTexts": ["Plane", "Air balloon", "Teleport"],
+			"picturesSpriteNames": ["sd2", "", "", "", "", "", ""],
+			"goIndexes": [5, 6, 7]
+		},
+		{
+			"title": "3",
+			"description": "[newline]You think that Paris would do the best. You tried to book a flight but, unfortunately, all flights to Paris are temporarily canceled.  You will have to choose another city.",
+			"buttonsTexts": ["London", "Madrid", ""],
+			"picturesSpriteNames": ["sd2", "", "", "", "", "", ""],
+			"goIndexes": [2, 4, -1]
+		},
+		{
+			"title": "4",
+			"description": "[newline]You've always liked Madrid. Unfortunately, all flights to Madrid is temporarily canceled. So you have to go to London. How do you want to get there?",
+			"buttonsTexts" : ["Flight", "Air Ballon", "Teleport"],
+			"picturesSpriteNames": ["ph", "", "", "", "", "", ""],
+			"goIndexes": [5, 6, 7]
+		},
+		{
+			"title": "5",
+			"description": "[newline]To complete booking the flight you have to confirm that you're not a robot and go through the antispam filter. Please answer the question carefully. How much will 4 * 8 be?",
+			"buttonsTexts": ["28", "32", "36"],
+			"picturesSpriteNames": ["IconPromotionPR", "", "", "", "", "", ""],
+			"goIndexes": [15, 8, 16]
+		},
+		{
+			"title": "6",
+			"description": "[newline]To complete booking the air balloon tickets you have to confirm that you're not a robot and go through the antispam filter. Please answer the question carefully. How much will 7 * 8 be?",
+			"buttonsTexts": ["48", "52", "56"],
+			"picturesSpriteNames": ["IconPromotionPR", "", "", "", "", "", ""],
+			"goIndexes": [17, 18, 19]
+		},
+		{
+			"title": "7",
+			"description": "[newline]Unfortunately, the teleport line is overloaded. You have to choose another option.",
+			"buttonsTexts": ["Flight", "Air Balloon", ""],
+			"picturesSpriteNames": ["IconPromotionPR", "", "", "", "", "", ""],
+			"goIndexes": [5, 6, -1]
+		},
+		{
+			"title": "8",
+			"description": "[newline]The flight is confirmed. You are on your way to the airport now.",
+			"buttonsTexts": ["Go to the gate", "", ""],
+			"picturesSpriteNames": ["IconPromotionPR", "", "", "", "", "", ""],
+			"goIndexes": [9, -1, -1]
+		},
+		{
+			"title": "9",
+			"description": "[newline]You go to the plane. A flight attendant offers you a snack. What will you take?",
+			"buttonsTexts" : ["Watermelon ice cream", "Blueberry cake", "Nothing"],
+			"picturesSpriteNames": ["IconPromotionPR", "", "", "", "", "", ""],
+			"goIndexes": [20, 10, 21]
+		},
+		{
+			"title": "10",
+			"description": "[newline]Would you like something to drink?",
+			"buttonsTexts" : ["Mandarin water", "Pomegranate tea", "Nothing"],
+			"picturesSpriteNames": ["IconPromotionPR", "", "", "", "", "", ""],
+			"goIndexes": [22, 11, 23]
+		},
+		{
+			"title": "11",
+			"description": "[newline]Blueberry cake and pomegranate tea turned out to be very tasty. Soon you went to sleep. You saw the book with the title 'silver umbrella' in your dream. You grew up in a good mood.",
+			"buttonsTexts": ["Next", "", ""],
+			"picturesSpriteNames": ["IconPromotionPR", "", "", "", "", "", ""],
+			"goIndexes": [12, -1, -1]
+		},
+		{
+			"title": "12",
+			"description": "[newline]Here you are in London. The first part of your journey is completed successfully! \n\nWe could continue your journey, but we have an interesting idea. To read a good book, it's better to write a good book. To complete this journey, download the Magic Coding Tool and write new chapters of the story yourself. Press back to create an account.",
+			"buttonsTexts" : ["Start over", "", ""],
+			"picturesSpriteNames": ["IconPromotionPR", "", "", "", "", "", ""],
+			"goIndexes": [0, -1, -1]
+		},
+		{
+			"title": "13",
+			"description": "[newline]{question8} tells you that tomorrow there will be the air balloons festival and you should meet an old friend over there. You decided to read another message. Choose another message to read?",
+			"buttonsTexts" : ["From {question7}", "From {question9}", ""],
+			"picturesSpriteNames": ["IconPromotionPR", "", "", "", "", "", ""],
+			"goIndexes": [1, 14, -1]
+		},
+		{
+			"title": "14",
+			"description": "[newline]{question9} reports that yesterday in the cafe you left an umbrella. You are surprised... How does he know that you were in the cafe yesterday? That's weird... Chose another message to read?",
+			"buttonsTexts" : ["From {question7}", "From {question8}", ""],
+			"picturesSpriteNames": ["IconPromotionPR", "", "", "", "", "", ""],
+			"goIndexes": [1, 13, -1]
+		},
+		{
+			"title": "15",
+			"description": "[newline]You are denied access at the moment. You can try again later. But you do not have time to wait, so just go back to the very beginning.",
+			"buttonsTexts": ["Start over", "", ""],
+			"picturesSpriteNames": ["IconPromotionPR", "", "", "", "", "", ""],
+			"goIndexes": [0, -1, -1]
+		},
+		{
+			"title": "16",
+			"description": "[newline]You are denied access at the moment. You can try again later. But you do not have time to wait, so just go back to the very beginning.",
+			"buttonsTexts": ["Start over", "", ""],
+			"picturesSpriteNames": ["IconPromotionPR", "", "", "", "", "", ""],
+			"goIndexes": [0, -1, -1]
+		},
+		{
+			"title": "17",
+			"description": "[newline]You are denied access at the moment. You can try again later. But you do not have time to wait, so just go back to the very beginning.",
+			"buttonsTexts": ["Start over", "", ""],
+			"picturesSpriteNames": ["IconPromotionPR", "", "", "", "", "", ""],
+			"goIndexes": [0, -1, -1]
+		},
+		{
+			"title": "18",
+			"description": "[newline]You are denied access at the moment. You can try again later. But you do not have time to wait, so just go back to the very beginning.",
+			"buttonsTexts": ["Start over", "", ""],
+			"picturesSpriteNames": ["IconPromotionPR", "", "", "", "", "", ""],
+			"goIndexes": [0, -1, -1]
+		},
+		{
+			"title": "19",
+			"description": "[newline]You click on 56 and see how a large balloon suddenly started coming your way.",
+			"buttonsTexts": ["To air balloon", "", ""],
+			"picturesSpriteNames": ["IconPromotionPR", "", "", "", "", "", ""],
+			"goIndexes": [24, -1, -1]
+		},
+		{
+			"title": "20",
+			"description": "[newline]It was so tasty. Now, what do you want to drink?",
+			"buttonsTexts" : ["Mandarin water", "Pomegranate tea", "Nothing"],
+			"picturesSpriteNames": ["IconPromotionPR", "", "", "", "", "", ""],
+			"goIndexes": [22, 11, 23]
+		},
+		{
+			"title": "21",
+			"description": "[newline]You don't want anything. The whole flight you think about what happened today. In meantime, the plane is about to land.",
+			"buttonsTexts": ["Next", "", ""],
+			"picturesSpriteNames": ["IconPromotionPR", "", "", "", "", "", ""],
+			"goIndexes": [12, -1, -1]
+		},
+		{
+			"title": "22",
+			"description": "[newline]The mandarin water turned out to be very tasty. So you asked for more. And more. The time flew by, and now your plane is about to land in London.",
+			"buttonsTexts": ["Next", "", ""],
+			"picturesSpriteNames": ["IconPromotionPR", "", "", "", "", "", ""],
+			"goIndexes": [12, -1, -1]
+		},
+		{
+			"title": "23",
+			"description": "[newline]You didn't want anything to drink. After a while, your plane is about to land.",
+			"buttonsTexts": ["Next", "", ""],
+			"picturesSpriteNames": ["IconPromotionPR", "", "", "", "", "", ""],
+			"goIndexes": [12, -1, -1]
+		},
+		{
+			"title": "24",
+			"description": "[newline]You fly to London in a hot air balloon. You love the sky, flying birds, beautiful scenery. But suddenly an incredibly strong wind happened. The pilot was forced to make an emergency landing. Fortunately, for you were able to sit on a plane almost immediately.",
+			"buttonsTexts": ["Next", "", ""],
+			"picturesSpriteNames": ["IconPromotionPR", "", "", "", "", "", ""],
+			"goIndexes": [9, -1, -1]
+		}
+	]
+}

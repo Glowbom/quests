@@ -1,0 +1,29 @@
+{
+"buttons":
+	[
+	{
+		"link":"Data/FortuneCookie",
+		"name":"Fortune Cookie"
+	},
+	{
+		"link":"Data/FortuneCookieRussian",
+		"name":"Fortune RUSSKIY"
+	},
+	{
+		"link":"Data/Example",
+		"name":"Example"
+	}, 
+	{
+		"link":"Data/Hohotay",
+		"name":"Hohotay"
+	},
+	{
+		"link":"Data/FortuneCookie",
+		"name":"Fortune Cookie"
+	},
+	{
+		"link":"Data/FortuneCookieRussian",
+		"name":"Fortune Cookie"
+	}
+	]
+}
