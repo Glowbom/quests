@@ -2,7 +2,6 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
-using JsonFx.Json;
 using UnityEngine.UI;
 using UnityEngine.Advertisements;
 
@@ -170,7 +169,7 @@ private string gameId = "";
 	{	
 		load ();
 		procced ();
-		Advertisement.Initialize(gameId);
+		//Advertisement.Initialize(gameId);
 
 		sprites.Clear();
 		Sprite sprite = Resources.Load("Textures/default", typeof(Sprite)) as Sprite;
@@ -297,7 +296,7 @@ private string gameId = "";
 	{
 		try {
 			using (StreamWriter sw = new StreamWriter ("Assets/Game.txt", false)) {
-				sw.Write (JsonFx.Json.JsonWriter.Serialize (logic)); 
+				sw.Write (JsonUtility.ToJson (logic)); 
 			}
 		} catch (IOException) {
 		}
@@ -314,7 +313,7 @@ private string gameId = "";
 			textAsset = Resources.Load ("Data/FortuneCookieRussian") as TextAsset;
         }
 
-		logic = JsonReader.Deserialize<Logic> (textAsset.text);
+		logic = JsonUtility.FromJson<Logic> (textAsset.text);
 		
 		trackEvent("Book", "Loaded");     
 	}
