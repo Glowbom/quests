@@ -1,5 +1,5 @@
 {
-	"heroValues": [],
+	"heroValues": [1, 1, 1],
 	"currentItemIndex": 0,
 	"deadValue": 0,
 	"deadLevel": 0,
@@ -7,14 +7,14 @@
 	"items": [{
 			"title": "Foreword",
 			"description": "[newline]You are getting a phone call. A {question0} is speaking. You are trying to {question1} what happened this {question2}. You are trying to find out the details, but the room is so {question3}. You find it difficult to bring thoughts together. Since you decided to {question4}, you boldly open the closet to get dressed up, so you can go {question5}. But recent events worried you, and you decided to {question6} first.[newline][newline]The phone rings again. Three messages appeared. The senders' names showed up on the screen. Whose message should you read first?",
-			"buttonsTexts" : ["From {question7}", "From {question8}", "From {question9}"],
+			"buttonsTexts": ["From {question7}", "From {question8}", "From {question9}"],
 			"picturesSpriteNames": ["default", "", "", "", "", "", ""],
 			"goIndexes": [1, 13, 14]
 		},
 		{
 			"title": "1",
 			"description": "[newline]You open the message. {question7} says that you are in danger because of the events happened this night and you have to leave the city now. Where would you like to go?",
-			"buttonsTexts" : ["London", "Paris", "Madrid"],
+			"buttonsTexts": ["London", "Paris", "Madrid"],
 			"picturesSpriteNames": ["sd1", "", "", "", "", "", ""],
 			"goIndexes": [2, 3, 4]
 		},
@@ -35,7 +35,7 @@
 		{
 			"title": "4",
 			"description": "[newline]You've always liked Madrid. Unfortunately, all flights to Madrid is temporarily canceled. So you have to go to London. How do you want to get there?",
-			"buttonsTexts" : ["Flight", "Air Ballon", "Teleport"],
+			"buttonsTexts": ["Flight", "Air Ballon", "Teleport"],
 			"picturesSpriteNames": ["ph", "", "", "", "", "", ""],
 			"goIndexes": [5, 6, 7]
 		},
@@ -70,14 +70,14 @@
 		{
 			"title": "9",
 			"description": "[newline]You go to the plane. A flight attendant offers you a snack. What will you take?",
-			"buttonsTexts" : ["Watermelon ice cream", "Blueberry cake", "Nothing"],
+			"buttonsTexts": ["Watermelon ice cream", "Blueberry cake", "Nothing"],
 			"picturesSpriteNames": ["IconPromotionPR", "", "", "", "", "", ""],
 			"goIndexes": [20, 10, 21]
 		},
 		{
 			"title": "10",
 			"description": "[newline]Would you like something to drink?",
-			"buttonsTexts" : ["Mandarin water", "Pomegranate tea", "Nothing"],
+			"buttonsTexts": ["Mandarin water", "Pomegranate tea", "Nothing"],
 			"picturesSpriteNames": ["IconPromotionPR", "", "", "", "", "", ""],
 			"goIndexes": [22, 11, 23]
 		},
@@ -91,21 +91,21 @@
 		{
 			"title": "12",
 			"description": "[newline]Here you are in London. The first part of your journey is completed successfully! \n\nWe could continue your journey, but we have an interesting idea. To read a good book, it's better to write a good book. To complete this journey, download the Magic Coding Tool and write new chapters of the story yourself. Press back to create an account.",
-			"buttonsTexts" : ["Start over", "", ""],
+			"buttonsTexts": ["Start over", "", ""],
 			"picturesSpriteNames": ["IconPromotionPR", "", "", "", "", "", ""],
 			"goIndexes": [0, -1, -1]
 		},
 		{
 			"title": "13",
 			"description": "[newline]{question8} tells you that tomorrow there will be the air balloons festival and you should meet an old friend over there. You decided to read another message. Choose another message to read?",
-			"buttonsTexts" : ["From {question7}", "From {question9}", ""],
+			"buttonsTexts": ["From {question7}", "From {question9}", ""],
 			"picturesSpriteNames": ["IconPromotionPR", "", "", "", "", "", ""],
 			"goIndexes": [1, 14, -1]
 		},
 		{
 			"title": "14",
 			"description": "[newline]{question9} reports that yesterday in the cafe you left an umbrella. You are surprised... How does he know that you were in the cafe yesterday? That's weird... Chose another message to read?",
-			"buttonsTexts" : ["From {question7}", "From {question8}", ""],
+			"buttonsTexts": ["From {question7}", "From {question8}", ""],
 			"picturesSpriteNames": ["IconPromotionPR", "", "", "", "", "", ""],
 			"goIndexes": [1, 13, -1]
 		},
@@ -147,7 +147,7 @@
 		{
 			"title": "20",
 			"description": "[newline]It was so tasty. Now, what do you want to drink?",
-			"buttonsTexts" : ["Mandarin water", "Pomegranate tea", "Nothing"],
+			"buttonsTexts": ["Mandarin water", "Pomegranate tea", "Nothing"],
 			"picturesSpriteNames": ["IconPromotionPR", "", "", "", "", "", ""],
 			"goIndexes": [22, 11, 23]
 		},

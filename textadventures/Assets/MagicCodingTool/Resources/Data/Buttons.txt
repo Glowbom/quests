@@ -1,0 +1,17 @@
+{
+"buttons":
+	[
+	{
+		"link":"Data/MainQuest",
+		"name":"MainQuest"
+	},
+	{
+		"link":"Data/Example",
+		"name":"Example"
+	}, 
+	{
+		"link":"Data/TemplateQuest",
+		"name":"TemplateQuest"
+	}
+	]
+}

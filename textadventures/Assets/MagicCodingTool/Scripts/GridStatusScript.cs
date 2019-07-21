@@ -2,7 +2,6 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
-using JsonFx.Json;
 using UnityEngine.UI;
 using UnityEngine.Networking;
 
@@ -349,30 +348,21 @@ private string gameId = "";
 			logoutButton.gameObject.SetActive(false);
 			email.text = "";
 		}
-		
-
-		//This checks if your computer's operating system is in the French language
-        //if (Application.systemLanguage == SystemLanguage.Russian)
-        //{
-            //Outputs into console that the system is French
-        //    Debug.Log("This system is in Russian. ");
-	//		front.gameObject.SetActive(false);
-	//		frontRu.gameObject.SetActive(true);
-	//		front = frontRu;
-	//		about = aboutRu;
-      //  }
 
 		for (int i = 0; i < gridButtons.Length; i++) {
 			gridButtons [i].gameObject.SetActive(false);
 		}
 				
-		for (int i = 0; i < buttonsLogic.buttons.Length; i++) {
+				if (buttonsLogic != null && buttonsLogic.buttons != null) {
+					for (int i = 0; i < buttonsLogic.buttons.Length; i++) {
 			if (i < gridButtons.Length) {
 					Button bs = gridButtons [i];
 					bs.transform.Find("Text").GetComponent<Text>().text = buttonsLogic.buttons [i].name;
 					gridButtons [i].gameObject.SetActive(true);
 				}
 			}
+				}
+		
 	}
 
 	public void updateLoginButtonTextIfNeeded() {
@@ -384,7 +374,7 @@ private string gameId = "";
 	}
 
 	public void comeBackPressed() {
-        Application.LoadLevel("StartScene");
+        
 	}
 
 	public void backPressed() {
@@ -427,7 +417,7 @@ private string gameId = "";
 		passwordField.enabled = true;
 		loginButton.enabled = true;
 
-		if (request.isError)
+		if (request.isNetworkError)
         {
 			Debug.Log("Error");
 			status.text = request.error;
@@ -478,7 +468,7 @@ private string gameId = "";
  
         yield return request.Send();
 
-		if (request.isError)
+		if (request.isNetworkError)
         {
 			Debug.Log("Error");
         }
@@ -518,7 +508,7 @@ private string gameId = "";
  
         yield return request.Send();
 
-		if (request.isError)
+		if (request.isNetworkError)
         {
 			Debug.Log("Error");
         }
@@ -545,7 +535,7 @@ private string gameId = "";
 
 	IEnumerator updateQuestAsync()
     {
-		GameStatusMagic.instance.quest.content = JsonFx.Json.JsonWriter.Serialize (logic);
+		GameStatusMagic.instance.quest.content = JsonUtility.ToJson (logic);
 		while(GameStatusMagic.instance.quest.content.Contains("\n")) {
 			GameStatusMagic.instance.quest.content = GameStatusMagic.instance.quest.content.Replace("\n", "[newline]");
 		}
@@ -562,7 +552,7 @@ private string gameId = "";
  
         yield return request.Send();
 
-		if (request.isError)
+		if (request.isNetworkError)
         {
 			Debug.Log("Error");
         }
@@ -601,7 +591,7 @@ private string gameId = "";
 		passwordField.enabled = true;
 		loginButton.enabled = true;
 
-		if (request.isError)
+		if (request.isNetworkError)
         {
 			status.text = request.error;
         }
@@ -856,7 +846,7 @@ private string gameId = "";
 	{
 		try {
 			using (StreamWriter sw = new StreamWriter ("Assets/Game.txt", false)) {
-				sw.Write (JsonFx.Json.JsonWriter.Serialize (logic)); 
+				sw.Write (JsonUtility.ToJson (logic)); 
 			}
 		} catch (IOException) {
 		}
@@ -879,14 +869,6 @@ private string gameId = "";
 		var textAsset = Resources.Load (edit ? "Data/Questions" : "Data/TemplateQuest") as TextAsset;
 		//This checks if your computer's operating system is in the French language
 
-		// language localization is here
-        /*if (Application.systemLanguage == SystemLanguage.Russian)
-        {
-            //Outputs into console that the system is French
-            Debug.Log("This system is in Russian. ");
-			textAsset = Resources.Load ("Data/FortuneCookieRussian") as TextAsset;
-        }*/
-
 		if (lastClickedLink != null) {
 			textAsset = Resources.Load (lastClickedLink) as TextAsset;
 		}
@@ -894,8 +876,7 @@ private string gameId = "";
 		if (type != null && type.Equals("Lifebook")) {
 			textAsset = Resources.Load (edit ? "Data/QuestionsLifebook" : "Data/TemplateQuest") as TextAsset;
 		}
-
-		logic = JsonReader.Deserialize<Logic> (textAsset.text);
+		logic = JsonUtility.FromJson<Logic> (textAsset.text);
 		
 		trackEvent("Book", "Loaded"); 
 
@@ -933,15 +914,7 @@ private string gameId = "";
 
 	public void loadButtonsLogic() {
 		var textAsset = Resources.Load ("Data/Buttons") as TextAsset;
-		//This checks if your computer's operating system is in the French language
-        //if (Application.systemLanguage == SystemLanguage.Russian)
-        //{
-            //Outputs into console that the system is French
-         //   Debug.Log("This system is in Russian. ");
-		//	textAsset = Resources.Load ("Data/ButtonsRussian") as TextAsset;
-        //}
-
-		buttonsLogic = JsonReader.Deserialize<Buttons> (textAsset.text);    
+		buttonsLogic = JsonUtility.FromJson<Buttons> (textAsset.text);    
 	}
 	
 	string text;
@@ -1031,7 +1004,7 @@ private string gameId = "";
 		signupConfirmPasswordField.enabled = true;
 		signupButton.enabled = true;
 
-		if (request.isError)
+		if (request.isNetworkError)
         {
 			signupStatus.text = request.error;
         }
