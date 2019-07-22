@@ -4,6 +4,11 @@ using System.Collections.Generic;
 using System.IO;
 using Assets.Scripts.Utils;
 
+/*
+ * Created on Sun Jul 21 2019
+ *
+ * Copyright (c) 2019 Glowbom, Inc.
+ */
 public class GameStatusMagic : MonoBehaviour {
 
 	private const string GAME_STATUS_SAVE_PATH = "GameStatusMagicSave.json";

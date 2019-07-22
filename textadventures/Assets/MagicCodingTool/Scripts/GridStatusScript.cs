@@ -5,6 +5,11 @@ using System.IO;
 using UnityEngine.UI;
 using UnityEngine.Networking;
 
+/*
+ * Created on Sun Jul 21 2019
+ *
+ * Copyright (c) 2019 Glowbom, Inc.
+ */
 [System.Serializable]
 public class Logic
 {

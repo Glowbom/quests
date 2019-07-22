@@ -5,6 +5,11 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 
+/*
+ * Created on Sun Jul 21 2019
+ *
+ * Copyright (c) 2019 Glowbom, Inc.
+ */
 namespace Assets.Scripts.Utils
 {
     class FileUtils
