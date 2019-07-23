@@ -19,6 +19,33 @@ public class QuestEditor : EditorWindow
         GUILayout.Label("Glowbom", EditorStyles.boldLabel);
 
         GUILayout.Label("Quests", EditorStyles.label);
+
+        EditorGUILayout.Space();
+
+        GUILayout.BeginVertical(EditorStyles.helpBox);
+
+        EditorGUILayout.Space();
+
+        GUILayout.Label("Cloud Storage", EditorStyles.label);
+
+        EditorGUILayout.Space();
+
+        GUILayout.Label("Glowbom Account", EditorStyles.label);
+
+        EditorGUILayout.Space();
+
+        EditorGUILayout.TextField("Login", "");
+        EditorGUILayout.TextField("Password", "");
+
+        EditorGUILayout.Space();
+
+         if (GUILayout.Button("Login")) {
+            // login code here
+        }
+
+        EditorGUILayout.Space();
+
+        GUILayout.EndVertical();
     }
     // Start is called before the first frame update
     void Start()

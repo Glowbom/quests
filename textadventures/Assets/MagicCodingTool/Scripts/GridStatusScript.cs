@@ -399,7 +399,7 @@ private string gameId = "";
 	}
 
 	public void openAboutLink() {
-		Application.OpenURL("https://photos.icons8.com/half-eaten-oatmel-cookie-5a8bf2a08b658800019f1d7a");
+		
 	}
 
 	IEnumerator getUser(string url)
@@ -928,9 +928,6 @@ private string gameId = "";
 	{
 		gameViewText.text = text;
 	}
-
-	// about
-	// icon https://photos.icons8.com/half-eaten-oatmel-cookie-5a8bf2a08b658800019f1d7a
 
 	// signup
 	public void backSignUpView() {

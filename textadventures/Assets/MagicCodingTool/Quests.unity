@@ -138,7 +138,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &16214786
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5971,7 +5971,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &789604670
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6256,7 +6256,7 @@ GameObject:
   - component: {fileID: 801521667}
   - component: {fileID: 801521666}
   m_Layer: 5
-  m_Name: Globom
+  m_Name: Glowbom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13104,8 +13104,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "We're  building the technology. Please stay tuned! \n\nVersion 0.1.1 July,
-    2019.\n\n\nDeveloped using Glowbom.com\nLinks:\n\n\n\n\n\n\n\n\n\n\nCopyright
+  m_Text: "\n\nVersion 0.1.1 July, 2019.\n\n\nDeveloped using Glowbom.com\nMore info:\n\n\n\n\n\n\n\n\n\n\nCopyright
     \xA9 2019 Glowbom. All rights reserved. "
 --- !u!222 &1885135544
 CanvasRenderer:
