@@ -73,6 +73,8 @@ public class QuestEditor : EditorWindow
 
         EditorGUILayout.Space();
 
+        // main quest
+
         GUILayout.BeginVertical(EditorStyles.helpBox);
 
         EditorGUILayout.Space();
@@ -84,6 +86,8 @@ public class QuestEditor : EditorWindow
         GUILayout.EndVertical();
 
         EditorGUILayout.Space();
+
+        
     }
     // Start is called before the first frame update
     void Start()
