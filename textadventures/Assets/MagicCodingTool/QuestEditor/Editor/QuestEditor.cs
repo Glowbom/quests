@@ -9,7 +9,9 @@ using UnityEditor;
  * Copyright (c) 2019 Glowbom, Inc.
  */
 public class QuestEditor : EditorWindow
-{
+{   
+    private int tab = 0;
+
     [MenuItem("Window/Glowbom/Quests")]
     public static void ShowWindow() {
         GetWindow<QuestEditor> ("Quests");
@@ -34,16 +36,38 @@ public class QuestEditor : EditorWindow
 
         EditorGUILayout.Space();
 
-        EditorGUILayout.TextField("Login", "");
-        EditorGUILayout.TextField("Password", "");
+        tab = GUILayout.Toolbar (tab, new string[] {"Login", "Sign Up"});
+        switch (tab) {
+            case 0:
+                EditorGUILayout.Space();
 
-        EditorGUILayout.Space();
+                EditorGUILayout.TextField("Email", "");
+                EditorGUILayout.TextField("Password", "");
 
-         if (GUILayout.Button("Login")) {
-            // login code here
+                EditorGUILayout.Space();
+
+                if (GUILayout.Button("Login")) {
+                    // login code here
+                }
+
+                EditorGUILayout.Space();
+            break;
+            case 1:
+                EditorGUILayout.Space();
+
+                EditorGUILayout.TextField("Email", "");
+                EditorGUILayout.TextField("New Password", "");
+                EditorGUILayout.TextField("Confirm Password", "");
+
+                EditorGUILayout.Space();
+
+                if (GUILayout.Button("Sign Up")) {
+                    // login code here
+                }
+
+                EditorGUILayout.Space();
+            break;
         }
-
-        EditorGUILayout.Space();
 
         GUILayout.EndVertical();
     }
