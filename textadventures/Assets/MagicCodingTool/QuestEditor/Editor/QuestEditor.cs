@@ -87,7 +87,19 @@ public class QuestEditor : EditorWindow
 
         EditorGUILayout.Space();
 
-        
+        // more quests
+
+        GUILayout.BeginVertical(EditorStyles.helpBox);
+
+        EditorGUILayout.Space();
+
+        GUILayout.Label("More Quests", EditorStyles.label);
+
+        EditorGUILayout.Space();
+
+        GUILayout.EndVertical();
+
+        EditorGUILayout.Space();
     }
     // Start is called before the first frame update
     void Start()
