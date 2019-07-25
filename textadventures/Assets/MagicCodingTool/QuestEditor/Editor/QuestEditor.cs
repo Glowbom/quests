@@ -83,6 +83,65 @@ public class QuestEditor : EditorWindow
 
         EditorGUILayout.Space();
 
+        GUILayout.Label("Element 1", EditorStyles.label);
+
+        EditorGUILayout.TextField("Title", "0");
+        EditorGUILayout.TextField("Text", "hello");
+
+        EditorGUILayout.Space();
+
+        GUILayout.Label("Button 1", EditorStyles.label);
+
+        EditorGUILayout.TextField("Title", "Desicion 1");
+        EditorGUILayout.TextField("Go To", "0");
+
+        if (GUILayout.Button("Remove")) {
+            // remove button code here
+        }
+
+        EditorGUILayout.Space();
+
+        GUILayout.Label("Button 2", EditorStyles.label);
+
+        EditorGUILayout.TextField("Title", "Desicion 2");
+        EditorGUILayout.TextField("Go To", "1");
+
+        if (GUILayout.Button("Remove")) {
+            // remove button code here
+        }
+
+        EditorGUILayout.Space();
+
+        GUILayout.Label("Button 3", EditorStyles.label);
+
+        EditorGUILayout.TextField("Title", "Desicion 3");
+        EditorGUILayout.TextField("Go To", "3");
+
+        if (GUILayout.Button("Remove")) {
+            // remove button code here
+        }
+
+        EditorGUILayout.Space();
+
+        GUILayout.Label("Button 4", EditorStyles.label);
+
+        EditorGUILayout.TextField("Title", "Desicion 4");
+        EditorGUILayout.TextField("Go To", "0");
+
+        if (GUILayout.Button("Remove")) {
+            // remove button code here
+        }
+
+        EditorGUILayout.Space();
+
+        if (GUILayout.Button("Add Button")) {
+            // remove button code here
+        }
+
+        EditorGUILayout.Space();
+
+
+
         GUILayout.EndVertical();
 
         EditorGUILayout.Space();
