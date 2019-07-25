@@ -262,6 +262,20 @@ public class QuestEditor : EditorWindow
         GUILayout.EndVertical();
 
         EditorGUILayout.Space();
+
+        // templates
+
+        GUILayout.BeginVertical(EditorStyles.helpBox);
+
+        EditorGUILayout.Space();
+
+        GUILayout.Label("Templates", EditorStyles.label);
+
+        EditorGUILayout.Space();
+
+        GUILayout.EndVertical();
+
+        EditorGUILayout.Space();
     }
     // Start is called before the first frame update
     void Start()
