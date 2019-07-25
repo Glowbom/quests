@@ -95,9 +95,17 @@ public class QuestEditor : EditorWindow
         EditorGUILayout.TextField("Title", "Desicion 1");
         EditorGUILayout.TextField("Go To", "0");
 
+        GUILayout.BeginHorizontal();
+        
+        if (GUILayout.Button("Add")) {
+            // add button code here
+        }
+
         if (GUILayout.Button("Remove")) {
             // remove button code here
         }
+
+        GUILayout.EndHorizontal();
 
         EditorGUILayout.Space();
 
@@ -106,9 +114,17 @@ public class QuestEditor : EditorWindow
         EditorGUILayout.TextField("Title", "Desicion 2");
         EditorGUILayout.TextField("Go To", "1");
 
+        GUILayout.BeginHorizontal();
+        
+        if (GUILayout.Button("Add")) {
+            // add button code here
+        }
+
         if (GUILayout.Button("Remove")) {
             // remove button code here
         }
+
+        GUILayout.EndHorizontal();
 
         EditorGUILayout.Space();
 
@@ -117,9 +133,17 @@ public class QuestEditor : EditorWindow
         EditorGUILayout.TextField("Title", "Desicion 3");
         EditorGUILayout.TextField("Go To", "3");
 
+        GUILayout.BeginHorizontal();
+        
+        if (GUILayout.Button("Add")) {
+            // add button code here
+        }
+
         if (GUILayout.Button("Remove")) {
             // remove button code here
         }
+
+        GUILayout.EndHorizontal();
 
         EditorGUILayout.Space();
 
@@ -128,19 +152,19 @@ public class QuestEditor : EditorWindow
         EditorGUILayout.TextField("Title", "Desicion 4");
         EditorGUILayout.TextField("Go To", "0");
 
+        GUILayout.BeginHorizontal();
+        
+        if (GUILayout.Button("Add")) {
+            // add button code here
+        }
+
         if (GUILayout.Button("Remove")) {
             // remove button code here
         }
 
-        EditorGUILayout.Space();
-
-        if (GUILayout.Button("Add Button")) {
-            // remove button code here
-        }
+        GUILayout.EndHorizontal();
 
         EditorGUILayout.Space();
-
-
 
         GUILayout.EndVertical();
 
