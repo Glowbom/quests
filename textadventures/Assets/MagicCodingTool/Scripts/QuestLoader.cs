@@ -1,6 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using System.IO;
 
 /*
  * Created on Sun Jul 28 2019
@@ -24,6 +23,20 @@ public class QuestLoader
     }
 
     public void save() {
-        
+        try
+        {
+            using (StreamWriter sw = new StreamWriter("Assets/MagicCodingTool/Resources/Data/TemplateQuest.txt", false))
+            {
+                sw.Write(JsonUtility.ToJson(logic));
+            }
+        }
+        catch (IOException e)
+        {
+            Debug.Log(e.Message);
+        }
+        finally
+        {
+            UnityEditor.AssetDatabase.Refresh();
+        }
     }
 }
