@@ -39,6 +39,7 @@ public class QuestEditor : EditorWindow
             foreach (var item in questLoader.logic.items)
             {
                 if (GUILayout.Button(i + " : " + item.title)) {
+                    GUI.FocusControl(null);
                     questLoader.logic.currentItemIndex = Array.IndexOf(questLoader.logic.items, item);
                     tabElements = 1;
                     OnGUI();
@@ -93,6 +94,7 @@ public class QuestEditor : EditorWindow
 
                     if (GUILayout.Button("Go")) {
                         if (goIndex >= 0 && goIndex < questLoader.logic.items.Length) {
+                            GUI.FocusControl(null);
                             questLoader.logic.currentItemIndex = goIndex;
                             initItemUi();
                         }
