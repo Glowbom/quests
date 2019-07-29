@@ -28,6 +28,35 @@ public class QuestEditor : EditorWindow
         GetWindow<QuestEditor> ("Quests");
     }
 
+    private void initAllTabUi() {
+        EditorGUILayout.Space();
+
+        if (questLoader.logic != null) {
+            int i = 0;
+            foreach (var item in questLoader.logic.items)
+            {
+                if (GUILayout.Button(i + " : " + item.title)) {
+                    
+                }
+
+                GUILayout.BeginHorizontal();
+                if (GUILayout.Button("Insert")) {
+                    // add button code here
+                }
+
+                if (GUILayout.Button("Remove")) {
+                    // remove button code here
+                }
+                GUILayout.EndHorizontal();
+
+                EditorGUILayout.Space();
+                ++i;
+            }
+        }
+
+        EditorGUILayout.Space();
+    }
+
     private void OnGUI()
     {
         questLoader.initialize();
@@ -57,73 +86,7 @@ public class QuestEditor : EditorWindow
         tabElements = GUILayout.Toolbar (tabElements, new string[] {"All", "1: 0"});
         switch (tabElements) {
             case 0:
-                EditorGUILayout.Space();
-
-                if (GUILayout.Button("1: 0")) {
-                    // login code here
-                }
-
-                GUILayout.BeginHorizontal();
-                if (GUILayout.Button("Insert")) {
-                    // add button code here
-                }
-
-                if (GUILayout.Button("Remove")) {
-                    // remove button code here
-                }
-                GUILayout.EndHorizontal();
-
-                EditorGUILayout.Space();
-
-                if (GUILayout.Button("2: Welcome")) {
-                    // login code here
-                }
-
-                GUILayout.BeginHorizontal();
-                if (GUILayout.Button("Insert")) {
-                    // add button code here
-                }
-
-                if (GUILayout.Button("Remove")) {
-                    // remove button code here
-                }
-                GUILayout.EndHorizontal();
-
-                EditorGUILayout.Space();
-
-                if (GUILayout.Button("3: No Way")) {
-                    // login code here
-                }
-
-                GUILayout.BeginHorizontal();
-                if (GUILayout.Button("Insert")) {
-                    // add button code here
-                }
-
-                if (GUILayout.Button("Remove")) {
-                    // remove button code here
-                }
-                GUILayout.EndHorizontal();
-
-                EditorGUILayout.Space();
-
-                if (GUILayout.Button("4: 3")) {
-                    // login code here
-                }
-
-                GUILayout.BeginHorizontal();
-                if (GUILayout.Button("Add")) {
-                    // add button code here
-                }
-
-                if (GUILayout.Button("Remove")) {
-                    // remove button code here
-                }
-                GUILayout.EndHorizontal();
-
-                EditorGUILayout.Space();
-
-                EditorGUILayout.Space();
+                initAllTabUi();
             break;
             case 1:
                 EditorGUILayout.Space();

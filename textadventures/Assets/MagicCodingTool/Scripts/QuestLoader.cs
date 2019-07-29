@@ -13,7 +13,7 @@ public class QuestLoader
     public string name = "Template Quest";
 
     public void initialize() {
-        if (logic != null) {
+        if (logic == null) {
             var textAsset = Resources.Load ("Data/TemplateQuest") as TextAsset;
             logic = JsonUtility.FromJson<Logic> (textAsset.text);
         }
