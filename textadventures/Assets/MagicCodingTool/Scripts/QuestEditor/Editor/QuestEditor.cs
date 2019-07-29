@@ -30,6 +30,38 @@ public class QuestEditor : EditorWindow
         GetWindow<QuestEditor> ("Quests");
     }
 
+    private void insert(int i) {
+        Logic.Item item = new Logic.Item();
+        item.title = "New Title";
+        item.description = "Hello!";
+        item.buttonsTexts = new string[1];
+        item.buttonsTexts[0] = "Go Button";
+        item.goIndexes = new int[1];
+        item.goIndexes[0] = 0;
+
+        List<Logic.Item> items = new List<Logic.Item>(questLoader.logic.items);
+        items.Insert(i, item);
+
+        questLoader.logic.items = items.ToArray();
+
+        // TODO: adjust indexes here
+
+        GUI.FocusControl(null);
+        initAllTabUi();
+    }
+
+    private void remove(int i) {
+        List<Logic.Item> items = new List<Logic.Item>(questLoader.logic.items);
+        items.RemoveAt(i);
+
+        questLoader.logic.items = items.ToArray();
+
+        // TODO: adjust indexes here
+
+        GUI.FocusControl(null);
+        initAllTabUi();
+    }
+
     private void initAllTabUi() {
         EditorGUILayout.Space();
 
@@ -49,11 +81,11 @@ public class QuestEditor : EditorWindow
 
                 GUILayout.BeginHorizontal();
                 if (GUILayout.Button("Insert")) {
-                    // add button code here
+                    insert(i);
                 }
 
                 if (GUILayout.Button("Remove")) {
-                    // remove button code here
+                    remove(i);
                 }
                 GUILayout.EndHorizontal();
 
@@ -65,6 +97,54 @@ public class QuestEditor : EditorWindow
         }
 
         EditorGUILayout.Space();
+    }
+
+    private void insertButton(int i) {
+        var item = questLoader.logic.items[questLoader.logic.currentItemIndex];
+        List<string> buttonsTextsList = new List<string>(item.buttonsTexts);
+        List<int> goIndexesList = new List<int>(item.goIndexes);
+        List<int> goConditionsList = item.goConditions == null ? new List<int>() : new List<int>(item.goConditions);
+
+        if (goConditionsList.Count > 0) {
+            goConditionsList.Insert(i, 0);
+        }
+
+        goIndexesList.Insert(i, 0);
+        buttonsTextsList.Insert(i, "Go Button");
+
+        item.buttonsTexts = buttonsTextsList.ToArray();
+        item.goIndexes = goIndexesList.ToArray();
+
+        if (goConditionsList.Count > 0) {
+            item.goConditions = goConditionsList.ToArray();
+        }
+
+        GUI.FocusControl(null);
+        initItemUi();
+    }
+
+    private void removeButton(int i) {
+        var item = questLoader.logic.items[questLoader.logic.currentItemIndex];
+        List<string> buttonsTextsList = new List<string>(item.buttonsTexts);
+        List<int> goIndexesList = new List<int>(item.goIndexes);
+        List<int> goConditionsList = new List<int>(item.goConditions);
+
+        if (goConditionsList.Count > 0) {
+            goConditionsList.RemoveAt(i);
+        }
+
+        goIndexesList.RemoveAt(i);
+        buttonsTextsList.RemoveAt(i);
+
+        item.buttonsTexts = buttonsTextsList.ToArray();
+        item.goIndexes = goIndexesList.ToArray();
+
+        if (goConditionsList.Count > 0) {
+            item.goConditions = goConditionsList.ToArray();
+        }
+
+        GUI.FocusControl(null);
+        initItemUi();
     }
 
     private void initItemUi() {
@@ -94,26 +174,7 @@ public class QuestEditor : EditorWindow
                     GUILayout.BeginHorizontal();
         
                     if (GUILayout.Button("Insert")) {
-                        List<string> buttonsTextsList = new List<string>(item.buttonsTexts);
-                        List<int> goIndexesList = new List<int>(item.goIndexes);
-                        List<int> goConditionsList = new List<int>(item.goConditions);
-
-                        if (goConditionsList.Count > 0) {
-                            goConditionsList.Insert(i, 0);
-                        }
-
-                        goIndexesList.Insert(i, 0);
-                        buttonsTextsList.Insert(i, "Go Button");
-
-                        item.buttonsTexts = buttonsTextsList.ToArray();
-                        item.goIndexes = goIndexesList.ToArray();
-
-                        if (goConditionsList.Count > 0) {
-                            item.goConditions = goConditionsList.ToArray();
-                        }
-
-                        GUI.FocusControl(null);
-                        initItemUi();
+                        insertButton(i);
                     }
 
                     if (GUILayout.Button("Go")) {
@@ -129,26 +190,7 @@ public class QuestEditor : EditorWindow
                     var style = new GUIStyle(GUI.skin.button);
                     style.normal.textColor = Color.white;
                     if (GUILayout.Button("Remove", style)) {
-                        List<string> buttonsTextsList = new List<string>(item.buttonsTexts);
-                        List<int> goIndexesList = new List<int>(item.goIndexes);
-                        List<int> goConditionsList = new List<int>(item.goConditions);
-
-                        if (goConditionsList.Count > 0) {
-                            goConditionsList.RemoveAt(i);
-                        }
-
-                        goIndexesList.RemoveAt(i);
-                        buttonsTextsList.RemoveAt(i);
-
-                        item.buttonsTexts = buttonsTextsList.ToArray();
-                        item.goIndexes = goIndexesList.ToArray();
-
-                        if (goConditionsList.Count > 0) {
-                            item.goConditions = goConditionsList.ToArray();
-                        }
-
-                        GUI.FocusControl(null);
-                        initItemUi();
+                        removeButton(i);
                     }
 
                     GUILayout.EndHorizontal();
