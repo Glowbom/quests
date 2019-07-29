@@ -21,6 +21,7 @@ public class QuestEditor : EditorWindow
 
     private int tab = 0;
     private int tabElements = 0;
+    private Vector2 scrollPos;
 
     [MenuItem("Window/Glowbom/Quests")]
     public static void ShowWindow() {
@@ -31,6 +32,9 @@ public class QuestEditor : EditorWindow
         EditorGUILayout.Space();
 
         if (questLoader.logic != null) {
+            EditorGUILayout.Space();
+
+            scrollPos = EditorGUILayout.BeginScrollView(scrollPos, GUILayout.Width(position.width - 20), GUILayout.Height(600));
             int i = 0;
             foreach (var item in questLoader.logic.items)
             {
@@ -53,6 +57,8 @@ public class QuestEditor : EditorWindow
                 EditorGUILayout.Space();
                 ++i;
             }
+
+            EditorGUILayout.EndScrollView();
         }
 
         EditorGUILayout.Space();
