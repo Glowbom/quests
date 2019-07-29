@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
 using UnityEditor;
 
@@ -36,7 +35,9 @@ public class QuestEditor : EditorWindow
             foreach (var item in questLoader.logic.items)
             {
                 if (GUILayout.Button(i + " : " + item.title)) {
-                    
+                    questLoader.logic.currentItemIndex = Array.IndexOf(questLoader.logic.items, item);
+                    tabElements = 1;
+                    OnGUI();
                 }
 
                 GUILayout.BeginHorizontal();
@@ -73,26 +74,32 @@ public class QuestEditor : EditorWindow
 
             int i = 0;
             foreach(var goIndex in item.goIndexes) {
-                GUILayout.Label("Button " + (i + 1), EditorStyles.label);
-                item.buttonsTexts[i] = EditorGUILayout.TextField("Title", item.buttonsTexts[i]);
-                item.goIndexes[i] = int.Parse(EditorGUILayout.TextField("Go To", goIndex.ToString()));
-                ++i;
-                GUILayout.BeginHorizontal();
+                if (goIndex >= 0) {
+                    GUILayout.Label("Button " + (i + 1), EditorStyles.label);
+                    item.buttonsTexts[i] = EditorGUILayout.TextField("Title", item.buttonsTexts[i]);
+                    item.goIndexes[i] = int.Parse(EditorGUILayout.TextField("Go To", goIndex.ToString()));
+                    ++i;
+                    GUILayout.BeginHorizontal();
         
-                if (GUILayout.Button("Insert")) {
-                    // add button code here
-                }
+                    if (GUILayout.Button("Insert")) {
+                        // add button code here
+                    }
 
-                if (GUILayout.Button("Go")) {
-                    // go to item code here
-                }
+                    if (GUILayout.Button("Go")) {
+                        if (goIndex >= 0 && goIndex < questLoader.logic.items.Length) {
+                            questLoader.logic.currentItemIndex = goIndex;
+                            initItemUi();
+                        }
+                    }
+                
 
-                if (GUILayout.Button("Remove")) {
-                    // remove button code here
-                }
+                    if (GUILayout.Button("Remove")) {
+                        // remove button code here
+                    }
 
-                GUILayout.EndHorizontal();
-                EditorGUILayout.Space();
+                    GUILayout.EndHorizontal();
+                    EditorGUILayout.Space();
+                }
             }
         }
     }
@@ -144,6 +151,19 @@ public class QuestEditor : EditorWindow
 
         GUILayout.Label("Quests", EditorStyles.label);
 
+        EditorGUILayout.Space();
+
+        GUILayout.BeginHorizontal();
+        
+            if (GUILayout.Button("Load")) {
+                questLoader.load();
+            }
+
+            if (GUILayout.Button("Save")) {
+                questLoader.save();
+            }
+
+        GUILayout.EndHorizontal();
         EditorGUILayout.Space();
 
         if (cloudSaveEanbled) {
