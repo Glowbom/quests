@@ -82,6 +82,8 @@ public class QuestEditor : EditorWindow
             int i = 0;
             foreach(var goIndex in item.goIndexes) {
                 if (goIndex >= 0) {
+                    GUI.backgroundColor = Color.white;
+
                     GUILayout.Label("Button " + (i + 1), EditorStyles.label);
                     item.buttonsTexts[i] = EditorGUILayout.TextField("Title", item.buttonsTexts[i]);
                     item.goIndexes[i] = int.Parse(EditorGUILayout.TextField("Go To", goIndex.ToString()));
@@ -99,9 +101,12 @@ public class QuestEditor : EditorWindow
                             initItemUi();
                         }
                     }
-                
 
-                    if (GUILayout.Button("Remove")) {
+                    
+                    GUI.backgroundColor = new Color32(238, 32, 77, 255);
+                    var style = new GUIStyle(GUI.skin.button);
+                    style.normal.textColor = Color.white;
+                    if (GUILayout.Button("Remove", style)) {
                         // remove button code here
                     }
 
