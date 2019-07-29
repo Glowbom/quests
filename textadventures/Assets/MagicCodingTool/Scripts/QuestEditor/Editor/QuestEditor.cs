@@ -6,10 +6,14 @@ using UnityEditor;
 /*
  * Created on Sun Jul 21 2019
  *
- * Copyright (c) 2019 Glowbom, Inc.
+ * Copyright (c) 2019 Glowbom.
  */
 public class QuestEditor : EditorWindow
 {   
+    static bool cloudSaveEanbled = false;
+    static bool projectsEnabled = false;
+    static bool templatesEnabled = false;
+
     static QuestLoader questLoader = null;
 
     static QuestEditor() {
@@ -23,6 +27,7 @@ public class QuestEditor : EditorWindow
     public static void ShowWindow() {
         GetWindow<QuestEditor> ("Quests");
     }
+
     private void OnGUI()
     {
         questLoader.initialize();
@@ -33,52 +38,9 @@ public class QuestEditor : EditorWindow
 
         EditorGUILayout.Space();
 
-        GUILayout.BeginVertical(EditorStyles.helpBox);
-
-        EditorGUILayout.Space();
-
-        GUILayout.Label("Cloud Storage", EditorStyles.label);
-
-        EditorGUILayout.Space();
-
-        GUILayout.Label("Glowbom Account", EditorStyles.label);
-
-        EditorGUILayout.Space();
-
-        tab = GUILayout.Toolbar (tab, new string[] {"Login", "Sign Up"});
-        switch (tab) {
-            case 0:
-                EditorGUILayout.Space();
-
-                EditorGUILayout.TextField("Email", "");
-                EditorGUILayout.TextField("Password", "");
-
-                EditorGUILayout.Space();
-
-                if (GUILayout.Button("Login")) {
-                    // login code here
-                }
-
-                EditorGUILayout.Space();
-            break;
-            case 1:
-                EditorGUILayout.Space();
-
-                EditorGUILayout.TextField("Email", "");
-                EditorGUILayout.TextField("New Password", "");
-                EditorGUILayout.TextField("Confirm Password", "");
-
-                EditorGUILayout.Space();
-
-                if (GUILayout.Button("Sign Up")) {
-                    // login code here
-                }
-
-                EditorGUILayout.Space();
-            break;
+        if (cloudSaveEanbled) {
+            initCloudSaveUi();
         }
-
-        GUILayout.EndVertical();
 
         EditorGUILayout.Space();
 
@@ -88,7 +50,7 @@ public class QuestEditor : EditorWindow
 
         EditorGUILayout.Space();
 
-        GUILayout.Label("Project 1", EditorStyles.label);
+        GUILayout.Label(questLoader.name, EditorStyles.label);
 
         EditorGUILayout.Space();
 
@@ -257,6 +219,67 @@ public class QuestEditor : EditorWindow
 
         EditorGUILayout.Space();
 
+        if (projectsEnabled) {
+            initProjectsUi();
+        }
+
+        if (templatesEnabled) {
+            initTemplatesUi();
+        }
+
+        EditorGUILayout.Space();
+    }
+
+    private void initCloudSaveUi() {
+        GUILayout.BeginVertical(EditorStyles.helpBox);
+
+        EditorGUILayout.Space();
+
+        GUILayout.Label("Cloud Storage", EditorStyles.label);
+
+        EditorGUILayout.Space();
+
+        GUILayout.Label("Glowbom Account", EditorStyles.label);
+
+        EditorGUILayout.Space();
+
+        tab = GUILayout.Toolbar (tab, new string[] {"Login", "Sign Up"});
+        switch (tab) {
+            case 0:
+                EditorGUILayout.Space();
+
+                EditorGUILayout.TextField("Email", "");
+                EditorGUILayout.TextField("Password", "");
+
+                EditorGUILayout.Space();
+
+                if (GUILayout.Button("Login")) {
+                    // login code here
+                }
+
+                EditorGUILayout.Space();
+            break;
+            case 1:
+                EditorGUILayout.Space();
+
+                EditorGUILayout.TextField("Email", "");
+                EditorGUILayout.TextField("New Password", "");
+                EditorGUILayout.TextField("Confirm Password", "");
+
+                EditorGUILayout.Space();
+
+                if (GUILayout.Button("Sign Up")) {
+                    // login code here
+                }
+
+                EditorGUILayout.Space();
+            break;
+        }
+
+        GUILayout.EndVertical();
+    }
+
+    private void initProjectsUi() {
         // more quests
 
         GUILayout.BeginVertical(EditorStyles.helpBox);
@@ -270,7 +293,9 @@ public class QuestEditor : EditorWindow
         GUILayout.EndVertical();
 
         EditorGUILayout.Space();
+    }
 
+    private void initTemplatesUi() {
         // templates
 
         GUILayout.BeginVertical(EditorStyles.helpBox);
@@ -282,8 +307,6 @@ public class QuestEditor : EditorWindow
         EditorGUILayout.Space();
 
         GUILayout.EndVertical();
-
-        EditorGUILayout.Space();
     }
     // Start is called before the first frame update
     void Start()

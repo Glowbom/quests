@@ -5,11 +5,12 @@ using UnityEngine;
 /*
  * Created on Sun Jul 28 2019
  *
- * Copyright (c) 2019 Glowbom
+ * Copyright (c) 2019 Glowbom.
  */
 public class QuestLoader
 {
     public Logic logic = null;
+    public string name = "Template Quest";
 
     public void initialize() {
         if (logic != null) {
