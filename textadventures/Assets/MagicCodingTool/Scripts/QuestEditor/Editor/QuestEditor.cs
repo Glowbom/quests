@@ -87,7 +87,6 @@ public class QuestEditor : EditorWindow
                     GUILayout.Label("Button " + (i + 1), EditorStyles.label);
                     item.buttonsTexts[i] = EditorGUILayout.TextField("Title", item.buttonsTexts[i]);
                     item.goIndexes[i] = int.Parse(EditorGUILayout.TextField("Go To", goIndex.ToString()));
-                    ++i;
                     GUILayout.BeginHorizontal();
         
                     if (GUILayout.Button("Insert")) {
@@ -107,11 +106,15 @@ public class QuestEditor : EditorWindow
                     var style = new GUIStyle(GUI.skin.button);
                     style.normal.textColor = Color.white;
                     if (GUILayout.Button("Remove", style)) {
-                        // remove button code here
+                        GUI.FocusControl(null);
+                        item.goIndexes[i] = -1;
+                        initItemUi();
                     }
 
                     GUILayout.EndHorizontal();
                     EditorGUILayout.Space();
+
+                    ++i;
                 }
             }
         }
