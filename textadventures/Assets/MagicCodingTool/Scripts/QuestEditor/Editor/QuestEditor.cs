@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
@@ -22,6 +23,7 @@ public class QuestEditor : EditorWindow
     private int tab = 0;
     private int tabElements = 0;
     private Vector2 scrollPos;
+    private Vector2 scrollPosButtons;
 
     [MenuItem("Window/Glowbom/Quests")]
     public static void ShowWindow() {
@@ -79,6 +81,8 @@ public class QuestEditor : EditorWindow
 
             EditorGUILayout.Space();
 
+            scrollPosButtons = EditorGUILayout.BeginScrollView(scrollPosButtons, GUILayout.Width(position.width - 20), GUILayout.Height(600));
+
             int i = 0;
             foreach(var goIndex in item.goIndexes) {
                 if (goIndex >= 0) {
@@ -90,7 +94,26 @@ public class QuestEditor : EditorWindow
                     GUILayout.BeginHorizontal();
         
                     if (GUILayout.Button("Insert")) {
-                        // add button code here
+                        List<string> buttonsTextsList = new List<string>(item.buttonsTexts);
+                        List<int> goIndexesList = new List<int>(item.goIndexes);
+                        List<int> goConditionsList = new List<int>(item.goConditions);
+
+                        if (goConditionsList.Count > 0) {
+                            goConditionsList.Insert(i, 0);
+                        }
+
+                        goIndexesList.Insert(i, 0);
+                        buttonsTextsList.Insert(i, "Go Button");
+
+                        item.buttonsTexts = buttonsTextsList.ToArray();
+                        item.goIndexes = goIndexesList.ToArray();
+
+                        if (goConditionsList.Count > 0) {
+                            item.goConditions = goConditionsList.ToArray();
+                        }
+
+                        GUI.FocusControl(null);
+                        initItemUi();
                     }
 
                     if (GUILayout.Button("Go")) {
@@ -106,8 +129,25 @@ public class QuestEditor : EditorWindow
                     var style = new GUIStyle(GUI.skin.button);
                     style.normal.textColor = Color.white;
                     if (GUILayout.Button("Remove", style)) {
+                        List<string> buttonsTextsList = new List<string>(item.buttonsTexts);
+                        List<int> goIndexesList = new List<int>(item.goIndexes);
+                        List<int> goConditionsList = new List<int>(item.goConditions);
+
+                        if (goConditionsList.Count > 0) {
+                            goConditionsList.RemoveAt(i);
+                        }
+
+                        goIndexesList.RemoveAt(i);
+                        buttonsTextsList.RemoveAt(i);
+
+                        item.buttonsTexts = buttonsTextsList.ToArray();
+                        item.goIndexes = goIndexesList.ToArray();
+
+                        if (goConditionsList.Count > 0) {
+                            item.goConditions = goConditionsList.ToArray();
+                        }
+
                         GUI.FocusControl(null);
-                        item.goIndexes[i] = -1;
                         initItemUi();
                     }
 
@@ -117,6 +157,8 @@ public class QuestEditor : EditorWindow
                     ++i;
                 }
             }
+
+            EditorGUILayout.EndScrollView();
         }
     }
 
