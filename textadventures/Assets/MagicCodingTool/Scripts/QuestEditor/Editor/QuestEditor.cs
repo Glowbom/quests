@@ -90,7 +90,7 @@ public class QuestEditor : EditorWindow
 
                     GUILayout.Label("Button " + (i + 1), EditorStyles.label);
                     item.buttonsTexts[i] = EditorGUILayout.TextField("Title", item.buttonsTexts[i]);
-                    item.goIndexes[i] = int.Parse(EditorGUILayout.TextField("Go To", goIndex.ToString()));
+                    item.goIndexes[i] = int.Parse(EditorGUILayout.TextField("Go To", item.goIndexes[i].ToString()));
                     GUILayout.BeginHorizontal();
         
                     if (GUILayout.Button("Insert")) {
