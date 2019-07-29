@@ -11,9 +11,11 @@ public class QuestLoader
 {
     public Logic logic = null;
 
-    public void load() {
-        var textAsset = Resources.Load ("Data/MainQuest") as TextAsset;
-        logic = JsonUtility.FromJson<Logic> (textAsset.text);
+    public void initialize() {
+        if (logic != null) {
+            var textAsset = Resources.Load ("Data/TemplateQuest") as TextAsset;
+            logic = JsonUtility.FromJson<Logic> (textAsset.text);
+        }
     }
 
     public void save() {

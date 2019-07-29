@@ -10,6 +10,12 @@ using UnityEditor;
  */
 public class QuestEditor : EditorWindow
 {   
+    static QuestLoader questLoader = null;
+
+    static QuestEditor() {
+        questLoader = new QuestLoader();
+    }
+
     private int tab = 0;
     private int tabElements = 0;
 
@@ -19,6 +25,8 @@ public class QuestEditor : EditorWindow
     }
     private void OnGUI()
     {
+        questLoader.initialize();
+
         GUILayout.Label("Glowbom", EditorStyles.boldLabel);
 
         GUILayout.Label("Quests", EditorStyles.label);
