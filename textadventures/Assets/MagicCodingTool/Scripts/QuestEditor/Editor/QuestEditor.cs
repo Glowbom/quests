@@ -57,22 +57,47 @@ public class QuestEditor : EditorWindow
         EditorGUILayout.Space();
     }
 
-    private void OnGUI()
-    {
-        questLoader.initialize();
-
-        GUILayout.Label("Glowbom", EditorStyles.boldLabel);
-
-        GUILayout.Label("Quests", EditorStyles.label);
-
+    private void initItemUi() {
         EditorGUILayout.Space();
 
-        if (cloudSaveEanbled) {
-            initCloudSaveUi();
+        if (questLoader.logic != null) {
+            var item = questLoader.logic.items[questLoader.logic.currentItemIndex];
+            GUILayout.Label("Element " + questLoader.logic.currentItemIndex, EditorStyles.label);
+
+            item.title = EditorGUILayout.TextField("Title", item.title);
+            EditorGUILayout.Space();
+
+            item.description = EditorGUILayout.TextArea(item.description, GUILayout.Height(100));
+
+            EditorGUILayout.Space();
+
+            int i = 0;
+            foreach(var goIndex in item.goIndexes) {
+                GUILayout.Label("Button " + (i + 1), EditorStyles.label);
+                item.buttonsTexts[i] = EditorGUILayout.TextField("Title", item.buttonsTexts[i]);
+                item.goIndexes[i] = int.Parse(EditorGUILayout.TextField("Go To", goIndex.ToString()));
+                ++i;
+                GUILayout.BeginHorizontal();
+        
+                if (GUILayout.Button("Insert")) {
+                    // add button code here
+                }
+
+                if (GUILayout.Button("Go")) {
+                    // go to item code here
+                }
+
+                if (GUILayout.Button("Remove")) {
+                    // remove button code here
+                }
+
+                GUILayout.EndHorizontal();
+                EditorGUILayout.Space();
+            }
         }
+    }
 
-        EditorGUILayout.Space();
-
+    private void initMainQuest() {
         // main quest
 
         GUILayout.BeginVertical(EditorStyles.helpBox);
@@ -83,96 +108,14 @@ public class QuestEditor : EditorWindow
 
         EditorGUILayout.Space();
 
-        tabElements = GUILayout.Toolbar (tabElements, new string[] {"All", "1: 0"});
+        var item = questLoader.logic.items[questLoader.logic.currentItemIndex];
+        tabElements = GUILayout.Toolbar (tabElements, new string[] {"All", questLoader.logic.currentItemIndex + " : " + item.title});
         switch (tabElements) {
             case 0:
                 initAllTabUi();
             break;
             case 1:
-                EditorGUILayout.Space();
-
-                GUILayout.Label("Element 1", EditorStyles.label);
-
-                EditorGUILayout.TextField("Title", "0");
-                EditorGUILayout.Space();
-                EditorGUILayout.TextArea("hello", GUILayout.Height(100));
-
-                EditorGUILayout.Space();
-
-                GUILayout.Label("Button 1", EditorStyles.label);
-
-                EditorGUILayout.TextField("Title", "Desicion 1");
-                EditorGUILayout.TextField("Go To", "1");
-
-                GUILayout.BeginHorizontal();
-        
-                if (GUILayout.Button("Insert")) {
-                    // add button code here
-                }
-
-                if (GUILayout.Button("Remove")) {
-                    // remove button code here
-                }
-
-                GUILayout.EndHorizontal();
-
-                EditorGUILayout.Space();
-
-                GUILayout.Label("Button 2", EditorStyles.label);
-
-                EditorGUILayout.TextField("Title", "Desicion 2");
-                EditorGUILayout.TextField("Go To", "1");
-
-                GUILayout.BeginHorizontal();
-        
-                if (GUILayout.Button("Insert")) {
-                    // add button code here
-                }
-
-                if (GUILayout.Button("Remove")) {
-                    // remove button code here
-                }
-
-                GUILayout.EndHorizontal();
-
-                EditorGUILayout.Space();
-
-                GUILayout.Label("Button 3", EditorStyles.label);
-
-                EditorGUILayout.TextField("Title", "Desicion 3");
-                EditorGUILayout.TextField("Go To", "3");
-
-                GUILayout.BeginHorizontal();
-        
-                if (GUILayout.Button("Insert")) {
-                    // add button code here
-                }
-
-                if (GUILayout.Button("Remove")) {
-                    // remove button code here
-                }
-
-                GUILayout.EndHorizontal();
-
-                EditorGUILayout.Space();
-
-                GUILayout.Label("Button 4", EditorStyles.label);
-
-                EditorGUILayout.TextField("Title", "Desicion 4");
-                EditorGUILayout.TextField("Go To", "0");
-
-                GUILayout.BeginHorizontal();
-        
-                if (GUILayout.Button("Add")) {
-                    // add button code here
-                }
-
-                if (GUILayout.Button("Remove")) {
-                    // remove button code here
-                }
-
-                GUILayout.EndHorizontal();
-                EditorGUILayout.Space();
+                initItemUi();
             break;
         }
 
@@ -191,6 +134,27 @@ public class QuestEditor : EditorWindow
         }
 
         EditorGUILayout.Space();
+    }
+
+    private void OnGUI()
+    {
+        questLoader.initialize();
+
+        GUILayout.Label("Glowbom", EditorStyles.boldLabel);
+
+        GUILayout.Label("Quests", EditorStyles.label);
+
+        EditorGUILayout.Space();
+
+        if (cloudSaveEanbled) {
+            initCloudSaveUi();
+        }
+
+        EditorGUILayout.Space();
+
+        if (questLoader.logic != null) {
+            initMainQuest();
+        }
     }
 
     private void initCloudSaveUi() {
