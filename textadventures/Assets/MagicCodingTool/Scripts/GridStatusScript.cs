@@ -167,6 +167,13 @@ public class GridStatusScript : MonoBehaviour
 						}
 					}
 				}
+
+				for(int heroValueIndex = 0; heroValueIndex < logic.heroElements.Length; heroValueIndex++) {
+					string element = logic.heroElements[heroValueIndex];
+					if (item.description.Contains("{"+element)) {
+						item.description = item.description.Replace("{" + element + "}", logic.heroValues[heroValueIndex].ToString());
+					}
+				}
 				
 				gameViewText.text = item.description;
 
@@ -183,6 +190,13 @@ public class GridStatusScript : MonoBehaviour
 								if (item.buttonsTexts [i].Contains("{" + key + "}")) {
 									item.buttonsTexts [i] = item.buttonsTexts [i].Replace("{" + key + "}", answers[key]);	
 								}
+							}
+						}
+
+						for(int heroValueIndex = 0; heroValueIndex < logic.heroElements.Length; heroValueIndex++) {
+							string element = logic.heroElements[heroValueIndex];
+							if (item.buttonsTexts [i].Contains("{"+element)) {
+								item.buttonsTexts [i] = item.buttonsTexts [i].Replace("{" + element + "}", logic.heroValues[heroValueIndex].ToString());
 							}
 						}
 
