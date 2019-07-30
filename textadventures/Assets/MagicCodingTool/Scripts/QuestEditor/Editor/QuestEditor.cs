@@ -44,7 +44,13 @@ public class QuestEditor : EditorWindow
 
         questLoader.logic.items = items.ToArray();
 
-        // TODO: adjust indexes here
+        foreach (var logicItem in questLoader.logic.items) {
+            for(int j = 0; j < logicItem.goIndexes.Length; j++) {
+                if (logicItem.goIndexes[j] >= i) {
+                    logicItem.goIndexes[j] = logicItem.goIndexes[j] + 1;
+                }
+            }
+        }
 
         GUI.FocusControl(null);
         initAllTabUi();
@@ -56,7 +62,16 @@ public class QuestEditor : EditorWindow
 
         questLoader.logic.items = items.ToArray();
 
-        // TODO: adjust indexes here
+        foreach (var logicItem in questLoader.logic.items) {
+            for(int j = 0; j < logicItem.goIndexes.Length; j++) {
+                if (logicItem.goIndexes[j] >= i) {
+                    logicItem.goIndexes[j] = logicItem.goIndexes[j] - 1;
+                    if (logicItem.goIndexes[j] < 0) {
+                        logicItem.goIndexes[j] = 0;
+                    }
+                }
+            }
+        }
 
         GUI.FocusControl(null);
         initAllTabUi();
