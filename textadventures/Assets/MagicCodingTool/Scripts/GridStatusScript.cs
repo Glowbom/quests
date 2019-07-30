@@ -3,12 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine.UI;
-using UnityEngine.Networking;
 
 /*
  * Created on Sun Jul 21 2019
  *
- * Copyright (c) 2019 Glowbom, Inc.
+ * Copyright (c) 2019 Glowbom.
  */
 [System.Serializable]
 public class Logic
@@ -80,12 +79,9 @@ public class GridStatusScript : MonoBehaviour
 	public GameObject editButtonPanel;
 	public InputField editTitleButtonField;
 
-	public GameObject loginView;
 	public GameObject editView;
 	public InputField editTitleField;
 	public InputField editTextField;
-	public InputField loginField;
-	public InputField passwordField;
 	public Image quitView;
 	public Image scrollView;
 	public Text gameViewTitle;
@@ -108,24 +104,6 @@ public class GridStatusScript : MonoBehaviour
 	public GameObject about;
 
 	public GameObject gridButtonsPanel;
-
-	public Image frontRu;
-
-	public GameObject aboutRu;
-
-	public string type;
-
-	public Button loginButton;
-	public Button logoutButton;
-	public Button showLoginButton;
-	public Button showSignupButton;
-
-	public Button showLoginButton2;
-	public Button showSignupButton2;
-	
-
-	public Text dontHaveAccountText;
-	public Text email;
 
 	// edit
 
@@ -224,7 +202,7 @@ public class GridStatusScript : MonoBehaviour
 					editButtons [item.buttonsTexts.Length].gameObject.SetActive(true);
 				}
 				
-				if (item.goConditions != null) {
+				if (item.goConditions != null && item.goConditions.Length > 0) {
 					bool conditionOk = true;
 					for (int i = 0; i < item.goConditions.Length; i++) {			
 						if (item.goConditions [i] >= logic.heroValues [i]) {
@@ -251,13 +229,7 @@ public class GridStatusScript : MonoBehaviour
 				
 			} 
 		}
-	} 
-
-#if UNITY_IOS
-private string gameId = "";
-#elif UNITY_ANDROID
-private string gameId = "";
-#endif
+	}
 
 	Dictionary<string, Sprite> sprites = new Dictionary<string, Sprite>();
 
@@ -270,7 +242,6 @@ private string gameId = "";
 		load ();
 		loadButtonsLogic();
 		procced ();
-		//Advertisement.Initialize(gameId);
 
 		sprites.Clear();
 		Sprite sprite = Resources.Load("Textures/default", typeof(Sprite)) as Sprite;
@@ -326,34 +297,6 @@ private string gameId = "";
 		sprite = Resources.Load("Textures/default", typeof(Sprite)) as Sprite;
 		sprites.Add(key, sprite);
 
-		if (GameStatusMagic.instance.getToken() != null && 
-			!GameStatusMagic.instance.getToken().Equals("")) {
-			//Debug.Log("token = " + GameStatusMagic.instance.getToken());
-			showLoginButton.gameObject.SetActive(false);
-			showLoginButton2.gameObject.SetActive(false);
-
-			if (!edit) {
-				editButton.gameObject.SetActive(true);
-			}
-			
-			showSignupButton.gameObject.SetActive(false);
-			showSignupButton2.gameObject.SetActive(false);
-			dontHaveAccountText.gameObject.SetActive(false);
-			logoutButton.gameObject.SetActive(true);
-
-			updateLoginButtonTextIfNeeded();
-		} else {
-			//Debug.Log("token = " + GameStatusMagic.instance.getToken());
-			showLoginButton.gameObject.SetActive(true);
-			showSignupButton.gameObject.SetActive(true);
-			showLoginButton2.gameObject.SetActive(true);
-			editButton.gameObject.SetActive(false);
-			showSignupButton2.gameObject.SetActive(true);
-			dontHaveAccountText.gameObject.SetActive(true);
-			logoutButton.gameObject.SetActive(false);
-			email.text = "";
-		}
-
 		for (int i = 0; i < gridButtons.Length; i++) {
 			gridButtons [i].gameObject.SetActive(false);
 		}
@@ -368,18 +311,6 @@ private string gameId = "";
 			}
 				}
 		
-	}
-
-	public void updateLoginButtonTextIfNeeded() {
-		if (GameStatusMagic.instance.getToken() != null && 
-			!GameStatusMagic.instance.getToken().Equals("") &&
-			GameStatusMagic.instance.user.email != null) {
-			email.text = GameStatusMagic.instance.user.email;
-		}
-	}
-
-	public void comeBackPressed() {
-        
 	}
 
 	public void backPressed() {
@@ -402,276 +333,12 @@ private string gameId = "";
 		
 	}
 
-	IEnumerator getUser(string url)
-    {
-		Debug.Log("getUser");
-		loginField.enabled = false;
-		passwordField.enabled = false;
-		loginButton.enabled = false;
-		status.text = "getting information...";
-		
-        var request = new UnityWebRequest(url, "GET");
-        byte[] bodyRaw = System.Text.Encoding.UTF8.GetBytes("{}");
-        request.uploadHandler = (UploadHandler) new UploadHandlerRaw(bodyRaw);
-        request.downloadHandler = (DownloadHandler) new DownloadHandlerBuffer();
-        request.SetRequestHeader("x-auth-token", GameStatusMagic.instance.getToken());
- 
-        yield return request.Send();
-
-		loginField.enabled = true;
-		passwordField.enabled = true;
-		loginButton.enabled = true;
-
-		if (request.isNetworkError)
-        {
-			Debug.Log("Error");
-			status.text = request.error;
-        }
-        else
-        {
-			Debug.Log("OK");
-			if (request.responseCode == 200) {
-				Debug.Log("Great Success");
-				loginView.SetActive(false);
-				showLoginButton.gameObject.SetActive(false);
-				showSignupButton.gameObject.SetActive(false);
-				showLoginButton2.gameObject.SetActive(false);
-				if (!edit) {
-					editButton.gameObject.SetActive(true);
-				}
-				showSignupButton2.gameObject.SetActive(false);
-				dontHaveAccountText.gameObject.SetActive(false);
-				logoutButton.gameObject.SetActive(true);
-				loginField.text = "";
-				passwordField.text = "";
-				status.text = "";
-
-				GameStatusMagic.instance.user = JsonUtility.FromJson<GameStatusMagic.User>(request.downloadHandler.text);
-				Debug.Log(GameStatusMagic.instance.user.email);
-				GameStatusMagic.instance.save();
-				updateLoginButtonTextIfNeeded();
-
-				StartCoroutine(getQuest());
-				
-
-				// in case it  was sign up
-				signupView.SetActive(false);
-			} else {
-				status.text = request.downloadHandler.text;
-			}
-        }
-    }
-
-	IEnumerator getQuest()
-    {
-		Debug.Log("getQuest");
-        var request = new UnityWebRequest("https://glowbom.herokuapp.com/api/quests/user/" + GameStatusMagic.instance.user._id, "GET");
-        byte[] bodyRaw = System.Text.Encoding.UTF8.GetBytes("{}");
-        request.uploadHandler = (UploadHandler) new UploadHandlerRaw(bodyRaw);
-        request.downloadHandler = (DownloadHandler) new DownloadHandlerBuffer();
-        request.SetRequestHeader("x-auth-token", GameStatusMagic.instance.getToken());
- 
-        yield return request.Send();
-
-		if (request.isNetworkError)
-        {
-			Debug.Log("Error");
-        }
-        else
-        {
-			Debug.Log("OK");
-			if (request.responseCode == 200) {
-				Debug.Log(request.downloadHandler.text);
-				GameStatusMagic.instance.quest = JsonUtility.FromJson<GameStatusMagic.Quest>(request.downloadHandler.text);
-				GameStatusMagic.instance.quest.text.currentItemIndex = 0;
-				GameStatusMagic.instance.save();
-
-				load ();
-				procced ();
-			} else {
-				Debug.Log(request.downloadHandler.text);
-			}
-        }
-    }
-
-	public void createQuestInCloud() {
-		StartCoroutine(createQuestInCloudAsync());
-	}
-
-	IEnumerator createQuestInCloudAsync()
-    {
-		Debug.Log("postQuest");
-        var request = new UnityWebRequest("https://glowbom.herokuapp.com/api/quests/",GameStatusMagic.instance.quest._id == null ? "POST" : "PUT");
-		//var request = new UnityWebRequest("https://glowbom.herokuapp.com/api/quests/","POST");
-		string body = "{\"text\": " + GameStatusMagic.instance.quest.content +",\"userId\":\""+ GameStatusMagic.instance.user._id +"\"}";
-		Debug.Log(body);
-        byte[] bodyRaw = System.Text.Encoding.UTF8.GetBytes(body);
-        request.uploadHandler = (UploadHandler) new UploadHandlerRaw(bodyRaw);
-        request.downloadHandler = (DownloadHandler) new DownloadHandlerBuffer();
-        request.SetRequestHeader("x-auth-token", GameStatusMagic.instance.getToken());
-		request.SetRequestHeader("Content-Type", "application/json");
- 
-        yield return request.Send();
-
-		if (request.isNetworkError)
-        {
-			Debug.Log("Error");
-        }
-        else
-        {
-			Debug.Log("OK");
-			if (request.responseCode == 200) {
-				Debug.Log(request.downloadHandler.text);
-				GameStatusMagic.instance.quest = JsonUtility.FromJson<GameStatusMagic.Quest>(request.downloadHandler.text);
-				GameStatusMagic.instance.quest.text.currentItemIndex = 0;
-				GameStatusMagic.instance.save();
-
-				load ();
-				procced ();
-			} else {
-				Debug.Log(request.downloadHandler.text);
-			}
-        }
-	}
-
-	public void updateQuestInCloud() {
-		StartCoroutine(updateQuestAsync());
-	}
-
-	IEnumerator updateQuestAsync()
-    {
-		GameStatusMagic.instance.quest.content = JsonUtility.ToJson (logic);
-		while(GameStatusMagic.instance.quest.content.Contains("\n")) {
-			GameStatusMagic.instance.quest.content = GameStatusMagic.instance.quest.content.Replace("\n", "[newline]");
-		}
-
-		Debug.Log("postQuest");
-        var request = new UnityWebRequest("https://glowbom.herokuapp.com/api/quests/" + GameStatusMagic.instance.quest._id, "PUT");
-		string body = "{\"text\": " + GameStatusMagic.instance.quest.content +",\"userId\":\""+ GameStatusMagic.instance.user._id +"\"}";
-		Debug.Log(body);
-        byte[] bodyRaw = System.Text.Encoding.UTF8.GetBytes(body);
-        request.uploadHandler = (UploadHandler) new UploadHandlerRaw(bodyRaw);
-        request.downloadHandler = (DownloadHandler) new DownloadHandlerBuffer();
-        request.SetRequestHeader("x-auth-token", GameStatusMagic.instance.getToken());
-		request.SetRequestHeader("Content-Type", "application/json");
- 
-        yield return request.Send();
-
-		if (request.isNetworkError)
-        {
-			Debug.Log("Error");
-        }
-        else
-        {
-			Debug.Log("OK");
-			if (request.responseCode == 200) {
-				Debug.Log(request.downloadHandler.text);
-				GameStatusMagic.instance.quest = JsonUtility.FromJson<GameStatusMagic.Quest>(request.downloadHandler.text);
-				GameStatusMagic.instance.save();
-
-				load ();
-				procced ();
-			} else {
-				Debug.Log(request.downloadHandler.text);
-			}
-        }
-	}
-
-	IEnumerator login(string url, string bodyJsonString)
-    {
-		loginField.enabled = false;
-		passwordField.enabled = false;
-		loginButton.enabled = false;
-		status.text = "loading...";
-		
-        var request = new UnityWebRequest(url, "POST");
-        byte[] bodyRaw = System.Text.Encoding.UTF8.GetBytes(bodyJsonString);
-        request.uploadHandler = (UploadHandler) new UploadHandlerRaw(bodyRaw);
-        request.downloadHandler = (DownloadHandler) new DownloadHandlerBuffer();
-        request.SetRequestHeader("Content-Type", "application/json");
- 
-        yield return request.Send();
-
-		loginField.enabled = true;
-		passwordField.enabled = true;
-		loginButton.enabled = true;
-
-		if (request.isNetworkError)
-        {
-			status.text = request.error;
-        }
-        else
-        {
-            // Show results as text
-            //Debug.Log(request.downloadHandler.text);
-
-            // Or retrieve results as binary data
-            //byte[] results = request.downloadHandler.data;
-
-			if (request.responseCode == 200) {
-				GameStatusMagic.instance.storeToken(request.downloadHandler.text);
-				StartCoroutine(getUser("https://glowbom.herokuapp.com/api/users/me"));
-			} else {
-				status.text = request.downloadHandler.text;
-			}
-        }
-    }
-
-	IEnumerator login()
-    {
-		return login("https://glowbom.herokuapp.com/api/auth", "{\"email\": \""+ loginField.text +"\",\"password\":\""+ passwordField.text +"\"}");
-    }
-
-	public void logout() {
-		loginView.SetActive(false);
-		GameStatusMagic.instance.quest = null;
-		GameStatusMagic.instance.user = null;
-		showLoginButton.gameObject.SetActive(true);
-		showSignupButton.gameObject.SetActive(true);
-		showLoginButton2.gameObject.SetActive(true);
-		editButton.gameObject.SetActive(false);
-		showSignupButton2.gameObject.SetActive(true);
-		dontHaveAccountText.gameObject.SetActive(true);
-		logoutButton.gameObject.SetActive(false);
-		GameStatusMagic.instance.resetToken();
-		email.text = "";
-	}
-
-	public void backLoginView() {
-		loginView.SetActive(false);
-	}
-	
-	public void showLoginPanel() {
-		edit = true;
-		backPressed();
-		
-		loginView.SetActive(true);
-		logoutButton.gameObject.SetActive(false);
-		loginField.text = "";
-		passwordField.text = "";
-		status.text = "";
-	}
-
-	public void loginPressed() {
-		if (loginField.text.Equals("")) {
-			status.text = "email can't be empty";
-			return;
-		}
-
-		if (passwordField.text.Equals("")) {
-			status.text = "password can't be empty";
-			return;
-		}
-
-		StartCoroutine(login());
-	}
 
 	public void openPressed() {
 		GameStatusMagic.instance.questAnswers.Clear();
-		edit = true;
 		load();
 
-		startButtonText.text = GameStatusMagic.instance.questAnswers.Count == 0 ? "Create Quest" : "Edit Quest";
+		startButtonText.text = "Start Quest";
 
 		front.gameObject.SetActive(false);
 	}
@@ -730,21 +397,6 @@ private string gameId = "";
 				string answer = logic.items [logic.currentItemIndex].buttonsTexts[i].ToLower();
 
 				logic.nextItem (i);
-
-
-				if (edit) {
-					if (logic.currentItemIndex != 0) {
-						answers[key] = answer;
-						GameStatusMagic.instance.questAnswers.Add(answer);
-					} else {
-						edit = false;
-						GameStatusMagic.instance.save();
-						startButtonText.text = "Edit Quest";
-
-						// call create / update quest here
-						load ();
-					}
-				}
 
 				procced ();
 				break;
@@ -856,13 +508,10 @@ private string gameId = "";
 		} catch (IOException) {
 		}
 	}
-
-	public bool edit = true;
 	
 	public void load ()
 	{
 		if  (GameStatusMagic.instance.quest != null && GameStatusMagic.instance.quest._id != null && GameStatusMagic.instance.quest.text != null) {
-			edit = false;
 			editButton.gameObject.SetActive(true);
 			logic = GameStatusMagic.instance.quest.text;
 			return;
@@ -871,50 +520,13 @@ private string gameId = "";
 			editButton.gameObject.SetActive(false);
 		}
 
-		var textAsset = Resources.Load (edit ? "Data/Questions" : "Data/TemplateQuest") as TextAsset;
-		//This checks if your computer's operating system is in the French language
+		var textAsset = Resources.Load ("Data/TemplateQuest") as TextAsset;
 
 		if (lastClickedLink != null) {
 			textAsset = Resources.Load (lastClickedLink) as TextAsset;
 		}
 
-		if (type != null && type.Equals("Lifebook")) {
-			textAsset = Resources.Load (edit ? "Data/QuestionsLifebook" : "Data/TemplateQuest") as TextAsset;
-		}
 		logic = JsonUtility.FromJson<Logic> (textAsset.text);
-		
-		trackEvent("Book", "Loaded"); 
-
-		if (!edit && GameStatusMagic.instance.user != null && GameStatusMagic.instance.user._id != null && GameStatusMagic.instance.quest == null) {
-			string text = textAsset.text;
-			if (text.Contains("{question")) {
-				foreach(string key in answers.Keys) {
-						//Debug.Log("key = " + key + "; value = " + answers[key]);
-					while (text.Contains("{" + key + "}")) {
-						text = text.Replace("{" + key + "}", answers[key]);	
-					}
-				}		
-			}
-
-			/* while(text.Contains("\n")) {
-				text = text.Replace("\n", "[newline]");
-			}
-
-			while(text.Contains("\"")) {
-				text = text.Replace("\"", "yoyoyo");
-			}
-
-			while(text.Contains("{")) {
-				text = text.Replace("{", "99999");
-			}
-
-			while(text.Contains("}")) {
-				text = text.Replace("}", "66666");
-			}*/
-			GameStatusMagic.instance.quest = new GameStatusMagic.Quest();
-			GameStatusMagic.instance.quest.content = text;
-			createQuestInCloud();
-		}
 	}
 
 	public void loadButtonsLogic() {
@@ -929,16 +541,6 @@ private string gameId = "";
 		gameViewText.text = text;
 	}
 
-	// signup
-	public void backSignUpView() {
-		signupView.SetActive(false);
-	}
-
-	public InputField signupField;
-	public InputField signupPasswordField;
-	public InputField signupConfirmPasswordField;
-	public Text signupStatus;
-	public Button signupButton;
 	public Button editButton;
 
 	public void showEditPanel() {
@@ -952,7 +554,6 @@ private string gameId = "";
 		gameViewText.text = editTextField.text;
 		logic.items[logic.currentItemIndex].title = editTitleField.text;
 		logic.items[logic.currentItemIndex].description = editTextField.text;
-		updateQuestInCloud();
 		editView.SetActive(false);
 	}
 
@@ -966,88 +567,5 @@ private string gameId = "";
 
 	public void cancelButtonChanges() {
 		editButtonPanel.gameObject.SetActive(false);
-	}
-
-	public void showSignUpPanel() {
-		edit = true;
-		backPressed();
-
-		signupView.SetActive(true);
-		logoutButton.gameObject.SetActive(false);
-		signupField.text = "";
-		signupPasswordField.text = "";
-		signupConfirmPasswordField.text = "";
-		signupStatus.text = "";
-
-		signupField.enabled = true;
-		signupPasswordField.enabled = true;
-		signupConfirmPasswordField.enabled = true;
-		signupButton.enabled = true;
-	}
-
-	IEnumerator signup(string url, string bodyJsonString)
-    {
-		signupField.enabled = false;
-		signupPasswordField.enabled = false;
-		signupConfirmPasswordField.enabled = false;
-		signupButton.enabled = false;
-		signupStatus.text = "Creating an account...";
-		
-        var request = new UnityWebRequest(url, "POST");
-        byte[] bodyRaw = System.Text.Encoding.UTF8.GetBytes(bodyJsonString);
-        request.uploadHandler = (UploadHandler) new UploadHandlerRaw(bodyRaw);
-        request.downloadHandler = (DownloadHandler) new DownloadHandlerBuffer();
-        request.SetRequestHeader("Content-Type", "application/json");
- 
-        yield return request.Send();
-
-		signupField.enabled = true;
-		signupPasswordField.enabled = true;
-		signupConfirmPasswordField.enabled = true;
-		signupButton.enabled = true;
-
-		if (request.isNetworkError)
-        {
-			signupStatus.text = request.error;
-        }
-        else
-        {
-			if (request.responseCode == 200) {
-				signupField.enabled = true;
-				signupPasswordField.enabled = true;
-				signupConfirmPasswordField.enabled = true;
-				signupButton.enabled = true;
-
-				GameStatusMagic.instance.storeToken(request.downloadHandler.text);
-				signupStatus.text = "Logging in...";
-				StartCoroutine(login("https://glowbom.herokuapp.com/api/auth", bodyJsonString));
-			} else {
-				signupStatus.text = request.downloadHandler.text;
-			}
-        }
-    }
-
-	public void signupPressed() {
-		if (signupField.text.Equals("")) {
-			signupStatus.text = "email can't be empty";
-			return;
-		}
-
-		if (signupPasswordField.text.Equals("")) {
-			signupStatus.text = "password can't be empty";
-			return;
-		}
-
-		if (signupConfirmPasswordField.text.Equals("")) {
-			signupStatus.text = "password can't be empty";
-			return;
-		}
-
-		if (!signupConfirmPasswordField.text.Equals(signupPasswordField.text)) {
-			signupStatus.text = "password doesn't match";
-			return;
-		}
-
-		StartCoroutine(signup("https://glowbom.herokuapp.com/api/users", "{\"email\": \""+ signupField.text +"\",\"password\":\""+ signupConfirmPasswordField.text +"\"}"));
 	}
 }
