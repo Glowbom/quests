@@ -251,8 +251,7 @@ public class GridStatusScript : MonoBehaviour
 	void Start ()
 	{	
 		GameStatusMagic.instance.load();
-		startButtonText.text = GameStatusMagic.instance.questAnswers.Count == 0 ? "Create Quest" : "Edit Quest";  
-
+		
 		load ();
 		loadButtonsLogic();
 		procced ();

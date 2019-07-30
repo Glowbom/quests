@@ -3217,7 +3217,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Create Quest
+  m_Text: Start Quest
 --- !u!222 &556099625
 CanvasRenderer:
   m_ObjectHideFlags: 0
