@@ -108,6 +108,10 @@ public class QuestEditor : EditorWindow
                 ++i;
             }
 
+            EditorGUILayout.Space();
+
+            initInitialHeroValues();
+
             EditorGUILayout.EndScrollView();
         }
 
@@ -176,7 +180,7 @@ public class QuestEditor : EditorWindow
 
             EditorGUILayout.Space();
 
-            scrollPosButtons = EditorGUILayout.BeginScrollView(scrollPosButtons, GUILayout.Width(position.width - 20), GUILayout.Height(600));
+            scrollPosButtons = EditorGUILayout.BeginScrollView(scrollPosButtons, GUILayout.Width(position.width - 20), GUILayout.Height(500));
 
             int i = 0;
             foreach(var goIndex in item.goIndexes) {
@@ -215,8 +219,149 @@ public class QuestEditor : EditorWindow
                 }
             }
 
+            EditorGUILayout.Space();
+
+            initHeroValues();
+
             EditorGUILayout.EndScrollView();
         }
+    }
+
+    private void initHeroValues() {
+        var item = questLoader.logic.items[questLoader.logic.currentItemIndex];
+        GUILayout.Label("Values", EditorStyles.label);
+
+        EditorGUILayout.Space();
+
+        if (questLoader.logic.heroElements == null || questLoader.logic.heroElements.Length == 0) {
+            questLoader.logic.heroElements = new string[1];
+            questLoader.logic.heroElements[0] = "Points";
+
+            questLoader.logic.heroValues = new int[1];
+            questLoader.logic.heroValues[0] = 0;
+        }
+
+        if (item.heroValues == null || item.heroValues.Length == 0 || item.heroValues.Length != questLoader.logic.heroValues.Length) {
+            item.heroValues = new int[questLoader.logic.heroValues.Length];
+        }
+
+        for(int x = 0; x < questLoader.logic.heroValues.Length; x++) {
+            GUI.backgroundColor = Color.white;
+
+            questLoader.logic.heroElements[x] = EditorGUILayout.TextField("Name", questLoader.logic.heroElements[x]);
+            item.heroValues[x] = int.Parse(EditorGUILayout.TextField(questLoader.logic.heroElements[x], item.heroValues[x].ToString()));
+            GUILayout.BeginHorizontal();
+        
+            if (GUILayout.Button("Insert")) {
+                insertHeroValue(x);
+            }
+
+            if (GUILayout.Button("Remove")) {
+                removeHeroValue(x); 
+            }
+
+            GUILayout.EndHorizontal();
+        }
+
+        EditorGUILayout.Space();
+    }
+
+    private void initInitialHeroValues() {
+        GUILayout.Label("Values", EditorStyles.label);
+
+        EditorGUILayout.Space();
+
+        if (questLoader.logic.heroElements == null || questLoader.logic.heroElements.Length == 0) {
+            questLoader.logic.heroElements = new string[1];
+            questLoader.logic.heroElements[0] = "Points";
+
+            questLoader.logic.heroValues = new int[1];
+            questLoader.logic.heroValues[0] = 0;
+        }
+
+        for(int x = 0; x < questLoader.logic.heroValues.Length; x++) {
+            GUI.backgroundColor = Color.white;
+
+            questLoader.logic.heroElements[x] = EditorGUILayout.TextField("Name", questLoader.logic.heroElements[x]);
+            questLoader.logic.heroValues[x] = int.Parse(EditorGUILayout.TextField(questLoader.logic.heroElements[x], questLoader.logic.heroValues[x].ToString()));
+            GUILayout.BeginHorizontal();
+        
+            if (GUILayout.Button("Insert")) {
+                insertInitialHeroValue(x);
+            }
+
+            if (GUILayout.Button("Remove")) {
+                removeInitialHeroValue(x); 
+            }
+
+            GUILayout.EndHorizontal();
+        }
+
+        EditorGUILayout.Space();
+    }
+
+    private void insertHeroValue(int i) {
+        var item = questLoader.logic.items[questLoader.logic.currentItemIndex];
+        List<string> heroElementsList = new List<string>(questLoader.logic.heroElements);
+        List<int> heroValuesList = new List<int>(questLoader.logic.heroValues);
+        List<int> heroValuesItemList = new List<int>(item.heroValues);
+
+        heroValuesList.Insert(i, 0);
+        heroValuesItemList.Insert(i, 0);
+        heroElementsList.Insert(i, "Points " + i);
+
+        questLoader.logic.heroElements = heroElementsList.ToArray();
+        questLoader.logic.heroValues = heroValuesList.ToArray();
+        item.heroValues = heroValuesItemList.ToArray();
+
+        GUI.FocusControl(null);
+        initItemUi();
+    }
+
+    private void removeHeroValue(int i) {
+        var item = questLoader.logic.items[questLoader.logic.currentItemIndex];
+        List<string> heroElementsList = new List<string>(questLoader.logic.heroElements);
+        List<int> heroValuesList = new List<int>(questLoader.logic.heroValues);
+        List<int> heroValuesItemList = new List<int>(item.heroValues);
+
+        heroElementsList.RemoveAt(i);
+        heroValuesList.RemoveAt(i);
+        heroValuesItemList.RemoveAt(i);
+
+        questLoader.logic.heroElements = heroElementsList.ToArray();
+        questLoader.logic.heroValues = heroValuesList.ToArray();
+        item.heroValues = heroValuesItemList.ToArray();
+
+        GUI.FocusControl(null);
+        initItemUi();
+    }
+
+    private void insertInitialHeroValue(int i) {
+        List<string> heroElementsList = new List<string>(questLoader.logic.heroElements);
+        List<int> heroValuesList = new List<int>(questLoader.logic.heroValues);
+
+        heroValuesList.Insert(i, 0);
+        heroElementsList.Insert(i, "Points " + i);
+
+        questLoader.logic.heroElements = heroElementsList.ToArray();
+        questLoader.logic.heroValues = heroValuesList.ToArray();
+
+        GUI.FocusControl(null);
+        initItemUi();
+    }
+
+    private void removeInitialHeroValue(int i) {
+        List<string> heroElementsList = new List<string>(questLoader.logic.heroElements);
+        List<int> heroValuesList = new List<int>(questLoader.logic.heroValues);
+
+        heroElementsList.RemoveAt(i);
+        heroValuesList.RemoveAt(i);
+
+        questLoader.logic.heroElements = heroElementsList.ToArray();
+        questLoader.logic.heroValues = heroValuesList.ToArray();
+
+        GUI.FocusControl(null);
+        initItemUi();
     }
 
     private void initMainQuest() {
