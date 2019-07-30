@@ -9395,7 +9395,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\n\nVersion 0.1.1 July, 2019.\n\n\nDeveloped using Glowbom.com\nMore info:\n\n\n\n\n\n\n\n\n\n\nCopyright
+  m_Text: "\n\nVersion 0.0.1 July, 2019.\n\n\nDeveloped using Glowbom.com\nMore info:\n\n\n\n\n\n\n\n\n\n\nCopyright
     \xA9 2019 Glowbom. All rights reserved. "
 --- !u!222 &1885135544
 CanvasRenderer:
