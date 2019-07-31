@@ -17,4 +17,80 @@ public class QuestCreator : MonoBehaviour
     {
         
     }
+
+    public void allNextPressed() {
+
+    }
+
+    public void previousPressed() {
+
+    }
+
+    public void allValuesNextPressed() {
+
+    }
+
+    public void allValuesPreviousPressed() {
+
+    }
+
+    public void valuesNextPressed() {
+
+    }
+
+    public void valuesPreviousPressed() {
+
+    }
+
+    public void buttonsNextPressed() {
+
+    }
+
+    public void buttonsPreviousPressed() {
+
+    }
+
+    // All
+
+    public void allTitlePressed(int i) {
+
+    }
+
+    public void allInsertPressed(int i) {
+        
+    }
+
+    public void allRemovePressed(int i) {
+        
+    }
+
+    public void allValueInsertPressed(int i) {
+        
+    }
+
+    public void allValueRemovePressed(int i) {
+        
+    }
+
+    // Buttons
+
+    public void buttonInsertPressed(int i) {
+        
+    }
+
+    public void buttonGoPressed(int i) {
+        
+    }
+
+    public void buttonRemovePressed(int i) {
+        
+    }
+
+    public void valueInsertPressed(int i) {
+        
+    }
+
+    public void valueRemovePressed(int i) {
+        
+    }
 }
