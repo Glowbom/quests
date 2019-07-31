@@ -25,7 +25,7 @@ public class QuestLoader
     public void save() {
         try
         {
-            using (StreamWriter sw = new StreamWriter("Assets/MagicCodingTool/Resources/Data/TemplateQuest.txt", false))
+            using (StreamWriter sw = new StreamWriter("Assets/Glowbom/Quests/Resources/Data/TemplateQuest.txt", false))
             {
                 sw.Write(JsonUtility.ToJson(logic));
             }
