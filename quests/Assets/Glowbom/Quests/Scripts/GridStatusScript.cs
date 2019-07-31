@@ -47,13 +47,16 @@ public class Logic
 				}
 			}
 			
-			if (deadValue > -1 && deadValue < heroValues.Length) {
+			/*if (deadValue > -1 && deadValue < heroValues.Length) {
 				if (heroValues [deadValue] <= deadLevel) {
 					currentItemIndex = deadItemIndex;
 					nextItem = items [currentItemIndex];
 					pleaseRestart = true;
 				}
 			}
+*/
+
+			
 			
 			return nextItem;
 		}
@@ -371,7 +374,7 @@ public class GridStatusScript : MonoBehaviour
 		gridBackground.gameObject.SetActive(true);
 	}
 	
-	public void buttonPressed (GameObject button)
+	public void buttonPressed (int i)
 	{
 		++buttonPressedCounter;
 		if (buttonPressedCounter % 25 == 0) {
@@ -383,22 +386,9 @@ public class GridStatusScript : MonoBehaviour
 			procced ();
 			return;
 		}
-		
-		int i = 0;
-		foreach (Button b in buttons) {
-			if (b.gameObject == button) {
 
-				string key = "question" + logic.currentItemIndex;
-				string answer = logic.items [logic.currentItemIndex].buttonsTexts[i].ToLower();
-
-				logic.nextItem (i);
-
-				procced ();
-				break;
-			}
-			
-			++i;
-		}
+		logic.nextItem (i);
+		procced ();
 	}
 
 	private int shift = 0;
