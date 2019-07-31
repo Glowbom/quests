@@ -146,9 +146,9 @@ public class QuestEditor : EditorWindow
         var item = questLoader.logic.items[questLoader.logic.currentItemIndex];
         List<string> buttonsTextsList = new List<string>(item.buttonsTexts);
         List<int> goIndexesList = new List<int>(item.goIndexes);
-        List<int> goConditionsList = new List<int>(item.goConditions);
+        List<int> goConditionsList = item.goConditions != null ? new List<int>(item.goConditions) : new List<int>();
 
-        if (goConditionsList.Count > 0) {
+        if (item.goConditions != null && goConditionsList.Count > 0) {
             goConditionsList.RemoveAt(i);
         }
 
@@ -158,7 +158,7 @@ public class QuestEditor : EditorWindow
         item.buttonsTexts = buttonsTextsList.ToArray();
         item.goIndexes = goIndexesList.ToArray();
 
-        if (goConditionsList.Count > 0) {
+        if (item.goConditions != null && goConditionsList.Count > 0) {
             item.goConditions = goConditionsList.ToArray();
         }
 
@@ -191,31 +191,37 @@ public class QuestEditor : EditorWindow
                     item.buttonsTexts[i] = EditorGUILayout.TextField("Title", item.buttonsTexts[i]);
                     item.goIndexes[i] = int.Parse(EditorGUILayout.TextField("Go To", item.goIndexes[i].ToString()));
                     GUILayout.BeginHorizontal();
-        
-                    if (GUILayout.Button("Insert")) {
+
+                    if (GUILayout.Button("Insert"))
+                    {
                         insertButton(i);
                     }
 
-                    if (GUILayout.Button("Go")) {
-                        if (goIndex >= 0 && goIndex < questLoader.logic.items.Length) {
+                    if (GUILayout.Button("Go"))
+                    {
+                        if (goIndex >= 0 && goIndex < questLoader.logic.items.Length)
+                        {
                             GUI.FocusControl(null);
                             questLoader.logic.currentItemIndex = goIndex;
                             initItemUi();
                         }
                     }
 
-                    
+
                     GUI.backgroundColor = new Color32(238, 32, 77, 255);
                     var style = new GUIStyle(GUI.skin.button);
                     style.normal.textColor = Color.white;
-                    if (GUILayout.Button("Remove", style)) {
+                    if (GUILayout.Button("Remove", style))
+                    {
                         removeButton(i);
+                        break;
                     }
 
                     GUILayout.EndHorizontal();
                     EditorGUILayout.Space();
 
                     ++i;
+
                 }
             }
 
