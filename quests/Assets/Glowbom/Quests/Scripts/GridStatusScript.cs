@@ -105,14 +105,6 @@ public class GridStatusScript : MonoBehaviour
 
 	public GameObject gridButtonsPanel;
 
-	// edit
-
-	public Button[] editButtons;
-	public Button[] editGotoButtons;
-
-	// signup
-	public GameObject signupView;
-
 	public Text status;
 
 	Dictionary<string, string> answers = new Dictionary<string, string>();
@@ -179,7 +171,6 @@ public class GridStatusScript : MonoBehaviour
 
 				for (int i = 0; i < buttons.Length; i++) {
 					buttons [i].gameObject.SetActive(false);
-					editButtons[i].gameObject.SetActive(false);
 				}
 				
 				for (int i = 0; i < item.buttonsTexts.Length; i++) {
@@ -201,19 +192,10 @@ public class GridStatusScript : MonoBehaviour
 						}
 
 						bs.transform.Find("Text").GetComponent<Text>().text = item.buttonsTexts [i];
-						editButtons[i].transform.Find("Text").GetComponent<Text>().text = item.buttonsTexts [i];
-
+						
 						buttons [i].enabled = item.goIndexes [i] != -1;
 						buttons [i].gameObject.SetActive(item.goIndexes [i] != -1);
-						editButtons [i].enabled = item.goIndexes [i] != -1;
-						editButtons [i].gameObject.SetActive(item.goIndexes [i] != -1);
 					}
-				}
-
-				if (editButtons.Length > item.buttonsTexts.Length) {
-					editButtons[item.buttonsTexts.Length].transform.Find("Text").GetComponent<Text>().text = "Add New";
-					editButtons [item.buttonsTexts.Length].enabled = true;
-					editButtons [item.buttonsTexts.Length].gameObject.SetActive(true);
 				}
 				
 				if (item.goConditions != null && item.goConditions.Length > 0) {
@@ -417,86 +399,10 @@ public class GridStatusScript : MonoBehaviour
 			
 			++i;
 		}
-
-		int j = 0;
-		foreach (Button b in editButtons) {
-			if (b.gameObject == button) {
-				editTitleButtonField.text = logic.items [logic.currentItemIndex].buttonsTexts[j].ToLower();
-
-				editGotoButtons[0].transform.Find("Text").GetComponent<Text>().text = "previous";
-				editGotoButtons[7].transform.Find("Text").GetComponent<Text>().text = "next";
-				shift = 0;
-
-				int index = logic.items [logic.currentItemIndex].goIndexes[j];
-				currentOpenedButtonIndex = j;
-	
-				for (int k = 1; k < 7; k++) {
-					
-					if (index + k - 1 < logic.items.Length) {
-
-						string value = logic.items [index + k - 1].title;// + ": " + logic.items [index + k - 1].description;
-						if (k == 1) {
-							value = "* " + value;
-						}
-						editGotoButtons[k].transform.Find("Text").GetComponent<Text>().text = value;
-
-						
-					} else {
-						editGotoButtons[k].transform.Find("Text").GetComponent<Text>().text = "";
-					}
-				}
-
-				editButtonPanel.gameObject.SetActive(true);
-				break;
-			}
-			
-			++j;
-		}
-
-		int indexGotoButton = 0;
-		foreach (Button b in editGotoButtons) {
-			if (b.gameObject == button) {
-				if (indexGotoButton != 0 && indexGotoButton != editGotoButtons.Length - 1) {
-					// change the route
-					logic.items [logic.currentItemIndex].goIndexes[currentOpenedButtonIndex] = logic.items [logic.currentItemIndex].goIndexes[currentOpenedButtonIndex] + indexGotoButton - 1 + shift;
-					shift = -1 * (indexGotoButton - 1);
-				} else if (indexGotoButton == 0) {
-					// previous
-					--shift;
-				} else {
-					// next
-					++shift;
-				}
-
-				refreshGotoButtons();
-			}
-			++indexGotoButton;
-		}
 	}
 
 	private int shift = 0;
 	private int currentOpenedButtonIndex = 0;
-
-	public void refreshGotoButtons() {
-		Debug.Log("refreshGotoButtons: " + shift);
-		int index = logic.items [logic.currentItemIndex].goIndexes[currentOpenedButtonIndex];
-	
-		for (int k = 1; k < 7; k++) {
-					
-			if (index + k - 1 + shift < logic.items.Length) {
-
-				string value = logic.items [index + k - 1 + shift].title;
-				if (k == 1 - shift) {
-					value = "* " + value;
-				}
-				editGotoButtons[k].transform.Find("Text").GetComponent<Text>().text = value;		
-			} else {
-				editGotoButtons[k].transform.Find("Text").GetComponent<Text>().text = "";
-			}
-					
-				
-		}
-	}
 
 	public void updateOrCreateQuestIfPossible() {
 		if (GameStatusMagic.instance.user != null) {
