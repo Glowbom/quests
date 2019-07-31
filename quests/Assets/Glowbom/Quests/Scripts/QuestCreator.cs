@@ -18,11 +18,19 @@ public class QuestCreator : MonoBehaviour
         
     }
 
+    public void save() {
+        loader.save();
+    }
+
+    public void load() {
+        loader.load();
+    }
+
     public void allNextPressed() {
 
     }
 
-    public void previousPressed() {
+    public void allPreviousPressed() {
 
     }
 
