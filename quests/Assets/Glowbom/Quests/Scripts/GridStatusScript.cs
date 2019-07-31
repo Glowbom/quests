@@ -430,14 +430,7 @@ public class GridStatusScript : MonoBehaviour
 	
 	public void load ()
 	{
-		if  (GameStatusMagic.instance.quest != null && GameStatusMagic.instance.quest._id != null && GameStatusMagic.instance.quest.text != null) {
-			editButton.gameObject.SetActive(true);
-			logic = GameStatusMagic.instance.quest.text;
-			return;
-		} 
-		else {
-			editButton.gameObject.SetActive(false);
-		}
+		editButton.gameObject.SetActive(true);
 
 		var textAsset = Resources.Load ("Data/TemplateQuest") as TextAsset;
 
@@ -463,8 +456,6 @@ public class GridStatusScript : MonoBehaviour
 	public Button editButton;
 
 	public void showEditPanel() {
-		editTitleField.text = logic.items[logic.currentItemIndex].title;
-		editTextField.text = logic.items[logic.currentItemIndex].description;
 		editView.SetActive(true);
 	}
 

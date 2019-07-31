@@ -101,4 +101,8 @@ public class QuestCreator : MonoBehaviour
     public void valueRemovePressed() {
         
     }
+
+    public void backPressed() {
+        gameObject.SetActive(false);
+    }
 }
