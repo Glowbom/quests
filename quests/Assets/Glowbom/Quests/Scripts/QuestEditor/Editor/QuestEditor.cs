@@ -87,7 +87,7 @@ public class QuestEditor : EditorWindow
             int i = 0;
             foreach (var item in questLoader.logic.items)
             {
-                if (GUILayout.Button(i + " : " + item.title)) {
+                if (GUILayout.Button(i == questLoader.logic.currentItemIndex ? "* " + i + " : " + item.title : i + " : " + item.title)) {
                     GUI.FocusControl(null);
                     questLoader.logic.currentItemIndex = Array.IndexOf(questLoader.logic.items, item);
                     tabElements = 1;
