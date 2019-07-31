@@ -72,11 +72,11 @@ public class QuestCreator : MonoBehaviour
         
     }
 
-    public void allValueInsertPressed(int i) {
+    public void allValueInsertPressed() {
         
     }
 
-    public void allValueRemovePressed(int i) {
+    public void allValueRemovePressed() {
         
     }
 
@@ -94,11 +94,11 @@ public class QuestCreator : MonoBehaviour
         
     }
 
-    public void valueInsertPressed(int i) {
+    public void valueInsertPressed() {
         
     }
 
-    public void valueRemovePressed(int i) {
+    public void valueRemovePressed() {
         
     }
 }
