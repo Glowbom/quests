@@ -1,9 +1,40 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
+/*
+ * Created on Sun Jul 30 2019
+ *
+ * Copyright (c) 2019 Glowbom.
+ */
 public class QuestCreator : MonoBehaviour
 {
+    public Text projectName;
+    // All
+    public Button allPreviousButton;
+    public Button allNextButton;
+    public Button[] allTitleButtons;
+    public Button[] allInsertButtons;
+    public Button[] allRemoveButtons;
+    public GameObject allValues;
+    public InputField allValuesName;
+    public InputField allValuesValue;
+
+    // Item
+    public InputField title;
+    public InputField description;
+    public GameObject values;
+    public InputField valuesName;
+    public InputField valuesValue;
+    // Go To Buttons
+    public Text[] buttonTexts;
+    public InputField[] buttonTitles;
+    public InputField[] buttonValues;
+    public Button[] buttonGoButtons;
+    public Button[] buttonInsertButtons;
+    public Button[] buttonRemoveButtons;
+
     QuestLoader loader = new QuestLoader();
     
     // Start is called before the first frame update

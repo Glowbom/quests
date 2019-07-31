@@ -40,13 +40,13 @@ public class QuestEditor : EditorWindow
         item.goIndexes[0] = 0;
 
         List<Logic.Item> items = new List<Logic.Item>(questLoader.logic.items);
-        items.Insert(i, item);
+        items.Insert(i + 1, item);
 
         questLoader.logic.items = items.ToArray();
 
         foreach (var logicItem in questLoader.logic.items) {
             for(int j = 0; j < logicItem.goIndexes.Length; j++) {
-                if (logicItem.goIndexes[j] >= i) {
+                if (logicItem.goIndexes[j] >= i + 1) {
                     logicItem.goIndexes[j] = logicItem.goIndexes[j] + 1;
                 }
             }
@@ -125,11 +125,11 @@ public class QuestEditor : EditorWindow
         List<int> goConditionsList = item.goConditions == null ? new List<int>() : new List<int>(item.goConditions);
 
         if (goConditionsList.Count > 0) {
-            goConditionsList.Insert(i, 0);
+            goConditionsList.Insert(i + 1, 0);
         }
 
-        goIndexesList.Insert(i, 0);
-        buttonsTextsList.Insert(i, "Go Button");
+        goIndexesList.Insert(i + 1, 0);
+        buttonsTextsList.Insert(i + 1, "Go Button");
 
         item.buttonsTexts = buttonsTextsList.ToArray();
         item.goIndexes = goIndexesList.ToArray();
@@ -306,9 +306,9 @@ public class QuestEditor : EditorWindow
         List<int> heroValuesList = new List<int>(questLoader.logic.heroValues);
         List<int> heroValuesItemList = new List<int>(item.heroValues);
 
-        heroValuesList.Insert(i, 0);
-        heroValuesItemList.Insert(i, 0);
-        heroElementsList.Insert(i, "Points " + i);
+        heroValuesList.Insert(i + 1, 0);
+        heroValuesItemList.Insert(i + 1, 0);
+        heroElementsList.Insert(i + 1, "Points " + i);
 
         questLoader.logic.heroElements = heroElementsList.ToArray();
         questLoader.logic.heroValues = heroValuesList.ToArray();
@@ -340,8 +340,8 @@ public class QuestEditor : EditorWindow
         List<string> heroElementsList = new List<string>(questLoader.logic.heroElements);
         List<int> heroValuesList = new List<int>(questLoader.logic.heroValues);
 
-        heroValuesList.Insert(i, 0);
-        heroElementsList.Insert(i, "Points " + i);
+        heroValuesList.Insert(i + 1, 0);
+        heroElementsList.Insert(i + 1, "Points " + i);
 
         questLoader.logic.heroElements = heroElementsList.ToArray();
         questLoader.logic.heroValues = heroValuesList.ToArray();
