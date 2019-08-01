@@ -79,6 +79,8 @@ public class Buttons {
 
 public class GridStatusScript : MonoBehaviour
 {
+    public InputField clipboard;
+
 	public GameObject editButtonPanel;
 	public InputField editTitleButtonField;
 
@@ -445,10 +447,37 @@ public class GridStatusScript : MonoBehaviour
 
 	public void showEditPanel() {
 		editView.SetActive(true);
-	}
+        if (clipboard != null)
+        {
+            clipboard.gameObject.SetActive(false);
+            clipboard.text = "";
+        }
+    }
 
     public void importPressed()
     {
+        if (clipboard != null)
+        {
+            clipboard.gameObject.SetActive(true);
+
+            if (clipboard.text != "")
+            {
+                Logic newLogic = JsonUtility.FromJson<Logic>(clipboard.text);
+                if (newLogic != null)
+                {
+                    logic = newLogic;
+                    logic.currentItemIndex = 0;
+                    procced();
+                    QuestLoader loader = new QuestLoader();
+                    loader.logic = logic;
+                    loader.save();
+                    clipboard.gameObject.SetActive(false);
+                    clipboard.text = "";
+                }
+            }
+        }
+
+#if UNITY_EDITOR
         TextEditor te = new TextEditor();
         te.Paste();
         Logic l = JsonUtility.FromJson<Logic>(te.text);
@@ -461,14 +490,24 @@ public class GridStatusScript : MonoBehaviour
             loader.logic = logic;
             loader.save();
         }
+#endif
     }
 
     public void exportPressed()
     {
+        if (clipboard != null)
+        {
+            clipboard.text = JsonUtility.ToJson(logic);
+            clipboard.Select();
+            clipboard.gameObject.SetActive(true);
+        }
+
+#if UNITY_EDITOR
         TextEditor te = new TextEditor();
         te.text = JsonUtility.ToJson(logic);
         te.SelectAll();
         te.Copy();
+#endif
     }
 
     public void saveChanges() {
