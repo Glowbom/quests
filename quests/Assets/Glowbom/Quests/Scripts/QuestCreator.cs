@@ -70,6 +70,11 @@ public class QuestCreator : MonoBehaviour
             {
                 bool hasItem = i - mainItemsPosition < allTitleButtons.Length;
 
+                if (questLoader.logic.items.Length <= i)
+                {
+                    hasItem = false;
+                }
+
                 allTitleButtons[i - mainItemsPosition].gameObject.SetActive(hasItem);
                 allInsertButtons[i - mainItemsPosition].gameObject.SetActive(hasItem);
                 allRemoveButtons[i - mainItemsPosition].gameObject.SetActive(hasItem);
@@ -77,8 +82,9 @@ public class QuestCreator : MonoBehaviour
                 if (hasItem)
                 {
                     allTitleButtons[i - mainItemsPosition].GetComponentInChildren<Text>().text = i == questLoader.logic.currentItemIndex ?
-                    "* " + i + " : " + questLoader.logic.items[i].title :
-                     i + " : " + questLoader.logic.items[i].title;
+                        "* " + i + " : " + questLoader.logic.items[i].title :
+                            i + " : " + questLoader.logic.items[i].title;
+
                 }
             }
 
@@ -156,6 +162,7 @@ public class QuestCreator : MonoBehaviour
     public void allNextPressed() {
         if (mainItemsPosition < questLoader.logic.items.Length - MAIN_ELEMENTS_COUNT)
         {
+            updateQuest();
             ++mainItemsPosition;
             initMainQuest();
         }
@@ -164,6 +171,7 @@ public class QuestCreator : MonoBehaviour
     public void allPreviousPressed() {
         if (mainItemsPosition > 0)
         {
+            updateQuest();
             --mainItemsPosition;
             initMainQuest();
         }
