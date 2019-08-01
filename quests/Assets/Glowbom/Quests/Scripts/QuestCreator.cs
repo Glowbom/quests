@@ -162,7 +162,6 @@ public class QuestCreator : MonoBehaviour
     public void allNextPressed() {
         if (mainItemsPosition < questLoader.logic.items.Length - MAIN_ELEMENTS_COUNT)
         {
-            updateQuest();
             ++mainItemsPosition;
             initMainQuest();
         }
@@ -171,7 +170,6 @@ public class QuestCreator : MonoBehaviour
     public void allPreviousPressed() {
         if (mainItemsPosition > 0)
         {
-            updateQuest();
             --mainItemsPosition;
             initMainQuest();
         }

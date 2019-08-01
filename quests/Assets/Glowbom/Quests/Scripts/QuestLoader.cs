@@ -36,7 +36,9 @@ public class QuestLoader
         }
         finally
         {
+#if UNITY_EDITOR
             UnityEditor.AssetDatabase.Refresh();
+#endif
         }
     }
 }
