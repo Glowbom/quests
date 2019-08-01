@@ -94,7 +94,7 @@ public class GridStatusScript : MonoBehaviour
 
 	public Button[] gridButtons;
 	public Image[] pictures;
-	private Logic logic = null;
+	public Logic logic = null;
 
 	public Text startButtonText;
 
@@ -121,7 +121,7 @@ public class GridStatusScript : MonoBehaviour
 
 	}
 	
-	void procced ()
+	public void procced ()
 	{
 		if (logic != null) {
 			if (logic.currentItemIndex > -1 && logic.currentItemIndex < logic.items.Length) {
