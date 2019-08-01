@@ -411,7 +411,7 @@ public class GridStatusScript : MonoBehaviour
 	public void save ()
 	{
 		try {
-			using (StreamWriter sw = new StreamWriter ("Assets/Game.txt", false)) {
+			using (StreamWriter sw = new StreamWriter ("Assets/Glowbom/Quests/Resources/Data/TemplateQuest.txt", false)) {
 				sw.Write (JsonUtility.ToJson (logic)); 
 			}
 		} catch (IOException) {
@@ -449,7 +449,31 @@ public class GridStatusScript : MonoBehaviour
 		editView.SetActive(true);
 	}
 
-	public void saveChanges() {
+    public void importPressed()
+    {
+        TextEditor te = new TextEditor();
+        te.Paste();
+        Logic l = JsonUtility.FromJson<Logic>(te.text);
+        if (l != null)
+        {
+            logic = l;
+            logic.currentItemIndex = 0;
+            procced();
+            QuestLoader loader = new QuestLoader();
+            loader.logic = logic;
+            loader.save();
+        }
+    }
+
+    public void exportPressed()
+    {
+        TextEditor te = new TextEditor();
+        te.text = JsonUtility.ToJson(logic);
+        te.SelectAll();
+        te.Copy();
+    }
+
+    public void saveChanges() {
 		gameViewTitle.text = editTitleField.text;
 		gameViewText.text = editTextField.text;
 		logic.items[logic.currentItemIndex].title = editTitleField.text;

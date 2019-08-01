@@ -420,14 +420,39 @@ public class QuestEditor : EditorWindow
         EditorGUILayout.Space();
 
         GUILayout.BeginHorizontal();
-        
-            if (GUILayout.Button("Load")) {
-                questLoader.load();
-            }
 
-            if (GUILayout.Button("Save")) {
+        if (GUILayout.Button("Import"))
+        {
+            TextEditor te = new TextEditor();
+            te.Paste();
+            questLoader.logic = JsonUtility.FromJson<Logic>(te.text);
+            if (questLoader.logic != null)
+            {
                 questLoader.save();
             }
+            else
+            {
+                questLoader.load();
+            }
+        }
+
+        if (GUILayout.Button("Export"))
+        {
+            TextEditor te = new TextEditor();
+            te.text = JsonUtility.ToJson(questLoader.logic);
+            te.SelectAll();
+            te.Copy();
+        }
+
+        if (GUILayout.Button("Load")) 
+        {
+            questLoader.load();
+        }
+
+        if (GUILayout.Button("Save"))
+        {
+            questLoader.save();
+        }
 
         GUILayout.EndHorizontal();
         EditorGUILayout.Space();
