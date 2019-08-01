@@ -52,6 +52,7 @@ public class QuestCreator : MonoBehaviour
     int mainItemsPosition = 0;
     int itemButtonsPosition = 0;
     int currentAllValuePosition = 0;
+    int currentValuePosition = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -120,6 +121,19 @@ public class QuestCreator : MonoBehaviour
 
         gotoPreviousButton.gameObject.SetActive(itemButtonsPosition != 0);
         gotoNextButton.gameObject.SetActive(itemButtonsPosition < buttonsCount - ITEM_BUTTONS_COUNT);
+
+        if (item.heroValues.Length != questLoader.logic.heroValues.Length)
+        {
+            item.heroValues = new int[questLoader.logic.heroValues.Length];
+        }
+
+        valuesPreviousButton.gameObject.SetActive(currentValuePosition > 0);
+        valuesNextButton.gameObject.SetActive(currentValuePosition < item.heroValues.Length - 1);
+        if (item.heroValues.Length > 0)
+        {
+            valuesName.text = questLoader.logic.heroElements[currentValuePosition];
+            valuesValue.text = item.heroValues[currentValuePosition].ToString();
+        }
     }
 
     // Update is called once per frame
@@ -172,11 +186,22 @@ public class QuestCreator : MonoBehaviour
     }
 
     public void valuesNextPressed() {
-
+        Logic.Item item = questLoader.logic.items[questLoader.logic.currentItemIndex];
+        if (currentValuePosition < item.heroValues.Length - 1)
+        {
+            updateQuest();
+            ++currentValuePosition;
+            initCurrentItem();
+        }
     }
 
     public void valuesPreviousPressed() {
-
+        if (currentValuePosition > 0)
+        {
+            updateQuest();
+            --currentValuePosition;
+            initCurrentItem();
+        }
     }
 
     private int currentItemButtonsCount()
@@ -266,6 +291,18 @@ public class QuestCreator : MonoBehaviour
             catch (Exception e)
             {
                 questLoader.logic.heroValues[currentAllValuePosition] = 0;
+            }
+        }
+
+        if (item.heroValues.Length > 0)
+        {
+            try
+            {
+                item.heroValues[currentValuePosition] = int.Parse(valuesValue.text);
+            }
+            catch (Exception e)
+            {
+                item.heroValues[currentValuePosition] = 0;
             }
         }
     }
