@@ -383,9 +383,34 @@ public class QuestCreator : MonoBehaviour
     }
 
     // Buttons
+    private void insertButton(int i)
+    {
+        var item = questLoader.logic.items[questLoader.logic.currentItemIndex];
+        List<string> buttonsTextsList = new List<string>(item.buttonsTexts);
+        List<int> goIndexesList = new List<int>(item.goIndexes);
+        List<int> goConditionsList = item.goConditions == null ? new List<int>() : new List<int>(item.goConditions);
+
+        if (goConditionsList.Count > 0)
+        {
+            goConditionsList.Insert(i + 1, 0);
+        }
+
+        goIndexesList.Insert(i + 1, 0);
+        buttonsTextsList.Insert(i + 1, "Go Button");
+
+        item.buttonsTexts = buttonsTextsList.ToArray();
+        item.goIndexes = goIndexesList.ToArray();
+
+        if (goConditionsList.Count > 0)
+        {
+            item.goConditions = goConditionsList.ToArray();
+        }
+
+        initCurrentItem();
+    }
 
     public void buttonInsertPressed(int i) {
-        
+        insertButton(i);
     }
 
     public void buttonGoPressed(int i) {
@@ -399,8 +424,34 @@ public class QuestCreator : MonoBehaviour
         initMainQuest();
     }
 
+    private void removeButton(int i)
+    {
+        var item = questLoader.logic.items[questLoader.logic.currentItemIndex];
+        List<string> buttonsTextsList = new List<string>(item.buttonsTexts);
+        List<int> goIndexesList = new List<int>(item.goIndexes);
+        List<int> goConditionsList = item.goConditions != null ? new List<int>(item.goConditions) : new List<int>();
+
+        if (item.goConditions != null && goConditionsList.Count > 0)
+        {
+            goConditionsList.RemoveAt(i);
+        }
+
+        goIndexesList.RemoveAt(i);
+        buttonsTextsList.RemoveAt(i);
+
+        item.buttonsTexts = buttonsTextsList.ToArray();
+        item.goIndexes = goIndexesList.ToArray();
+
+        if (item.goConditions != null && goConditionsList.Count > 0)
+        {
+            item.goConditions = goConditionsList.ToArray();
+        }
+
+        initCurrentItem();
+    }
+
     public void buttonRemovePressed(int i) {
-        
+        removeButton(i);
     }
 
     public void valueInsertPressed() {
