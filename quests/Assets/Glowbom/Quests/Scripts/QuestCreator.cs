@@ -122,7 +122,7 @@ public class QuestCreator : MonoBehaviour
         gotoPreviousButton.gameObject.SetActive(itemButtonsPosition != 0);
         gotoNextButton.gameObject.SetActive(itemButtonsPosition < buttonsCount - ITEM_BUTTONS_COUNT);
 
-        if (item.heroValues.Length != questLoader.logic.heroValues.Length)
+        if (item.heroValues == null || item.heroValues.Length != questLoader.logic.heroValues.Length)
         {
             item.heroValues = new int[questLoader.logic.heroValues.Length];
         }
@@ -294,6 +294,11 @@ public class QuestCreator : MonoBehaviour
             }
         }
 
+        if (item.heroValues == null)
+        {
+            item.heroValues = new int[questLoader.logic.heroValues.Length];
+        }
+
         if (item.heroValues.Length > 0)
         {
             try
@@ -307,8 +312,37 @@ public class QuestCreator : MonoBehaviour
         }
     }
 
+    private void insert(int i)
+    {
+        Logic.Item item = new Logic.Item();
+        item.title = "New Title";
+        item.description = "Hello!";
+        item.buttonsTexts = new string[1];
+        item.buttonsTexts[0] = "Go Button";
+        item.goIndexes = new int[1];
+        item.goIndexes[0] = 0;
+
+        List<Logic.Item> items = new List<Logic.Item>(questLoader.logic.items);
+        items.Insert(i + 1, item);
+
+        questLoader.logic.items = items.ToArray();
+
+        foreach (var logicItem in questLoader.logic.items)
+        {
+            for (int j = 0; j < logicItem.goIndexes.Length; j++)
+            {
+                if (logicItem.goIndexes[j] >= i + 1)
+                {
+                    logicItem.goIndexes[j] = logicItem.goIndexes[j] + 1;
+                }
+            }
+        }
+
+        initMainQuest();
+    }
+
     public void allInsertPressed(int i) {
-        
+        insert(mainItemsPosition + i);
     }
 
     public void allRemovePressed(int i) {
