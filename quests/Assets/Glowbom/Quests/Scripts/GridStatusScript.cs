@@ -336,8 +336,6 @@ public class GridStatusScript : MonoBehaviour
 		GameStatusMagic.instance.questAnswers.Clear();
 		load();
 
-		startButtonText.text = "Start Quest";
-
 		front.gameObject.SetActive(false);
 	}
 
