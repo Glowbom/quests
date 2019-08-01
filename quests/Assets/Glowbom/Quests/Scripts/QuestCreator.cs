@@ -330,7 +330,14 @@ public class QuestCreator : MonoBehaviour
     }
 
     public void buttonGoPressed(int i) {
-        
+        updateQuest();
+        Logic.Item item = questLoader.logic.items[questLoader.logic.currentItemIndex];
+        int index = item.goIndexes[itemButtonsPosition + i];
+
+        questLoader.logic.currentItemIndex = index;
+        itemButtonsPosition = 0;
+        mainItemsPosition = index;
+        initMainQuest();
     }
 
     public void buttonRemovePressed(int i) {
