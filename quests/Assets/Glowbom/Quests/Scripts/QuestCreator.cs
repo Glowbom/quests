@@ -345,8 +345,33 @@ public class QuestCreator : MonoBehaviour
         insert(mainItemsPosition + i);
     }
 
+    private void remove(int i)
+    {
+        List<Logic.Item> items = new List<Logic.Item>(questLoader.logic.items);
+        items.RemoveAt(i);
+
+        questLoader.logic.items = items.ToArray();
+
+        foreach (var logicItem in questLoader.logic.items)
+        {
+            for (int j = 0; j < logicItem.goIndexes.Length; j++)
+            {
+                if (logicItem.goIndexes[j] >= i)
+                {
+                    logicItem.goIndexes[j] = logicItem.goIndexes[j] - 1;
+                    if (logicItem.goIndexes[j] < 0)
+                    {
+                        logicItem.goIndexes[j] = 0;
+                    }
+                }
+            }
+        }
+
+        initMainQuest();
+    }
+
     public void allRemovePressed(int i) {
-        
+        remove(mainItemsPosition + i);
     }
 
     public void allValueInsertPressed() {
