@@ -2652,7 +2652,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 720593004}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6699,10 +6699,10 @@ RectTransform:
   m_LocalScale: {x: 1.28, y: 1.28, z: 1.28}
   m_Children:
   - {fileID: 84642352}
-  - {fileID: 1906680264}
   - {fileID: 236499493}
-  - {fileID: 937337891}
+  - {fileID: 1906680264}
   - {fileID: 775460621}
+  - {fileID: 937337891}
   - {fileID: 803556817}
   - {fileID: 617879603}
   m_Father: {fileID: 854924019}
@@ -7254,7 +7254,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 720593004}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -9229,7 +9229,7 @@ RectTransform:
   - {fileID: 1085601484}
   - {fileID: 644344267}
   m_Father: {fileID: 720593004}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -10753,6 +10753,8 @@ MonoBehaviour:
   values: {fileID: 1956545536}
   valuesName: {fileID: 806938145}
   valuesValue: {fileID: 266374702}
+  valuesPreviousButton: {fileID: 903511603}
+  valuesNextButton: {fileID: 1680116388}
   gotoPreviousButton: {fileID: 151170790}
   gotoNextButton: {fileID: 170344087}
   buttonTexts:
@@ -16898,7 +16900,7 @@ RectTransform:
   - {fileID: 1505611536}
   - {fileID: 328745241}
   m_Father: {fileID: 720593004}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

@@ -51,7 +51,7 @@ public class QuestCreator : MonoBehaviour
 
     int mainItemsPosition = 0;
     int itemButtonsPosition = 0;
-    int currentAllValue = 0;
+    int currentAllValuePosition = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -84,6 +84,15 @@ public class QuestCreator : MonoBehaviour
             allPreviousButton.gameObject.SetActive(mainItemsPosition != 0);
             allNextButton.gameObject.SetActive(mainItemsPosition != questLoader.logic.items.Length - MAIN_ELEMENTS_COUNT);
             initCurrentItem();
+
+            allValuesPreviousButton.gameObject.SetActive(currentAllValuePosition > 0);
+            allValuesNextButton.gameObject.SetActive(currentAllValuePosition < questLoader.logic.heroValues.Length - 1);
+            if (questLoader.logic.heroValues.Length > 0)
+            {
+                allValuesName.text = questLoader.logic.heroElements[currentAllValuePosition];
+                allValuesValue.text = questLoader.logic.heroValues[currentAllValuePosition].ToString();
+            }
+
         }
     }
 
@@ -145,11 +154,21 @@ public class QuestCreator : MonoBehaviour
     }
 
     public void allValuesNextPressed() {
-
+        if (currentAllValuePosition < questLoader.logic.heroValues.Length - 1)
+        {
+            updateQuest();
+            ++currentAllValuePosition;
+            initMainQuest();
+        }
     }
 
     public void allValuesPreviousPressed() {
-
+        if (currentAllValuePosition > 0)
+        {
+            updateQuest();
+            --currentAllValuePosition;
+            initMainQuest();
+        }
     }
 
     public void valuesNextPressed() {
@@ -228,11 +247,25 @@ public class QuestCreator : MonoBehaviour
                     {
                         item.goIndexes[i] = 0;
                     }
-                } catch(Exception e)
+                } 
+                catch(Exception e)
                 {
                     item.goIndexes[i] = 0;
                 }
 
+            }
+        }
+
+        if (questLoader.logic.heroValues.Length > 0)
+        {
+            questLoader.logic.heroElements[currentAllValuePosition] = allValuesName.text;
+            try
+            {
+                questLoader.logic.heroValues[currentAllValuePosition] = int.Parse(allValuesValue.text);
+            }
+            catch (Exception e)
+            {
+                questLoader.logic.heroValues[currentAllValuePosition] = 0;
             }
         }
     }
