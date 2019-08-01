@@ -10746,6 +10746,8 @@ MonoBehaviour:
   allValues: {fileID: 720593003}
   allValuesName: {fileID: 1906680265}
   allValuesValue: {fileID: 937337892}
+  allValuesPreviousButton: {fileID: 1854384385}
+  allValuesNextButton: {fileID: 21218025}
   title: {fileID: 348102267}
   description: {fileID: 1165957296}
   values: {fileID: 1956545536}

@@ -25,6 +25,8 @@ public class QuestCreator : MonoBehaviour
     public GameObject allValues;
     public InputField allValuesName;
     public InputField allValuesValue;
+    public Button allValuesPreviousButton;
+    public Button allValuesNextButton;
 
     // Item
     public InputField title;
@@ -32,6 +34,8 @@ public class QuestCreator : MonoBehaviour
     public GameObject values;
     public InputField valuesName;
     public InputField valuesValue;
+    public Button valuesPreviousButton;
+    public Button valuesNextButton;
     // Go To Buttons
     public Button gotoPreviousButton;
     public Button gotoNextButton;
@@ -47,6 +51,7 @@ public class QuestCreator : MonoBehaviour
 
     int mainItemsPosition = 0;
     int itemButtonsPosition = 0;
+    int currentAllValue = 0;
 
     // Start is called before the first frame update
     void Start()
