@@ -143,7 +143,9 @@ public class QuestCreator : MonoBehaviour
     }
 
     public void save() {
+        updateQuest();
         questLoader.save();
+        initMainQuest();
     }
 
     public void load() {
@@ -374,12 +376,41 @@ public class QuestCreator : MonoBehaviour
         remove(mainItemsPosition + i);
     }
 
+    private void insertInitialHeroValue(int i)
+    {
+        List<string> heroElementsList = new List<string>(questLoader.logic.heroElements);
+        List<int> heroValuesList = new List<int>(questLoader.logic.heroValues);
+
+        heroValuesList.Insert(i + 1, 0);
+        heroElementsList.Insert(i + 1, "Points " + i);
+
+        questLoader.logic.heroElements = heroElementsList.ToArray();
+        questLoader.logic.heroValues = heroValuesList.ToArray();
+
+        ++currentAllValuePosition;
+        initMainQuest();
+    }
+
+    private void removeInitialHeroValue(int i)
+    {
+        List<string> heroElementsList = new List<string>(questLoader.logic.heroElements);
+        List<int> heroValuesList = new List<int>(questLoader.logic.heroValues);
+
+        heroElementsList.RemoveAt(i);
+        heroValuesList.RemoveAt(i);
+
+        questLoader.logic.heroElements = heroElementsList.ToArray();
+        questLoader.logic.heroValues = heroValuesList.ToArray();
+
+        initMainQuest();
+    }
+
     public void allValueInsertPressed() {
-        
+        insertInitialHeroValue(currentAllValuePosition);
     }
 
     public void allValueRemovePressed() {
-        
+        removeInitialHeroValue(currentAllValuePosition);
     }
 
     // Buttons
@@ -454,12 +485,49 @@ public class QuestCreator : MonoBehaviour
         removeButton(i);
     }
 
+    private void insertHeroValue(int i)
+    {
+        var item = questLoader.logic.items[questLoader.logic.currentItemIndex];
+        List<string> heroElementsList = new List<string>(questLoader.logic.heroElements);
+        List<int> heroValuesList = new List<int>(questLoader.logic.heroValues);
+        List<int> heroValuesItemList = new List<int>(item.heroValues);
+
+        heroValuesList.Insert(i + 1, 0);
+        heroValuesItemList.Insert(i + 1, 0);
+        heroElementsList.Insert(i + 1, "Points " + i);
+
+        questLoader.logic.heroElements = heroElementsList.ToArray();
+        questLoader.logic.heroValues = heroValuesList.ToArray();
+        item.heroValues = heroValuesItemList.ToArray();
+
+        ++currentValuePosition;
+        initMainQuest();
+    }
+
+    private void removeHeroValue(int i)
+    {
+        var item = questLoader.logic.items[questLoader.logic.currentItemIndex];
+        List<string> heroElementsList = new List<string>(questLoader.logic.heroElements);
+        List<int> heroValuesList = new List<int>(questLoader.logic.heroValues);
+        List<int> heroValuesItemList = new List<int>(item.heroValues);
+
+        heroElementsList.RemoveAt(i);
+        heroValuesList.RemoveAt(i);
+        heroValuesItemList.RemoveAt(i);
+
+        questLoader.logic.heroElements = heroElementsList.ToArray();
+        questLoader.logic.heroValues = heroValuesList.ToArray();
+        item.heroValues = heroValuesItemList.ToArray();
+
+        initMainQuest();
+    }
+
     public void valueInsertPressed() {
-        
+        insertHeroValue(currentValuePosition);
     }
 
     public void valueRemovePressed() {
-        
+        removeHeroValue(currentValuePosition);
     }
 
     public void backPressed() {
