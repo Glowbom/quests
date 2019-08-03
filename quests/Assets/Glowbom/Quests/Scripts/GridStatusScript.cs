@@ -454,6 +454,14 @@ public class GridStatusScript : MonoBehaviour
         }
     }
 
+    public void homePressed()
+    {
+        logic.currentItemIndex = 0;
+        save();
+        load();
+        procced();
+    }
+
     public void importPressed()
     {
         if (clipboard != null)

@@ -423,6 +423,14 @@ public class QuestEditor : EditorWindow
 
         GUILayout.BeginHorizontal();
 
+        if (GUILayout.Button("Home"))
+        {
+            tabElements = 0;
+            questLoader.logic.currentItemIndex = 0;
+            questLoader.save();
+            questLoader.load();
+        }
+
         if (GUILayout.Button("Import"))
         {
             TextEditor te = new TextEditor();
