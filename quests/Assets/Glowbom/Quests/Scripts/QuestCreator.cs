@@ -62,6 +62,35 @@ public class QuestCreator : MonoBehaviour
         initMainQuest();
     }
 
+    private string createTitle(Logic.Item item, int i)
+    {
+        string buttonTitle = i + " : [" + item.title + "] " + item.description;
+
+        if (item.title == "")
+        {
+            buttonTitle = i + " : " + item.description;
+        }
+
+        if (i == questLoader.logic.currentItemIndex)
+        {
+            buttonTitle = "* " + buttonTitle;
+        }
+
+        buttonTitle = buttonTitle.Replace("\n", "");
+
+        try
+        {
+            buttonTitle = buttonTitle.Substring(0, 20);
+            buttonTitle += "...";
+        }
+        catch (ArgumentOutOfRangeException)
+        {
+            // less then 30 characters
+        }
+
+        return buttonTitle;
+    }
+
     private void initMainQuest()
     {
         if (questLoader.logic != null)
@@ -81,10 +110,7 @@ public class QuestCreator : MonoBehaviour
 
                 if (hasItem)
                 {
-                    allTitleButtons[i - mainItemsPosition].GetComponentInChildren<Text>().text = i == questLoader.logic.currentItemIndex ?
-                        "* " + i + " : " + questLoader.logic.items[i].title :
-                            i + " : " + questLoader.logic.items[i].title;
-
+                    allTitleButtons[i - mainItemsPosition].GetComponentInChildren<Text>().text = createTitle(questLoader.logic.items[i], i);
                 }
             }
 
@@ -102,6 +128,7 @@ public class QuestCreator : MonoBehaviour
 
         }
     }
+
 
     private void initCurrentItem()
     {
