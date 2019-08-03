@@ -79,6 +79,35 @@ public class QuestEditor : EditorWindow
         initAllTabUi();
     }
 
+    private string createTitle(Logic.Item item, int i)
+    {
+        string buttonTitle = i + " : [" + item.title + "] " + item.description;
+
+        if (item.title == "")
+        {
+            buttonTitle = i + " : " + item.description;
+        }
+
+        if (i == questLoader.logic.currentItemIndex)
+        {
+            buttonTitle = "* " + buttonTitle;
+        }
+
+        buttonTitle = buttonTitle.Replace("\n", "");
+
+        try
+        {
+            buttonTitle = buttonTitle.Substring(0, 30);
+            buttonTitle += "...";
+        }
+        catch (ArgumentOutOfRangeException)
+        {
+            // less then 30 characters
+        }
+
+        return buttonTitle;
+    }
+
     private void initAllTabUi() {
         EditorGUILayout.Space();
 
@@ -89,7 +118,9 @@ public class QuestEditor : EditorWindow
             int i = 0;
             foreach (var item in questLoader.logic.items)
             {
-                if (GUILayout.Button(i == questLoader.logic.currentItemIndex ? "* " + i + " : " + item.title : i + " : " + item.title)) {
+                string buttonTitle = createTitle(item, i);
+
+                if (GUILayout.Button(buttonTitle)) {
                     GUI.FocusControl(null);
                     questLoader.logic.currentItemIndex = Array.IndexOf(questLoader.logic.items, item);
                     tabElements = 1;
@@ -384,7 +415,8 @@ public class QuestEditor : EditorWindow
         EditorGUILayout.Space();
 
         var item = questLoader.logic.items[questLoader.logic.currentItemIndex];
-        tabElements = GUILayout.Toolbar (tabElements, new string[] {"All", questLoader.logic.currentItemIndex + " : " + item.title});
+        string buttonTitle = createTitle(item, questLoader.logic.currentItemIndex);
+        tabElements = GUILayout.Toolbar (tabElements, new string[] { "All", buttonTitle });
         switch (tabElements) {
             case 0:
                 initAllTabUi();
