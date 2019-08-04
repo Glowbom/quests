@@ -60,23 +60,35 @@ public class QuestEditor : EditorWindow
 
     private void remove(int i) {
         List<Logic.Item> items = new List<Logic.Item>(questLoader.logic.items);
-        items.RemoveAt(i);
+        if (items.Count > 1)
+        {
+            items.RemoveAt(i);
 
-        questLoader.logic.items = items.ToArray();
+            questLoader.logic.items = items.ToArray();
 
-        foreach (var logicItem in questLoader.logic.items) {
-            for(int j = 0; j < logicItem.goIndexes.Length; j++) {
-                if (logicItem.goIndexes[j] >= i) {
-                    logicItem.goIndexes[j] = logicItem.goIndexes[j] - 1;
-                    if (logicItem.goIndexes[j] < 0) {
-                        logicItem.goIndexes[j] = 0;
+            foreach (var logicItem in questLoader.logic.items)
+            {
+                for (int j = 0; j < logicItem.goIndexes.Length; j++)
+                {
+                    if (logicItem.goIndexes[j] >= i)
+                    {
+                        logicItem.goIndexes[j] = logicItem.goIndexes[j] - 1;
+                        if (logicItem.goIndexes[j] < 0)
+                        {
+                            logicItem.goIndexes[j] = 0;
+                        }
                     }
                 }
             }
-        }
 
-        GUI.FocusControl(null);
-        initAllTabUi();
+            if (questLoader.logic.currentItemIndex == i)
+            {
+                questLoader.logic.currentItemIndex = 0;
+            }
+
+            GUI.FocusControl(null);
+            initAllTabUi();
+        }  
     }
 
     private string createTitle(Logic.Item item, int i)
@@ -108,10 +120,34 @@ public class QuestEditor : EditorWindow
         return buttonTitle;
     }
 
+    public void append()
+    {
+        Logic.Item item = new Logic.Item();
+        item.title = "New Title";
+        item.description = "Hello!";
+        item.buttonsTexts = new string[1];
+        item.buttonsTexts[0] = "Go Button";
+        item.goIndexes = new int[1];
+        item.goIndexes[0] = 0;
+
+        List<Logic.Item> items = new List<Logic.Item>(questLoader.logic.items);
+        items.Add(item);
+
+        questLoader.logic.items = items.ToArray();
+        questLoader.logic.currentItemIndex = questLoader.logic.items.Length - 1;
+        GUI.FocusControl(null);
+        initAllTabUi();
+    }
+
     private void initAllTabUi() {
         EditorGUILayout.Space();
 
         if (questLoader.logic != null) {
+            if (GUILayout.Button("Add"))
+            {
+                append();
+            }
+
             EditorGUILayout.Space();
 
             scrollPos = EditorGUILayout.BeginScrollView(scrollPos, GUILayout.Width(position.width - 20), GUILayout.Height(600));
@@ -120,6 +156,7 @@ public class QuestEditor : EditorWindow
             {
                 string buttonTitle = createTitle(item, i);
 
+                GUILayout.BeginHorizontal();
                 if (GUILayout.Button(buttonTitle)) {
                     GUI.FocusControl(null);
                     questLoader.logic.currentItemIndex = Array.IndexOf(questLoader.logic.items, item);
@@ -127,15 +164,19 @@ public class QuestEditor : EditorWindow
                     OnGUI();
                 }
 
-                GUILayout.BeginHorizontal();
-                if (GUILayout.Button("Insert")) {
-                    insert(i);
-                }
-
-                if (GUILayout.Button("Remove")) {
+                if (GUILayout.Button("Remove"))
+                {
                     remove(i);
                 }
+
                 GUILayout.EndHorizontal();
+
+                /*if (GUILayout.Button("Insert")) {
+                    insert(i);
+                }*/
+
+               
+                
 
                 EditorGUILayout.Space();
                 ++i;
