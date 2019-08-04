@@ -95,6 +95,8 @@ public class QuestCreator : MonoBehaviour
     {
         if (questLoader.logic != null)
         {
+            projectName.text = questLoader.name + " [" + questLoader.logic.items.Length + " items]";
+
             for (int i = 0 + mainItemsPosition; i < mainItemsPosition + MAIN_ELEMENTS_COUNT; i++)
             {
                 bool hasItem = i - mainItemsPosition < allTitleButtons.Length;

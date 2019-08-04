@@ -451,7 +451,7 @@ public class QuestEditor : EditorWindow
 
         EditorGUILayout.Space();
 
-        GUILayout.Label(questLoader.name, EditorStyles.label);
+        GUILayout.Label(questLoader.name + " [" + questLoader.logic.items.Length + " items]", EditorStyles.label);
 
         EditorGUILayout.Space();
 
