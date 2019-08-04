@@ -311,7 +311,7 @@ public class QuestCreator : MonoBehaviour
 
     private void updateQuest()
     {
-        Logic.Item item = questLoader.logic.items[mainItemsPosition + questLoader.logic.currentItemIndex];
+        Logic.Item item = questLoader.logic.items[questLoader.logic.currentItemIndex];
         item.title = title.text;
         item.description = description.text;
 
