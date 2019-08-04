@@ -174,21 +174,24 @@ public class QuestCreator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    public void save() {
+    public void save()
+    {
         updateQuest();
         questLoader.save();
         initMainQuest();
     }
 
-    public void load() {
+    public void load()
+    {
         questLoader.load();
         initMainQuest();
     }
 
-    public void allNextPressed() {
+    public void allNextPressed()
+    {
         updateQuest();
         if (mainItemsPosition < questLoader.logic.items.Length - MAIN_ELEMENTS_COUNT)
         {
@@ -207,7 +210,8 @@ public class QuestCreator : MonoBehaviour
         initMainQuest();
     }
 
-    public void allPreviousPressed() {
+    public void allPreviousPressed()
+    {
         updateQuest();
         if (mainItemsPosition > 0)
         {
@@ -216,7 +220,8 @@ public class QuestCreator : MonoBehaviour
         }
     }
 
-    public void allValuesNextPressed() {
+    public void allValuesNextPressed()
+    {
         if (currentAllValuePosition < questLoader.logic.heroValues.Length - 1)
         {
             updateQuest();
@@ -225,7 +230,8 @@ public class QuestCreator : MonoBehaviour
         }
     }
 
-    public void allValuesPreviousPressed() {
+    public void allValuesPreviousPressed()
+    {
         if (currentAllValuePosition > 0)
         {
             updateQuest();
@@ -234,7 +240,8 @@ public class QuestCreator : MonoBehaviour
         }
     }
 
-    public void valuesNextPressed() {
+    public void valuesNextPressed()
+    {
         Logic.Item item = questLoader.logic.items[questLoader.logic.currentItemIndex];
         if (currentValuePosition < item.heroValues.Length - 1)
         {
@@ -244,7 +251,8 @@ public class QuestCreator : MonoBehaviour
         }
     }
 
-    public void valuesPreviousPressed() {
+    public void valuesPreviousPressed()
+    {
         if (currentValuePosition > 0)
         {
             updateQuest();
@@ -268,7 +276,8 @@ public class QuestCreator : MonoBehaviour
         return buttonsCount;
     }
 
-    public void buttonsNextPressed() {
+    public void buttonsNextPressed()
+    {
         int buttonsCount = currentItemButtonsCount();
 
         if (itemButtonsPosition <= buttonsCount - ITEM_BUTTONS_COUNT)
@@ -279,7 +288,8 @@ public class QuestCreator : MonoBehaviour
         }
     }
 
-    public void buttonsPreviousPressed() {
+    public void buttonsPreviousPressed()
+    {
         if (itemButtonsPosition > 0)
         {
             updateQuest();
@@ -316,8 +326,8 @@ public class QuestCreator : MonoBehaviour
                 try
                 {
                     item.goIndexes[i] = int.Parse(buttonValues[i - itemButtonsPosition].text);
-                } 
-                catch(Exception e)
+                }
+                catch (Exception e)
                 {
                     item.goIndexes[i] = 0;
                 }
@@ -403,7 +413,8 @@ public class QuestCreator : MonoBehaviour
         initMainQuest();
     }
 
-    public void allInsertPressed(int i) {
+    public void allInsertPressed(int i)
+    {
         insert(mainItemsPosition + i);
     }
 
@@ -441,7 +452,8 @@ public class QuestCreator : MonoBehaviour
         }
     }
 
-    public void allRemovePressed(int i) {
+    public void allRemovePressed(int i)
+    {
         remove(mainItemsPosition + i);
     }
 
@@ -474,11 +486,13 @@ public class QuestCreator : MonoBehaviour
         initMainQuest();
     }
 
-    public void allValueInsertPressed() {
+    public void allValueInsertPressed()
+    {
         insertInitialHeroValue(currentAllValuePosition);
     }
 
-    public void allValueRemovePressed() {
+    public void allValueRemovePressed()
+    {
         removeInitialHeroValue(currentAllValuePosition);
     }
 
@@ -509,11 +523,13 @@ public class QuestCreator : MonoBehaviour
         initCurrentItem();
     }
 
-    public void buttonInsertPressed(int i) {
+    public void buttonInsertPressed(int i)
+    {
         insertButton(i);
     }
 
-    public void buttonGoPressed(int i) {
+    public void buttonGoPressed(int i)
+    {
         updateQuest();
         Logic.Item item = questLoader.logic.items[questLoader.logic.currentItemIndex];
         int index = item.goIndexes[itemButtonsPosition + i];
@@ -550,7 +566,8 @@ public class QuestCreator : MonoBehaviour
         initCurrentItem();
     }
 
-    public void buttonRemovePressed(int i) {
+    public void buttonRemovePressed(int i)
+    {
         removeButton(i);
     }
 
@@ -591,19 +608,27 @@ public class QuestCreator : MonoBehaviour
         initMainQuest();
     }
 
-    public void valueInsertPressed() {
+    public void valueInsertPressed()
+    {
         insertHeroValue(currentValuePosition);
     }
 
-    public void valueRemovePressed() {
+    public void valueRemovePressed()
+    {
         removeHeroValue(currentValuePosition);
     }
 
-    public void backPressed() {
+    public void backPressed()
+    {
         updateQuest();
         save();
         game.logic = questLoader.logic;
         game.procced();
         gameObject.SetActive(false);
+    }
+
+    public void getPlugin()
+    {
+        Application.OpenURL("https://github.com/Glowbom/quests/releases");
     }
 }
