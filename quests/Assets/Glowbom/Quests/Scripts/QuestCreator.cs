@@ -189,6 +189,7 @@ public class QuestCreator : MonoBehaviour
     }
 
     public void allNextPressed() {
+        updateQuest();
         if (mainItemsPosition < questLoader.logic.items.Length - MAIN_ELEMENTS_COUNT)
         {
             ++mainItemsPosition;
@@ -207,6 +208,7 @@ public class QuestCreator : MonoBehaviour
     }
 
     public void allPreviousPressed() {
+        updateQuest();
         if (mainItemsPosition > 0)
         {
             --mainItemsPosition;
@@ -299,7 +301,7 @@ public class QuestCreator : MonoBehaviour
 
     private void updateQuest()
     {
-        Logic.Item item = questLoader.logic.items[questLoader.logic.currentItemIndex];
+        Logic.Item item = questLoader.logic.items[mainItemsPosition + questLoader.logic.currentItemIndex];
         item.title = title.text;
         item.description = description.text;
 
@@ -314,10 +316,6 @@ public class QuestCreator : MonoBehaviour
                 try
                 {
                     item.goIndexes[i] = int.Parse(buttonValues[i - itemButtonsPosition].text);
-                    if (item.goIndexes[i] >= questLoader.logic.items.Length)
-                    {
-                        item.goIndexes[i] = 0;
-                    }
                 } 
                 catch(Exception e)
                 {
@@ -436,6 +434,7 @@ public class QuestCreator : MonoBehaviour
             if (questLoader.logic.currentItemIndex == i)
             {
                 questLoader.logic.currentItemIndex = 0;
+                mainItemsPosition = 0;
             }
 
             initMainQuest();
