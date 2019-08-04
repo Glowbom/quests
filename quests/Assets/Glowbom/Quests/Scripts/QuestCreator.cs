@@ -12,7 +12,7 @@ using UnityEngine.UI;
 public class QuestCreator : MonoBehaviour
 {
     public GridStatusScript game;
-    private const int MAIN_ELEMENTS_COUNT = 4;
+    private const int MAIN_ELEMENTS_COUNT = 9;
     private const int ITEM_BUTTONS_COUNT = 3;
 
     public Text projectName;
@@ -105,7 +105,7 @@ public class QuestCreator : MonoBehaviour
                 }
 
                 allTitleButtons[i - mainItemsPosition].gameObject.SetActive(hasItem);
-                allInsertButtons[i - mainItemsPosition].gameObject.SetActive(hasItem);
+                //allInsertButtons[i - mainItemsPosition].gameObject.SetActive(hasItem);
                 allRemoveButtons[i - mainItemsPosition].gameObject.SetActive(hasItem);
 
                 if (hasItem)
@@ -194,6 +194,16 @@ public class QuestCreator : MonoBehaviour
         }
     }
 
+    public void scrollToTheEnd()
+    {
+        mainItemsPosition = questLoader.logic.items.Length - MAIN_ELEMENTS_COUNT;
+        if (mainItemsPosition < 0)
+        {
+            mainItemsPosition = 0;
+        }
+        initMainQuest();
+    }
+
     public void allPreviousPressed() {
         if (mainItemsPosition > 0)
         {
@@ -255,10 +265,9 @@ public class QuestCreator : MonoBehaviour
     }
 
     public void buttonsNextPressed() {
-        Logic.Item item = questLoader.logic.items[questLoader.logic.currentItemIndex];
         int buttonsCount = currentItemButtonsCount();
 
-        if (itemButtonsPosition <= buttonsCount - MAIN_ELEMENTS_COUNT)
+        if (itemButtonsPosition <= buttonsCount - ITEM_BUTTONS_COUNT)
         {
             updateQuest();
             ++itemButtonsPosition;
@@ -347,6 +356,24 @@ public class QuestCreator : MonoBehaviour
         }
     }
 
+    public void append()
+    {
+        Logic.Item item = new Logic.Item();
+        item.title = "New Title";
+        item.description = "Hello!";
+        item.buttonsTexts = new string[1];
+        item.buttonsTexts[0] = "Go Button";
+        item.goIndexes = new int[1];
+        item.goIndexes[0] = 0;
+
+        List<Logic.Item> items = new List<Logic.Item>(questLoader.logic.items);
+        items.Add(item);
+
+        questLoader.logic.items = items.ToArray();
+        questLoader.logic.currentItemIndex = questLoader.logic.items.Length - 1;
+        scrollToTheEnd();
+    }
+
     private void insert(int i)
     {
         Logic.Item item = new Logic.Item();
@@ -383,26 +410,34 @@ public class QuestCreator : MonoBehaviour
     private void remove(int i)
     {
         List<Logic.Item> items = new List<Logic.Item>(questLoader.logic.items);
-        items.RemoveAt(i);
-
-        questLoader.logic.items = items.ToArray();
-
-        foreach (var logicItem in questLoader.logic.items)
+        if (items.Count > 1)
         {
-            for (int j = 0; j < logicItem.goIndexes.Length; j++)
+            items.RemoveAt(i);
+
+            questLoader.logic.items = items.ToArray();
+
+            foreach (var logicItem in questLoader.logic.items)
             {
-                if (logicItem.goIndexes[j] >= i)
+                for (int j = 0; j < logicItem.goIndexes.Length; j++)
                 {
-                    logicItem.goIndexes[j] = logicItem.goIndexes[j] - 1;
-                    if (logicItem.goIndexes[j] < 0)
+                    if (logicItem.goIndexes[j] >= i)
                     {
-                        logicItem.goIndexes[j] = 0;
+                        logicItem.goIndexes[j] = logicItem.goIndexes[j] - 1;
+                        if (logicItem.goIndexes[j] < 0)
+                        {
+                            logicItem.goIndexes[j] = 0;
+                        }
                     }
                 }
             }
-        }
 
-        initMainQuest();
+            if (questLoader.logic.currentItemIndex == i)
+            {
+                questLoader.logic.currentItemIndex = 0;
+            }
+
+            initMainQuest();
+        }
     }
 
     public void allRemovePressed(int i) {
