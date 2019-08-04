@@ -621,8 +621,9 @@ public class QuestCreator : MonoBehaviour
     public void backPressed()
     {
         updateQuest();
-        save();
-        game.logic = questLoader.logic;
+        questLoader.logic.currentItemIndex = 0;
+        questLoader.save();
+        game.load();
         game.procced();
         gameObject.SetActive(false);
     }
