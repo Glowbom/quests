@@ -184,7 +184,7 @@ public class QuestEditor : EditorWindow
 
             EditorGUILayout.Space();
 
-            initInitialHeroValues();
+            //initInitialHeroValues();
 
             EditorGUILayout.EndScrollView();
         }
@@ -311,7 +311,7 @@ public class QuestEditor : EditorWindow
 
             EditorGUILayout.Space();
 
-            initHeroValues();
+            //initHeroValues();
 
             EditorGUILayout.EndScrollView();
         }
