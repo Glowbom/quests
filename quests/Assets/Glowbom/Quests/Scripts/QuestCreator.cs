@@ -47,8 +47,6 @@ public class QuestCreator : MonoBehaviour
     public Button[] buttonRemoveButtons;
     public GameObject[] buttonContainers;
 
-    QuestLoader questLoader = new QuestLoader();
-
     int mainItemsPosition = 0;
     int itemButtonsPosition = 0;
     int currentAllValuePosition = 0;
@@ -57,7 +55,7 @@ public class QuestCreator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        questLoader.load();
+        game.load();
 
         initMainQuest();
     }
@@ -71,7 +69,7 @@ public class QuestCreator : MonoBehaviour
             buttonTitle = i + " : " + item.description;
         }
 
-        if (i == questLoader.logic.currentItemIndex)
+        if (i == game.logic.currentItemIndex)
         {
             buttonTitle = "* " + buttonTitle;
         }
@@ -91,17 +89,17 @@ public class QuestCreator : MonoBehaviour
         return buttonTitle;
     }
 
-    private void initMainQuest()
+    public void initMainQuest()
     {
-        if (questLoader.logic != null)
+        if (game.logic != null)
         {
-            projectName.text = questLoader.name + " [" + questLoader.logic.items.Length + " items]";
+            projectName.text = game.name + " [" + game.logic.items.Length + " items]";
 
             for (int i = 0 + mainItemsPosition; i < mainItemsPosition + MAIN_ELEMENTS_COUNT; i++)
             {
                 bool hasItem = i - mainItemsPosition < allTitleButtons.Length;
 
-                if (questLoader.logic.items.Length <= i)
+                if (game.logic.items.Length <= i)
                 {
                     hasItem = false;
                 }
@@ -112,20 +110,20 @@ public class QuestCreator : MonoBehaviour
 
                 if (hasItem)
                 {
-                    allTitleButtons[i - mainItemsPosition].GetComponentInChildren<Text>().text = createTitle(questLoader.logic.items[i], i);
+                    allTitleButtons[i - mainItemsPosition].GetComponentInChildren<Text>().text = createTitle(game.logic.items[i], i);
                 }
             }
 
             allPreviousButton.gameObject.SetActive(mainItemsPosition != 0);
-            allNextButton.gameObject.SetActive(mainItemsPosition != questLoader.logic.items.Length - MAIN_ELEMENTS_COUNT);
+            allNextButton.gameObject.SetActive(mainItemsPosition != game.logic.items.Length - MAIN_ELEMENTS_COUNT);
             initCurrentItem();
 
             allValuesPreviousButton.gameObject.SetActive(currentAllValuePosition > 0);
-            allValuesNextButton.gameObject.SetActive(currentAllValuePosition < questLoader.logic.heroValues.Length - 1);
-            if (questLoader.logic.heroValues.Length > 0)
+            allValuesNextButton.gameObject.SetActive(currentAllValuePosition < game.logic.heroValues.Length - 1);
+            if (game.logic.heroValues.Length > 0)
             {
-                allValuesName.text = questLoader.logic.heroElements[currentAllValuePosition];
-                allValuesValue.text = questLoader.logic.heroValues[currentAllValuePosition].ToString();
+                allValuesName.text = game.logic.heroElements[currentAllValuePosition];
+                allValuesValue.text = game.logic.heroValues[currentAllValuePosition].ToString();
             }
 
         }
@@ -134,7 +132,7 @@ public class QuestCreator : MonoBehaviour
 
     private void initCurrentItem()
     {
-        Logic.Item item = questLoader.logic.items[questLoader.logic.currentItemIndex];
+        Logic.Item item = game.logic.items[game.logic.currentItemIndex];
         title.text = item.title;
         description.text = item.description;
 
@@ -157,16 +155,16 @@ public class QuestCreator : MonoBehaviour
         gotoPreviousButton.gameObject.SetActive(itemButtonsPosition != 0);
         gotoNextButton.gameObject.SetActive(itemButtonsPosition < buttonsCount - ITEM_BUTTONS_COUNT);
 
-        if (item.heroValues == null || item.heroValues.Length != questLoader.logic.heroValues.Length)
+        if (item.heroValues == null || item.heroValues.Length != game.logic.heroValues.Length)
         {
-            item.heroValues = new int[questLoader.logic.heroValues.Length];
+            item.heroValues = new int[game.logic.heroValues.Length];
         }
 
         valuesPreviousButton.gameObject.SetActive(currentValuePosition > 0);
         valuesNextButton.gameObject.SetActive(currentValuePosition < item.heroValues.Length - 1);
         if (item.heroValues.Length > 0)
         {
-            valuesName.text = questLoader.logic.heroElements[currentValuePosition];
+            valuesName.text = game.logic.heroElements[currentValuePosition];
             valuesValue.text = item.heroValues[currentValuePosition].ToString();
         }
     }
@@ -180,20 +178,20 @@ public class QuestCreator : MonoBehaviour
     public void save()
     {
         updateQuest();
-        questLoader.save();
+        game.save();
         initMainQuest();
     }
 
     public void load()
     {
-        questLoader.load();
+        game.load();
         initMainQuest();
     }
 
     public void allNextPressed()
     {
         updateQuest();
-        if (mainItemsPosition < questLoader.logic.items.Length - MAIN_ELEMENTS_COUNT)
+        if (mainItemsPosition < game.logic.items.Length - MAIN_ELEMENTS_COUNT)
         {
             ++mainItemsPosition;
             initMainQuest();
@@ -202,7 +200,7 @@ public class QuestCreator : MonoBehaviour
 
     public void scrollToTheEnd()
     {
-        mainItemsPosition = questLoader.logic.items.Length - MAIN_ELEMENTS_COUNT;
+        mainItemsPosition = game.logic.items.Length - MAIN_ELEMENTS_COUNT;
         if (mainItemsPosition < 0)
         {
             mainItemsPosition = 0;
@@ -222,7 +220,7 @@ public class QuestCreator : MonoBehaviour
 
     public void allValuesNextPressed()
     {
-        if (currentAllValuePosition < questLoader.logic.heroValues.Length - 1)
+        if (currentAllValuePosition < game.logic.heroValues.Length - 1)
         {
             updateQuest();
             ++currentAllValuePosition;
@@ -242,7 +240,7 @@ public class QuestCreator : MonoBehaviour
 
     public void valuesNextPressed()
     {
-        Logic.Item item = questLoader.logic.items[questLoader.logic.currentItemIndex];
+        Logic.Item item = game.logic.items[game.logic.currentItemIndex];
         if (currentValuePosition < item.heroValues.Length - 1)
         {
             updateQuest();
@@ -263,7 +261,7 @@ public class QuestCreator : MonoBehaviour
 
     private int currentItemButtonsCount()
     {
-        Logic.Item item = questLoader.logic.items[questLoader.logic.currentItemIndex];
+        Logic.Item item = game.logic.items[game.logic.currentItemIndex];
         int buttonsCount = 0;
         foreach (var goIndex in item.goIndexes)
         {
@@ -304,14 +302,14 @@ public class QuestCreator : MonoBehaviour
     {
         updateQuest();
 
-        questLoader.logic.currentItemIndex = mainItemsPosition + i;
+        game.logic.currentItemIndex = mainItemsPosition + i;
         itemButtonsPosition = 0;
         initMainQuest();
     }
 
     private void updateQuest()
     {
-        Logic.Item item = questLoader.logic.items[questLoader.logic.currentItemIndex];
+        Logic.Item item = game.logic.items[game.logic.currentItemIndex];
         item.title = title.text;
         item.description = description.text;
 
@@ -335,22 +333,22 @@ public class QuestCreator : MonoBehaviour
             }
         }
 
-        if (questLoader.logic.heroValues.Length > 0)
+        if (game.logic.heroValues.Length > 0)
         {
-            questLoader.logic.heroElements[currentAllValuePosition] = allValuesName.text;
+            game.logic.heroElements[currentAllValuePosition] = allValuesName.text;
             try
             {
-                questLoader.logic.heroValues[currentAllValuePosition] = int.Parse(allValuesValue.text);
+                game.logic.heroValues[currentAllValuePosition] = int.Parse(allValuesValue.text);
             }
             catch (Exception e)
             {
-                questLoader.logic.heroValues[currentAllValuePosition] = 0;
+                game.logic.heroValues[currentAllValuePosition] = 0;
             }
         }
 
         if (item.heroValues == null)
         {
-            item.heroValues = new int[questLoader.logic.heroValues.Length];
+            item.heroValues = new int[game.logic.heroValues.Length];
         }
 
         if (item.heroValues.Length > 0)
@@ -376,11 +374,11 @@ public class QuestCreator : MonoBehaviour
         item.goIndexes = new int[1];
         item.goIndexes[0] = 0;
 
-        List<Logic.Item> items = new List<Logic.Item>(questLoader.logic.items);
+        List<Logic.Item> items = new List<Logic.Item>(game.logic.items);
         items.Add(item);
 
-        questLoader.logic.items = items.ToArray();
-        questLoader.logic.currentItemIndex = questLoader.logic.items.Length - 1;
+        game.logic.items = items.ToArray();
+        game.logic.currentItemIndex = game.logic.items.Length - 1;
         scrollToTheEnd();
     }
 
@@ -394,12 +392,12 @@ public class QuestCreator : MonoBehaviour
         item.goIndexes = new int[1];
         item.goIndexes[0] = 0;
 
-        List<Logic.Item> items = new List<Logic.Item>(questLoader.logic.items);
+        List<Logic.Item> items = new List<Logic.Item>(game.logic.items);
         items.Insert(i + 1, item);
 
-        questLoader.logic.items = items.ToArray();
+        game.logic.items = items.ToArray();
 
-        foreach (var logicItem in questLoader.logic.items)
+        foreach (var logicItem in game.logic.items)
         {
             for (int j = 0; j < logicItem.goIndexes.Length; j++)
             {
@@ -420,14 +418,14 @@ public class QuestCreator : MonoBehaviour
 
     private void remove(int i)
     {
-        List<Logic.Item> items = new List<Logic.Item>(questLoader.logic.items);
+        List<Logic.Item> items = new List<Logic.Item>(game.logic.items);
         if (items.Count > 1)
         {
             items.RemoveAt(i);
 
-            questLoader.logic.items = items.ToArray();
+            game.logic.items = items.ToArray();
 
-            foreach (var logicItem in questLoader.logic.items)
+            foreach (var logicItem in game.logic.items)
             {
                 for (int j = 0; j < logicItem.goIndexes.Length; j++)
                 {
@@ -442,9 +440,9 @@ public class QuestCreator : MonoBehaviour
                 }
             }
 
-            if (questLoader.logic.currentItemIndex == i)
+            if (game.logic.currentItemIndex == i)
             {
-                questLoader.logic.currentItemIndex = 0;
+                game.logic.currentItemIndex = 0;
                 mainItemsPosition = 0;
             }
 
@@ -459,14 +457,14 @@ public class QuestCreator : MonoBehaviour
 
     private void insertInitialHeroValue(int i)
     {
-        List<string> heroElementsList = new List<string>(questLoader.logic.heroElements);
-        List<int> heroValuesList = new List<int>(questLoader.logic.heroValues);
+        List<string> heroElementsList = new List<string>(game.logic.heroElements);
+        List<int> heroValuesList = new List<int>(game.logic.heroValues);
 
         heroValuesList.Insert(i + 1, 0);
         heroElementsList.Insert(i + 1, "Points " + i);
 
-        questLoader.logic.heroElements = heroElementsList.ToArray();
-        questLoader.logic.heroValues = heroValuesList.ToArray();
+        game.logic.heroElements = heroElementsList.ToArray();
+        game.logic.heroValues = heroValuesList.ToArray();
 
         ++currentAllValuePosition;
         initMainQuest();
@@ -474,14 +472,14 @@ public class QuestCreator : MonoBehaviour
 
     private void removeInitialHeroValue(int i)
     {
-        List<string> heroElementsList = new List<string>(questLoader.logic.heroElements);
-        List<int> heroValuesList = new List<int>(questLoader.logic.heroValues);
+        List<string> heroElementsList = new List<string>(game.logic.heroElements);
+        List<int> heroValuesList = new List<int>(game.logic.heroValues);
 
         heroElementsList.RemoveAt(i);
         heroValuesList.RemoveAt(i);
 
-        questLoader.logic.heroElements = heroElementsList.ToArray();
-        questLoader.logic.heroValues = heroValuesList.ToArray();
+        game.logic.heroElements = heroElementsList.ToArray();
+        game.logic.heroValues = heroValuesList.ToArray();
 
         initMainQuest();
     }
@@ -499,7 +497,7 @@ public class QuestCreator : MonoBehaviour
     // Buttons
     private void insertButton(int i)
     {
-        var item = questLoader.logic.items[questLoader.logic.currentItemIndex];
+        var item = game.logic.items[game.logic.currentItemIndex];
         List<string> buttonsTextsList = new List<string>(item.buttonsTexts);
         List<int> goIndexesList = new List<int>(item.goIndexes);
         List<int> goConditionsList = item.goConditions == null ? new List<int>() : new List<int>(item.goConditions);
@@ -531,10 +529,10 @@ public class QuestCreator : MonoBehaviour
     public void buttonGoPressed(int i)
     {
         updateQuest();
-        Logic.Item item = questLoader.logic.items[questLoader.logic.currentItemIndex];
+        Logic.Item item = game.logic.items[game.logic.currentItemIndex];
         int index = item.goIndexes[itemButtonsPosition + i];
 
-        questLoader.logic.currentItemIndex = index;
+        game.logic.currentItemIndex = index;
         itemButtonsPosition = 0;
         mainItemsPosition = index;
         initMainQuest();
@@ -542,7 +540,7 @@ public class QuestCreator : MonoBehaviour
 
     private void removeButton(int i)
     {
-        var item = questLoader.logic.items[questLoader.logic.currentItemIndex];
+        var item = game.logic.items[game.logic.currentItemIndex];
         List<string> buttonsTextsList = new List<string>(item.buttonsTexts);
         List<int> goIndexesList = new List<int>(item.goIndexes);
         List<int> goConditionsList = item.goConditions != null ? new List<int>(item.goConditions) : new List<int>();
@@ -573,17 +571,17 @@ public class QuestCreator : MonoBehaviour
 
     private void insertHeroValue(int i)
     {
-        var item = questLoader.logic.items[questLoader.logic.currentItemIndex];
-        List<string> heroElementsList = new List<string>(questLoader.logic.heroElements);
-        List<int> heroValuesList = new List<int>(questLoader.logic.heroValues);
+        var item = game.logic.items[game.logic.currentItemIndex];
+        List<string> heroElementsList = new List<string>(game.logic.heroElements);
+        List<int> heroValuesList = new List<int>(game.logic.heroValues);
         List<int> heroValuesItemList = new List<int>(item.heroValues);
 
         heroValuesList.Insert(i + 1, 0);
         heroValuesItemList.Insert(i + 1, 0);
         heroElementsList.Insert(i + 1, "Points " + i);
 
-        questLoader.logic.heroElements = heroElementsList.ToArray();
-        questLoader.logic.heroValues = heroValuesList.ToArray();
+        game.logic.heroElements = heroElementsList.ToArray();
+        game.logic.heroValues = heroValuesList.ToArray();
         item.heroValues = heroValuesItemList.ToArray();
 
         ++currentValuePosition;
@@ -592,17 +590,17 @@ public class QuestCreator : MonoBehaviour
 
     private void removeHeroValue(int i)
     {
-        var item = questLoader.logic.items[questLoader.logic.currentItemIndex];
-        List<string> heroElementsList = new List<string>(questLoader.logic.heroElements);
-        List<int> heroValuesList = new List<int>(questLoader.logic.heroValues);
+        var item = game.logic.items[game.logic.currentItemIndex];
+        List<string> heroElementsList = new List<string>(game.logic.heroElements);
+        List<int> heroValuesList = new List<int>(game.logic.heroValues);
         List<int> heroValuesItemList = new List<int>(item.heroValues);
 
         heroElementsList.RemoveAt(i);
         heroValuesList.RemoveAt(i);
         heroValuesItemList.RemoveAt(i);
 
-        questLoader.logic.heroElements = heroElementsList.ToArray();
-        questLoader.logic.heroValues = heroValuesList.ToArray();
+        game.logic.heroElements = heroElementsList.ToArray();
+        game.logic.heroValues = heroValuesList.ToArray();
         item.heroValues = heroValuesItemList.ToArray();
 
         initMainQuest();
@@ -621,9 +619,9 @@ public class QuestCreator : MonoBehaviour
     public void backPressed()
     {
         updateQuest();
-        questLoader.logic.currentItemIndex = 0;
-        questLoader.save();
-        game.load();
+        game.logic.currentItemIndex = 0;
+        mainItemsPosition = 0;
+        game.save();
         game.procced();
         gameObject.SetActive(false);
     }

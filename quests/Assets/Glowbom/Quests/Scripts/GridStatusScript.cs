@@ -444,9 +444,12 @@ public class GridStatusScript : MonoBehaviour
 	}
 
 	public Button editButton;
+    public QuestCreator creator;
 
 	public void showEditPanel() {
-		editView.SetActive(true);
+        homePressed();
+        creator.initMainQuest();
+        editView.SetActive(true);
         if (clipboard != null)
         {
             clipboard.gameObject.SetActive(false);
