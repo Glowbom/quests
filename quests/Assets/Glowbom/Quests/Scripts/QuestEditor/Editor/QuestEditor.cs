@@ -240,6 +240,8 @@ public class QuestEditor : EditorWindow
         initItemUi();
     }
 
+   
+
     private void initItemUi() {
         EditorGUILayout.Space();
 
@@ -250,7 +252,15 @@ public class QuestEditor : EditorWindow
             item.title = EditorGUILayout.TextField("Title", item.title);
             EditorGUILayout.Space();
 
-            item.description = EditorGUILayout.TextArea(item.description, GUILayout.Height(100));
+            var areaStyle = new GUIStyle(GUI.skin.textArea);
+            areaStyle.wordWrap = true;
+            var width = position.width - 35;
+
+            //item.description = EditorGUILayout.TextArea(item.description, GUILayout.Width(150));
+
+            areaStyle.fixedHeight = 0; // reset height, else CalcHeight gives wrong numbers
+            areaStyle.fixedHeight = areaStyle.CalcHeight(new GUIContent(item.description), width);
+            item.description = EditorGUILayout.TextArea(item.description, areaStyle, GUILayout.Height(areaStyle.fixedHeight));
 
             EditorGUILayout.Space();
 
