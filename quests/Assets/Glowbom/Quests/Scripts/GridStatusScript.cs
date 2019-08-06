@@ -247,6 +247,8 @@ public class GridStatusScript : MonoBehaviour
 		Sprite sprite = Resources.Load("Textures/default", typeof(Sprite)) as Sprite;
 		sprites.Add("default", sprite);
 
+        // put images load here
+
 		string key = "sd1";
 		sprite = Resources.Load("Textures/default", typeof(Sprite)) as Sprite;
 		sprites.Add(key, sprite);
