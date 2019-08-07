@@ -34,8 +34,6 @@ sysinfo.txt
 *.apk
 *.unitypackage
 
-*.meta
-
 textadventures/Assets/Resources/Textures/back.jpg
 
 textadventures/Assets/Resources/Textures/front.jpg
