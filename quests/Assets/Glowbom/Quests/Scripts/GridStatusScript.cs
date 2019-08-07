@@ -249,57 +249,53 @@ public class GridStatusScript : MonoBehaviour
 
         // put images load here
 
-		string key = "sd1";
-		sprite = Resources.Load("Textures/default", typeof(Sprite)) as Sprite;
+		string key = "img0";
+		sprite = Resources.Load("Textures/images/img0", typeof(Sprite)) as Sprite;
 		sprites.Add(key, sprite);
 
-		key = "sd2";
-		sprite = Resources.Load("Textures/default", typeof(Sprite)) as Sprite;
+		key = "img1";
+		sprite = Resources.Load("Textures/images/img1", typeof(Sprite)) as Sprite;
 		sprites.Add(key, sprite);
 
-		key = "sd3";
-		sprite = Resources.Load("Textures/default", typeof(Sprite)) as Sprite;
-		sprites.Add(key, sprite);
-		sprites.Add("IconPromotionPR", sprite);
-
-		key = "sf1";
-		sprite = Resources.Load("Textures/default", typeof(Sprite)) as Sprite;
+		key = "img2";
+		sprite = Resources.Load("Textures/images/img2", typeof(Sprite)) as Sprite;
 		sprites.Add(key, sprite);
 
-		key = "sf2";
-		sprite = Resources.Load("Textures/default", typeof(Sprite)) as Sprite;
+		key = "img3";
+		sprite = Resources.Load("Textures/images/img3", typeof(Sprite)) as Sprite;
 		sprites.Add(key, sprite);
 
-		key = "sf3";
-		sprite = Resources.Load("Textures/default", typeof(Sprite)) as Sprite;
-		sprites.Add(key, sprite);
-
-		key = "sf4";
-		sprite = Resources.Load("Textures/default", typeof(Sprite)) as Sprite;
-		sprites.Add(key, sprite);
-
-		key = "sa";
-		sprite = Resources.Load("Textures/default", typeof(Sprite)) as Sprite;
+		key = "img4";
+		sprite = Resources.Load("Textures/images/img4", typeof(Sprite)) as Sprite;
 		sprites.Add(key, sprite);
 
 
-		key = "end";
-		sprite = Resources.Load("Textures/default", typeof(Sprite)) as Sprite;
+		key = "img5";
+		sprite = Resources.Load("Textures/images/img5", typeof(Sprite)) as Sprite;
 		sprites.Add(key, sprite);
 
-		key = "afterend";
-		sprite = Resources.Load("Textures/default", typeof(Sprite)) as Sprite;
+		key = "img6";
+		sprite = Resources.Load("Textures/images/img6", typeof(Sprite)) as Sprite;
 		sprites.Add(key, sprite);
 
-		key = "deadend";
-		sprite = Resources.Load("Textures/default", typeof(Sprite)) as Sprite;
+		key = "img7";
+		sprite = Resources.Load("Textures/images/img7", typeof(Sprite)) as Sprite;
 		sprites.Add(key, sprite);
 
-		key = "ph";
-		sprite = Resources.Load("Textures/default", typeof(Sprite)) as Sprite;
+		key = "img8";
+		sprite = Resources.Load("Textures/images/img8", typeof(Sprite)) as Sprite;
 		sprites.Add(key, sprite);
 
-		for (int i = 0; i < gridButtons.Length; i++) {
+
+        key = "img9";
+        sprite = Resources.Load("Textures/images/img9", typeof(Sprite)) as Sprite;
+        sprites.Add(key, sprite);
+
+        key = "img10";
+        sprite = Resources.Load("Textures/images/img10", typeof(Sprite)) as Sprite;
+        sprites.Add(key, sprite);
+
+        for (int i = 0; i < gridButtons.Length; i++) {
 			gridButtons [i].gameObject.SetActive(false);
 		}
 				
