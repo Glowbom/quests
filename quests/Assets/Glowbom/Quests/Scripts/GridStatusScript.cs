@@ -259,53 +259,28 @@ public class GridStatusScript : MonoBehaviour
 
         load();
 
-        // put images load here
+        foreach(var item in logic.items)
+        {
+            if (item.picturesSpriteNames != null && item.picturesSpriteNames.Length != 0)
+            {
+                for (int i = 0; i < item.picturesSpriteNames.Length; i++)
+                {
+                    if (i < pictures.Length)
+                    {
+                        string key = item.picturesSpriteNames[i];
+                        if (!sprites.ContainsKey(key))
+                        {
+                            sprite = Resources.Load("Textures/images/" + key, typeof(Sprite)) as Sprite;
+                            if (sprite != null)
+                            {
+                                sprites.Add(key, sprite);
+                            }
+                        }
 
-        string key = "img0";
-		sprite = Resources.Load("Textures/images/img0", typeof(Sprite)) as Sprite;
-		sprites.Add(key, sprite);
-
-		key = "img1";
-		sprite = Resources.Load("Textures/images/img1", typeof(Sprite)) as Sprite;
-		sprites.Add(key, sprite);
-
-		key = "img2";
-		sprite = Resources.Load("Textures/images/img2", typeof(Sprite)) as Sprite;
-		sprites.Add(key, sprite);
-
-		key = "img3";
-		sprite = Resources.Load("Textures/images/img3", typeof(Sprite)) as Sprite;
-		sprites.Add(key, sprite);
-
-		key = "img4";
-		sprite = Resources.Load("Textures/images/img4", typeof(Sprite)) as Sprite;
-		sprites.Add(key, sprite);
-
-
-		key = "img5";
-		sprite = Resources.Load("Textures/images/img5", typeof(Sprite)) as Sprite;
-		sprites.Add(key, sprite);
-
-		key = "img6";
-		sprite = Resources.Load("Textures/images/img6", typeof(Sprite)) as Sprite;
-		sprites.Add(key, sprite);
-
-		key = "img7";
-		sprite = Resources.Load("Textures/images/img7", typeof(Sprite)) as Sprite;
-		sprites.Add(key, sprite);
-
-		key = "img8";
-		sprite = Resources.Load("Textures/images/img8", typeof(Sprite)) as Sprite;
-		sprites.Add(key, sprite);
-
-
-        key = "img9";
-        sprite = Resources.Load("Textures/images/img9", typeof(Sprite)) as Sprite;
-        sprites.Add(key, sprite);
-
-        key = "img10";
-        sprite = Resources.Load("Textures/images/img10", typeof(Sprite)) as Sprite;
-        sprites.Add(key, sprite);
+                    }
+                }
+            }
+        }
 
         loadButtonsLogic();
         procced();
