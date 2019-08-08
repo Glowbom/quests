@@ -218,13 +218,11 @@ public class GridStatusScript : MonoBehaviour
 				}
 				
 				if (item.picturesSpriteNames != null) {
-                    if (item.picturesSpriteNames.Length == 0)
-                    {
-                        pictures[0].gameObject.SetActive(false);
-                    } else
-                    {
-                        pictures[0].gameObject.SetActive(true);
 
+                    pictures[0].gameObject.SetActive(false);
+
+                    if (item.picturesSpriteNames.Length != 0)
+                    {
                         for (int i = 0; i < item.picturesSpriteNames.Length; i++)
                         {
                             if (i < pictures.Length)
@@ -232,8 +230,9 @@ public class GridStatusScript : MonoBehaviour
                                 if (sprites.ContainsKey(item.picturesSpriteNames[i]))
                                 {
                                     pictures[i].sprite = sprites[item.picturesSpriteNames[i]];
+                                    pictures[i].gameObject.SetActive(!item.picturesSpriteNames[i].Equals(string.Empty));
                                 }
-                                pictures[i].gameObject.SetActive(!item.picturesSpriteNames[i].Equals(string.Empty));
+                        
                             }
                         }
                     }
@@ -256,9 +255,13 @@ public class GridStatusScript : MonoBehaviour
 		Sprite sprite = Resources.Load("Textures/default", typeof(Sprite)) as Sprite;
 		sprites.Add("default", sprite);
 
+        GameStatusMagic.instance.load();
+
+        load();
+
         // put images load here
 
-		string key = "img0";
+        string key = "img0";
 		sprite = Resources.Load("Textures/images/img0", typeof(Sprite)) as Sprite;
 		sprites.Add(key, sprite);
 
@@ -304,9 +307,6 @@ public class GridStatusScript : MonoBehaviour
         sprite = Resources.Load("Textures/images/img10", typeof(Sprite)) as Sprite;
         sprites.Add(key, sprite);
 
-        GameStatusMagic.instance.load();
-
-        load();
         loadButtonsLogic();
         procced();
 
