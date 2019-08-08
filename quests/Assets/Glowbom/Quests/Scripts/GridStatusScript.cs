@@ -218,15 +218,30 @@ public class GridStatusScript : MonoBehaviour
 				}
 				
 				if (item.picturesSpriteNames != null) {
-					for (int i = 0; i < item.picturesSpriteNames.Length; i++) {
-						if (i < pictures.Length) {
-							if (sprites.ContainsKey(item.picturesSpriteNames [i])) {
-								pictures [i].sprite = sprites[item.picturesSpriteNames [i]];
-							}			
-							pictures [i].gameObject.SetActive (!item.picturesSpriteNames [i].Equals (string.Empty));
-						}
-					}
+                    if (item.picturesSpriteNames.Length == 0)
+                    {
+                        pictures[0].gameObject.SetActive(false);
+                    } else
+                    {
+                        pictures[0].gameObject.SetActive(true);
+
+                        for (int i = 0; i < item.picturesSpriteNames.Length; i++)
+                        {
+                            if (i < pictures.Length)
+                            {
+                                if (sprites.ContainsKey(item.picturesSpriteNames[i]))
+                                {
+                                    pictures[i].sprite = sprites[item.picturesSpriteNames[i]];
+                                }
+                                pictures[i].gameObject.SetActive(!item.picturesSpriteNames[i].Equals(string.Empty));
+                            }
+                        }
+                    }
 				}
+                else
+                {
+                    pictures[0].gameObject.SetActive(false);
+                }
 				
 			} 
 		}
@@ -237,12 +252,6 @@ public class GridStatusScript : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{	
-		GameStatusMagic.instance.load();
-		
-		load ();
-		loadButtonsLogic();
-		procced ();
-
 		sprites.Clear();
 		Sprite sprite = Resources.Load("Textures/default", typeof(Sprite)) as Sprite;
 		sprites.Add("default", sprite);
@@ -294,6 +303,12 @@ public class GridStatusScript : MonoBehaviour
         key = "img10";
         sprite = Resources.Load("Textures/images/img10", typeof(Sprite)) as Sprite;
         sprites.Add(key, sprite);
+
+        GameStatusMagic.instance.load();
+
+        load();
+        loadButtonsLogic();
+        procced();
 
         for (int i = 0; i < gridButtons.Length; i++) {
 			gridButtons [i].gameObject.SetActive(false);
