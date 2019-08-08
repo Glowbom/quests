@@ -31,6 +31,7 @@ public class QuestCreator : MonoBehaviour
     // Item
     public InputField title;
     public InputField description;
+    public InputField image;
     public GameObject values;
     public InputField valuesName;
     public InputField valuesValue;
@@ -135,6 +136,11 @@ public class QuestCreator : MonoBehaviour
         Logic.Item item = game.logic.items[game.logic.currentItemIndex];
         title.text = item.title;
         description.text = item.description;
+
+        if (item.picturesSpriteNames != null && item.picturesSpriteNames.Length > 0)
+        {
+            image.text = item.picturesSpriteNames[0];
+        }
 
         int buttonsCount = currentItemButtonsCount();
 
@@ -312,6 +318,19 @@ public class QuestCreator : MonoBehaviour
         Logic.Item item = game.logic.items[game.logic.currentItemIndex];
         item.title = title.text;
         item.description = description.text;
+
+        if (item.picturesSpriteNames == null || item.picturesSpriteNames.Length == 0)
+        {
+            if (image.text != "")
+            {
+                item.picturesSpriteNames = new string[1];
+            }
+        }
+
+        if (image.text != "" && item.picturesSpriteNames != null && item.picturesSpriteNames.Length > 0)
+        {
+            item.picturesSpriteNames[0] = image.text;
+        }
 
         int buttonsCount = currentItemButtonsCount();
         for (int i = 0 + itemButtonsPosition; i < itemButtonsPosition + ITEM_BUTTONS_COUNT; i++)
