@@ -32,13 +32,23 @@ public class Logic
 	public int deadLevel;
 	public int deadItemIndex;
 	public bool pleaseRestart = false;
+    public string answers = "";
 	
 	public Item nextItem (int i)
 	{
 		Item item = items [currentItemIndex];
+       
 		if (i > -1 && i < item.goIndexes.Length) {
 			currentItemIndex = item.goIndexes [i];
-			
+
+            if (answers == "")
+            {
+                answers = item.buttonsTexts[i];
+            } else
+            {
+                answers += (", " + item.buttonsTexts[i]);
+            }
+
 			Item nextItem = items [currentItemIndex];
 			
 			if (nextItem.heroValues != null) {
@@ -242,6 +252,22 @@ public class GridStatusScript : MonoBehaviour
                 {
                     pictures[0].gameObject.SetActive(false);
                 }
+
+
+                // Online Feedback Form
+                if (item.title == "Form" && item.description.Contains("http"))
+                {
+                    for (int i = 0; i < inputFields.Length; i++)
+                    {
+                        inputFields[i].text = "";
+                        inputFields[i].gameObject.SetActive(false);
+                    }
+
+                    Forms.ui = this;
+                    gameViewText.text = "Loading...";
+                    gameViewTitle.text = "";
+                    Forms.load(this, item.description);
+                } 
 				
 			} 
 		}
@@ -370,7 +396,32 @@ public class GridStatusScript : MonoBehaviour
 			//Advertisement.Show();
 		}
 
-		if (logic.pleaseRestart) {
+        if (inputFields != null && inputFields[0].IsActive())
+        {
+            Forms.values = new List<string>();
+            for (int j = 0; j < inputFields.Length; j++)
+            {
+                if (inputFields[j].IsActive())
+                {
+                    Forms.values.Add(inputFields[j].text);
+                }
+            }
+
+            if (logic.answers != "")
+            {
+                Forms.values.Add(logic.answers);
+            }
+
+            Forms.submit(this);
+
+            for (int k = 0; k < inputFields.Length; k++)
+            {
+                inputFields[k].gameObject.SetActive(false);
+            }
+
+        }
+
+        if (logic.pleaseRestart) {
 			load ();
 			procced ();
 			return;
@@ -418,6 +469,7 @@ public class GridStatusScript : MonoBehaviour
 		}
 
 		logic = JsonUtility.FromJson<Logic> (textAsset.text);
+        logic.answers = "";
 	}
 
 	public void loadButtonsLogic() {

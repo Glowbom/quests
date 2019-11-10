@@ -247,7 +247,7 @@ public class QuestEditor : EditorWindow
 
         if (questLoader.logic != null) {
             var item = questLoader.logic.items[questLoader.logic.currentItemIndex];
-            GUILayout.Label("Element " + questLoader.logic.currentItemIndex, EditorStyles.label);
+            GUILayout.Label("Screen " + questLoader.logic.currentItemIndex, EditorStyles.label);
 
             item.title = EditorGUILayout.TextField("Title", item.title);
             EditorGUILayout.Space();

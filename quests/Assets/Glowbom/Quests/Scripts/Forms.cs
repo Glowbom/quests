@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.UI;
 
 /*
  * Created on Sun Aug 19 2019
@@ -10,17 +11,19 @@ using UnityEngine.Networking;
  */
 public class Forms
 {
+    public static GridStatusScript ui;
+
 	public static List<string> names;
     public static List<string> entries;
     public static List<string> values;
     private static string url;
 
-	public static void getStartedPressed(MonoBehaviour monoBehaviour, string formUrl)
+	public static void load(MonoBehaviour monoBehaviour, string formUrl)
 	{
         monoBehaviour.StartCoroutine(get(formUrl));
 	}
 
-    public static void submitPressed(MonoBehaviour monoBehaviour)
+    public static void submit(MonoBehaviour monoBehaviour)
     {
         monoBehaviour.StartCoroutine(post());
     }
@@ -139,6 +142,22 @@ public class Forms
                             index = -1;
                         }
                     } 
+                }
+
+                if (ui != null && ui.inputFields != null)
+                {
+                    ui.gameViewText.text = "";
+                    for (int j = 0; j < names.Count - 1; j++)
+                    {
+                        if (j < ui.inputFields.Length)
+                        {
+                            ui.inputFields[j].gameObject.SetActive(true);
+                            ui.inputFields[j].placeholder.GetComponent<Text>().text = names[j];
+                        } else
+                        {
+                            break;
+                        }
+                    }
                 }
 
                 if (pageContent.Contains("entry."))
