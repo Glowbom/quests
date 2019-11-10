@@ -93,6 +93,7 @@ public class GridStatusScript : MonoBehaviour
 	public Text gameViewText;
 	public Text gameViewHeroStatusText;
 	public Button[] buttons;
+    public InputField[] inputFields;
 
 	public Button[] gridButtons;
 	public Image[] pictures;
