@@ -403,6 +403,12 @@ public class GridStatusScript : MonoBehaviour
             {
                 if (inputFields[j].IsActive())
                 {
+                    if (inputFields[j].text == "")
+                    {
+                        // don't allow to submit until it has something
+                        return;
+                    }
+
                     Forms.values.Add(inputFields[j].text);
                 }
             }

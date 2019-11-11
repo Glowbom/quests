@@ -20,8 +20,45 @@ public class Forms
 
 	public static void load(MonoBehaviour monoBehaviour, string formUrl)
 	{
-        monoBehaviour.StartCoroutine(get(formUrl));
-	}
+        //if (Application.platform == RuntimePlatform.WebGLPlayer)
+        //{
+        names = new List<string>();
+        names.Add("XXX");
+        names.Add("YYY");
+        names.Add("ZZZ");
+        names.Add("AAA");
+
+        entries = new List<string>();
+        entries.Add("entry1");
+        entries.Add("entry2");
+        entries.Add("entry3");
+        entries.Add("entry4");
+
+        url = "response_url";
+        ;
+        if (ui != null && ui.inputFields != null)
+        {
+            ui.gameViewText.text = "";
+            for (int j = 0; j < names.Count - 1; j++)
+            {
+                if (j < ui.inputFields.Length)
+                {
+                    ui.inputFields[j].gameObject.SetActive(true);
+                    ui.inputFields[j].placeholder.GetComponent<Text>().text = names[j];
+                }
+                else
+                {
+                    break;
+                }
+            }
+        }
+
+
+        return;
+        //}
+
+        //monoBehaviour.StartCoroutine(get(formUrl));
+    }
 
     public static void submit(MonoBehaviour monoBehaviour)
     {
