@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using UnityEngine.UI;
 
 /*
  * Created on Sun Jul 21 2019
@@ -557,6 +558,14 @@ public class QuestEditor : EditorWindow
 
         if (GUILayout.Button("Save"))
         {
+            Image mainImage = GameObject.Find("MainImage").GetComponent<Image>();
+            if (mainImage.GetComponent<RectTransform>().hasChanged)
+            {
+                var item = questLoader.logic.items[questLoader.logic.currentItemIndex];
+                item.mainImagePosition = mainImage.rectTransform.localPosition;
+                item.mainImageSize = mainImage.rectTransform.sizeDelta;
+            }
+
             questLoader.save();
         }
 
