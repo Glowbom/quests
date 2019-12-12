@@ -470,6 +470,10 @@ public class QuestEditor : EditorWindow
 
         EditorGUILayout.Space();
 
+        questLoader.name = EditorGUILayout.TextField("Name", questLoader.name);
+
+        EditorGUILayout.Space();
+
         GUILayout.Label(questLoader.name + " [" + questLoader.logic.items.Length + " items]", EditorStyles.label);
 
         EditorGUILayout.Space();

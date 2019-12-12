@@ -9,7 +9,7 @@ using System.IO;
 public class QuestLoader
 {
     public Logic logic = null;
-    public string name = "Template Quest";
+    public string name = "TemplateQuest";
 
     public void initialize() {
         if (logic == null) {
@@ -18,14 +18,14 @@ public class QuestLoader
     }
 
     public void load() {
-        var textAsset = Resources.Load ("Data/TemplateQuest") as TextAsset;
+        var textAsset = Resources.Load ("Data/" + name) as TextAsset;
         logic = JsonUtility.FromJson<Logic> (textAsset.text);
     }
 
     public void save() {
         try
         {
-            using (StreamWriter sw = new StreamWriter("Assets/Glowbom/Quests/Resources/Data/TemplateQuest.txt", false))
+            using (StreamWriter sw = new StreamWriter("Assets/Glowbom/Quests/Resources/Data/" + name + ".txt", false))
             {
                 sw.Write(JsonUtility.ToJson(logic));
             }

@@ -396,7 +396,7 @@ public class GridStatusScript : MonoBehaviour
 			//Advertisement.Show();
 		}
 
-        if (inputFields != null && inputFields[0].IsActive())
+        if (inputFields != null && inputFields.Length > 0 && inputFields[0].IsActive())
         {
             Forms.values = new List<string>();
             for (int j = 0; j < inputFields.Length; j++)
