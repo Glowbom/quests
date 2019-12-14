@@ -241,6 +241,71 @@ public class QuestEditor : EditorWindow
         initItemUi();
     }
 
+    int questsCount = 1;
+    string deafautQuestName = "Quest";
+
+    private void initQuestsUi()
+    {
+        EditorGUILayout.Space();
+
+        if (questLoader.logic != null)
+        {
+            var item = questLoader.logic.items[questLoader.logic.currentItemIndex];
+            GUILayout.Label("Supporting Multiple Quests", EditorStyles.label);
+
+            questsCount = int.Parse(EditorGUILayout.TextField("Count", questsCount.ToString()));
+
+            EditorGUILayout.Space();
+
+            scrollPosButtons = EditorGUILayout.BeginScrollView(scrollPosButtons, GUILayout.Width(position.width - 20), GUILayout.Height(500));
+
+            
+            for (int i = 0; i < questsCount; i++)
+            {
+                GUI.backgroundColor = Color.white;
+
+                GUILayout.Label("Quest " + (i + 1), EditorStyles.label);
+                questLoader.name = EditorGUILayout.TextField("Name", questLoader.name);
+                deafautQuestName = EditorGUILayout.TextField("Title", deafautQuestName);
+                GUILayout.BeginHorizontal();
+
+                if (GUILayout.Button("Insert"))
+                {
+                    //insertButton(i);
+                }
+
+                if (GUILayout.Button("Open"))
+                {
+                    //if (goIndex >= 0 && goIndex < questLoader.logic.items.Length)
+                    //{
+                    //    GUI.FocusControl(null);
+                    //    questLoader.logic.currentItemIndex = goIndex;
+                    //    initItemUi();
+                    //}
+                }
+
+
+                GUI.backgroundColor = new Color32(238, 32, 77, 255);
+                var style = new GUIStyle(GUI.skin.button);
+                style.normal.textColor = Color.white;
+                if (GUILayout.Button("Remove", style))
+                {
+                    //removeButton(i);
+                    break;
+                }
+
+                GUILayout.EndHorizontal();
+                EditorGUILayout.Space();
+            }
+
+            EditorGUILayout.Space();
+
+            //initHeroValues();
+
+            EditorGUILayout.EndScrollView();
+        }
+    }
+
 
 
     private void initItemUi() {
@@ -481,7 +546,7 @@ public class QuestEditor : EditorWindow
 
         var item = questLoader.logic.items[questLoader.logic.currentItemIndex];
         string buttonTitle = createTitle(item, questLoader.logic.currentItemIndex);
-        tabElements = GUILayout.Toolbar (tabElements, new string[] { "All", buttonTitle });
+        tabElements = GUILayout.Toolbar (tabElements, new string[] { "All", buttonTitle, "Quests" });
         switch (tabElements) {
             case 0:
                 initAllTabUi();
@@ -489,6 +554,9 @@ public class QuestEditor : EditorWindow
             case 1:
                 initItemUi();
             break;
+            case 2:
+                initQuestsUi();
+                break;
         }
 
         GUILayout.EndVertical();
