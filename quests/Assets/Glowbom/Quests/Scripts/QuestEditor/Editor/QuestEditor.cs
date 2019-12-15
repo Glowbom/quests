@@ -259,8 +259,9 @@ public class QuestEditor : EditorWindow
 
             scrollPosButtons = EditorGUILayout.BeginScrollView(scrollPosButtons, GUILayout.Width(position.width - 20), GUILayout.Height(500));
 
-            
-            for (int i = 0; i < questsCount; i++)
+            Debug.Log(questLoader.buttonsLogic.buttons);
+            questLoader.loadButtonsLogic();
+            for (int i = 0; i < questLoader.buttonsLogic.buttons.Length; i++)
             {
                 GUI.backgroundColor = Color.white;
 

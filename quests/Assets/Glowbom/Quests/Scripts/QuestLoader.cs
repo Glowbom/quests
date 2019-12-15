@@ -9,6 +9,7 @@ using System.IO;
 public class QuestLoader
 {
     public Logic logic = null;
+    public Buttons buttonsLogic = null;
     public string name = "TemplateQuest";
 
     public void initialize() {
@@ -17,9 +18,17 @@ public class QuestLoader
         }
     }
 
+    public void loadButtonsLogic()
+    {
+        var textAsset = Resources.Load("Data/Buttons") as TextAsset;
+        buttonsLogic = JsonUtility.FromJson<Buttons>(textAsset.text);
+        Debug.Log(textAsset.text);
+    }
+
     public void load() {
         var textAsset = Resources.Load ("Data/" + name) as TextAsset;
         logic = JsonUtility.FromJson<Logic> (textAsset.text);
+        loadButtonsLogic();
     }
 
     public void save() {

@@ -289,7 +289,7 @@ public class GridStatusScript : MonoBehaviour
 
         load();
 
-        foreach(var item in logic.items)
+        foreach (var item in logic.items)
         {
             if (item.picturesSpriteNames != null && item.picturesSpriteNames.Length != 0)
             {
