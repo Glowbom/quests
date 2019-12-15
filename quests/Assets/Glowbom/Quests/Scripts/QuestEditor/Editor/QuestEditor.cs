@@ -163,6 +163,17 @@ public class QuestEditor : EditorWindow
                     questLoader.logic.currentItemIndex = Array.IndexOf(questLoader.logic.items, item);
                     tabElements = 1;
                     OnGUI();
+
+                    Image mainImage = GameObject.Find("MainImage").GetComponent<Image>();
+                    if (mainImage.GetComponent<RectTransform>().hasChanged)
+                    {
+                        var nextItem = questLoader.logic.items[questLoader.logic.currentItemIndex];
+                        if (nextItem.mainImagePosition != null && nextItem.mainImagePosition.x != 0)
+                        {
+                            mainImage.rectTransform.localPosition = nextItem.mainImagePosition;
+                            mainImage.rectTransform.sizeDelta = nextItem.mainImageSize;
+                        }
+                    }
                 }
 
                 if (GUILayout.Button("Remove"))
