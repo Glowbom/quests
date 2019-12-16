@@ -563,6 +563,7 @@ public class QuestEditor : EditorWindow
         EditorGUILayout.Space();
 
         questLoader.name = EditorGUILayout.TextField("Name", questLoader.name);
+        questLoader.language = EditorGUILayout.TextField("Language", questLoader.language);
 
         EditorGUILayout.Space();
 

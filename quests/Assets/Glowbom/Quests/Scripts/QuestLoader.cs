@@ -11,6 +11,7 @@ public class QuestLoader
     public Logic logic = null;
     public Buttons buttonsLogic = null;
     public string name = "TemplateQuest";
+    public string language = "";
 
     public void initialize() {
         if (logic == null) {
@@ -20,12 +21,12 @@ public class QuestLoader
 
     public void loadButtonsLogic()
     {
-        var textAsset = Resources.Load("Data/Buttons") as TextAsset;
+        var textAsset = Resources.Load("Data/Buttons" + language) as TextAsset;
         buttonsLogic = JsonUtility.FromJson<Buttons>(textAsset.text);
     }
 
     public void load() {
-        var textAsset = Resources.Load ("Data/" + name) as TextAsset;
+        var textAsset = Resources.Load ("Data/" + name + language) as TextAsset;
         logic = JsonUtility.FromJson<Logic> (textAsset.text);
         loadButtonsLogic();
     }
@@ -33,12 +34,12 @@ public class QuestLoader
     public void save() {
         try
         {
-            using (StreamWriter sw = new StreamWriter("Assets/Glowbom/Quests/Resources/Data/" + name + ".txt", false))
+            using (StreamWriter sw = new StreamWriter("Assets/Glowbom/Quests/Resources/Data/" + name + language + ".txt", false))
             {
                 sw.Write(JsonUtility.ToJson(logic));
             }
 
-            using (StreamWriter sw = new StreamWriter("Assets/Glowbom/Quests/Resources/Data/Buttons.txt", false))
+            using (StreamWriter sw = new StreamWriter("Assets/Glowbom/Quests/Resources/Data/Buttons" + language + ".txt", false))
             {
                 sw.Write(JsonUtility.ToJson(buttonsLogic));
             }
