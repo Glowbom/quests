@@ -22,7 +22,6 @@ public class QuestLoader
     {
         var textAsset = Resources.Load("Data/Buttons") as TextAsset;
         buttonsLogic = JsonUtility.FromJson<Buttons>(textAsset.text);
-        Debug.Log(textAsset.text);
     }
 
     public void load() {

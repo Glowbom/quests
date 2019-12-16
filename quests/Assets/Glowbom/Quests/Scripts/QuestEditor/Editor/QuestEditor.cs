@@ -204,6 +204,30 @@ public class QuestEditor : EditorWindow
         EditorGUILayout.Space();
     }
 
+    private void insertQuest(int i)
+    {
+        List<Buttons.Button> buttonsList = new List<Buttons.Button>(questLoader.buttonsLogic.buttons);
+        Buttons.Button button = new Buttons.Button();
+        button.name = "New Quest";
+        button.link = "Data/NewQuest";
+        buttonsList.Insert(i + 1, button);
+
+        questLoader.buttonsLogic.buttons = buttonsList.ToArray();
+
+        GUI.FocusControl(null);
+        initItemUi();
+    }
+
+    private void removeQuest(int i)
+    {
+        List<Buttons.Button> buttonsList = new List<Buttons.Button>(questLoader.buttonsLogic.buttons);
+        buttonsList.RemoveAt(i);
+        questLoader.buttonsLogic.buttons = buttonsList.ToArray();
+
+        GUI.FocusControl(null);
+        initItemUi();
+    }
+
     private void insertButton(int i) {
         var item = questLoader.logic.items[questLoader.logic.currentItemIndex];
         List<string> buttonsTextsList = new List<string>(item.buttonsTexts);
@@ -277,17 +301,13 @@ public class QuestEditor : EditorWindow
 
                 if (GUILayout.Button("Insert"))
                 {
-                    //insertButton(i);
+                    insertQuest(i);
                 }
 
                 if (GUILayout.Button("Open"))
                 {
-                    //if (goIndex >= 0 && goIndex < questLoader.logic.items.Length)
-                    //{
-                    //    GUI.FocusControl(null);
-                    //    questLoader.logic.currentItemIndex = goIndex;
-                    //    initItemUi();
-                    //}
+                    questLoader.name = questLoader.buttonsLogic.buttons[i].link;
+                    questLoader.load();
                 }
 
 
@@ -296,7 +316,7 @@ public class QuestEditor : EditorWindow
                 style.normal.textColor = Color.white;
                 if (GUILayout.Button("Remove", style))
                 {
-                    //removeButton(i);
+                    removeQuest(i);
                     break;
                 }
 
