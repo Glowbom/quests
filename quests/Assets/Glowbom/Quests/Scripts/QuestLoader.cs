@@ -38,6 +38,11 @@ public class QuestLoader
             {
                 sw.Write(JsonUtility.ToJson(logic));
             }
+
+            using (StreamWriter sw = new StreamWriter("Assets/Glowbom/Quests/Resources/Data/Buttons.txt", false))
+            {
+                sw.Write(JsonUtility.ToJson(buttonsLogic));
+            }
         }
         catch (IOException e)
         {

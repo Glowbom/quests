@@ -78,8 +78,11 @@ public class Logic
 	}
 }
 
-public class Buttons {
-	public class Button
+[System.Serializable]
+public class Buttons
+{
+    [System.Serializable]
+    public class Button
 	{
 		public string name;
 		public string link;

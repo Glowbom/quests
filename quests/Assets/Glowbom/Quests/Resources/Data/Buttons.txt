@@ -1,17 +1,1 @@
-{
-"buttons":
-	[
-	{
-		"link":"Data/MainQuest",
-		"name":"MainQuest"
-	},
-	{
-		"link":"Data/Example",
-		"name":"Example"
-	}, 
-	{
-		"link":"Data/TemplateQuest",
-		"name":"TemplateQuest"
-	}
-	]
-}
+{"buttons":[{"name":"MainQuest4","link":"Data/MainQuest3"},{"name":"Example1","link":"Data/Example1"},{"name":"TemplateQuest2","link":"2"}]}

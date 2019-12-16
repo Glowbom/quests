@@ -252,7 +252,6 @@ public class QuestEditor : EditorWindow
         initItemUi();
     }
 
-    int questsCount = 1;
     string deafautQuestName = "Quest";
 
     private void initQuestsUi()
@@ -261,24 +260,19 @@ public class QuestEditor : EditorWindow
 
         if (questLoader.logic != null)
         {
-            var item = questLoader.logic.items[questLoader.logic.currentItemIndex];
             GUILayout.Label("Supporting Multiple Quests", EditorStyles.label);
-
-            questsCount = int.Parse(EditorGUILayout.TextField("Count", questsCount.ToString()));
 
             EditorGUILayout.Space();
 
             scrollPosButtons = EditorGUILayout.BeginScrollView(scrollPosButtons, GUILayout.Width(position.width - 20), GUILayout.Height(500));
 
-            Debug.Log(questLoader.buttonsLogic.buttons);
-            questLoader.loadButtonsLogic();
             for (int i = 0; i < questLoader.buttonsLogic.buttons.Length; i++)
             {
                 GUI.backgroundColor = Color.white;
 
                 GUILayout.Label("Quest " + (i + 1), EditorStyles.label);
-                questLoader.name = EditorGUILayout.TextField("Name", questLoader.name);
-                deafautQuestName = EditorGUILayout.TextField("Title", deafautQuestName);
+                questLoader.buttonsLogic.buttons[i].name = EditorGUILayout.TextField("Name", questLoader.buttonsLogic.buttons[i].name);
+                questLoader.buttonsLogic.buttons[i].link = EditorGUILayout.TextField("Link", questLoader.buttonsLogic.buttons[i].link);
                 GUILayout.BeginHorizontal();
 
                 if (GUILayout.Button("Insert"))
