@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.IO;
 using UnityEngine;
 
 /*
@@ -7,17 +6,34 @@ using UnityEngine;
  *
  * Copyright (c) 2019 Glowbom.
  */
-public class MonetizationLoader : MonoBehaviour
+public class MonetizationLoader
 {
-    // Start is called before the first frame update
-    void Start()
+    public Monetization monetization = null;
+
+    public void load()
     {
-        
+        var textAsset = Resources.Load("Data/Monetization") as TextAsset;
+        monetization = JsonUtility.FromJson<Monetization>(textAsset.text);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void save()
     {
-        
+        try
+        {
+            using (StreamWriter sw = new StreamWriter("Assets/Glowbom/Monetization/Resources/Data/Monetization.txt", false))
+            {
+                sw.Write(JsonUtility.ToJson(monetization));
+            }
+        }
+        catch (IOException e)
+        {
+            Debug.Log(e.Message);
+        }
+        finally
+        {
+#if UNITY_EDITOR
+            UnityEditor.AssetDatabase.Refresh();
+#endif
+        }
     }
 }
