@@ -17,4 +17,19 @@ public class Monetization : MonoBehaviour
     public string iOSBanner;
     public string iOSInterstitial;
     public string iOSAppId;
+
+    public void showInterstitial()
+    {
+
+    }
+
+    public void showBanner()
+    {
+
+    }
+
+    public void initAds()
+    {
+
+    }
 }
