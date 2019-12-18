@@ -41,3 +41,9 @@ textadventures/Assets/Resources/Textures/front.jpg
 textadventures/Assets/Resources/Textures/icon.png
 
 quests/Assets/Libs.meta
+quests/Assets/GoogleMobileAds.meta
+quests/Assets/PlayServicesResolver.meta
+quests/Assets/Plugins.meta
+quests/Assets/GoogleMobileAds/
+quests/Assets/PlayServicesResolver/
+quests/Assets/Plugins/
