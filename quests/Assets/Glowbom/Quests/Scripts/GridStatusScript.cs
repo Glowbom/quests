@@ -95,6 +95,7 @@ public class Buttons
 
 public class GridStatusScript : MonoBehaviour
 {
+    public Monetization monetization;
     public InputField clipboard;
 
 	public GameObject editButtonPanel;
@@ -144,6 +145,12 @@ public class GridStatusScript : MonoBehaviour
 	{
 		if (logic != null) {
 			if (logic.currentItemIndex > -1 && logic.currentItemIndex < logic.items.Length) {
+
+                if (monetization != null)
+                {
+                    monetization.tryShowAds();
+                }
+
 				resetDraggablePanelPosition(scrollView.gameObject.transform);
 				
 				Logic.Item item = logic.items [logic.currentItemIndex];
@@ -284,6 +291,11 @@ public class GridStatusScript : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{	
+        if (monetization != null)
+        {
+            monetization.initAds();
+        }
+
 		sprites.Clear();
 		Sprite sprite = Resources.Load("Textures/default", typeof(Sprite)) as Sprite;
 		sprites.Add("default", sprite);
