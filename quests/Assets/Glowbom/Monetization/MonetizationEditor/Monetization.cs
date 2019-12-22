@@ -1,7 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
+#if GLOWBOM_ADS
 using GoogleMobileAds.Api;
+#endif
 
 /*
  * Created on Mon Dec 16 2019
@@ -21,12 +24,16 @@ public class Monetization : MonoBehaviour
     public int showAdsIn = 6;
 
     private int adCounter = 0;
+ #if GLOWBOM_ADS
 
     private BannerView bannerView;
     private InterstitialAd interstitial;
+#endif
 
     private void requestBanner()
     {
+#if GLOWBOM_ADS
+
 #if UNITY_ANDROID
         string adUnitId = androidBanner;
 #elif UNITY_IPHONE
@@ -43,10 +50,13 @@ public class Monetization : MonoBehaviour
 
         // Load the banner with the request.
         this.bannerView.LoadAd(request);
+
+#endif
     }
 
     private void requestInterstitial()
     {
+#if GLOWBOM_ADS
 #if UNITY_ANDROID
         string adUnitId = androidInterstitial;
 #elif UNITY_IPHONE
@@ -61,18 +71,22 @@ public class Monetization : MonoBehaviour
         AdRequest request = new AdRequest.Builder().Build();
         // Load the interstitial with the request.
         this.interstitial.LoadAd(request);
+#endif
     }
 
     public void destroy()
     {
+ #if GLOWBOM_ADS
         if (interstitial != null)
         {
             interstitial.Destroy();
         }
+#endif
     }
 
     public void showInterstitial()
     {
+#if GLOWBOM_ADS
         if (interstitial == null)
         {
             requestInterstitial();
@@ -84,6 +98,7 @@ public class Monetization : MonoBehaviour
 
             showBanner();
         }
+#endif
     }
 
     public void showBanner()
@@ -93,6 +108,7 @@ public class Monetization : MonoBehaviour
 
     public void initAds()
     {
+#if GLOWBOM_ADS
 #if UNITY_ANDROID
         string appId = androidAppId;
 #elif UNITY_IPHONE
@@ -103,6 +119,7 @@ public class Monetization : MonoBehaviour
 
         // Initialize the Google Mobile Ads SDK.
         MobileAds.Initialize(appId);
+#endif
     }
 
     public void tryShowAds()
