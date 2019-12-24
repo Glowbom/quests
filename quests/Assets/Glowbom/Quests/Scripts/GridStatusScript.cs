@@ -372,6 +372,12 @@ public class GridStatusScript : MonoBehaviour
 		load();
 
 		front.gameObject.SetActive(false);
+
+        if (buttonsLogic != null && buttonsLogic.buttons != null && buttonsLogic.buttons.Length > 1)
+        {
+            gridButtonsPanel.gameObject.SetActive(true);
+            gridBackground.gameObject.SetActive(true);
+        }
 	}
 
 	private int buttonPressedCounter = 0;
