@@ -386,10 +386,12 @@ public class GridStatusScript : MonoBehaviour
 
 	public void buttonGridPressed (GameObject button) {
 		int i = 0;
+
 		foreach (Button b in gridButtons) {
-			if (b.gameObject == button) {
+            if (b.gameObject == button) {
 				lastClickedLink = buttonsLogic.buttons[i].link;
-				load();
+
+                load();
 				procced();
 				
 				//logic.nextItem (i);
@@ -495,7 +497,7 @@ public class GridStatusScript : MonoBehaviour
 		var textAsset = Resources.Load ("Data/TemplateQuest") as TextAsset;
 
 		if (lastClickedLink != null) {
-			textAsset = Resources.Load (lastClickedLink) as TextAsset;
+			textAsset = Resources.Load ("Data/" + lastClickedLink) as TextAsset;
 		}
 
 		logic = JsonUtility.FromJson<Logic> (textAsset.text);
