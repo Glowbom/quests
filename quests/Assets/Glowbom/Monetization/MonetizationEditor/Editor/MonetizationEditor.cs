@@ -13,7 +13,7 @@ public class MonetizationEditor : EditorWindow
     [MenuItem("Window/Glowbom/Monetization")]
     public static void ShowWindow()
     {
-        GetWindow<QuestEditor>("Monetization");
+        GetWindow<MonetizationEditor>("Monetization");
     }
 
     private void OnGUI()
