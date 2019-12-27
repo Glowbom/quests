@@ -6,6 +6,8 @@ using UnityEditor;
 
 public class MonetizationEditor : EditorWindow
 {
+    MonetizationLoader monetizationLoader = null;
+
     static MonetizationEditor()
     {
     }
