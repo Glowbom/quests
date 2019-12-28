@@ -6,10 +6,11 @@ using UnityEditor;
 
 public class MonetizationEditor : EditorWindow
 {
-    MonetizationLoader monetizationLoader = null;
+    static MonetizationLoader monetizationLoader = null;
 
     static MonetizationEditor()
     {
+        monetizationLoader = new MonetizationLoader();
     }
 
     [MenuItem("Window/Glowbom/Monetization")]
@@ -20,11 +21,18 @@ public class MonetizationEditor : EditorWindow
 
     private void OnGUI()
     {
+        monetizationLoader.load();
+
         GUILayout.Label("Glowbom", EditorStyles.boldLabel);
 
         GUILayout.Label("Monetization", EditorStyles.label);
 
         EditorGUILayout.Space();
+
+        if (GUILayout.Button("Save"))
+        {
+            monetizationLoader.save();
+        }
     }
 }
 #endif

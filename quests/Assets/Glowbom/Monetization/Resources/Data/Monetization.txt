@@ -1,0 +1,1 @@
+{"androidBanner":"1","androidInterstitial":"1","androidAppId":"2","iOSBanner":"3","iOSInterstitial":"4","iOSAppId":"6","showAdsIn":6}

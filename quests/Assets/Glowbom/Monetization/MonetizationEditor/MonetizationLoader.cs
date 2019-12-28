@@ -13,7 +13,14 @@ public class MonetizationLoader
     public void load()
     {
         var textAsset = Resources.Load("Data/Monetization") as TextAsset;
-        monetization = JsonUtility.FromJson<Monetization>(textAsset.text);
+        if (textAsset == null)
+        {
+            monetization = new Monetization();
+        }
+        else
+        {
+            monetization = JsonUtility.FromJson<Monetization>(textAsset.text);
+        }
     }
 
     public void save()
