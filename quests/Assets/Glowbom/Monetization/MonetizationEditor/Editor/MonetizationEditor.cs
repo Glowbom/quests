@@ -33,6 +33,10 @@ public class MonetizationEditor : EditorWindow
         {
             monetizationLoader.save();
         }
+
+        EditorGUILayout.Space();
+
+        monetizationLoader.monetization.androidAppId = EditorGUILayout.TextField("Android App Id", monetizationLoader.monetization.androidAppId);
     }
 }
 #endif
