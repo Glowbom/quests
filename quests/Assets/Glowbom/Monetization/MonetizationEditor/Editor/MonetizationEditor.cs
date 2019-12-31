@@ -37,6 +37,7 @@ public class MonetizationEditor : EditorWindow
         EditorGUILayout.Space();
 
         monetizationLoader.monetization.androidAppId = EditorGUILayout.TextField("Android App Id", monetizationLoader.monetization.androidAppId);
+        monetizationLoader.monetization.androidBanner = EditorGUILayout.TextField("Android Banner", monetizationLoader.monetization.androidBanner);
     }
 }
 #endif
