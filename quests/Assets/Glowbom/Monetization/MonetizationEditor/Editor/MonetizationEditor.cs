@@ -11,6 +11,7 @@ public class MonetizationEditor : EditorWindow
     static MonetizationEditor()
     {
         monetizationLoader = new MonetizationLoader();
+
     }
 
     [MenuItem("Window/Glowbom/Monetization")]
@@ -21,7 +22,7 @@ public class MonetizationEditor : EditorWindow
 
     private void OnGUI()
     {
-        monetizationLoader.load();
+        monetizationLoader.initialize();
 
         GUILayout.Label("Glowbom", EditorStyles.boldLabel);
 

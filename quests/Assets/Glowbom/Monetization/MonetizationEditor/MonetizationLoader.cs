@@ -23,6 +23,14 @@ public class MonetizationLoader
         }
     }
 
+    public void initialize()
+    {
+        if (monetization == null)
+        {
+            load();
+        }
+    }
+
     public void save()
     {
         try
