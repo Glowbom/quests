@@ -41,6 +41,7 @@ public class MonetizationEditor : EditorWindow
         monetizationLoader.monetization.androidInterstitial = EditorGUILayout.TextField("Android Interstitial", monetizationLoader.monetization.androidInterstitial);
         monetizationLoader.monetization.iOSAppId = EditorGUILayout.TextField("iOS App Id", monetizationLoader.monetization.iOSAppId);
         monetizationLoader.monetization.iOSBanner = EditorGUILayout.TextField("iOS Banner", monetizationLoader.monetization.iOSBanner);
+        monetizationLoader.monetization.iOSInterstitial = EditorGUILayout.TextField("iOS Interstitial", monetizationLoader.monetization.iOSInterstitial);
     }
 }
 #endif
