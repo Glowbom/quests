@@ -12,7 +12,7 @@ using GoogleMobileAds.Api;
  * Copyright (c) 2019 Glowbom.
  */
 [System.Serializable]
-public class Monetization : MonoBehaviour
+public class Monetization
 {
     public string androidBanner;
     public string androidInterstitial;
