@@ -1,1 +1,1 @@
-{"androidBanner":"asdjaslkdjasl","androidInterstitial":"1","androidAppId":"sadasd","iOSBanner":"3","iOSInterstitial":"4","iOSAppId":"6","showAdsIn":6}
+{"androidBanner":"Android Banner","androidInterstitial":"Android Full Screen Ads","androidAppId":"Android App Id","iOSBanner":"iOS Banner","iOSInterstitial":"iOS Full Screen Ads","iOSAppId":"iOS App Id","showAdsIn":6}
