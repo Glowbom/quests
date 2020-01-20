@@ -5,5 +5,8 @@ using UnityEngine;
 [System.Serializable]
 public class Feedback
 {
-    public string formName;
+    public List<string> names;
+    public List<string> entries;
+    public List<string> values;
+    public string url;
 }
