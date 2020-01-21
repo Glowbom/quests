@@ -362,6 +362,7 @@ public class QuestEditor : EditorWindow
             }
 
             item.picturesSpriteNames[0] = EditorGUILayout.TextField("Image", item.picturesSpriteNames[0]);
+            item.correctScore = int.Parse(EditorGUILayout.TextField("Correct Score", item.correctScore.ToString()));
 
             EditorGUILayout.Space();
 
@@ -375,6 +376,13 @@ public class QuestEditor : EditorWindow
                     GUILayout.Label("Button " + (i + 1), EditorStyles.label);
                     item.buttonsTexts[i] = EditorGUILayout.TextField("Title", item.buttonsTexts[i]);
                     item.goIndexes[i] = int.Parse(EditorGUILayout.TextField("Go To", item.goIndexes[i].ToString()));
+
+                    if (item.buttonScores == null)
+                    {
+                        item.buttonScores = new int[item.goIndexes.Length];
+                    }
+
+                    item.buttonScores[i] = int.Parse(EditorGUILayout.TextField("Score", item.buttonScores[i].ToString()));
                     GUILayout.BeginHorizontal();
 
                     if (GUILayout.Button("Insert"))

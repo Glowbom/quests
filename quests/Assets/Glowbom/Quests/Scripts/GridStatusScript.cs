@@ -22,6 +22,7 @@ public class Logic
 		public int[] goIndexes;
 		public int[] goConditions;
 		public int[] heroValues;
+        public int[] buttonScores;
 
         public Vector2 mainImagePosition;
         public Vector2 mainImageSize;
@@ -88,7 +89,6 @@ public class Buttons
 	{
 		public string name;
 		public string link;
-        public int score;
 	}
 
 	public Button[] buttons;
