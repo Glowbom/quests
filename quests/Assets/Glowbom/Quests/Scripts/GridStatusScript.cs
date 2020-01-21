@@ -42,9 +42,46 @@ public class Logic
 	public bool pleaseRestart = false;
     public string answers = "";
 
+    public int getCorrectScore()
+    {
+        return items[currentItemIndex].correctScore;
+    }
+
     public bool isSupportAnswers()
     {
         return items[currentItemIndex].correctScore > 0; 
+    }
+
+    public bool hasMultipleAnswers()
+    {
+        bool hasMultiple = false;
+        int scores = 0;
+
+        if (items[currentItemIndex] != null)
+        {
+            for (int i = 0; i < items[currentItemIndex].buttonScores.Length; i++)
+            {
+                if (items[currentItemIndex].buttonScores[i] > 0)
+                {
+                    ++scores;
+                    if (scores > 1)
+                    {
+                        hasMultiple = true;
+                        break;
+                    }
+                }
+            }
+        }
+
+        return hasMultiple;
+    }
+
+    public int getButtonScore(int i)
+    {
+        return items[currentItemIndex].buttonScores != null &&
+            items[currentItemIndex].buttonScores != null &&
+            i > -1 && i < items[currentItemIndex].buttonScores.Length ?
+            items[currentItemIndex].buttonScores[i] : 0;
     }
 
     public bool isCorrectAnswer(int i)
@@ -53,7 +90,7 @@ public class Logic
 
         if (item.buttonScores != null && i > -1 && i < item.buttonScores.Length)
         {
-            return item.correctScore != 0 && item.correctScore == item.buttonScores[i];
+            return item.correctScore != 0 && item.buttonScores[i] > 0;
         }
 
         return false;
@@ -165,11 +202,15 @@ public class GridStatusScript : MonoBehaviour
 	{
 
 	}
-	
+
+    private int scoreCollected = 0;
+
 	public void procced ()
 	{
 		if (logic != null) {
-			if (logic.currentItemIndex > -1 && logic.currentItemIndex < logic.items.Length) {
+            scoreCollected = 0;
+
+            if (logic.currentItemIndex > -1 && logic.currentItemIndex < logic.items.Length) {
 
                 if (monetization != null)
                 {
@@ -487,13 +528,26 @@ public class GridStatusScript : MonoBehaviour
 
         if (logic.isSupportAnswers())
         {
+            
             if (logic.isCorrectAnswer(i))
             {
                 buttons[i].image.color = new Color32(55, 179, 46, 255);
+
+                if (logic.hasMultipleAnswers())
+                {
+                    scoreCollected += logic.getButtonScore(i);
+                    if (scoreCollected < logic.getCorrectScore())
+                    {
+                        return;
+                    }
+                }
+
             } else
             {
                 buttons[i].image.color = new Color32(178, 68, 55, 255);
             }
+
+            
 
             await Task.Delay(TimeSpan.FromSeconds(1));
         }

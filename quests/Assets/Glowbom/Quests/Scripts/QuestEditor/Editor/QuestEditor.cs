@@ -377,9 +377,13 @@ public class QuestEditor : EditorWindow
                     item.buttonsTexts[i] = EditorGUILayout.TextField("Title", item.buttonsTexts[i]);
                     item.goIndexes[i] = int.Parse(EditorGUILayout.TextField("Go To", item.goIndexes[i].ToString()));
 
-                    if (item.buttonScores == null)
+                    if (item.buttonScores == null || item.buttonScores.Length == 0 || item.buttonScores.Length != item.goIndexes.Length)
                     {
                         item.buttonScores = new int[item.goIndexes.Length];
+                        for(int j = 0; j < item.goIndexes.Length; j++)
+                        {
+                            item.buttonScores[j] = 0;
+                        }
                     }
 
                     item.buttonScores[i] = int.Parse(EditorGUILayout.TextField("Score", item.buttonScores[i].ToString()));
