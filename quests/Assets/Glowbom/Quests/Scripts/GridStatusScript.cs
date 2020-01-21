@@ -25,6 +25,8 @@ public class Logic
 
         public Vector2 mainImagePosition;
         public Vector2 mainImageSize;
+
+        public int correctScore;
     }
 	
 	public string[] heroElements;
@@ -86,6 +88,7 @@ public class Buttons
 	{
 		public string name;
 		public string link;
+        public int score;
 	}
 
 	public Button[] buttons;
