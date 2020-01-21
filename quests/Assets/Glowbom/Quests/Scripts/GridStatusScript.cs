@@ -42,6 +42,11 @@ public class Logic
 	public bool pleaseRestart = false;
     public string answers = "";
 
+    public bool isSupportAnswers()
+    {
+        return items[currentItemIndex].correctScore > 0; 
+    }
+
     public bool isCorrectAnswer(int i)
     {
         Item item = items[currentItemIndex];
@@ -220,7 +225,7 @@ public class GridStatusScript : MonoBehaviour
 
 				for (int i = 0; i < buttons.Length; i++) {
 					buttons [i].gameObject.SetActive(false);
-                    buttons [i].image.color = new Color32(255, 255, 255, 255);
+                    buttons [i].image.color = new Color32(255, 255, 255, 0); // 255 for non-transparent
                 }
 				
 				for (int i = 0; i < item.buttonsTexts.Length; i++) {
@@ -480,11 +485,19 @@ public class GridStatusScript : MonoBehaviour
 			return;
 		}
 
-        if (logic.isCorrectAnswer(i))
+        if (logic.isSupportAnswers())
         {
-            buttons[i].image.color = new Color32(55, 179, 46, 255);
+            if (logic.isCorrectAnswer(i))
+            {
+                buttons[i].image.color = new Color32(55, 179, 46, 255);
+            } else
+            {
+                buttons[i].image.color = new Color32(178, 68, 55, 255);
+            }
+
             await Task.Delay(TimeSpan.FromSeconds(1));
         }
+        
 
         logic.nextItem(i);
         procced();
