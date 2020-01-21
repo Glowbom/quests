@@ -41,6 +41,8 @@ public class QuestEditor : EditorWindow
         item.buttonsTexts[0] = "Go Button";
         item.goIndexes = new int[1];
         item.goIndexes[0] = 0;
+        item.buttonAnswers = new int[1];
+        item.buttonAnswers[0] = 0;
 
         List<Logic.Item> items = new List<Logic.Item>(questLoader.logic.items);
         items.Insert(i + 1, item);
@@ -130,6 +132,8 @@ public class QuestEditor : EditorWindow
         item.buttonsTexts[0] = "Go Button";
         item.goIndexes = new int[1];
         item.goIndexes[0] = 0;
+        item.buttonAnswers = new int[1];
+        item.buttonAnswers[0] = 0;
 
         List<Logic.Item> items = new List<Logic.Item>(questLoader.logic.items);
         items.Add(item);
@@ -362,7 +366,7 @@ public class QuestEditor : EditorWindow
             }
 
             item.picturesSpriteNames[0] = EditorGUILayout.TextField("Image", item.picturesSpriteNames[0]);
-            item.correctScore = int.Parse(EditorGUILayout.TextField("Correct Score", item.correctScore.ToString()));
+            item.answersCount = int.Parse(EditorGUILayout.TextField("Answers Count", item.answersCount.ToString()));
 
             EditorGUILayout.Space();
 
@@ -377,16 +381,16 @@ public class QuestEditor : EditorWindow
                     item.buttonsTexts[i] = EditorGUILayout.TextField("Title", item.buttonsTexts[i]);
                     item.goIndexes[i] = int.Parse(EditorGUILayout.TextField("Go To", item.goIndexes[i].ToString()));
 
-                    if (item.buttonScores == null || item.buttonScores.Length == 0 || item.buttonScores.Length != item.goIndexes.Length)
+                    if (item.buttonAnswers == null || item.buttonAnswers.Length == 0 || item.buttonAnswers.Length != item.goIndexes.Length)
                     {
-                        item.buttonScores = new int[item.goIndexes.Length];
+                        item.buttonAnswers = new int[item.goIndexes.Length];
                         for(int j = 0; j < item.goIndexes.Length; j++)
                         {
-                            item.buttonScores[j] = 0;
+                            item.buttonAnswers[j] = 0;
                         }
                     }
 
-                    item.buttonScores[i] = int.Parse(EditorGUILayout.TextField("Score", item.buttonScores[i].ToString()));
+                    item.buttonAnswers[i] = int.Parse(EditorGUILayout.TextField("Answer", item.buttonAnswers[i].ToString()));
                     GUILayout.BeginHorizontal();
 
                     if (GUILayout.Button("Insert"))

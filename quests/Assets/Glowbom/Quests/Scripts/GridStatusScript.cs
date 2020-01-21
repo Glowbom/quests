@@ -24,12 +24,12 @@ public class Logic
 		public int[] goIndexes;
 		public int[] goConditions;
 		public int[] heroValues;
-        public int[] buttonScores;
+        public int[] buttonAnswers;
 
         public Vector2 mainImagePosition;
         public Vector2 mainImageSize;
 
-        public int correctScore;
+        public int answersCount;
     }
 	
 	public string[] heroElements;
@@ -42,29 +42,29 @@ public class Logic
 	public bool pleaseRestart = false;
     public string answers = "";
 
-    public int getCorrectScore()
+    public int getAnswersCount()
     {
-        return items[currentItemIndex].correctScore;
+        return items[currentItemIndex].answersCount;
     }
 
     public bool isSupportAnswers()
     {
-        return items[currentItemIndex].correctScore > 0; 
+        return items[currentItemIndex].answersCount > 0; 
     }
 
     public bool hasMultipleAnswers()
     {
         bool hasMultiple = false;
-        int scores = 0;
+        int answers = 0;
 
         if (items[currentItemIndex] != null)
         {
-            for (int i = 0; i < items[currentItemIndex].buttonScores.Length; i++)
+            for (int i = 0; i < items[currentItemIndex].buttonAnswers.Length; i++)
             {
-                if (items[currentItemIndex].buttonScores[i] > 0)
+                if (items[currentItemIndex].buttonAnswers[i] > 0)
                 {
-                    ++scores;
-                    if (scores > 1)
+                    ++answers;
+                    if (answers > 1)
                     {
                         hasMultiple = true;
                         break;
@@ -76,21 +76,21 @@ public class Logic
         return hasMultiple;
     }
 
-    public int getButtonScore(int i)
+    public int getButtonAnswer(int i)
     {
-        return items[currentItemIndex].buttonScores != null &&
-            items[currentItemIndex].buttonScores != null &&
-            i > -1 && i < items[currentItemIndex].buttonScores.Length ?
-            items[currentItemIndex].buttonScores[i] : 0;
+        return items[currentItemIndex].buttonAnswers != null &&
+            items[currentItemIndex].buttonAnswers != null &&
+            i > -1 && i < items[currentItemIndex].buttonAnswers.Length ?
+            items[currentItemIndex].buttonAnswers[i] : 0;
     }
 
     public bool isCorrectAnswer(int i)
     {
         Item item = items[currentItemIndex];
 
-        if (item.buttonScores != null && i > -1 && i < item.buttonScores.Length)
+        if (item.buttonAnswers != null && i > -1 && i < item.buttonAnswers.Length)
         {
-            return item.correctScore != 0 && item.buttonScores[i] > 0;
+            return item.answersCount != 0 && item.buttonAnswers[i] > 0;
         }
 
         return false;
@@ -203,12 +203,12 @@ public class GridStatusScript : MonoBehaviour
 
 	}
 
-    private int scoreCollected = 0;
+    private int answersCollected = 0;
 
 	public void procced ()
 	{
 		if (logic != null) {
-            scoreCollected = 0;
+            answersCollected = 0;
 
             if (logic.currentItemIndex > -1 && logic.currentItemIndex < logic.items.Length) {
 
@@ -535,8 +535,8 @@ public class GridStatusScript : MonoBehaviour
 
                 if (logic.hasMultipleAnswers())
                 {
-                    scoreCollected += logic.getButtonScore(i);
-                    if (scoreCollected < logic.getCorrectScore())
+                    answersCollected += logic.getButtonAnswer(i);
+                    if (answersCollected < logic.getAnswersCount())
                     {
                         return;
                     }
