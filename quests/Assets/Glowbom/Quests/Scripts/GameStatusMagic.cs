@@ -28,7 +28,6 @@ public class GameStatusMagic : MonoBehaviour {
 				_instance = UnityEngine.Object.FindObjectOfType(typeof(GameStatusMagic)) as GameStatusMagic;
 				if (_instance == null)
 				{
-					Debug.Log("Creating GameStatusMagic");
 					GameObject go = new GameObject("_Game Status Magic");
 					_instance = go.AddComponent<GameStatusMagic>();
 				}
