@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine.UI;
+using System.Threading.Tasks;
+using System;
 
 /*
  * Created on Sun Jul 21 2019
@@ -434,7 +436,7 @@ public class GridStatusScript : MonoBehaviour
 		gridBackground.gameObject.SetActive(true);
 	}
 	
-	public void buttonPressed (int i)
+	public async void buttonPressed (int i)
 	{
 		++buttonPressedCounter;
 		if (buttonPressedCounter % 25 == 0) {
@@ -478,11 +480,19 @@ public class GridStatusScript : MonoBehaviour
 			return;
 		}
 
-		logic.nextItem (i);
-		procced ();
-	}
+        if (logic.isCorrectAnswer(i))
+        {
+            buttons[i].image.color = new Color32(55, 179, 46, 255);
+            await Task.Delay(TimeSpan.FromSeconds(1));
+        }
 
-	private int shift = 0;
+        logic.nextItem(i);
+        procced();
+    }
+
+    
+
+    private int shift = 0;
 	private int currentOpenedButtonIndex = 0;
 
 	public void updateOrCreateQuestIfPossible() {
