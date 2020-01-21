@@ -98,6 +98,9 @@ public class Buttons
 
 public class GridStatusScript : MonoBehaviour
 {
+    // correct answer color #37B392
+    // incorrect answer color #B24437
+
     public Monetization monetization;
     public InputField clipboard;
 
@@ -203,7 +206,8 @@ public class GridStatusScript : MonoBehaviour
 
 				for (int i = 0; i < buttons.Length; i++) {
 					buttons [i].gameObject.SetActive(false);
-				}
+                    buttons [i].image.color = new Color32(255, 255, 255, 255);
+                }
 				
 				for (int i = 0; i < item.buttonsTexts.Length; i++) {
 					if (i < buttons.Length) {

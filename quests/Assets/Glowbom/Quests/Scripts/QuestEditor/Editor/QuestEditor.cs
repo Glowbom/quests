@@ -12,7 +12,7 @@ using UnityEngine.UI;
  * Copyright (c) 2019 Glowbom.
  */
 public class QuestEditor : EditorWindow
-{   
+{
     static bool cloudSaveEanbled = false;
     static bool projectsEnabled = false;
     static bool templatesEnabled = false;
