@@ -39,8 +39,20 @@ public class Logic
 	public int deadItemIndex;
 	public bool pleaseRestart = false;
     public string answers = "";
-	
-	public Item nextItem (int i)
+
+    public bool isCorrectAnswer(int i)
+    {
+        Item item = items[currentItemIndex];
+
+        if (item.buttonScores != null && i > -1 && i < item.buttonScores.Length)
+        {
+            return item.correctScore != 0 && item.correctScore == item.buttonScores[i];
+        }
+
+        return false;
+    }
+
+    public Item nextItem (int i)
 	{
 		Item item = items [currentItemIndex];
        
