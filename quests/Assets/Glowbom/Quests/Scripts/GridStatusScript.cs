@@ -203,6 +203,7 @@ public class GridStatusScript : MonoBehaviour
 
 	}
 
+    public PlayAudio playAudio;
     private int answersCollected = 0;
 
 	public void procced ()
@@ -533,6 +534,8 @@ public class GridStatusScript : MonoBehaviour
             {
                 buttons[i].image.color = new Color32(55, 179, 46, 255);
 
+                playAudio.correct();
+
                 if (logic.hasMultipleAnswers())
                 {
                     answersCollected += logic.getButtonAnswer(i);
@@ -542,9 +545,11 @@ public class GridStatusScript : MonoBehaviour
                     }
                 }
 
+                
             } else
             {
                 buttons[i].image.color = new Color32(178, 68, 55, 255);
+                playAudio.incorrect();
             }
 
             
