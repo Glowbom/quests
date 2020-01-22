@@ -1,1 +1,1 @@
-{"buttons":[{"name":"New Quest","link":"TextQuests"},{"name":"TemplateQuest2","link":"TemplateQuest"}]}
+{"buttons":[{"name":"New Quest","link":"TextQuests"}]}
