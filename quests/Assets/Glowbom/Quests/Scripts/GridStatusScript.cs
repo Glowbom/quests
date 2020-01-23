@@ -30,6 +30,7 @@ public class Logic
         public Vector2 mainImageSize;
 
         public int answersCount;
+        public string answerPicture;
     }
 
     public string[] heroElements;
