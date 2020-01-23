@@ -31,8 +31,8 @@ public class Logic
 
         public int answersCount;
     }
-	
-	public string[] heroElements;
+
+    public string[] heroElements;
 	public int[] heroValues;
 	public int currentItemIndex = 0;
 	public Item[] items;
@@ -148,6 +148,12 @@ public class Buttons
 	}
 
 	public Button[] buttons;
+}
+
+[System.Serializable]
+public class Default
+{
+    public string lastUsedName;
 }
 
 // networking
@@ -604,7 +610,7 @@ public class GridStatusScript : MonoBehaviour
 	public void save ()
 	{
 		try {
-			using (StreamWriter sw = new StreamWriter ("Assets/Glowbom/Quests/Resources/Data/TemplateQuest.txt", false)) {
+			using (StreamWriter sw = new StreamWriter ("Assets/Glowbom/Quests/Resources/Data/" + QuestLoader.name + QuestLoader.language + ".txt", false)) {
 				sw.Write (JsonUtility.ToJson (logic)); 
 			}
 		} catch (IOException) {
@@ -615,7 +621,7 @@ public class GridStatusScript : MonoBehaviour
 	{
 		editButton.gameObject.SetActive(true);
 
-		var textAsset = Resources.Load ("Data/TemplateQuest") as TextAsset;
+		var textAsset = Resources.Load ("Data/" + QuestLoader.name + QuestLoader.language) as TextAsset;
 
 		if (lastClickedLink != null) {
 			textAsset = Resources.Load ("Data/" + lastClickedLink) as TextAsset;

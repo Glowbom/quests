@@ -10,8 +10,9 @@ public class QuestLoader
 {
     public Logic logic = null;
     public Buttons buttonsLogic = null;
-    public string name = "TemplateQuest";
-    public string language = "";
+    public Default config = null;
+    public static string name = "TemplateQuest";
+    public static string language = "";
 
     public void initialize() {
         if (logic == null) {
@@ -25,15 +26,45 @@ public class QuestLoader
         buttonsLogic = JsonUtility.FromJson<Buttons>(textAsset.text);
     }
 
+    public void loadConfig()
+    {
+        var textAsset = Resources.Load("Data/Config") as TextAsset;
+        if (textAsset == null)
+        {
+            config = new Default();
+            config.lastUsedName = "TemplateQuest";
+        }
+        else
+        {
+            config = JsonUtility.FromJson<Default>(textAsset.text);
+        }
+        
+    }
+
     public void load() {
+        loadConfig();
+        name = config.lastUsedName;
+
         var textAsset = Resources.Load ("Data/" + name + language) as TextAsset;
         logic = JsonUtility.FromJson<Logic> (textAsset.text);
+        
         loadButtonsLogic();
     }
 
     public void save() {
         try
         {
+            if (config == null)
+            {
+                config = new Default();
+            }
+
+            config.lastUsedName = name;
+            using (StreamWriter sw = new StreamWriter("Assets/Glowbom/Quests/Resources/Data/Config.txt", false))
+            {
+                sw.Write(JsonUtility.ToJson(config));
+            }
+
             using (StreamWriter sw = new StreamWriter("Assets/Glowbom/Quests/Resources/Data/" + name + language + ".txt", false))
             {
                 sw.Write(JsonUtility.ToJson(logic));

@@ -310,7 +310,7 @@ public class QuestEditor : EditorWindow
 
                 if (GUILayout.Button("Open"))
                 {
-                    questLoader.name = questLoader.buttonsLogic.buttons[i].link;
+                    QuestLoader.name = questLoader.buttonsLogic.buttons[i].link;
                     questLoader.load();
                 }
 
@@ -578,12 +578,12 @@ public class QuestEditor : EditorWindow
 
         EditorGUILayout.Space();
 
-        questLoader.name = EditorGUILayout.TextField("Name", questLoader.name);
-        questLoader.language = EditorGUILayout.TextField("Language", questLoader.language);
+        QuestLoader.name = EditorGUILayout.TextField("Name", QuestLoader.name);
+        QuestLoader.language = EditorGUILayout.TextField("Language", QuestLoader.language);
 
         EditorGUILayout.Space();
 
-        GUILayout.Label(questLoader.name + " [" + questLoader.logic.items.Length + " items]", EditorStyles.label);
+        GUILayout.Label(QuestLoader.name + " [" + questLoader.logic.items.Length + " items]", EditorStyles.label);
 
         EditorGUILayout.Space();
 
