@@ -205,8 +205,10 @@ public class GridStatusScript : MonoBehaviour
 
     public PlayAudio playAudio;
     private int answersCollected = 0;
+    public int correctAnswers = 0;
+    public int totalQuestionsCount = 0;
 
-	public void procced ()
+    public void procced ()
 	{
 		if (logic != null) {
             answersCollected = 0;
@@ -247,7 +249,17 @@ public class GridStatusScript : MonoBehaviour
 					item.description = item.description.Replace("[newline]", "\n");	
 				}
 
-				if (item.description.Contains("{question")) {
+                if (item.description.Contains("[correctAnswers]"))
+                {
+                    item.description = item.description.Replace("[correctAnswers]", correctAnswers.ToString());
+                }
+
+                if (item.description.Contains("[totalQuestionsCount]"))
+                {
+                    item.description = item.description.Replace("[totalQuestionsCount]", totalQuestionsCount.ToString());
+                }
+
+                if (item.description.Contains("{question")) {
 					foreach(string key in answers.Keys) {
 						//Debug.Log("key = " + key + "; value = " + answers[key]);
 						if (item.description.Contains("{" + key + "}")) {
@@ -549,7 +561,7 @@ public class GridStatusScript : MonoBehaviour
                     }
                 }
 
-                
+                ++correctAnswers;
             } else
             {
                 buttons[i].image.color = new Color32(178, 68, 55, 255);
@@ -611,6 +623,7 @@ public class GridStatusScript : MonoBehaviour
 
 		logic = JsonUtility.FromJson<Logic> (textAsset.text);
         logic.answers = "";
+        correctAnswers = 0;
 	}
 
 	public void loadButtonsLogic() {
