@@ -1,1 +1,1 @@
-{"buttons":[{"name":"New Quest","link":"TextQuests"}]}
+{"buttons":[{"name":"Cinema 1","link":"Cinema"},{"name":"Cinema 2","link":"Cinema2"}]}

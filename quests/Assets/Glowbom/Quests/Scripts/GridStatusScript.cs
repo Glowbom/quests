@@ -534,7 +534,11 @@ public class GridStatusScript : MonoBehaviour
             {
                 buttons[i].image.color = new Color32(55, 179, 46, 255);
 
-                playAudio.correct();
+                if (playAudio != null)
+                {
+                    playAudio.correct();
+                }
+                
 
                 if (logic.hasMultipleAnswers())
                 {
@@ -549,7 +553,11 @@ public class GridStatusScript : MonoBehaviour
             } else
             {
                 buttons[i].image.color = new Color32(178, 68, 55, 255);
-                playAudio.incorrect();
+                if (playAudio != null)
+                {
+                    playAudio.incorrect();
+                }
+                
             }
 
             

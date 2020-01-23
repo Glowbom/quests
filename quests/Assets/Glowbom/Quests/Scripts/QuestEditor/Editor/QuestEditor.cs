@@ -155,7 +155,7 @@ public class QuestEditor : EditorWindow
 
             EditorGUILayout.Space();
 
-            scrollPos = EditorGUILayout.BeginScrollView(scrollPos, GUILayout.Width(position.width - 20), GUILayout.Height(600));
+            scrollPos = EditorGUILayout.BeginScrollView(scrollPos, GUILayout.Width(position.width - 20), GUILayout.Height(490));
             int i = 0;
             foreach (var item in questLoader.logic.items)
             {
@@ -370,7 +370,7 @@ public class QuestEditor : EditorWindow
 
             EditorGUILayout.Space();
 
-            scrollPosButtons = EditorGUILayout.BeginScrollView(scrollPosButtons, GUILayout.Width(position.width - 20), GUILayout.Height(500));
+            scrollPosButtons = EditorGUILayout.BeginScrollView(scrollPosButtons, GUILayout.Width(position.width - 20), GUILayout.Height(250));
 
             int i = 0;
             foreach(var goIndex in item.goIndexes) {
