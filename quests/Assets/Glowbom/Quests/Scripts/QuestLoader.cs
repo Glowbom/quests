@@ -41,14 +41,22 @@ public class QuestLoader
         
     }
 
-    public void load() {
-        loadConfig();
-        name = config.lastUsedName;
+    public void load(bool shouldGetConfig)
+    {
+        if (shouldGetConfig)
+        {
+            loadConfig();
+            name = config.lastUsedName;
+        }
 
-        var textAsset = Resources.Load ("Data/" + name + language) as TextAsset;
-        logic = JsonUtility.FromJson<Logic> (textAsset.text);
-        
+        var textAsset = Resources.Load("Data/" + name + language) as TextAsset;
+        logic = JsonUtility.FromJson<Logic>(textAsset.text);
+
         loadButtonsLogic();
+    }
+
+    public void load() { 
+        load(true);
     }
 
     public void save() {

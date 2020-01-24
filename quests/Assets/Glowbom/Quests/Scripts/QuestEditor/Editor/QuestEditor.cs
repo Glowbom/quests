@@ -665,7 +665,7 @@ public class QuestEditor : EditorWindow
 
         if (GUILayout.Button("Load")) 
         {
-            questLoader.load();
+            questLoader.load(false);
         }
 
         if (GUILayout.Button("Save"))
