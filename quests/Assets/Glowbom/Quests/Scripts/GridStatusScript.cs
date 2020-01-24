@@ -85,6 +85,11 @@ public class Logic
             items[currentItemIndex].buttonAnswers[i] : 0;
     }
 
+    public string getAnswerPicture()
+    {
+        return items[currentItemIndex].answerPicture;
+    }
+
     public bool isCorrectAnswer(int i)
     {
         Item item = items[currentItemIndex];
@@ -569,6 +574,12 @@ public class GridStatusScript : MonoBehaviour
                 }
 
                 ++correctAnswers;
+
+                if (logic.getAnswerPicture() != null && logic.getAnswerPicture() != "")
+                {
+                    pictures[0].sprite = sprites[logic.getAnswerPicture()];
+                    await Task.Delay(TimeSpan.FromSeconds(4));
+                }
             } else
             {
                 buttons[i].image.color = new Color32(178, 68, 55, 255);
