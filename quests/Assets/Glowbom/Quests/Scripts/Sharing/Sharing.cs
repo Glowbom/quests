@@ -16,7 +16,7 @@ public class Sharing : MonoBehaviour
 
     public void shareMessage(string message, string url = "")
     {
-        _shareMessage(message, url);
+        _shareMessage(message + " " + url, url);
     }
 
 #elif UNITY_ANDROID
