@@ -414,6 +414,18 @@ public class GridStatusScript : MonoBehaviour
                             }
                         }
 
+                        if (item.answerPicture != null && item.answerPicture != "")
+                        {
+                            if (!sprites.ContainsKey(item.answerPicture))
+                            {
+                                sprite = Resources.Load("Textures/images/" + item.answerPicture, typeof(Sprite)) as Sprite;
+                                if (sprite != null)
+                                {
+                                    sprites.Add(item.answerPicture, sprite);
+                                }
+                            }
+                        }
+
                     }
                 }
             }
