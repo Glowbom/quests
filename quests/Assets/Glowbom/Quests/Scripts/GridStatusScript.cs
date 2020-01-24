@@ -396,41 +396,6 @@ public class GridStatusScript : MonoBehaviour
 
         load();
 
-        foreach (var item in logic.items)
-        {
-            if (item.picturesSpriteNames != null && item.picturesSpriteNames.Length != 0)
-            {
-                for (int i = 0; i < item.picturesSpriteNames.Length; i++)
-                {
-                    if (i < pictures.Length)
-                    {
-                        string key = item.picturesSpriteNames[i];
-                        if (!sprites.ContainsKey(key))
-                        {
-                            sprite = Resources.Load("Textures/images/" + key, typeof(Sprite)) as Sprite;
-                            if (sprite != null)
-                            {
-                                sprites.Add(key, sprite);
-                            }
-                        }
-
-                        if (item.answerPicture != null && item.answerPicture != "")
-                        {
-                            if (!sprites.ContainsKey(item.answerPicture))
-                            {
-                                sprite = Resources.Load("Textures/images/" + item.answerPicture, typeof(Sprite)) as Sprite;
-                                if (sprite != null)
-                                {
-                                    sprites.Add(item.answerPicture, sprite);
-                                }
-                            }
-                        }
-
-                    }
-                }
-            }
-        }
-
         loadButtonsLogic();
         procced();
 
@@ -590,7 +555,9 @@ public class GridStatusScript : MonoBehaviour
                 if (logic.getAnswerPicture() != null && logic.getAnswerPicture() != "")
                 {
                     pictures[0].sprite = sprites[logic.getAnswerPicture()];
+                    pictures[0].gameObject.SetActive(true);
                     await Task.Delay(TimeSpan.FromSeconds(4));
+                  
                 }
             } else
             {
@@ -654,9 +621,48 @@ public class GridStatusScript : MonoBehaviour
 		logic = JsonUtility.FromJson<Logic> (textAsset.text);
         logic.answers = "";
         correctAnswers = 0;
-	}
 
-	public void loadButtonsLogic() {
+        // load pics
+        Sprite sprite = null;
+        foreach (var item in logic.items)
+        {
+            if (item.answerPicture != null && item.answerPicture != "")
+            {
+
+                if (!sprites.ContainsKey(item.answerPicture))
+                {
+                    sprite = Resources.Load("Textures/images/" + item.answerPicture, typeof(Sprite)) as Sprite;
+                    if (sprite != null)
+                    {
+                        sprites.Add(item.answerPicture, sprite);
+                    }
+                }
+            }
+
+            if (item.picturesSpriteNames != null && item.picturesSpriteNames.Length != 0)
+            {
+                for (int i = 0; i < item.picturesSpriteNames.Length; i++)
+                {
+                    if (i < pictures.Length)
+                    {
+                        string key = item.picturesSpriteNames[i];
+                        if (!sprites.ContainsKey(key))
+                        {
+                            sprite = Resources.Load("Textures/images/" + key, typeof(Sprite)) as Sprite;
+                            if (sprite != null)
+                            {
+                                sprites.Add(key, sprite);
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+
+    }
+
+    public void loadButtonsLogic() {
 		var textAsset = Resources.Load ("Data/Buttons") as TextAsset;
 		buttonsLogic = JsonUtility.FromJson<Buttons> (textAsset.text);    
 	}
