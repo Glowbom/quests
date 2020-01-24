@@ -4,11 +4,11 @@
 
 extern UIViewController *UnityGetGLViewController();
 
-@interface iOSSharing : NSObject
+@interface Sharing : NSObject
 
 @end
 
-@implementation iOSSharing
+@implementation Sharing
 
 +(void)shareView:(NSString *)message addUrl:(NSString *)url
 {
@@ -37,6 +37,6 @@ extern "C"
 {
     void _shareMessage(const char *message, const char *url)
     {
-        [iOSSharing shareView:[NSString stringWithUTF8String:message] addUrl:[NSString stringWithUTF8String:url]];
+        [Sharing shareView:[NSString stringWithUTF8String:message] addUrl:[NSString stringWithUTF8String:url]];
     }
 }

@@ -90,6 +90,23 @@ public class Logic
         return items[currentItemIndex].answerPicture;
     }
 
+    public bool isSharingButton(int i)
+    {
+        Item item = items[currentItemIndex];
+
+        if (item.goIndexes != null && i > -1 && i < item.goIndexes.Length)
+        {
+            return item.goIndexes[i] == 10001;
+        }
+
+        return false;
+    }
+
+    public string getTextToShare()
+    {
+        return items[currentItemIndex].description;
+    }
+
     public bool isCorrectAnswer(int i)
     {
         Item item = items[currentItemIndex];
@@ -169,6 +186,7 @@ public class GridStatusScript : MonoBehaviour
     // correct answer color #37B392
     // incorrect answer color #B24437
 
+    public Sharing sharing;
     public Monetization monetization;
     public InputField clipboard;
 
@@ -572,6 +590,11 @@ public class GridStatusScript : MonoBehaviour
             
 
             await Task.Delay(TimeSpan.FromSeconds(1));
+        }
+
+        if (logic.isSharingButton(i) && sharing != null)
+        {
+            sharing.shareMessage(logic.getTextToShare(), "glowbom.com");
         }
         
 
