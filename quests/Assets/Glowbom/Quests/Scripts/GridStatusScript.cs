@@ -595,6 +595,7 @@ public class GridStatusScript : MonoBehaviour
         if (logic.isSharingButton(i) && sharing != null)
         {
             sharing.shareMessage(logic.getTextToShare(), "glowbom.com");
+            return;
         }
         
 
