@@ -35,7 +35,7 @@ extern UIViewController *UnityGetGLViewController();
 
 extern "C"
 {
-    void _ShareMessage(const char *message, const char *url)
+    void _shareMessage(const char *message, const char *url)
     {
         [iOSSharing shareView:[NSString stringWithUTF8String:message] addUrl:[NSString stringWithUTF8String:url]];
     }
