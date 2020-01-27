@@ -16,13 +16,14 @@ public class Forms
 	public static List<string> names;
     public static List<string> entries;
     public static List<string> values;
-    private static string url;
+    public static string url;
+    static FeedbackLoader feedbackLoader = null;
 
 	public static void load(MonoBehaviour monoBehaviour, string formUrl)
 	{
         //if (Application.platform == RuntimePlatform.WebGLPlayer)
         //{
-        names = new List<string>();
+        /*names = new List<string>();
         names.Add("XXX");
         names.Add("YYY");
         names.Add("ZZZ");
@@ -34,30 +35,51 @@ public class Forms
         entries.Add("entry3");
         entries.Add("entry4");
 
-        url = "response_url";
-        ;
-        if (ui != null && ui.inputFields != null)
+        url = "response_url";*/
+
+        if (feedbackLoader == null)
         {
-            ui.gameViewText.text = "";
-            for (int j = 0; j < names.Count - 1; j++)
+            feedbackLoader = new FeedbackLoader();
+            feedbackLoader.initialize();
+
+            if (feedbackLoader.feedback.url != null && feedbackLoader.feedback.url != "")
             {
-                if (j < ui.inputFields.Length)
-                {
-                    ui.inputFields[j].gameObject.SetActive(true);
-                    ui.inputFields[j].placeholder.GetComponent<Text>().text = names[j];
-                }
-                else
-                {
-                    break;
-                }
+                names = new List<string>(feedbackLoader.feedback.names);
+                entries = new List<string>(feedbackLoader.feedback.entries);
+                url = feedbackLoader.feedback.url;
             }
         }
 
+        if (url != null && url != "")
+        {
+            if (ui != null && ui.inputFields != null)
+            {
+                ui.gameViewText.text = "";
+                for (int j = 0; j < names.Count - 1; j++)
+                {
+                    if (j < ui.inputFields.Length)
+                    {
+                        ui.inputFields[j].gameObject.SetActive(true);
+                        ui.inputFields[j].placeholder.GetComponent<Text>().text = names[j];
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+            }
+        } else
+        {
+            forceLoad(monoBehaviour, formUrl);
+        }
+    }
 
-        return;
-        //}
-
-        //monoBehaviour.StartCoroutine(get(formUrl));
+    public static void forceLoad(MonoBehaviour monoBehaviour, string formUrl)
+    {
+        if (formUrl != "")
+        {
+            monoBehaviour.StartCoroutine(get(formUrl));
+        }
     }
 
     public static void submit(MonoBehaviour monoBehaviour)
@@ -230,6 +252,10 @@ public class Forms
                         }
                     }
                 }
+
+#if UNITY_EDITOR
+                UnityEditor.AssetDatabase.Refresh();
+#endif
             }
         }
     }

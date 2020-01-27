@@ -9,4 +9,5 @@ public class Feedback
     public List<string> entries;
     public List<string> values;
     public string url;
+    public string link;
 }
