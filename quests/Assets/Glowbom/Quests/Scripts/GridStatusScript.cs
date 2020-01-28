@@ -413,24 +413,38 @@ public class GridStatusScript : MonoBehaviour
 
         GameStatusMagic.instance.load();
 
+        loadButtonsLogic();
+
         load();
 
-        loadButtonsLogic();
         procced();
 
         for (int i = 0; i < gridButtons.Length; i++) {
 			gridButtons [i].gameObject.SetActive(false);
 		}
 				
-				if (buttonsLogic != null && buttonsLogic.buttons != null) {
-					for (int i = 0; i < buttonsLogic.buttons.Length; i++) {
-			if (i < gridButtons.Length) {
+		if (buttonsLogic != null && buttonsLogic.buttons != null)
+        {
+			for (int i = 0; i < buttonsLogic.buttons.Length; i++)
+            {
+			    if (i < gridButtons.Length)
+                {
 					Button bs = gridButtons [i];
 					bs.transform.Find("Text").GetComponent<Text>().text = buttonsLogic.buttons [i].name;
 					gridButtons [i].gameObject.SetActive(true);
+
+                    
+                    if (buttonsLogic.buttons[i].image != null && buttonsLogic.buttons[i].image != "")
+                    {
+                        if (sprites.ContainsKey(buttonsLogic.buttons[i].image))
+                        {
+                            bs.GetComponent<Image>().sprite = sprites[buttonsLogic.buttons[i].image];
+                            bs.transform.Find("Text").GetComponent<Text>().text = "";
+                        }
+                    }
 				}
 			}
-				}
+		}
 		
 	}
 
@@ -680,6 +694,22 @@ public class GridStatusScript : MonoBehaviour
                             }
                         }
 
+                    }
+                }
+            }
+        }
+
+        foreach (var b in buttonsLogic.buttons)
+        {
+            if (b.image != null && b.image != "")
+            {
+                string key = b.image;
+                if (!sprites.ContainsKey(key))
+                {
+                    sprite = Resources.Load("Textures/" + key, typeof(Sprite)) as Sprite;
+                    if (sprite != null)
+                    {
+                        sprites.Add(key, sprite);
                     }
                 }
             }
