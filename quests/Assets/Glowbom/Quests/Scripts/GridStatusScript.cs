@@ -102,10 +102,47 @@ public class Logic
         return false;
     }
 
+    public bool isAskFriendButton(int i)
+    {
+        Item item = items[currentItemIndex];
+
+        if (item.goIndexes != null && i > -1 && i < item.goIndexes.Length)
+        {
+            return item.goIndexes[i] == 10002;
+        }
+
+        return false;
+    }
+
     public string getTextToShare()
     {
         return items[currentItemIndex].description;
     }
+
+    public string getAskFriendTextToShare()
+    {
+        string a = "";
+        int i = 0;
+        foreach(string s in items[currentItemIndex].buttonsTexts)
+        {
+            if (items[currentItemIndex].goIndexes[i] == 10001 || items[currentItemIndex].goIndexes[i] == 10002)
+            {
+                ++i;
+                continue;
+            }
+
+            a += s + ", ";
+            ++i;
+        }
+
+        if (a != "")
+        {
+            a = a.Substring(0, a.Length - 4);
+        }
+
+        return items[currentItemIndex].description + " Answers: " + a;
+    }
+
 
     public bool isCorrectAnswer(int i)
     {
@@ -561,6 +598,18 @@ public class GridStatusScript : MonoBehaviour
 			return;
 		}
 
+        if (logic.isSharingButton(i) && sharing != null)
+        {
+            sharing.shareMessage(logic.getTextToShare(), "glowbom.com");
+            return;
+        }
+
+        if (logic.isAskFriendButton(i) && sharing != null)
+        {
+            sharing.shareMessage(logic.getAskFriendTextToShare(), "glowbom.com");
+            return;
+        }
+
         if (logic.isSupportAnswers())
         {
             
@@ -607,12 +656,8 @@ public class GridStatusScript : MonoBehaviour
             await Task.Delay(TimeSpan.FromSeconds(1));
         }
 
-        if (logic.isSharingButton(i) && sharing != null)
-        {
-            sharing.shareMessage(logic.getTextToShare(), "glowbom.com");
-            return;
-        }
         
+
 
         logic.nextItem(i);
         procced();

@@ -237,16 +237,19 @@ public class QuestEditor : EditorWindow
         List<string> buttonsTextsList = new List<string>(item.buttonsTexts);
         List<int> goIndexesList = new List<int>(item.goIndexes);
         List<int> goConditionsList = item.goConditions == null ? new List<int>() : new List<int>(item.goConditions);
+        List<int> buttonAnswersList = new List<int>(item.buttonAnswers);
 
         if (goConditionsList.Count > 0) {
             goConditionsList.Insert(i + 1, 0);
         }
 
         goIndexesList.Insert(i + 1, 0);
+        buttonAnswersList.Insert(i + 1, 0);
         buttonsTextsList.Insert(i + 1, "Go Button");
 
         item.buttonsTexts = buttonsTextsList.ToArray();
         item.goIndexes = goIndexesList.ToArray();
+        item.buttonAnswers = buttonAnswersList.ToArray();
 
         if (goConditionsList.Count > 0) {
             item.goConditions = goConditionsList.ToArray();
@@ -261,6 +264,7 @@ public class QuestEditor : EditorWindow
         List<string> buttonsTextsList = new List<string>(item.buttonsTexts);
         List<int> goIndexesList = new List<int>(item.goIndexes);
         List<int> goConditionsList = item.goConditions != null ? new List<int>(item.goConditions) : new List<int>();
+        List<int> buttonAnswersList = new List<int>(item.buttonAnswers);
 
         if (item.goConditions != null && goConditionsList.Count > 0) {
             goConditionsList.RemoveAt(i);
@@ -268,9 +272,11 @@ public class QuestEditor : EditorWindow
 
         goIndexesList.RemoveAt(i);
         buttonsTextsList.RemoveAt(i);
+        buttonAnswersList.RemoveAt(i);
 
         item.buttonsTexts = buttonsTextsList.ToArray();
         item.goIndexes = goIndexesList.ToArray();
+        item.buttonAnswers = buttonAnswersList.ToArray();
 
         if (item.goConditions != null && goConditionsList.Count > 0) {
             item.goConditions = goConditionsList.ToArray();

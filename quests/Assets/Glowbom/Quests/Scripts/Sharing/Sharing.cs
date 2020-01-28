@@ -16,6 +16,7 @@ public class Sharing : MonoBehaviour
 
     public void shareMessage(string message, string url = "")
     {
+        Debug.Log(message + " " + url);
         _shareMessage(message + " " + url, url);
     }
 
