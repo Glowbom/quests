@@ -300,7 +300,9 @@ public class QuestEditor : EditorWindow
 
                 GUILayout.Label("Quest " + (i + 1), EditorStyles.label);
                 questLoader.buttonsLogic.buttons[i].name = EditorGUILayout.TextField("Name", questLoader.buttonsLogic.buttons[i].name);
+                questLoader.buttonsLogic.buttons[i].image = EditorGUILayout.TextField("Image", questLoader.buttonsLogic.buttons[i].image);
                 questLoader.buttonsLogic.buttons[i].link = EditorGUILayout.TextField("Link", questLoader.buttonsLogic.buttons[i].link);
+                
                 GUILayout.BeginHorizontal();
 
                 if (GUILayout.Button("Insert"))

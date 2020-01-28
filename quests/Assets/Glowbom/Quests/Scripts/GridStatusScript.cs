@@ -167,8 +167,9 @@ public class Buttons
     public class Button
 	{
 		public string name;
-		public string link;
-	}
+        public string image;
+        public string link;
+    }
 
 	public Button[] buttons;
 }
