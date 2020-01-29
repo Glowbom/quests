@@ -48,6 +48,20 @@ public class Logic
         return items[currentItemIndex].answersCount;
     }
 
+    public int getTotalQuestionsCount()
+    {
+        int totalQuestions = 0;
+        for (int i = 0; i < items.Length; i++)
+        {
+            if (items[i].answersCount > 0)
+            {
+                ++totalQuestions;
+            }
+        }
+
+        return totalQuestions;
+    }
+
     public bool isSupportAnswers()
     {
         return items[currentItemIndex].answersCount > 0; 
@@ -324,6 +338,7 @@ public class GridStatusScript : MonoBehaviour
 
                 if (item.description.Contains("[totalQuestionsCount]"))
                 {
+                    totalQuestionsCount = logic.getTotalQuestionsCount();
                     item.description = item.description.Replace("[totalQuestionsCount]", totalQuestionsCount.ToString());
                 }
 
