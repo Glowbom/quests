@@ -157,7 +157,7 @@ public class Logic
 
         if (a != "")
         {
-            a = a.Substring(0, a.Length - 4);
+            a = a.Substring(0, a.Length - 2);
         }
 
         return items[currentItemIndex].description + " Answers: " + a;
