@@ -376,6 +376,7 @@ public class QuestEditor : EditorWindow
             item.picturesSpriteNames[0] = EditorGUILayout.TextField("Image", item.picturesSpriteNames[0]);
             item.answersCount = int.Parse(EditorGUILayout.TextField("Answers Count", item.answersCount.ToString()));
             item.answerPicture = EditorGUILayout.TextField("Answer Picture", item.answerPicture);
+            item.answerPictureDelay = int.Parse(EditorGUILayout.TextField("Answers Picture Delay", item.answerPictureDelay.ToString()));
 
             EditorGUILayout.Space();
 

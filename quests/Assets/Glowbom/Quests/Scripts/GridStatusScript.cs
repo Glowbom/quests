@@ -31,6 +31,7 @@ public class Logic
 
         public int answersCount;
         public string answerPicture;
+        public int answerPictureDelay;
     }
 
     public string[] heroElements;
@@ -97,6 +98,11 @@ public class Logic
             items[currentItemIndex].buttonAnswers != null &&
             i > -1 && i < items[currentItemIndex].buttonAnswers.Length ?
             items[currentItemIndex].buttonAnswers[i] : 0;
+    }
+
+    public int getAnswerPictureDelay()
+    {
+        return items[currentItemIndex].answerPictureDelay;
     }
 
     public string getAnswerPicture()
@@ -653,7 +659,16 @@ public class GridStatusScript : MonoBehaviour
                 {
                     pictures[0].sprite = sprites[logic.getAnswerPicture()];
                     pictures[0].gameObject.SetActive(true);
-                    await Task.Delay(TimeSpan.FromSeconds(4));
+
+                    if (logic.getAnswerPictureDelay() == 0)
+                    {
+                        await Task.Delay(TimeSpan.FromSeconds(4));
+                    }
+                    else
+                    {
+                        await Task.Delay(TimeSpan.FromSeconds(logic.getAnswerPictureDelay() - 1));
+                    }
+                    
                   
                 }
             } else
