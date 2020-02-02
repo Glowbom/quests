@@ -227,6 +227,7 @@ public class Buttons
 		public string name;
         public string image;
         public string link;
+        public int score;
     }
 
 	public Button[] buttons;
