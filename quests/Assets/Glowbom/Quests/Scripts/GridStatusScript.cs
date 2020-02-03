@@ -43,6 +43,7 @@ public class Logic
 	public int deadItemIndex;
 	public bool pleaseRestart = false;
     public string answers = "";
+    public string backgroundPicture;
 
     public int getAnswersCount()
     {
@@ -226,6 +227,7 @@ public class Buttons
 		public string name;
         public string image;
         public string link;
+        public int score;
     }
 
 	public Button[] buttons;
@@ -264,6 +266,7 @@ public class GridStatusScript : MonoBehaviour
 
 	public Button[] gridButtons;
 	public Image[] pictures;
+    public Image backgroundImage;
 	public Logic logic = null;
 
 	public Text startButtonText;
@@ -480,8 +483,8 @@ public class GridStatusScript : MonoBehaviour
         for (int i = 0; i < gridButtons.Length; i++) {
 			gridButtons [i].gameObject.SetActive(false);
 		}
-				
-		if (buttonsLogic != null && buttonsLogic.buttons != null)
+
+        if (buttonsLogic != null && buttonsLogic.buttons != null)
         {
 			for (int i = 0; i < buttonsLogic.buttons.Length; i++)
             {
@@ -531,6 +534,7 @@ public class GridStatusScript : MonoBehaviour
 		GameStatusMagic.instance.questAnswers.Clear();
 		load();
 
+
 		front.gameObject.SetActive(false);
 
         if (buttonsLogic != null && buttonsLogic.buttons != null && buttonsLogic.buttons.Length > 1)
@@ -553,10 +557,20 @@ public class GridStatusScript : MonoBehaviour
 
                 load();
 				procced();
-				
-				//logic.nextItem (i);
-				//procced ();
-				break;
+
+
+                if (backgroundImage != null && logic.backgroundPicture != null && logic.backgroundPicture != "")
+                {
+                    if (sprites.ContainsKey(logic.backgroundPicture))
+                    {
+                        backgroundImage.sprite = sprites[logic.backgroundPicture];
+                    }
+                }
+
+
+                //logic.nextItem (i);
+                //procced ();
+                break;
 			}
 			
 			++i;
@@ -786,6 +800,19 @@ public class GridStatusScript : MonoBehaviour
                     {
                         sprites.Add(key, sprite);
                     }
+                }
+            }
+        }
+
+        if (logic.backgroundPicture != null && logic.backgroundPicture != "")
+        {
+            string key = logic.backgroundPicture;
+            if (!sprites.ContainsKey(key))
+            {
+                sprite = Resources.Load("Textures/" + key, typeof(Sprite)) as Sprite;
+                if (sprite != null)
+                {
+                    sprites.Add(key, sprite);
                 }
             }
         }
