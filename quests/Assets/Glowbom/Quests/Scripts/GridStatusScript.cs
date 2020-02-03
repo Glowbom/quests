@@ -228,6 +228,7 @@ public class Buttons
         public string image;
         public string link;
         public int score;
+        public int totalQuestionsCount;
     }
 
 	public Button[] buttons;
@@ -343,12 +344,15 @@ public class GridStatusScript : MonoBehaviour
                 if (item.description.Contains("[correctAnswers]"))
                 {
                     item.description = item.description.Replace("[correctAnswers]", correctAnswers.ToString());
+                    buttonsLogic.buttons[lastClickedGridButtonIndex].score = correctAnswers;
                 }
 
                 if (item.description.Contains("[totalQuestionsCount]"))
                 {
                     totalQuestionsCount = logic.getTotalQuestionsCount();
                     item.description = item.description.Replace("[totalQuestionsCount]", totalQuestionsCount.ToString());
+                    buttonsLogic.buttons[lastClickedGridButtonIndex].totalQuestionsCount = totalQuestionsCount;
+                    saveButtonsLogic();
                 }
 
                 if (item.description.Contains("{question")) {
@@ -480,37 +484,49 @@ public class GridStatusScript : MonoBehaviour
 
         procced();
 
-        for (int i = 0; i < gridButtons.Length; i++) {
-			gridButtons [i].gameObject.SetActive(false);
-		}
+        refreshGridButtons();
+    }
+
+    public void refreshGridButtons()
+    {
+        for (int i = 0; i < gridButtons.Length; i++)
+        {
+            gridButtons[i].gameObject.SetActive(false);
+        }
 
         if (buttonsLogic != null && buttonsLogic.buttons != null)
         {
-			for (int i = 0; i < buttonsLogic.buttons.Length; i++)
+            for (int i = 0; i < buttonsLogic.buttons.Length; i++)
             {
-			    if (i < gridButtons.Length)
+                if (i < gridButtons.Length)
                 {
-					Button bs = gridButtons [i];
-					bs.transform.Find("Text").GetComponent<Text>().text = buttonsLogic.buttons [i].name;
-					gridButtons [i].gameObject.SetActive(true);
+                    Button bs = gridButtons[i];
+                    bs.transform.Find("Text").GetComponent<Text>().text = buttonsLogic.buttons[i].name;
+                    gridButtons[i].gameObject.SetActive(true);
 
-                    
+
                     if (buttonsLogic.buttons[i].image != null && buttonsLogic.buttons[i].image != "")
                     {
                         if (sprites.ContainsKey(buttonsLogic.buttons[i].image))
                         {
                             bs.GetComponent<Image>().sprite = sprites[buttonsLogic.buttons[i].image];
                             bs.transform.Find("Text").GetComponent<Text>().text = "";
+
+                            if (buttonsLogic.buttons[i].score != 0)
+                            {
+                                bs.transform.Find("Text").GetComponent<Text>().text = buttonsLogic.buttons[i].score.ToString()
+                                    + " of " + buttonsLogic.buttons[i].totalQuestionsCount.ToString();
+                            }
                         }
                     }
-				}
-			}
-		}
-		
-	}
+                }
+            }
+        }
+    }
 
 	public void backPressed() {
-		front.gameObject.SetActive(true);
+        refreshGridButtons();
+        front.gameObject.SetActive(true);
 	}
 
 	public void aboutPressed() {
@@ -547,13 +563,15 @@ public class GridStatusScript : MonoBehaviour
 	private int buttonPressedCounter = 0;
 
 	private string lastClickedLink = null;
+    private int lastClickedGridButtonIndex = -1;
 
-	public void buttonGridPressed (GameObject button) {
+    public void buttonGridPressed (GameObject button) {
 		int i = 0;
 
 		foreach (Button b in gridButtons) {
             if (b.gameObject == button) {
-				lastClickedLink = buttonsLogic.buttons[i].link;
+                lastClickedGridButtonIndex = i;
+                lastClickedLink = buttonsLogic.buttons[i].link;
 
                 load();
 				procced();
@@ -735,8 +753,23 @@ public class GridStatusScript : MonoBehaviour
 		} catch (IOException) {
 		}
 	}
-	
-	public void load ()
+
+    public void saveButtonsLogic()
+    {
+        try
+        {
+            using (StreamWriter sw = new StreamWriter("Assets/Glowbom/Quests/Resources/Data/Buttons" + QuestLoader.language + ".txt", false))
+            {
+                sw.Write(JsonUtility.ToJson(buttonsLogic));
+            }
+        }
+        catch (IOException e)
+        {
+            Debug.Log(e.Message);
+        }
+    }
+
+    public void load ()
 	{
 		editButton.gameObject.SetActive(true);
 
