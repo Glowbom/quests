@@ -31,7 +31,7 @@ public class Logic
 
         public int answersCount;
         public string answerPicture;
-        public int answerPictureDelay;
+        public int answerPictureDelay = 4;
     }
 
     public string[] heroElements;
