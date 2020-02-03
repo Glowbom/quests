@@ -4,5 +4,5 @@ This page is currently updating. Please stay tuned.
 
 # 2. Add Multiple Quizzes
 
-# 3. Monetizate Your App Using AdMob
+# 3. Monetize Your App Using AdMob
 
