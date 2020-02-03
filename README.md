@@ -1,8 +1,8 @@
 This page is currently updating. Please stay tuned.
 
-# Create Your App
+# 1. Create Your Trivia App
 
-# Ship Your App
+# 2. Add Multiple Quizzes
 
-# Monetize Your App
+# 3. Monetization Your App
 
