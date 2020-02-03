@@ -135,6 +135,18 @@ public class Logic
         return false;
     }
 
+    public bool isGoBackButton(int i)
+    {
+        Item item = items[currentItemIndex];
+
+        if (item.goIndexes != null && i > -1 && i < item.goIndexes.Length)
+        {
+            return item.goIndexes[i] == 10003;
+        }
+
+        return false;
+    }
+
     public string getTextToShare()
     {
         return items[currentItemIndex].description;
@@ -344,7 +356,11 @@ public class GridStatusScript : MonoBehaviour
                 if (item.description.Contains("[correctAnswers]"))
                 {
                     item.description = item.description.Replace("[correctAnswers]", correctAnswers.ToString());
-                    buttonsLogic.buttons[lastClickedGridButtonIndex].score = correctAnswers;
+
+                    if (correctAnswers > buttonsLogic.buttons[lastClickedGridButtonIndex].score)
+                    {
+                        buttonsLogic.buttons[lastClickedGridButtonIndex].score = correctAnswers;
+                    }
                 }
 
                 if (item.description.Contains("[totalQuestionsCount]"))
@@ -660,6 +676,12 @@ public class GridStatusScript : MonoBehaviour
         if (logic.isAskFriendButton(i) && sharing != null)
         {
             sharing.shareMessage(logic.getAskFriendTextToShare(), "glowbom.com");
+            return;
+        }
+
+        if (logic.isGoBackButton(i))
+        {
+            backPressed();
             return;
         }
 
