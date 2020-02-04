@@ -554,6 +554,9 @@ public class GridStatusScript : MonoBehaviour
     }
 
 	public void backPressed() {
+        logic.currentItemIndex = 0;
+        load();
+        procced();
         refreshGridButtons();
         front.gameObject.SetActive(true);
 	}
