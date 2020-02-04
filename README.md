@@ -4,9 +4,9 @@
 
 # 2. Deep dive into Glowbom Quests
 
-Multiple quizzes, design themes, functional buttons...
+Multiple quizzes, design themes, functional buttons.
 
-This section is currently updating. Please stay tuned.
+Video is coming soon...
 
 # 3. Monetize your app using AdMob
 
