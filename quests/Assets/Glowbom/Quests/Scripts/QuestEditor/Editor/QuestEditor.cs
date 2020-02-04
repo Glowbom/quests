@@ -73,7 +73,7 @@ public class QuestEditor : EditorWindow
             {
                 for (int j = 0; j < logicItem.goIndexes.Length; j++)
                 {
-                    if (logicItem.goIndexes[j] >= i)
+                    if (logicItem.goIndexes[j] >= i && logicItem.goIndexes[j] != 10001 && logicItem.goIndexes[j] != 10002 && logicItem.goIndexes[j] != 10003)
                     {
                         logicItem.goIndexes[j] = logicItem.goIndexes[j] - 1;
                         if (logicItem.goIndexes[j] < 0)

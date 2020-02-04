@@ -113,18 +113,22 @@ public class Logic
 
     public bool isSharingButton(int i)
     {
-        Item item = items[currentItemIndex];
-
-        if (item.goIndexes != null && i > -1 && i < item.goIndexes.Length)
+        if (currentItemIndex < items.Length)
         {
-            return item.goIndexes[i] == 10001;
-        }
+            Item item = items[currentItemIndex];
 
+            if (item.goIndexes != null && i > -1 && i < item.goIndexes.Length)
+            {
+                return item.goIndexes[i] == 10001;
+            }
+        }
+        
         return false;
     }
 
     public bool isAskFriendButton(int i)
     {
+       
         Item item = items[currentItemIndex];
 
         if (item.goIndexes != null && i > -1 && i < item.goIndexes.Length)
@@ -204,26 +208,30 @@ public class Logic
                 answers += (", " + item.buttonsTexts[i]);
             }
 
-			Item nextItem = items [currentItemIndex];
-			
-			if (nextItem.heroValues != null) {
-				for (int j = 0; j < nextItem.heroValues.Length; j++) {
-					heroValues [j] += nextItem.heroValues [j];
-				}
-			}
-			
-			/*if (deadValue > -1 && deadValue < heroValues.Length) {
-				if (heroValues [deadValue] <= deadLevel) {
-					currentItemIndex = deadItemIndex;
-					nextItem = items [currentItemIndex];
-					pleaseRestart = true;
-				}
-			}
-*/
+            if (currentItemIndex < items.Length)
+            {
+                Item ni = items[currentItemIndex];
 
+                if (ni.heroValues != null)
+                {
+                    for (int j = 0; j < ni.heroValues.Length; j++)
+                    {
+                        heroValues[j] += ni.heroValues[j];
+                    }
+                }
+
+                /*if (deadValue > -1 && deadValue < heroValues.Length) {
+                    if (heroValues [deadValue] <= deadLevel) {
+                        currentItemIndex = deadItemIndex;
+                        nextItem = items [currentItemIndex];
+                        pleaseRestart = true;
+                    }
+                }
+                */
+
+                return ni;
+            }
 			
-			
-			return nextItem;
 		}
 		
 		return null;
@@ -357,7 +365,8 @@ public class GridStatusScript : MonoBehaviour
                 {
                     item.description = item.description.Replace("[correctAnswers]", correctAnswers.ToString());
 
-                    if (correctAnswers > buttonsLogic.buttons[lastClickedGridButtonIndex].score)
+                    if (gridButtonsPanel != null && lastClickedGridButtonIndex >= 0
+                        && correctAnswers > buttonsLogic.buttons[lastClickedGridButtonIndex].score)
                     {
                         buttonsLogic.buttons[lastClickedGridButtonIndex].score = correctAnswers;
                     }
@@ -367,8 +376,12 @@ public class GridStatusScript : MonoBehaviour
                 {
                     totalQuestionsCount = logic.getTotalQuestionsCount();
                     item.description = item.description.Replace("[totalQuestionsCount]", totalQuestionsCount.ToString());
-                    buttonsLogic.buttons[lastClickedGridButtonIndex].totalQuestionsCount = totalQuestionsCount;
-                    saveButtonsLogic();
+
+                    if (gridButtonsPanel != null && lastClickedGridButtonIndex >= 0)
+                    {
+                        buttonsLogic.buttons[lastClickedGridButtonIndex].totalQuestionsCount = totalQuestionsCount;
+                        saveButtonsLogic();
+                    }
                 }
 
                 if (item.description.Contains("{question")) {
@@ -569,7 +582,7 @@ public class GridStatusScript : MonoBehaviour
 
 		front.gameObject.SetActive(false);
 
-        if (buttonsLogic != null && buttonsLogic.buttons != null && buttonsLogic.buttons.Length > 1)
+        if (gridButtonsPanel != null && buttonsLogic != null && buttonsLogic.buttons != null && buttonsLogic.buttons.Length > 1)
         {
             gridButtonsPanel.gameObject.SetActive(true);
             gridBackground.gameObject.SetActive(true);

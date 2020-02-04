@@ -61,7 +61,7 @@ public class Sharing : MonoBehaviour
 
 #else
 
-    public static void shareMessage(string message, string url = "")
+    public void shareMessage(string message, string url = "")
     {
         Debug.LogError("sharing is not supported on this platform.");
     }
