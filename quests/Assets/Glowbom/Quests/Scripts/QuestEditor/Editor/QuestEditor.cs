@@ -633,6 +633,7 @@ public class QuestEditor : EditorWindow
         QuestLoader.name = EditorGUILayout.TextField("Name", QuestLoader.name);
         QuestLoader.language = EditorGUILayout.TextField("Language", QuestLoader.language);
         questLoader.logic.backgroundPicture = EditorGUILayout.TextField("Background Picture", questLoader.logic.backgroundPicture);
+        questLoader.logic.link = EditorGUILayout.TextField("Link", questLoader.logic.link);
 
         EditorGUILayout.Space();
 

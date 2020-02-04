@@ -44,6 +44,7 @@ public class Logic
 	public bool pleaseRestart = false;
     public string answers = "";
     public string backgroundPicture;
+    public string link;
 
     public int getAnswersCount()
     {
@@ -557,6 +558,7 @@ public class GridStatusScript : MonoBehaviour
         logic.currentItemIndex = 0;
         load();
         procced();
+
         refreshGridButtons();
         front.gameObject.SetActive(true);
 	}
@@ -685,13 +687,13 @@ public class GridStatusScript : MonoBehaviour
 
         if (logic.isSharingButton(i) && sharing != null)
         {
-            sharing.shareMessage(logic.getTextToShare(), "glowbom.com");
+            sharing.shareMessage(logic.getTextToShare(), logic.link != null && logic.link != "" ? logic.link : "glowbom.com");
             return;
         }
 
         if (logic.isAskFriendButton(i) && sharing != null)
         {
-            sharing.shareMessage(logic.getAskFriendTextToShare(), "glowbom.com");
+            sharing.shareMessage(logic.getAskFriendTextToShare(), logic.link != null && logic.link != "" ? logic.link : "glowbom.com");
             return;
         }
 
