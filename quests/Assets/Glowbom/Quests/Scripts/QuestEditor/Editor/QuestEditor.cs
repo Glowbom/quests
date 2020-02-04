@@ -232,6 +232,48 @@ public class QuestEditor : EditorWindow
         initItemUi();
     }
 
+    private void convertToAskFriendButton()
+    {
+        var item = questLoader.logic.items[questLoader.logic.currentItemIndex];
+        if (item.goIndexes.Length > 0)
+        {
+            item.goIndexes[item.goIndexes.Length - 1] = 10002;
+            item.buttonAnswers[item.goIndexes.Length - 1] = 0;
+            item.buttonsTexts[item.goIndexes.Length - 1] = "Ask Friend";
+        }
+
+        GUI.FocusControl(null);
+        initItemUi();
+    }
+
+    private void convertToShareButton()
+    {
+        var item = questLoader.logic.items[questLoader.logic.currentItemIndex];
+        if (item.goIndexes.Length > 0)
+        {
+            item.goIndexes[item.goIndexes.Length - 1] = 10001;
+            item.buttonAnswers[item.goIndexes.Length - 1] = 0;
+            item.buttonsTexts[item.goIndexes.Length - 1] = "Share";
+        }
+
+        GUI.FocusControl(null);
+        initItemUi();
+    }
+
+    private void convertToBackButton()
+    {
+        var item = questLoader.logic.items[questLoader.logic.currentItemIndex];
+        if (item.goIndexes.Length > 0)
+        {
+            item.goIndexes[item.goIndexes.Length - 1] = 10003;
+            item.buttonAnswers[item.goIndexes.Length - 1] = 0;
+            item.buttonsTexts[item.goIndexes.Length - 1] = "Great";
+        }
+
+        GUI.FocusControl(null);
+        initItemUi();
+    }
+
     private void insertButton(int i) {
         var item = questLoader.logic.items[questLoader.logic.currentItemIndex];
         List<string> buttonsTextsList = new List<string>(item.buttonsTexts);
@@ -243,7 +285,7 @@ public class QuestEditor : EditorWindow
             goConditionsList.Insert(i + 1, 0);
         }
 
-        goIndexesList.Insert(i + 1, 0);
+        goIndexesList.Insert(i + 1, questLoader.logic.items.Length);
         buttonAnswersList.Insert(i + 1, 0);
         buttonsTextsList.Insert(i + 1, "Go Button");
 
@@ -712,17 +754,17 @@ public class QuestEditor : EditorWindow
 
         if (GUILayout.Button("Ask Friend"))
         {
-            // add button
+            convertToAskFriendButton();
         }
 
         if (GUILayout.Button("Share Button"))
         {
-            // add button
+            convertToShareButton();
         }
 
         if (GUILayout.Button("Back Button"))
         {
-            // add button
+            convertToBackButton();
         }
 
         GUILayout.EndHorizontal();
