@@ -2,7 +2,7 @@ This page is currently updating. Please stay tuned.
 
 # 1. Create Trivia App
 
-[![Build your own Quiz App](https://ucfdcfe6061f9ae159b6ccc8db29.previews.dropboxusercontent.com/p/thumb/AAsEqV-HBf1VD6b-ENdI94OYTF4ushpgt2JPAW3XNK6gvgWekPqpXYzVgyraTzpOep9q7oc-z8vWWpBaHdfuj4rb6HG6HPPRbOB4uHR1h9tfQATtVAd17aNkoI_fqbgFEOwM0QGFl-vlGBlAAWwc6Z6DN6Kx2Yg3KhMSd4tcefqdA-2csnKchmwfRAxGeOyBe1a_wa2Hs8KwcqeM1-WX_JTG3MePBzL1YiObRnPx9_KhDBr5FtRifeOKGQEEtPIqI-CyvOPZcqKNrMRAhbaJ-ssLjuhJMMYGn_7bR2zu5MzdkEaIYVUHuSDF9HAN1KcrT6sQUuEwggWz6Wz_4eoMhCPz5ZqxH4TN6SrTSORywoXArpsTTfAlv7mNsyW5DCv1Mb9o1Z0Gy-5zW9HQtZRBNZcf/p.png?fv_content=true&size_mode=5)](https://www.youtube.com/watch?v=5py0nFKtoLU)
+[![Build your own Quiz App](https://uc501163b07a4b01543ed1dff320.previews.dropboxusercontent.com/p/thumb/AAtGEB9PTvssaqxuHIfVMMwgPLoCu0bHlPq4DKnkLXE_kRKBnn5wBf70UJWFbcbdfEw11ucDwZvNl_noUUhcdHym7KpCIboMb3g4pYeHEUOesGRltZGTSY3U2cW156pZftE4iWQEl8pdNl6nwa-82Zaiak6yS68ZbTOwEN55sJThfN6teR1nwn5SEsWq8QpKu2MSiW0wb6qDt7ktLsA6yzEapQEbabBq1D9gWN7ILYnVGb6VQXWytlHTSR9OiKYP0W9g-EGDOGqZbEgS8f65HJH14p45dd2zRsuAV6ylXNY39FHBiEKxf2EUEqmO7BlihGur6lZN5xcpRPHyeeB51fLeD0ipsMS39ovDRJ65V0YxQCBHjwRRSpoM9LV4_wqzUECWUhAMuPzKLuAaqSokYWqs/p.png?fv_content=true&size_mode=5)](https://www.youtube.com/watch?v=5py0nFKtoLU)
 
 # 2. Add Multiple Quizzes
 
