@@ -94,7 +94,7 @@ public class QuestCreator : MonoBehaviour
     {
         if (game.logic != null)
         {
-            projectName.text = game.name + " [" + game.logic.items.Length + " items]";
+            projectName.text = game.name + " [" + game.logic.items.Length + " screens]";
 
             for (int i = 0 + mainItemsPosition; i < mainItemsPosition + MAIN_ELEMENTS_COUNT; i++)
             {
