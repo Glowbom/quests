@@ -649,22 +649,6 @@ public class QuestEditor : EditorWindow
             questLoader.save();
             questLoader.load();
         }
-        
-        if (GUILayout.Button("Apply to all"))
-        {
-            Image mainImage = GameObject.Find("MainImage").GetComponent<Image>();
-            if (mainImage.GetComponent<RectTransform>().hasChanged)
-            {
-                foreach (var item in questLoader.logic.items)
-                {
-                    item.mainImagePosition = mainImage.rectTransform.localPosition;
-                    item.mainImageSize = mainImage.rectTransform.sizeDelta;
-                }
-            }
-
-            questLoader.save();
-        }
-
 
         if (GUILayout.Button("Import"))
         {
@@ -708,7 +692,42 @@ public class QuestEditor : EditorWindow
         }
 
         GUILayout.EndHorizontal();
+
+        GUILayout.BeginHorizontal();
+
+        if (GUILayout.Button("Apply to all"))
+        {
+            Image mainImage = GameObject.Find("MainImage").GetComponent<Image>();
+            if (mainImage.GetComponent<RectTransform>().hasChanged)
+            {
+                foreach (var item in questLoader.logic.items)
+                {
+                    item.mainImagePosition = mainImage.rectTransform.localPosition;
+                    item.mainImageSize = mainImage.rectTransform.sizeDelta;
+                }
+            }
+
+            questLoader.save();
+        }
+
+        if (GUILayout.Button("Ask Friend"))
+        {
+            // add button
+        }
+
+        if (GUILayout.Button("Share Button"))
+        {
+            // add button
+        }
+
+        if (GUILayout.Button("Back Button"))
+        {
+            // add button
+        }
+
+        GUILayout.EndHorizontal();
         EditorGUILayout.Space();
+
 
         if (cloudSaveEanbled) {
             initCloudSaveUi();
