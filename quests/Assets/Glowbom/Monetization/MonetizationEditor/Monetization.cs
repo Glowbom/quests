@@ -108,6 +108,15 @@ public class Monetization
 
     public void initAds()
     {
+        MonetizationLoader monetizationLoader = new MonetizationLoader();
+        monetizationLoader.load();
+        iOSAppId = monetizationLoader.monetization.iOSAppId;
+        androidAppId = monetizationLoader.monetization.androidAppId;
+        iOSBanner = monetizationLoader.monetization.iOSBanner;
+        androidBanner = monetizationLoader.monetization.androidBanner;
+        iOSInterstitial = monetizationLoader.monetization.iOSInterstitial;
+        androidInterstitial = monetizationLoader.monetization.androidInterstitial;
+
 #if GLOWBOM_ADS
 #if UNITY_ANDROID
         string appId = androidAppId;
