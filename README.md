@@ -4,7 +4,7 @@
 
 # 2. Deep dive into Glowbom Quests
 
-Multiple quizzes, design themes, functional buttons.
+Multiple quizzes, design themes, functional buttons, optimization tips.
 
 Video is coming soon...
 
