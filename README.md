@@ -10,5 +10,5 @@ Video is coming soon...
 
 # 3. Monetize your app using AdMob
 
-This section is currently updating. Please stay tuned.
+This section is currently updating. Please stay tuned!
 
