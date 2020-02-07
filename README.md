@@ -10,5 +10,5 @@ Video is coming soon...
 
 # 3. Monetize your app using AdMob
 
-This section is currently updating. Please stay tuned!
+[![Build your own Quiz App](https://img.youtube.com/vi/xvx6RtHJNKg/0.jpg)](https://www.youtube.com/watch?v=xvx6RtHJNKg)
 
