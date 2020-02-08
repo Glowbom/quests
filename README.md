@@ -12,9 +12,14 @@
 8. Insinde **Quests** panel in the **All** you can add, remove and modify screens.
 9. To run the project, click on **Play** button.
 10. Click on the first screen item from the **All** tab.
-12. Modify screen **Title** and text.
-13. Bellow **Title** and text you can find the decision buttons section. Each button has a title, **Go To** section, and **Answer**. **Go To** represents a screen number where the button leeds to. **Answer** field can highlight the right and wrong answers (value 1 means *right answer*, 0 means *wrong*). 
-14. To highlight the right and wrong answers, you need to send **Answers Count** to more than 0. More than 1 means more than one correct answer, 1 means only 1 correct answer. If **Answers Count** is 0, there will be no highlighting at all.
+11. Modify screen **Title** and text.
+12. Bellow **Title** and text you can find the decision buttons section. Each button has **Title**, **Go To** section, and **Answer**. **Go To** represents a screen number where the button leeds to. **Answer** field can highlight the right and wrong answers (value 1 means *right answer*, 0 means *wrong*). 
+13. To highlight the right and wrong answers, you need to send **Answers Count** to more than 0. More than 1 means more than one correct answer, 1 means only 1 correct answer. If **Answers Count** is 0, there will be no highlighting at all.
+14. To show the results, put [correctAnswers] and [totalQuestionsCount] inside the screen text field. An example could be:
+
+```
+You got [correctAnswers] out of [totalQuestionsCount] questions correct.
+```
 
 # Example App
 
