@@ -44,3 +44,14 @@ Multiple quizzes, design themes, functional buttons, optimization tips.
 
 The section is currently updating... Please stay tuned!
 
+# References
+
+[Website](https://glowbom.com/)
+
+[YouTube Channel](https://www.youtube.com/channel/UCrYQEQPhAHmn7N8W58nNwOw)
+
+[Source](https://github.com/Glowbom)
+
+[App Example](https://globalsculptor.com/apps/countries.html)
+
+
