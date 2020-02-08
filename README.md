@@ -42,5 +42,5 @@ Please download an example app for [iOS](https://apps.apple.com/us/app/6-countri
 
 Multiple quizzes, design themes, functional buttons, optimization tips.
 
-Video is coming soon...
+The section is currently updating... Please stay tuned!
 
