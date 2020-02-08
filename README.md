@@ -8,6 +8,8 @@
 4. Double click on **glowbom-quests-1.0.0.unitypackage** to import **Glowbom Quests** into your project.
 5. Open **DesignClassic** scene from **Project** window in Unity. You can find **DesignClassic** scene file at **Assets/Glowbom/Quests**.
 
+# Example App
+
 Please download an example app for [iOS](https://apps.apple.com/us/app/6-countries-world-geography/id1497861140?ls=1) and [Android](https://play.google.com/store/apps/details?id=com.glowbom.quests) to explore what's possible to build with **Glowbom Quests**.
 
 # Monetize your app using AdMob
