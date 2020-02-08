@@ -1,6 +1,3 @@
-We’re Glowbom: we allow you to create apps on mobile without coding. 
-[App Example](https://globalsculptor.com/apps/countries.html).
-
 # Create your first trivia app for iOS
 
 [![Build your own Quiz App](https://img.youtube.com/vi/5py0nFKtoLU/0.jpg)](https://www.youtube.com/watch?v=5py0nFKtoLU)
