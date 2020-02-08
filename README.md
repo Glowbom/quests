@@ -27,7 +27,7 @@ You got [correctAnswers] out of [totalQuestionsCount] questions correct.
 18. Background images can be changed from **Inspector** for **Canvas->Front** and **Canvas->Background** objects. You can use any image available in the plugin or choose your own if you put image files inside **Assets/Glowbom/Quests/Resources/** folder.
 19. To build the project go to **File->Build Settings...**, click **Add Open Scenes** and **Build** buttons.
 20. Open the project in Xcode.
-21. Add your own signing certificate at **Unity-iPhone->Signing & Capabilities->Signing.
+21. Add your own signing certificate at **Unity-iPhone->Signing & Capabilities->Signing.**
 22. Press **Play** button to run your app on the device.
 
 # Example App
