@@ -24,6 +24,11 @@ You got [correctAnswers] out of [totalQuestionsCount] questions correct.
 15. To make some design changes, go to **Hierarchy**.
 16. Select and expand **Canvas->Front** object to change the front screen of the app. **Canvas->Front->Title** and **Canvas->Front->Author** objects are usually used for displaying the app name and short description. You can also change text font and color from **Inspector**.
 17. To change the main screen text select objects **Canvas->Panel->Title**, **Canvas->Panel->Text**, and for each button **Canvas->ButtonsPanel->Button->Text**, **Canvas->ButtonsPanel->Button1->Text**, etc. Each object can be easily moved around using the standard controls of Unity.
+18. Background images can be changed from **Inspector** for **Canvas->Front** and **Canvas->Background** objects. You can use any image available in the plugin or choose your own if you put image files inside **Assets/Glowbom/Quests/Resources/** folder.
+19. To build the project go to **File->Build Settings...**, click **Add Open Scenes** and **Build** buttons.
+20. Open the project in Xcode.
+21. Add your own signing certificate at **Unity-iPhone->Signing & Capabilities->Signing.
+22. Press **Play** button to run your app on the device.
 
 # Example App
 
