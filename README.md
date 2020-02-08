@@ -20,6 +20,9 @@
 ```
 You got [correctAnswers] out of [totalQuestionsCount] questions correct.
 ```
+The numbers will be replaced during the runtime.
+
+15. To make some design changes, go to **Hierarchy**.
 
 # Example App
 
