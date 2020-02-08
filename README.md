@@ -1,5 +1,3 @@
-# Glowbom
-
 We’re Glowbom: we allow you to create apps on mobile without coding. 
 
 # Get Started
