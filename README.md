@@ -9,6 +9,12 @@
 5. Open **DesignClassic** scene from **Project** window in Unity. You can find **DesignClassic** scene file at **Assets/Glowbom/Quests**.
 6. Switch the platform to iOS by going to **File->Build Settings...** and clicking on **Switch Platform**.
 7. Open **Glowbom Quests Editor** by going to **Window->Glowbom->Quests**.
+8. Insinde **Quests** panel in the **All** you can add, remove and modify screens.
+9. To run the project, click on **Play** button.
+10. Click on the first screen item from the **All** tab.
+12. Modify screen **Title** and text.
+13. Bellow **Title** and text you can find the decision buttons section. Each button has a title, **Go To** section, and **Answer**. **Go To** represents a screen number where the button leeds to. **Answer** field can highlight the right and wrong answers (value 1 means *right answer*, 0 means *wrong*). 
+14. To highlight the right and wrong answers, you need to send **Answers Count** to more than 0. More than 1 means more than one correct answer, 1 means only 1 correct answer. If **Answers Count** is 0, there will be no highlighting at all.
 
 # Example App
 
