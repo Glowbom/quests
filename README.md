@@ -15,12 +15,12 @@
 11. Modify screen **Title** and text.
 12. Bellow **Title** and text you can find the decision buttons section. Each button has **Title**, **Go To** section, and **Answer**. **Go To** represents a screen number where the button leeds to. **Answer** field can highlight the right and wrong answers (value 1 means *right answer*, 0 means *wrong*). 
 13. To highlight the right and wrong answers, you need to send **Answers Count** to more than 0. More than 1 means more than one correct answer, 1 means only 1 correct answer. If **Answers Count** is 0, there will be no highlighting at all.
-14. To show the results, put [correctAnswers] and [totalQuestionsCount] inside the screen text field. An example could be:
+14. To show the results, put [correctAnswers] and [totalQuestionsCount] inside the screen text field. The numbers will be replaced during the runtime. An example could be:
 
 ```
 You got [correctAnswers] out of [totalQuestionsCount] questions correct.
 ```
-The numbers will be replaced during the runtime.
+
 15. To make some design changes, go to **Hierarchy**.
 16. Select and expand **Canvas/Front** object to change the front screen of the app. **Canvas/Front/Title** and **Canvas/Front/Author** objects are usually used for displaying the app name and short description. You can also change text font and color from **Inspector**.
 17. To change the main screen text select objects **Canvas/Panel/Title**, **Canvas/Panel/Text**, and for each button **Canvas/ButtonsPanel/Button/Text**, **Canvas/ButtonsPanel/Button1/Text**, etc. Each object can be easily moved around using the standard controls of Unity.
