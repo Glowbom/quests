@@ -60,7 +60,7 @@ Please download an example app for [iOS](https://apps.apple.com/us/app/6-countri
 8. To enable Google Mobile Ads, go to **Assets->Google Mobile Ads->Settings...** and open **Inspector**.
 9. Enable Google Mobile Ads and put App Id inside **Inspector** window.
 
-## Build and run you project
+## Build and run your project
 
 1. Build the project by clicking on **Build** button in **File->Build Settings...**
 2. Open the project in Xcode.
