@@ -78,6 +78,10 @@ The current version of **Glowbom Quests** has 3 design themes: **DesignClassic**
 2. Please read [reducing the file size of your build Unity Manual](https://docs.unity3d.com/Manual/ReducingFilesize.html).
 3. Set **Enabled Bitcode** to **No** from  **Unity-iPhone->Build Settings** in Xcode.
 
+### Optimization tips for Android
+
+Build an app bundle instead of a standard apk file to reduce the build size for Android.
+
 # References
 
 [Website](https://glowbom.com/)
