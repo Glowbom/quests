@@ -51,7 +51,7 @@ Please download an example app for [iOS](https://apps.apple.com/us/app/6-countri
 ## Set up ads
 
 1. Set up a new app on [Google AdMob](https://admob.google.com/home/).
-2. Opend **Window->Glowbom->Monetization** and copy App Id over there. Don't forget to press **Save** button.
+2. Open **Window->Glowbom->Monetization** panel and copy **App Id** over there. Don't forget to press **Save** button.
 3. Create Banner and Interstitial ads. We don't suppoort Rewarded and Native advanced ads yet.
 4. Copy Ad Ids to **Glowbom Monetization** panel and press **Save** button.
 5. Open **Player Settings** from **File->Build Settings...**.
