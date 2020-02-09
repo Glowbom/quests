@@ -62,11 +62,11 @@ Please download an example app for [iOS](https://apps.apple.com/us/app/6-countri
 
 ## Build and run you project
 
-1. Build the project by clicking on **Build** button in **File->Build Settings...**.
+1. Build the project by clicking on **Build** button in **File->Build Settings...**
 2. Open the project in Xcode.
 3. Add your own signing certificate at **Unity-iPhone->Signing & Capabilities->Signing.**
 4. Download [Google Mobile Ads SDK for iOS](https://developers.google.com/admob/ios/download) and unzip it to any folder you like.
-5. Add **GoogleMobileAds.framework** from this folder to **Unity-iPhone->Build Phases->Link Binary With Libraries** by clicking on **+->Add Other...->Add Files...**.
+5. Add **GoogleMobileAds.framework** from this folder to **Unity-iPhone->Build Phases->Link Binary With Libraries** by clicking on **+->Add Other...->Add Files...**
 6. Add a path to **Google Mobile Ads SDK** folder into **Framework Search Paths** at **Unity-iPhone->Build Settings** and make it recursive.
 7. Open **Info.plist** file as **Source Code** from **Project navigator** and add **GADIsAdManagerApp** key set to **true**:
 
