@@ -30,7 +30,7 @@ You got [correctAnswers] out of [totalQuestionsCount] questions correct.
 21. Add your own signing certificate at **Unity-iPhone->Signing & Capabilities->Signing.**
 22. Press **Play** button to run your app on the device.
 
-# Example app
+## Example app
 
 Please download an example app for [iOS](https://apps.apple.com/us/app/6-countries-world-geography/id1497861140?ls=1) and [Android](https://play.google.com/store/apps/details?id=com.glowbom.quests) to explore what's possible to build with **Glowbom Quests**.
 
