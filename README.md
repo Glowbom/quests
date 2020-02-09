@@ -79,11 +79,19 @@ Please download an example app for [iOS](https://apps.apple.com/us/app/6-countri
 
 # Deep dive into Glowbom Quests
 
+## Supporting multiple quests
+
 **Glowbom Quests** supports multiple quests in the same application. You can add and remove quests in **Glowbom Quests** panel inside **Quests** tab. There are 3 fields for each quest: **Name**, **Image**, and **Link**. If you have more than 1 quest in the app, you will see an additional quest selection menu when you launch your app. If **Image** field isn't empty, the quest button in the quest selection menu will show the background image instead of text. If **Image** is empty, the button will show the text from **Name** field. **Link** field should contain a file name of the quest.
+
+## Create a new quest
 
 Each quest has **Name** field. To load a new quest, just type a quest file name inside **Name** field and press **Load** button. You can also create a new quest if you type a new file name inside **Name** field and press **Save**. If you put a sprite name inside **Background Picture** field, the sprite will be shown in the background when you launch the quest.
 
+## Functional buttons
+
 Every quest screen item has decision buttons. Each button has **Title**, **Go To** section, and **Answer**. **Go To** represents a screen number where the button leads to. The button becomes **Share** button if **Go To** has value of 10001, **Ask Friend** button if the value is 10002, and **Back** button if it's 10003.
+
+## Design themes
 
 The current version of **Glowbom Quests** has 3 design themes: **DesignClassic**, **DesignPenguin**, and **DesignWorld**. To switch the theme, just open a different scene file from **Project** window in Unity. The scene files are located in **Assets/Glowbom/Quests**. Each object on the scene can be easily moved around and changed using the standard controls of Unity. The main objects are the front screen (**Canvas->Front**), the background image (**Canvas->Background**), the main content title (**Canvas->Panel->Title**), the main content text (**Canvas->Panel->Text**), decision buttons (**Canvas->ButtonsPanel**), and the main image (**Canvas->ButtonsPanel->MainImage**).
 
