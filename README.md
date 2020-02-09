@@ -89,7 +89,7 @@ Each quest has **Name** field. To load a new quest, just type a quest file name 
 
 ## Functional buttons
 
-Every quest screen item has decision buttons. Each button has **Title**, **Go To** section, and **Answer**. **Go To** represents a screen number where the button leads to. The button becomes **Share** button if **Go To** has value of 10001, **Ask Friend** button if the value is 10002, and **Back** button if it's 10003.
+Every quest screen item has decision buttons. Each button has **Title**, **Go To** section, and **Answer**. **Go To** represents a screen number where the button leads to. The button becomes **Share** button if **Go To** has the value of 10001, **Ask Friend** button if the value is 10002, and **Back** button if it's 10003.
 
 ## Design themes
 
