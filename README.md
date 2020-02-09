@@ -83,7 +83,7 @@ Please download an example app for [iOS](https://apps.apple.com/us/app/6-countri
 
 **Glowbom Quests** supports multiple quests in the same application. You can add and remove quests in **Glowbom Quests** panel inside **Quests** tab. There are 3 fields for each quest: **Name**, **Image**, and **Link**. If you have more than 1 quest in the app, you will see an additional quest selection menu when you launch your app. If **Image** field isn't empty, the quest button in the quest selection menu will show the background image instead of text. If **Image** is empty, the button will show the text from **Name** field. **Link** field should contain a file name of the quest.
 
-## Create a new quest
+### Create a new quest
 
 Each quest has **Name** field. To load a new quest, just type a quest file name inside **Name** field and press **Load** button. You can also create a new quest if you type a new file name inside **Name** field and press **Save**. If you put a sprite name inside **Background Picture** field, the sprite will be shown in the background when you launch the quest.
 
