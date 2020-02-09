@@ -14,11 +14,11 @@
 
 ## Make content changes
 
-1. Insinde **Quests** panel in the **All** you can add, remove and modify screens.
+1. Inside **Quests** panel in the **All** you can add, remove and modify screens.
 2. To run the project, click on **Play** button.
 3. Click on the first screen item from the **All** tab.
 4. Modify screen **Title** and text.
-5. Bellow **Title** and text you can find the decision buttons section. Each button has **Title**, **Go To** section, and **Answer**. **Go To** represents a screen number where the button leeds to. **Answer** field can highlight the right and wrong answers (value 1 means *right answer*, 0 means *wrong*). 
+5. Bellow **Title** and text you can find the decision buttons section. Each button has **Title**, **Go To** section, and **Answer**. **Go To** represents a screen number where the button leads to. **Answer** field can highlight the right and wrong answers (value 1 means *right answer*, 0 means *wrong*). 
 6. To highlight the right and wrong answers, you need to send **Answers Count** to more than 0. More than 1 means more than one correct answer, 1 means only 1 correct answer. If **Answers Count** is 0, there will be no highlighting at all.
 7. To show the results, put [correctAnswers] and [totalQuestionsCount] inside the screen text field. The numbers will be replaced during the runtime. An example could be:
 
