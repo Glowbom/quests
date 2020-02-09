@@ -64,9 +64,19 @@ Please download an example app for [iOS](https://apps.apple.com/us/app/6-countri
 
 # Deep dive into Glowbom Quests
 
-Multiple quizzes, design themes, functional buttons, optimization tips.
+**Glowbom Quests** supports multiple quests in the same application. You can add and remove quests in **Glowbom Quests** panel inside **Quests** tab. There are 3 field for each quest: **Name**, **Image**, and **Link**. If you have more than 1 quest in the app, you will see an additional quest selection menu when you launch you app. If **Image** field isn't empty, the quest button in the quest selection menu will show the background image instead of text. If **Image** is empty, the button will show the text from **Name** field. **Link** field should contain a file name of the quest.
 
-The section is currently updating... Please stay tuned!
+Each quest has **Name** field. To load a new quest, just type a quest file name inside **Name** field and press **Load** button. You can also create a new quest if you type a new file name inside **Name** field and press **Save**. If you put a sprite name inside **Background Picture** field, the sprite will be shown in the background when you launch the quest.
+
+Every quest screen item has decision buttons. Each button has **Title**, **Go To** section, and **Answer**. **Go To** represents a screen number where the button leeds to. The button becomes **Share** button if **Go To** has value of 10001, **Ask Friend** button if the values is 10002, and **Back** button if it's 10003.
+
+The current version of **Glowbom Quests** has 3 design themes: **DesignClassic**, **DesignPenguin**, and **DesignWorld**. To switch the theme, just open a different scene file from **Project** window in Unity. The scene files are located in **Assets/Glowbom/Quests**. Each object on the scene can be easily moved around and changed using the standard controls of Unity. The main objects are a front screen (**Canvas->Front**), a background image (**Canvas->Background**), a main content title (**Canvas->Panel->Title**), a main content text (**Canvas->Panel->Text**), decision buttons (**Canvas->ButtonsPanel**), and a main image (**Canvas->ButtonsPanel->MainImage**).
+
+### Optimization tips
+
+1. Please read [optimizing the size of the built iOS Player Unity Manual](https://docs.unity3d.com/Manual/iphone-playerSizeOptimization.html) to reduce the build size for iOS.
+2. Please read [reducing the file size of your build Unity Manual](https://docs.unity3d.com/Manual/ReducingFilesize.html).
+3. Set **Enabled Bitcode** to **No** from  **Unity-iPhone->Build Settings**.
 
 # References
 
