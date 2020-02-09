@@ -72,11 +72,11 @@ Every quest screen item has decision buttons. Each button has **Title**, **Go To
 
 The current version of **Glowbom Quests** has 3 design themes: **DesignClassic**, **DesignPenguin**, and **DesignWorld**. To switch the theme, just open a different scene file from **Project** window in Unity. The scene files are located in **Assets/Glowbom/Quests**. Each object on the scene can be easily moved around and changed using the standard controls of Unity. The main objects are a front screen (**Canvas->Front**), a background image (**Canvas->Background**), a main content title (**Canvas->Panel->Title**), a main content text (**Canvas->Panel->Text**), decision buttons (**Canvas->ButtonsPanel**), and a main image (**Canvas->ButtonsPanel->MainImage**).
 
-### Optimization tips
+### Optimization tips for iOS
 
 1. Please read [optimizing the size of the built iOS Player Unity Manual](https://docs.unity3d.com/Manual/iphone-playerSizeOptimization.html) to reduce the build size for iOS.
 2. Please read [reducing the file size of your build Unity Manual](https://docs.unity3d.com/Manual/ReducingFilesize.html).
-3. Set **Enabled Bitcode** to **No** from  **Unity-iPhone->Build Settings**.
+3. Set **Enabled Bitcode** to **No** from  **Unity-iPhone->Build Settings** in Xcode.
 
 # References
 
