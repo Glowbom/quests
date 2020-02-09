@@ -82,7 +82,7 @@ The current version of **Glowbom Quests** has 3 design themes: **DesignClassic**
 
 1. Please read a [practical guide to optimization for mobiles](https://docs.unity3d.com/Manual/MobileOptimizationPracticalGuide.html).
 2. Build an [Android App Bundle](https://developer.android.com/guide/app-bundle) instead of a standard apk file to reduce the build size for Android.
-3. Uncheck **x86** from **Target Architectures** in **Other Settings** of **Player Settings...**. Othervise, you will have the following error after you upload a bundle to Google Play: 
+3. Uncheck **x86** from **Target Architectures** in **Other Settings** of **Player Settings...**. Othervise, you will have [the following error](https://stackoverflow.com/questions/57629052/after-upgrading-my-unity-android-to-64-bit-i-still-get-an-error-after-uploading) after you upload a bundle to Google Play: 
 
 ```
 This release is not compliant with the Google Play 64-bit requirement
