@@ -1,7 +1,3 @@
-# Example app
-
-Please download an example app for [iOS](https://apps.apple.com/us/app/6-countries-world-geography/id1497861140?ls=1) and [Android](https://play.google.com/store/apps/details?id=com.glowbom.quests) to explore what's possible to build with **Glowbom Quests**.
-
 # Create your first trivia app
 
 [![Build your own Quiz App](https://img.youtube.com/vi/5py0nFKtoLU/0.jpg)](https://www.youtube.com/watch?v=5py0nFKtoLU)
@@ -33,6 +29,10 @@ You got [correctAnswers] out of [totalQuestionsCount] questions correct.
 20. Open the project in Xcode.
 21. Add your own signing certificate at **Unity-iPhone->Signing & Capabilities->Signing.**
 22. Press **Play** button to run your app on the device.
+
+# Example app
+
+Please download an example app for [iOS](https://apps.apple.com/us/app/6-countries-world-geography/id1497861140?ls=1) and [Android](https://play.google.com/store/apps/details?id=com.glowbom.quests) to explore what's possible to build with **Glowbom Quests**.
 
 # Monetize your app using AdMob
 
