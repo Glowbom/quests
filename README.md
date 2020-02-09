@@ -81,7 +81,7 @@ The current version of **Glowbom Quests** has 3 design themes: **DesignClassic**
 ### Optimization tips for Android
 
 1. Please read a [practical guide to optimization for mobiles](https://docs.unity3d.com/Manual/MobileOptimizationPracticalGuide.html).
-2. Build an app bundle instead of a standard apk file to reduce the build size for Android.
+2. Build an [Android App Bundle](https://developer.android.com/guide/app-bundle) instead of a standard apk file to reduce the build size for Android.
 
 # References
 
