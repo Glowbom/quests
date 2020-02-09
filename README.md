@@ -38,6 +38,30 @@ Please download an example app for [iOS](https://apps.apple.com/us/app/6-countri
 
 [![Build your own Quiz App](https://img.youtube.com/vi/xvx6RtHJNKg/0.jpg)](https://www.youtube.com/watch?v=xvx6RtHJNKg)
 
+1. Set up a new app on AdMob.com.
+2. Opend **Window->Glowbom->Monetization** and copy App Id over there. Don't forget to press **Save** button.
+3. Create Banner and Interstitial ads. We don't suppoort Rewarded and Native advanced ads yet.
+4. Copy Ad Ids to **Glowbom Monetization** panel and press **Save** button.
+5. Open **Player Settings** from **File->Build Settings...**.
+6. In **Other Settings** section find **Scripting Define Symbols** field and put GLOWBOM_ADS constant over there.
+7. Download [Google Mobile Ads Unity Plugin](https://github.com/googleads/googleads-mobile-unity/releases/tag/v4.2.1) and open the unitypackage file.
+8. To enable Google Mobile Ads, go to **Assets->Google Mobile Ads->Settings...** and open **Inspector**.
+9. Enable Google Mobile Ads and put App Id inside **Inspector** window.
+10. Build the project by clicking on **Build** button in **File->Build Settings...**.
+11. Open the project in Xcode.
+12. Add your own signing certificate at **Unity-iPhone->Signing & Capabilities->Signing.**
+13. Download [Google Mobile Ads SDK for iOS](https://developers.google.com/admob/ios/download) and unzip it to any folder you like.
+14. Add **GoogleMobileAds.framework** from this folder to **Unity-iPhone->Build Phases->Link Binary With Libraries** by clicking on **+->Add Other...->Add Files...**.
+15. Add a path to **Google Mobile Ads SDK** folder into **Framework Search Paths** at **Unity-iPhone->Build Settings** and make it recursive.
+16. Open **Info.plist** file as **Source Code** from **Project navigator** and add **GADIsAdManagerApp** key set to **true**:
+
+```
+<key>GADIsAdManagerApp</key>
+<true/>
+```
+
+17. Press **Play** button to run your app on the device.
+
 # Deep dive into Glowbom Quests
 
 Multiple quizzes, design themes, functional buttons, optimization tips.
