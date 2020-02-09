@@ -52,9 +52,9 @@ Please download an example app for [iOS](https://apps.apple.com/us/app/6-countri
 
 1. Set up a new app on [Google AdMob](https://admob.google.com/home/).
 2. Open **Window->Glowbom->Monetization** panel and copy **App Id** over there. Don't forget to press **Save** button.
-3. Create Banner and Interstitial ads. We don't suppoort Rewarded and Native advanced ads yet.
+3. Create Banner and Interstitial ads. We don't support Rewarded and Native advanced ads yet.
 4. Copy Ad Ids to **Glowbom Monetization** panel and press **Save** button.
-5. Open **Player Settings** from **File->Build Settings...**.
+5. Open **Player Settings** from **File->Build Settings...**
 6. In **Other Settings** section find **Scripting Define Symbols** field and put GLOWBOM_ADS constant over there.
 7. Download [Google Mobile Ads Unity Plugin](https://github.com/googleads/googleads-mobile-unity/releases/tag/v4.2.1) and open the unitypackage file.
 8. To enable Google Mobile Ads, go to **Assets->Google Mobile Ads->Settings...** and open **Inspector**.
