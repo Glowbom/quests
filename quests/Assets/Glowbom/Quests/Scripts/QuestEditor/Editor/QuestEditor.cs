@@ -168,16 +168,23 @@ public class QuestEditor : EditorWindow
                     tabElements = 1;
                     OnGUI();
 
-                    Image mainImage = GameObject.Find("MainImage").GetComponent<Image>();
-                    if (mainImage.GetComponent<RectTransform>().hasChanged)
+                    try
                     {
-                        var nextItem = questLoader.logic.items[questLoader.logic.currentItemIndex];
-                        if (nextItem.mainImagePosition != null && nextItem.mainImagePosition.x != 0)
+                        Image mainImage = GameObject.Find("MainImage").GetComponent<Image>();
+                        if (mainImage.GetComponent<RectTransform>().hasChanged)
                         {
-                            mainImage.rectTransform.localPosition = nextItem.mainImagePosition;
-                            mainImage.rectTransform.sizeDelta = nextItem.mainImageSize;
+                            var nextItem = questLoader.logic.items[questLoader.logic.currentItemIndex];
+                            if (nextItem.mainImagePosition != null && nextItem.mainImagePosition.x != 0)
+                            {
+                                mainImage.rectTransform.localPosition = nextItem.mainImagePosition;
+                                mainImage.rectTransform.sizeDelta = nextItem.mainImageSize;
+                            }
                         }
+                    } catch(Exception e)
+                    {
+                        Debug.Log(e.Message);
                     }
+                    
                 }
 
                 if (GUILayout.Button("Remove"))
@@ -723,12 +730,18 @@ public class QuestEditor : EditorWindow
 
         if (GUILayout.Button("Save"))
         {
-            Image mainImage = GameObject.Find("MainImage").GetComponent<Image>();
-            if (mainImage.GetComponent<RectTransform>().hasChanged)
+            try
             {
-                var item = questLoader.logic.items[questLoader.logic.currentItemIndex];
-                item.mainImagePosition = mainImage.rectTransform.localPosition;
-                item.mainImageSize = mainImage.rectTransform.sizeDelta;
+                Image mainImage = GameObject.Find("MainImage").GetComponent<Image>();
+                if (mainImage.GetComponent<RectTransform>().hasChanged)
+                {
+                    var item = questLoader.logic.items[questLoader.logic.currentItemIndex];
+                    item.mainImagePosition = mainImage.rectTransform.localPosition;
+                    item.mainImageSize = mainImage.rectTransform.sizeDelta;
+                }
+            } catch(Exception e)
+            {
+                Debug.Log(e.Message);
             }
 
             questLoader.save();
@@ -740,16 +753,22 @@ public class QuestEditor : EditorWindow
 
         if (GUILayout.Button("Apply to all"))
         {
-            Image mainImage = GameObject.Find("MainImage").GetComponent<Image>();
-            if (mainImage.GetComponent<RectTransform>().hasChanged)
+            try
             {
-                foreach (var item in questLoader.logic.items)
+                Image mainImage = GameObject.Find("MainImage").GetComponent<Image>();
+                if (mainImage.GetComponent<RectTransform>().hasChanged)
                 {
-                    item.mainImagePosition = mainImage.rectTransform.localPosition;
-                    item.mainImageSize = mainImage.rectTransform.sizeDelta;
+                    foreach (var item in questLoader.logic.items)
+                    {
+                        item.mainImagePosition = mainImage.rectTransform.localPosition;
+                        item.mainImageSize = mainImage.rectTransform.sizeDelta;
+                    }
                 }
+            } catch(Exception e)
+            {
+                Debug.Log(e.Message);
             }
-
+            
             questLoader.save();
         }
 
