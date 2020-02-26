@@ -905,11 +905,10 @@ public class GridStatusScript : MonoBehaviour
 	}
 
 	public Button editButton;
-    public QuestCreator creator;
 
 	public void showEditPanel() {
         homePressed();
-        creator.initMainQuest();
+        //creator.initMainQuest();
         editView.SetActive(true);
         if (clipboard != null)
         {
