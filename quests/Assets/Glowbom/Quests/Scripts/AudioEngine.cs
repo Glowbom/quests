@@ -12,6 +12,8 @@ public class AudioEngine : MonoBehaviour
     public AudioSource correctAudioSource;
     public AudioSource incorrectAudioSource;
 
+    public AudioSource source;
+
     public void correct()
     {
         correctAudioSource.Play();
@@ -20,6 +22,14 @@ public class AudioEngine : MonoBehaviour
     public void incorrect()
     {
         incorrectAudioSource.Play();
+    }
+
+    public void play()
+    {
+        if (source != null)
+        {
+            source.Play();
+        }
     }
 
     // Start is called before the first frame update
