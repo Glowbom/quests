@@ -14,16 +14,16 @@ using System;
 [System.Serializable]
 public class Logic
 {
-	[System.Serializable]
-	public class Item
-	{
-		public string title;
-		public string description;
-		public string[] buttonsTexts;
-		public string[] picturesSpriteNames;
-		public int[] goIndexes;
-		public int[] goConditions;
-		public int[] heroValues;
+    [System.Serializable]
+    public class Item
+    {
+        public string title;
+        public string description;
+        public string[] buttonsTexts;
+        public string[] picturesSpriteNames;
+        public int[] goIndexes;
+        public int[] goConditions;
+        public int[] heroValues;
         public int[] buttonAnswers;
 
         public Vector2 mainImagePosition;
@@ -35,13 +35,13 @@ public class Logic
     }
 
     public string[] heroElements;
-	public int[] heroValues;
-	public int currentItemIndex = 0;
-	public Item[] items;
-	public int deadValue;
-	public int deadLevel;
-	public int deadItemIndex;
-	public bool pleaseRestart = false;
+    public int[] heroValues;
+    public int currentItemIndex = 0;
+    public Item[] items;
+    public int deadValue;
+    public int deadLevel;
+    public int deadItemIndex;
+    public bool pleaseRestart = false;
     public string answers = "";
     public string backgroundPicture;
     public string link;
@@ -67,7 +67,7 @@ public class Logic
 
     public bool isSupportAnswers()
     {
-        return items[currentItemIndex].answersCount > 0; 
+        return items[currentItemIndex].answersCount > 0;
     }
 
     public bool hasMultipleAnswers()
@@ -123,13 +123,13 @@ public class Logic
                 return item.goIndexes[i] == 10001;
             }
         }
-        
+
         return false;
     }
 
     public bool isAskFriendButton(int i)
     {
-       
+
         Item item = items[currentItemIndex];
 
         if (item.goIndexes != null && i > -1 && i < item.goIndexes.Length)
@@ -161,7 +161,7 @@ public class Logic
     {
         string a = "";
         int i = 0;
-        foreach(string s in items[currentItemIndex].buttonsTexts)
+        foreach (string s in items[currentItemIndex].buttonsTexts)
         {
             if (items[currentItemIndex].goIndexes[i] == 10001 || items[currentItemIndex].goIndexes[i] == 10002)
             {
@@ -194,17 +194,19 @@ public class Logic
         return false;
     }
 
-    public Item nextItem (int i)
-	{
-		Item item = items [currentItemIndex];
-       
-		if (i > -1 && i < item.goIndexes.Length) {
-			currentItemIndex = item.goIndexes [i];
+    public Item nextItem(int i)
+    {
+        Item item = items[currentItemIndex];
+
+        if (i > -1 && i < item.goIndexes.Length)
+        {
+            currentItemIndex = item.goIndexes[i];
 
             if (answers == "")
             {
                 answers = item.buttonsTexts[i];
-            } else
+            }
+            else
             {
                 answers += (", " + item.buttonsTexts[i]);
             }
@@ -232,11 +234,11 @@ public class Logic
 
                 return ni;
             }
-			
-		}
-		
-		return null;
-	}
+
+        }
+
+        return null;
+    }
 }
 
 [System.Serializable]
@@ -244,15 +246,23 @@ public class Buttons
 {
     [System.Serializable]
     public class Button
-	{
-		public string name;
+    {
+        public string name;
         public string image;
         public string link;
         public int score;
         public int totalQuestionsCount;
     }
 
-	public Button[] buttons;
+    public Button[] buttons;
+
+    public string title;
+    public string secondTitle;
+    public string aboutText;
+
+    public string playButton;
+    public string aboutButton;
+    public string mainMenuButton;
 }
 
 [System.Serializable]
@@ -272,95 +282,102 @@ public class GridStatusScript : MonoBehaviour
     public Monetization monetization;
     public InputField clipboard;
 
-	public GameObject editButtonPanel;
-	public InputField editTitleButtonField;
+    public GameObject editButtonPanel;
+    public InputField editTitleButtonField;
 
-	public GameObject editView;
-	public InputField editTitleField;
-	public InputField editTextField;
-	public Image quitView;
-	public Image scrollView;
-	public Text gameViewTitle;
-	public Text gameViewText;
-	public Text gameViewHeroStatusText;
-	public Button[] buttons;
+    public GameObject editView;
+    public InputField editTitleField;
+    public InputField editTextField;
+    public Image quitView;
+    public Image scrollView;
+    public Text gameViewTitle;
+    public Text gameViewText;
+    public Text gameViewHeroStatusText;
+    public Button[] buttons;
     public InputField[] inputFields;
 
-	public Button[] gridButtons;
-	public Image[] pictures;
+    public Button[] gridButtons;
+    public Image[] pictures;
     public Image backgroundImage;
-	public Logic logic = null;
+    public Logic logic = null;
 
-	public Text startButtonText;
+    public Text startButtonText;
 
-	private Buttons buttonsLogic = null;
+    private Buttons buttonsLogic = null;
 
-	public Image front;
+    public Image front;
 
-	public Image gridBackground;
+    public Image gridBackground;
 
-	public GameObject about;
+    public GameObject about;
 
-	public GameObject gridButtonsPanel;
+    public GameObject gridButtonsPanel;
 
-	public Text status;
+    public Text status;
 
-	Dictionary<string, string> answers = new Dictionary<string, string>();
-	
-	public static void trackEvent(string category, string action) {
+    Dictionary<string, string> answers = new Dictionary<string, string>();
 
-	}
-	
-	private static void resetDraggablePanelPosition (Transform view)
-	{
+    public static void trackEvent(string category, string action)
+    {
 
-	}
+    }
+
+    private static void resetDraggablePanelPosition(Transform view)
+    {
+
+    }
 
     public PlayAudio playAudio;
     private int answersCollected = 0;
     public int correctAnswers = 0;
     public int totalQuestionsCount = 0;
 
-    public void procced ()
-	{
-		if (logic != null) {
+    public void procced()
+    {
+        if (logic != null)
+        {
             answersCollected = 0;
 
-            if (logic.currentItemIndex > -1 && logic.currentItemIndex < logic.items.Length) {
+            if (logic.currentItemIndex > -1 && logic.currentItemIndex < logic.items.Length)
+            {
 
                 if (monetization != null)
                 {
                     monetization.tryShowAds();
                 }
 
-				resetDraggablePanelPosition(scrollView.gameObject.transform);
-				
-				Logic.Item item = logic.items [logic.currentItemIndex];
-				gameViewTitle.text = item.title;
-				
-				//trackEvent("Book", item.title);
-				
-				string statusString = "";
-				int index = 0;
-				
-				if (logic.heroElements != null) {
-					foreach (string key in logic.heroElements) {
-						statusString += string.Format ("{0} = {1},  ", key, logic.heroValues [index]);
-						++index;
-					}
-				}
-				
-				if (statusString.Length > 2) {
-					statusString = statusString.Remove (statusString.Length - 2, 2);
-				}
-				
-				gameViewHeroStatusText.text = statusString;
+                resetDraggablePanelPosition(scrollView.gameObject.transform);
 
-				
+                Logic.Item item = logic.items[logic.currentItemIndex];
+                gameViewTitle.text = item.title;
 
-				if (item.description.Contains("[newline]")) {
-					item.description = item.description.Replace("[newline]", "\n");	
-				}
+                //trackEvent("Book", item.title);
+
+                string statusString = "";
+                int index = 0;
+
+                if (logic.heroElements != null)
+                {
+                    foreach (string key in logic.heroElements)
+                    {
+                        statusString += string.Format("{0} = {1},  ", key, logic.heroValues[index]);
+                        ++index;
+                    }
+                }
+
+                if (statusString.Length > 2)
+                {
+                    statusString = statusString.Remove(statusString.Length - 2, 2);
+                }
+
+                gameViewHeroStatusText.text = statusString;
+
+
+
+                if (item.description.Contains("[newline]"))
+                {
+                    item.description = item.description.Replace("[newline]", "\n");
+                }
 
                 if (item.description.Contains("[correctAnswers]"))
                 {
@@ -385,69 +402,87 @@ public class GridStatusScript : MonoBehaviour
                     }
                 }
 
-                if (item.description.Contains("{question")) {
-					foreach(string key in answers.Keys) {
-						//Debug.Log("key = " + key + "; value = " + answers[key]);
-						if (item.description.Contains("{" + key + "}")) {
-							item.description = item.description.Replace("{" + key + "}", answers[key]);	
-						}
-					}
-				}
-
-				for(int heroValueIndex = 0; heroValueIndex < logic.heroElements.Length; heroValueIndex++) {
-					string element = logic.heroElements[heroValueIndex];
-					if (item.description.Contains("{"+element)) {
-						item.description = item.description.Replace("{" + element + "}", logic.heroValues[heroValueIndex].ToString());
-					}
-				}
-				
-				gameViewText.text = item.description;
-
-				for (int i = 0; i < buttons.Length; i++) {
-					buttons [i].gameObject.SetActive(false);
-                    buttons [i].image.color = new Color32(255, 255, 255, 0); // 255 for non-transparent
+                if (item.description.Contains("{question"))
+                {
+                    foreach (string key in answers.Keys)
+                    {
+                        //Debug.Log("key = " + key + "; value = " + answers[key]);
+                        if (item.description.Contains("{" + key + "}"))
+                        {
+                            item.description = item.description.Replace("{" + key + "}", answers[key]);
+                        }
+                    }
                 }
-				
-				for (int i = 0; i < item.buttonsTexts.Length; i++) {
-					if (i < buttons.Length) {
-						Button bs = buttons [i];
-						if (item.buttonsTexts [i].Contains("{question")) {
-							foreach(string key in answers.Keys) {
-								if (item.buttonsTexts [i].Contains("{" + key + "}")) {
-									item.buttonsTexts [i] = item.buttonsTexts [i].Replace("{" + key + "}", answers[key]);	
-								}
-							}
-						}
 
-						for(int heroValueIndex = 0; heroValueIndex < logic.heroElements.Length; heroValueIndex++) {
-							string element = logic.heroElements[heroValueIndex];
-							if (item.buttonsTexts [i].Contains("{"+element)) {
-								item.buttonsTexts [i] = item.buttonsTexts [i].Replace("{" + element + "}", logic.heroValues[heroValueIndex].ToString());
-							}
-						}
+                for (int heroValueIndex = 0; heroValueIndex < logic.heroElements.Length; heroValueIndex++)
+                {
+                    string element = logic.heroElements[heroValueIndex];
+                    if (item.description.Contains("{" + element))
+                    {
+                        item.description = item.description.Replace("{" + element + "}", logic.heroValues[heroValueIndex].ToString());
+                    }
+                }
 
-						bs.transform.Find("Text").GetComponent<Text>().text = item.buttonsTexts [i];
-						
-						buttons [i].enabled = item.goIndexes [i] != -1;
-						buttons [i].gameObject.SetActive(item.goIndexes [i] != -1);
-					}
-				}
-				
-				if (item.goConditions != null && item.goConditions.Length > 0) {
-					bool conditionOk = true;
-					for (int i = 0; i < item.goConditions.Length; i++) {			
-						if (item.goConditions [i] >= logic.heroValues [i]) {
-							conditionOk = false;
-							break;
-						}
-					}
-				
-					if (buttons [buttons.Length - 1].enabled) {
-						buttons [buttons.Length - 1].gameObject.SetActive(conditionOk);
-					}
-				}
-				
-				if (item.picturesSpriteNames != null) {
+                gameViewText.text = item.description;
+
+                for (int i = 0; i < buttons.Length; i++)
+                {
+                    buttons[i].gameObject.SetActive(false);
+                    buttons[i].image.color = new Color32(255, 255, 255, 0); // 255 for non-transparent
+                }
+
+                for (int i = 0; i < item.buttonsTexts.Length; i++)
+                {
+                    if (i < buttons.Length)
+                    {
+                        Button bs = buttons[i];
+                        if (item.buttonsTexts[i].Contains("{question"))
+                        {
+                            foreach (string key in answers.Keys)
+                            {
+                                if (item.buttonsTexts[i].Contains("{" + key + "}"))
+                                {
+                                    item.buttonsTexts[i] = item.buttonsTexts[i].Replace("{" + key + "}", answers[key]);
+                                }
+                            }
+                        }
+
+                        for (int heroValueIndex = 0; heroValueIndex < logic.heroElements.Length; heroValueIndex++)
+                        {
+                            string element = logic.heroElements[heroValueIndex];
+                            if (item.buttonsTexts[i].Contains("{" + element))
+                            {
+                                item.buttonsTexts[i] = item.buttonsTexts[i].Replace("{" + element + "}", logic.heroValues[heroValueIndex].ToString());
+                            }
+                        }
+
+                        bs.transform.Find("Text").GetComponent<Text>().text = item.buttonsTexts[i];
+
+                        buttons[i].enabled = item.goIndexes[i] != -1;
+                        buttons[i].gameObject.SetActive(item.goIndexes[i] != -1);
+                    }
+                }
+
+                if (item.goConditions != null && item.goConditions.Length > 0)
+                {
+                    bool conditionOk = true;
+                    for (int i = 0; i < item.goConditions.Length; i++)
+                    {
+                        if (item.goConditions[i] >= logic.heroValues[i])
+                        {
+                            conditionOk = false;
+                            break;
+                        }
+                    }
+
+                    if (buttons[buttons.Length - 1].enabled)
+                    {
+                        buttons[buttons.Length - 1].gameObject.SetActive(conditionOk);
+                    }
+                }
+
+                if (item.picturesSpriteNames != null)
+                {
 
                     pictures[0].gameObject.SetActive(false);
 
@@ -462,11 +497,11 @@ public class GridStatusScript : MonoBehaviour
                                     pictures[i].sprite = sprites[item.picturesSpriteNames[i]];
                                     pictures[i].gameObject.SetActive(!item.picturesSpriteNames[i].Equals(string.Empty));
                                 }
-                        
+
                             }
                         }
                     }
-				}
+                }
                 else
                 {
                     pictures[0].gameObject.SetActive(false);
@@ -486,25 +521,25 @@ public class GridStatusScript : MonoBehaviour
                     gameViewText.text = "Loading...";
                     gameViewTitle.text = "";
                     Forms.load(this, item.description);
-                } 
-				
-			} 
-		}
-	}
+                }
 
-	Dictionary<string, Sprite> sprites = new Dictionary<string, Sprite>();
+            }
+        }
+    }
 
-	// Use this for initialization
-	void Start ()
-	{	
+    Dictionary<string, Sprite> sprites = new Dictionary<string, Sprite>();
+
+    // Use this for initialization
+    void Start()
+    {
         if (monetization != null)
         {
             monetization.initAds();
         }
 
-		sprites.Clear();
-		Sprite sprite = Resources.Load("Textures/default", typeof(Sprite)) as Sprite;
-		sprites.Add("default", sprite);
+        sprites.Clear();
+        Sprite sprite = Resources.Load("Textures/default", typeof(Sprite)) as Sprite;
+        sprites.Add("default", sprite);
 
         GameStatusMagic.instance.load();
 
@@ -549,66 +584,79 @@ public class GridStatusScript : MonoBehaviour
                             }
                         }
                     }
+                    else
+                    {
+                        bs.GetComponent<Image>().sprite = null;
+                    }
                 }
             }
         }
     }
 
-	public void backPressed() {
+    public void backPressed()
+    {
         logic.currentItemIndex = 0;
         load();
         procced();
 
         refreshGridButtons();
         front.gameObject.SetActive(true);
-	}
+    }
 
-	public void aboutPressed() {
-		about.SetActive(true);
-	}
+    public void aboutPressed()
+    {
+        about.SetActive(true);
+    }
 
-	public void aboutBackPressed() {
-		about.SetActive(false);
-	}
+    public void aboutBackPressed()
+    {
+        about.SetActive(false);
+    }
 
-	public void openGlowbomLink() {
-		Application.OpenURL("https://glowbom.com/");
-	}
+    public void openGlowbomLink()
+    {
+        Application.OpenURL("https://glowbom.com/");
+    }
 
-	public void openAboutLink() {
-		
-	}
+    public void openAboutLink()
+    {
 
-
-	public void openPressed() {
-		GameStatusMagic.instance.questAnswers.Clear();
-		load();
+    }
 
 
-		front.gameObject.SetActive(false);
+    public void openPressed()
+    {
+        GameStatusMagic.instance.questAnswers.Clear();
+        load();
+
+
+        front.gameObject.SetActive(false);
 
         if (gridButtonsPanel != null && buttonsLogic != null && buttonsLogic.buttons != null && buttonsLogic.buttons.Length > 1)
         {
             gridButtonsPanel.gameObject.SetActive(true);
             gridBackground.gameObject.SetActive(true);
         }
-	}
+    }
 
-	private int buttonPressedCounter = 0;
+    private int buttonPressedCounter = 0;
 
-	private string lastClickedLink = null;
+    private string lastClickedLink = null;
     private int lastClickedGridButtonIndex = -1;
 
-    public void buttonGridPressed (GameObject button) {
-		int i = 0;
+    public void buttonGridPressed(GameObject button)
+    {
+        int i = 0;
 
-		foreach (Button b in gridButtons) {
-            if (b.gameObject == button) {
+        foreach (Button b in gridButtons)
+        {
+            if (b.gameObject == button)
+            {
                 lastClickedGridButtonIndex = i;
                 lastClickedLink = buttonsLogic.buttons[i].link;
 
                 load();
-				procced();
+                procced();
 
 
                 if (backgroundImage != null && logic.backgroundPicture != null && logic.backgroundPicture != "")
@@ -623,30 +671,33 @@ public class GridStatusScript : MonoBehaviour
                 //logic.nextItem (i);
                 //procced ();
                 break;
-			}
-			
-			++i;
-		}
+            }
 
-		gridButtonsPanel.gameObject.SetActive(false);
-		gridBackground.gameObject.SetActive(false);
-	}
+            ++i;
+        }
 
-	public void backButtonMenuPressed(GameObject button) {
-		front.gameObject.SetActive(true);
-	}
+        gridButtonsPanel.gameObject.SetActive(false);
+        gridBackground.gameObject.SetActive(false);
+    }
 
-	public void backButtonGamePressed(GameObject button) {
-		gridButtonsPanel.gameObject.SetActive(true);
-		gridBackground.gameObject.SetActive(true);
-	}
-	
-	public async void buttonPressed (int i)
-	{
-		++buttonPressedCounter;
-		if (buttonPressedCounter % 25 == 0) {
-			//Advertisement.Show();
-		}
+    public void backButtonMenuPressed(GameObject button)
+    {
+        front.gameObject.SetActive(true);
+    }
+
+    public void backButtonGamePressed(GameObject button)
+    {
+        gridButtonsPanel.gameObject.SetActive(true);
+        gridBackground.gameObject.SetActive(true);
+    }
+
+    public async void buttonPressed(int i)
+    {
+        ++buttonPressedCounter;
+        if (buttonPressedCounter % 25 == 0)
+        {
+            //Advertisement.Show();
+        }
 
         if (inputFields != null && inputFields.Length > 0 && inputFields[0].IsActive())
         {
@@ -679,11 +730,12 @@ public class GridStatusScript : MonoBehaviour
 
         }
 
-        if (logic.pleaseRestart) {
-			load ();
-			procced ();
-			return;
-		}
+        if (logic.pleaseRestart)
+        {
+            load();
+            procced();
+            return;
+        }
 
         if (logic.isSharingButton(i) && sharing != null)
         {
@@ -705,7 +757,7 @@ public class GridStatusScript : MonoBehaviour
 
         if (logic.isSupportAnswers())
         {
-            
+
             if (logic.isCorrectAnswer(i))
             {
                 buttons[i].image.color = new Color32(55, 179, 46, 255);
@@ -714,7 +766,7 @@ public class GridStatusScript : MonoBehaviour
                 {
                     playAudio.correct();
                 }
-                
+
 
                 if (logic.hasMultipleAnswers())
                 {
@@ -740,62 +792,112 @@ public class GridStatusScript : MonoBehaviour
                     {
                         await Task.Delay(TimeSpan.FromSeconds(logic.getAnswerPictureDelay() - 1));
                     }
-                    
-                  
+
+
                 }
-            } else
+            }
+            else
             {
                 buttons[i].image.color = new Color32(178, 68, 55, 255);
                 if (playAudio != null)
                 {
                     playAudio.incorrect();
                 }
-                
+
             }
 
-            
+
 
             await Task.Delay(TimeSpan.FromSeconds(1));
         }
 
-        
+
 
 
         logic.nextItem(i);
         procced();
     }
 
-    
+
 
     private int shift = 0;
-	private int currentOpenedButtonIndex = 0;
+    private int currentOpenedButtonIndex = 0;
 
-	public void updateOrCreateQuestIfPossible() {
-		if (GameStatusMagic.instance.user != null) {
+    public void updateOrCreateQuestIfPossible()
+    {
+        if (GameStatusMagic.instance.user != null)
+        {
 
-		}
-	}
-	
-	// Update is called once per frame
-	void Update ()
-	{
-		if (Input.GetKeyDown(KeyCode.Escape)) {
-			quitView.gameObject.SetActive(true);
-		}
-	}
-	
-	public void save ()
-	{
-		try {
-			using (StreamWriter sw = new StreamWriter ("Assets/Glowbom/Quests/Resources/Data/" + QuestLoader.name + QuestLoader.language + ".txt", false)) {
-				sw.Write (JsonUtility.ToJson (logic)); 
-			}
-		} catch (IOException) {
-		}
-	}
+        }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            quitView.gameObject.SetActive(true);
+        }
+    }
+
+    public void save(string path)
+    {
+        try
+        {
+            using (StreamWriter sw = new StreamWriter(lastClickedLink != null && lastClickedLink != "" ?
+                path.Replace("TemplateQuest", lastClickedLink) : path, false))
+            {
+                sw.Write(JsonUtility.ToJson(logic));
+            }
+        }
+        catch (IOException)
+        {
+        }
+    }
+
+    public void save()
+    {
+        if (lastUsedFileName != null)
+        {
+            save(lastUsedFileName);
+            return;
+        }
+
+        try
+        {
+            using (StreamWriter sw = new StreamWriter("Assets/Glowbom/Quests/Resources/Data/" + QuestLoader.name + QuestLoader.language + ".txt", false))
+            {
+                sw.Write(JsonUtility.ToJson(logic));
+            }
+        }
+        catch (IOException)
+        {
+        }
+    }
+
+    public void saveButtonsLogic(string path)
+    {
+        try
+        {
+            using (StreamWriter sw = new StreamWriter(path, false))
+            {
+                sw.Write(JsonUtility.ToJson(buttonsLogic));
+            }
+        }
+        catch (IOException e)
+        {
+            Debug.Log(e.Message);
+        }
+    }
 
     public void saveButtonsLogic()
     {
+        if (lastUsedButtonsFileName != null)
+        {
+            saveButtonsLogic(lastUsedButtonsFileName);
+            return;
+        }
+
         try
         {
             using (StreamWriter sw = new StreamWriter("Assets/Glowbom/Quests/Resources/Data/Buttons" + QuestLoader.language + ".txt", false))
@@ -809,19 +911,118 @@ public class GridStatusScript : MonoBehaviour
         }
     }
 
-    public void load ()
-	{
-		editButton.gameObject.SetActive(true);
+    private string lastUsedFileName = null;
 
-		var textAsset = Resources.Load ("Data/" + QuestLoader.name + QuestLoader.language) as TextAsset;
+    public void loadFromFile(string filename, bool storeFilename)
+    {
+        try
+        {
+            using (StreamReader reader = new StreamReader(filename))
+            {
+                load(reader.ReadToEnd());
+                if (storeFilename)
+                {
+                    lastUsedFileName = filename;
+                }
+            }
+        }
+        catch (IOException e)
+        {
+            Debug.Log(e.Message);
+        }
 
-		if (lastClickedLink != null) {
-			textAsset = Resources.Load ("Data/" + lastClickedLink) as TextAsset;
-		}
+        loadResources();
+    }
 
-		logic = JsonUtility.FromJson<Logic> (textAsset.text);
+    public void loadFromFile(string filename)
+    {
+        loadFromFile(filename, true);
+    }
+
+    public void load()
+    {
+        if (lastUsedFileName != null)
+        {
+            String link = lastUsedFileName;
+            if (lastClickedLink != null && lastClickedLink != "")
+            {
+                link = link.Replace("TemplateQuest", lastClickedLink);
+            }
+
+            loadFromFile(link, false);
+            return;
+        }
+
+        var textAsset = Resources.Load("Data/" + QuestLoader.name + QuestLoader.language) as TextAsset;
+
+        if (lastClickedLink != null)
+        {
+            textAsset = Resources.Load("Data/" + lastClickedLink) as TextAsset;
+        }
+
+        load(textAsset.text);
+    }
+
+    private Sprite loadSpriteFromFile(string path)
+    {
+
+        if (string.IsNullOrEmpty(path)) return null;
+
+        path += ".png";
+        if (File.Exists(path))
+        {
+            byte[] bytes = System.IO.File.ReadAllBytes(path);
+            Texture2D texture = new Texture2D(1, 1);
+            texture.LoadImage(bytes);
+            Sprite sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
+
+            return sprite;
+        }
+        else
+        {
+            path = path.Replace(".png", ".jpg");
+            if (File.Exists(path))
+            {
+                byte[] bytes = System.IO.File.ReadAllBytes(path);
+                Texture2D texture = new Texture2D(1, 1);
+                texture.LoadImage(bytes);
+                Sprite sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
+
+                return sprite;
+            }
+        }
+        return null;
+    }
+
+    private void load(String data)
+    {
+        editButton.gameObject.SetActive(true);
+
+        logic = JsonUtility.FromJson<Logic>(data);
         logic.answers = "";
         correctAnswers = 0;
+
+        loadResources();
+    }
+
+    public void cleanupSprites()
+    {
+        sprites.Clear();
+        Resources.UnloadUnusedAssets();
+    }
+
+    private void loadResources()
+    {
+        string spritesLink = null;
+        if (lastUsedFileName != null)
+        {
+            String link = lastUsedFileName;
+            if (lastClickedLink != null && lastClickedLink != "")
+            {
+                spritesLink = link.Replace("Data/TemplateQuest.txt", "Textures/");
+            }
+        }
+
 
         // load pics
         Sprite sprite = null;
@@ -832,7 +1033,8 @@ public class GridStatusScript : MonoBehaviour
 
                 if (!sprites.ContainsKey(item.answerPicture))
                 {
-                    sprite = Resources.Load("Textures/images/" + item.answerPicture, typeof(Sprite)) as Sprite;
+                    sprite = spritesLink == null ? Resources.Load("Textures/images/" + item.answerPicture, typeof(Sprite)) as Sprite :
+                        loadSpriteFromFile(spritesLink + "images/" + item.answerPicture);
                     if (sprite != null)
                     {
                         sprites.Add(item.answerPicture, sprite);
@@ -849,7 +1051,8 @@ public class GridStatusScript : MonoBehaviour
                         string key = item.picturesSpriteNames[i];
                         if (!sprites.ContainsKey(key))
                         {
-                            sprite = Resources.Load("Textures/images/" + key, typeof(Sprite)) as Sprite;
+                            sprite = spritesLink == null ? Resources.Load("Textures/images/" + key, typeof(Sprite)) as Sprite :
+                                loadSpriteFromFile(spritesLink + "images/" + key);
                             if (sprite != null)
                             {
                                 sprites.Add(key, sprite);
@@ -861,17 +1064,21 @@ public class GridStatusScript : MonoBehaviour
             }
         }
 
-        foreach (var b in buttonsLogic.buttons)
+        if (buttonsLogic != null)
         {
-            if (b.image != null && b.image != "")
+            foreach (var b in buttonsLogic.buttons)
             {
-                string key = b.image;
-                if (!sprites.ContainsKey(key))
+                if (b.image != null && b.image != "")
                 {
-                    sprite = Resources.Load("Textures/" + key, typeof(Sprite)) as Sprite;
-                    if (sprite != null)
+                    string key = b.image;
+                    if (!sprites.ContainsKey(key))
                     {
-                        sprites.Add(key, sprite);
+                        sprite = spritesLink == null ? Resources.Load("Textures/" + key, typeof(Sprite)) as Sprite :
+                            loadSpriteFromFile(spritesLink + key);
+                        if (sprite != null)
+                        {
+                            sprites.Add(key, sprite);
+                        }
                     }
                 }
             }
@@ -882,7 +1089,8 @@ public class GridStatusScript : MonoBehaviour
             string key = logic.backgroundPicture;
             if (!sprites.ContainsKey(key))
             {
-                sprite = Resources.Load("Textures/" + key, typeof(Sprite)) as Sprite;
+                sprite = spritesLink == null ? Resources.Load("Textures/" + key, typeof(Sprite)) as Sprite :
+                    loadSpriteFromFile(spritesLink + key);
                 if (sprite != null)
                 {
                     sprites.Add(key, sprite);
@@ -892,23 +1100,48 @@ public class GridStatusScript : MonoBehaviour
 
     }
 
-    public void loadButtonsLogic() {
-		var textAsset = Resources.Load ("Data/Buttons") as TextAsset;
-		buttonsLogic = JsonUtility.FromJson<Buttons> (textAsset.text);    
-	}
-	
-	string text;
-	
-	public void printText ()
-	{
-		gameViewText.text = text;
-	}
+    private string lastUsedButtonsFileName = null;
 
-	public Button editButton;
+    public void loadButtonsLogicFromFile(string filename)
+    {
+        try
+        {
+            using (StreamReader reader = new StreamReader(filename))
+            {
+                buttonsLogic = JsonUtility.FromJson<Buttons>(reader.ReadToEnd());
+                lastUsedButtonsFileName = filename;
+            }
+        }
+        catch (IOException e)
+        {
+            Debug.Log(e.Message);
+        }
+    }
 
-	public void showEditPanel() {
+    public void loadButtonsLogic()
+    {
+        if (lastUsedButtonsFileName != null)
+        {
+            loadButtonsLogicFromFile(lastUsedButtonsFileName);
+            return;
+        }
+
+        var textAsset = Resources.Load("Data/Buttons") as TextAsset;
+        buttonsLogic = JsonUtility.FromJson<Buttons>(textAsset.text);
+    }
+
+    string text;
+
+    public void printText()
+    {
+        gameViewText.text = text;
+    }
+
+    public Button editButton;
+
+    public void showEditPanel()
+    {
         homePressed();
-        //creator.initMainQuest();
         editView.SetActive(true);
         if (clipboard != null)
         {
@@ -979,23 +1212,27 @@ public class GridStatusScript : MonoBehaviour
 #endif
     }
 
-    public void saveChanges() {
-		gameViewTitle.text = editTitleField.text;
-		gameViewText.text = editTextField.text;
-		logic.items[logic.currentItemIndex].title = editTitleField.text;
-		logic.items[logic.currentItemIndex].description = editTextField.text;
-		editView.SetActive(false);
-	}
+    public void saveChanges()
+    {
+        gameViewTitle.text = editTitleField.text;
+        gameViewText.text = editTextField.text;
+        logic.items[logic.currentItemIndex].title = editTitleField.text;
+        logic.items[logic.currentItemIndex].description = editTextField.text;
+        editView.SetActive(false);
+    }
 
-	public void saveButtonChanges() {
-		editButtonPanel.gameObject.SetActive(false);
-	}
+    public void saveButtonChanges()
+    {
+        editButtonPanel.gameObject.SetActive(false);
+    }
 
-	public void cancelChanges() {
-		editView.SetActive(false);
-	}
+    public void cancelChanges()
+    {
+        editView.SetActive(false);
+    }
 
-	public void cancelButtonChanges() {
-		editButtonPanel.gameObject.SetActive(false);
-	}
+    public void cancelButtonChanges()
+    {
+        editButtonPanel.gameObject.SetActive(false);
+    }
 }
