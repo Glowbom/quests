@@ -32,6 +32,12 @@ public class AudioEngine : MonoBehaviour
         }
     }
 
+    public class AudioItem
+    {
+        public string spriteName;
+        public float time;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
