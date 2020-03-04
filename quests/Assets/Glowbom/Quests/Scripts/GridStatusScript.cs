@@ -263,6 +263,10 @@ public class Buttons
     public string playButton;
     public string aboutButton;
     public string mainMenuButton;
+
+    public string frontImage;
+    public string gridImage;
+    public string backImage;
 }
 
 [System.Serializable]
@@ -303,7 +307,7 @@ public class GridStatusScript : MonoBehaviour
 
     public Text startButtonText;
 
-    private Buttons buttonsLogic = null;
+    public Buttons buttonsLogic = null;
 
     public Image front;
 
@@ -1130,6 +1134,136 @@ public class GridStatusScript : MonoBehaviour
         buttonsLogic = JsonUtility.FromJson<Buttons>(textAsset.text);
     }
 
+
+    public Text title;
+    public Text secondTitle;
+    public Text aboutText;
+
+    public Text playButton;
+    public Text aboutButton;
+    public Text mainMenuButton;
+
+    public void updateFrontUi()
+    {
+        if (title != null)
+        {
+            if (buttonsLogic.title == null || buttonsLogic.title == "")
+            {
+                buttonsLogic.title = title.text;
+                saveButtonsLogic();
+            }
+            else
+            {
+                title.text = buttonsLogic.title;
+            }
+        }
+
+        if (secondTitle != null)
+        {
+            if (buttonsLogic.secondTitle == null || buttonsLogic.secondTitle == "")
+            {
+                buttonsLogic.secondTitle = secondTitle.text;
+                saveButtonsLogic();
+            }
+            else
+            {
+                secondTitle.text = buttonsLogic.secondTitle;
+            }
+        }
+
+        if (aboutText != null)
+        {
+            if (buttonsLogic.aboutText == null || buttonsLogic.aboutText == "")
+            {
+                buttonsLogic.aboutText = aboutText.text;
+                saveButtonsLogic();
+            }
+            else
+            {
+                aboutText.text = buttonsLogic.aboutText;
+            }
+        }
+
+        if (playButton != null)
+        {
+            if (buttonsLogic.playButton == null || buttonsLogic.playButton == "")
+            {
+                buttonsLogic.playButton = playButton.text;
+                saveButtonsLogic();
+            }
+            else
+            {
+                playButton.text = buttonsLogic.playButton;
+            }
+        }
+
+        if (aboutButton != null)
+        {
+            if (buttonsLogic.aboutButton == null || buttonsLogic.aboutButton == "")
+            {
+                buttonsLogic.aboutButton = aboutButton.text;
+                saveButtonsLogic();
+            }
+            else
+            {
+                aboutButton.text = buttonsLogic.aboutButton;
+            }
+        }
+
+        if (mainMenuButton != null)
+        {
+            if (buttonsLogic.mainMenuButton == null || buttonsLogic.mainMenuButton == "")
+            {
+                buttonsLogic.mainMenuButton = mainMenuButton.text;
+                saveButtonsLogic();
+            }
+            else
+            {
+                mainMenuButton.text = buttonsLogic.mainMenuButton;
+            }
+        }
+
+        if (buttonsLogic.frontImage != null)
+        {
+            if (sprites.ContainsKey(buttonsLogic.frontImage))
+            {
+                front.sprite = sprites[buttonsLogic.frontImage];
+            }
+        }
+        else
+        {
+            buttonsLogic.frontImage = front.sprite.name;
+            saveButtonsLogic();
+        }
+
+
+        if (buttonsLogic.gridImage != null)
+        {
+            if (sprites.ContainsKey(buttonsLogic.gridImage))
+            {
+                gridBackground.sprite = sprites[buttonsLogic.gridImage];
+            }
+        }
+        else
+        {
+            buttonsLogic.gridImage = gridBackground.sprite.name;
+            saveButtonsLogic();
+        }
+
+        if (buttonsLogic.backImage != null)
+        {
+            if (sprites.ContainsKey(buttonsLogic.backImage))
+            {
+                backgroundImage.sprite = sprites[buttonsLogic.backImage];
+            }
+        }
+        else
+        {
+            buttonsLogic.backImage = backgroundImage.sprite.name;
+            saveButtonsLogic();
+        }
+    }
+
     string text;
 
     public void printText()
@@ -1138,10 +1272,12 @@ public class GridStatusScript : MonoBehaviour
     }
 
     public Button editButton;
+    //public QuestCreator creator;
 
     public void showEditPanel()
     {
         homePressed();
+        //creator.initMainQuest();
         editView.SetActive(true);
         if (clipboard != null)
         {
