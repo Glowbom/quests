@@ -531,7 +531,7 @@ public class GridStatusScript : MonoBehaviour
         }
     }
 
-    Dictionary<string, Sprite> sprites = new Dictionary<string, Sprite>();
+    public Dictionary<string, Sprite> sprites = new Dictionary<string, Sprite>();
 
     // Use this for initialization
     void Start()
@@ -853,9 +853,19 @@ public class GridStatusScript : MonoBehaviour
             {
                 sw.Write(JsonUtility.ToJson(logic));
             }
+
+            Debug.Log("Saved: " + path);
         }
         catch (IOException)
         {
+        }
+    }
+
+    public void saveAs(string newLink, string oldLink)
+    {
+        if (lastUsedFileName != null)
+        {
+            save(lastUsedFileName.Replace(oldLink, newLink));
         }
     }
 
@@ -1272,12 +1282,12 @@ public class GridStatusScript : MonoBehaviour
     }
 
     public Button editButton;
-    //public QuestCreator creator;
+//    public QuestCreator creator;
 
     public void showEditPanel()
     {
         homePressed();
-        //creator.initMainQuest();
+//        creator.initMainQuest();
         editView.SetActive(true);
         if (clipboard != null)
         {
