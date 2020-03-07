@@ -42,7 +42,7 @@ public class AudioEngine : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        audioMap = new Dictionary<long, AudioSource>();
     }
 
     // Update is called once per frame
