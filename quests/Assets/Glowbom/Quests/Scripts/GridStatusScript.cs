@@ -982,7 +982,11 @@ public class GridStatusScript : MonoBehaviour
 
         if (string.IsNullOrEmpty(path)) return null;
 
-        path += ".png";
+        if (!path.Contains(".png") && !path.Contains(".jpg"))
+        {
+            path += ".png";
+        }
+
         if (File.Exists(path))
         {
             byte[] bytes = System.IO.File.ReadAllBytes(path);
@@ -1001,7 +1005,6 @@ public class GridStatusScript : MonoBehaviour
                 Texture2D texture = new Texture2D(1, 1);
                 texture.LoadImage(bytes);
                 Sprite sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
-
                 return sprite;
             }
         }
@@ -1023,6 +1026,54 @@ public class GridStatusScript : MonoBehaviour
     {
         sprites.Clear();
         Resources.UnloadUnusedAssets();
+    }
+
+    public string getTextureImagesPath(int index, string name, string extention)
+    {
+        string spritesLink = null;
+        if (lastUsedFileName != null)
+        {
+            String link = lastUsedFileName;
+            if (lastClickedLink != null && lastClickedLink != "")
+            {
+                spritesLink = link.Replace("Data/TemplateQuest.txt", "Textures/");
+            }
+        }
+
+        return spritesLink == null ? "Textures/images/" + name + index + extention :
+                        spritesLink + "images/" + name + index + extention;
+    }
+
+    public string getTexturesPath(string name, string extention)
+    {
+        string spritesLink = null;
+        if (lastUsedFileName != null)
+        {
+            String link = lastUsedFileName;
+            if (lastClickedLink != null && lastClickedLink != "")
+            {
+                spritesLink = link.Replace("Data/TemplateQuest.txt", "Textures/");
+            }
+        }
+
+        return spritesLink == null ? "Textures/" + name + extention :
+                        spritesLink + name + extention;
+    }
+
+    public void reloadResource(string key, string path)
+    {
+        Debug.Log("reloading " + path);
+        Sprite sprite = loadSpriteFromFile(path);
+        if (sprite != null)
+        {
+            if (sprites.ContainsKey(key))
+            {
+                Debug.Log("removing sprite: " + key);
+                sprites.Remove(key);
+            }
+
+            sprites.Add(key, sprite);
+        }
     }
 
     private void loadResources()
