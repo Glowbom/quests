@@ -43,6 +43,7 @@ public class AudioEngine : MonoBehaviour
     void Start()
     {
         audioMap = new Dictionary<long, AudioSource>();
+        audioMap.Clear();
     }
 
     // Update is called once per frame
