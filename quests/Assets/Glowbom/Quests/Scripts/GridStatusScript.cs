@@ -807,7 +807,7 @@ public class GridStatusScript : MonoBehaviour
                 {
                     playAudio.incorrect();
                 }
-
+                highlightCorrectAnswerIfNeeded();
             }
 
 
@@ -820,6 +820,22 @@ public class GridStatusScript : MonoBehaviour
 
         logic.nextItem(i);
         procced();
+    }
+
+    private bool isShowCorrectAnswer = false;
+
+    private void highlightCorrectAnswerIfNeeded()
+    {
+        if (isShowCorrectAnswer)
+        {
+            for (int j = 0; j < buttons.Length; j++)
+            {
+                if (logic.isCorrectAnswer(j))
+                {
+                    buttons[j].image.color = new Color32(55, 179, 46, 255);
+                }
+            }
+        }
     }
 
 
