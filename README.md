@@ -97,6 +97,7 @@ The current version of **Glowbom Quests** has 3 design themes: **DesignClassic**
 1. Please read [optimizing the size of the built iOS Player Unity Manual](https://docs.unity3d.com/Manual/iphone-playerSizeOptimization.html) to reduce the build size for iOS.
 2. Please read [reducing the file size of your build Unity Manual](https://docs.unity3d.com/Manual/ReducingFilesize.html).
 3. Set **Enabled Bitcode** to **No** from  **Unity-iPhone->Build Settings** in Xcode.
+4. If you're submitting to **Kids** category and are using Ads or analytics, you might want to make [extra changes](https://forum.unity.com/threads/important-changes-for-ios-kids-apps-action-needed-by-developers.838939/).
 
 ### Optimization tips for Android
 
