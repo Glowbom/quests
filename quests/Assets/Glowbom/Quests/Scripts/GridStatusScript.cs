@@ -822,7 +822,7 @@ public class GridStatusScript : MonoBehaviour
         procced();
     }
 
-    private bool isShowCorrectAnswer = false;
+    private bool isShowCorrectAnswer = true;
 
     private void highlightCorrectAnswerIfNeeded()
     {
