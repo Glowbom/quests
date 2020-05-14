@@ -4,7 +4,7 @@
 
 ## Installation
 
-1. Download [Unity](https://unity3d.com/get-unity/download/archive) if you haven't done it already. We recommend Unity 2019.2.3.
+1. Download [Unity](https://unity3d.com/get-unity/download/archive) if you haven't done it already. We recommend Unity 2019.3.13f1.
 2. Download [Glowbom Quests 1.0.0](https://github.com/Glowbom/quests/releases) (**glowbom-quests-1.0.0.unitypackage**).
 3. Create a new 2D project in **Unity**.
 4. Double click on **glowbom-quests-1.0.0.unitypackage** to import **Glowbom Quests** into your project.
@@ -56,7 +56,7 @@ Please download an example app for [iOS](https://apps.apple.com/us/app/6-countri
 4. Copy Ad Ids to **Glowbom Monetization** panel and press **Save** button.
 5. Open **Player Settings** from **File->Build Settings...**
 6. In **Other Settings** section find **Scripting Define Symbols** field and put GLOWBOM_ADS constant over there.
-7. Download [Google Mobile Ads Unity Plugin](https://github.com/googleads/googleads-mobile-unity/releases/tag/v4.2.1) and open the unitypackage file.
+7. Download [Google Mobile Ads Unity Plugin](https://github.com/googleads/googleads-mobile-unity/releases/tag/v5.1.0) and open the unitypackage file.
 8. To enable Google Mobile Ads, go to **Assets->Google Mobile Ads->Settings...** and open **Inspector**.
 9. Enable Google Mobile Ads and put App Id inside **Inspector** window.
 
