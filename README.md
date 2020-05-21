@@ -4,7 +4,7 @@
 
 ## Installation
 
-1. Download [Unity](https://unity3d.com/get-unity/download/archive) if you haven't done it already. We recommend Unity 2019.3.13.
+1. Download [Unity](https://unity3d.com/get-unity/download/archive) if you haven't done it already. We recommend Unity 2019.3.14.
 2. Download [Glowbom Quests 1.0.0](https://github.com/Glowbom/quests/releases) (**glowbom-quests-1.0.0.unitypackage**).
 3. Create a new 2D project in **Unity**.
 4. Double click on **glowbom-quests-1.0.0.unitypackage** to import **Glowbom Quests** into your project.
