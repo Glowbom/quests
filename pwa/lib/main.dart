@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import './question.dart';
-import './answer.dart';
+import './result.dart';
+import './quiz.dart';
 
 void main() => runApp(Quests());
 
 class _QuestsState extends State<Quests> {
   var _questionIndex = 0;
 
-  final questions = const [
+  final _questions = const [
     {
       'question': 'What is the supreme law of the land?',
       'answers': [
@@ -41,21 +41,13 @@ class _QuestsState extends State<Quests> {
         appBar: AppBar(
           title: Text('Glowbom Quests'),
         ),
-        body: _questionIndex < questions.length
-            ? Column(
-                children: <Widget>[
-                  Question(
-                    questions[_questionIndex]['question'],
-                  ),
-                  ...(questions[_questionIndex]['answers'] as List<String>)
-                      .map((answer) {
-                    return Answer(_answerQuestion, answer);
-                  }).toList()
-                ],
+        body: _questionIndex < _questions.length
+            ? Quiz(
+                answerQuestion: _answerQuestion,
+                questions: _questions,
+                questionIndex: _questionIndex,
               )
-            : Center(
-                child: Text('You did it!'),
-              ),
+            : Result(),
       ),
     );
   }
