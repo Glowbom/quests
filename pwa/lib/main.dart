@@ -20,7 +20,7 @@ class _QuestsState extends State<Quests> {
     {
       'question': 'What does the Constitution do?',
       'answers': [
-        {'text': 'the Constitution', 'score': 0},
+        {'text': 'incorrect', 'score': 0},
         {'text': 'incorrect', 'score': 0},
         {'text': 'sets up the government', 'score': 1},
       ],
@@ -50,7 +50,7 @@ class _QuestsState extends State<Quests> {
                 questions: _questions,
                 questionIndex: _questionIndex,
               )
-            : Result(),
+            : Result(_totalScore),
       ),
     );
   }
