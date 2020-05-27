@@ -6,27 +6,30 @@ void main() => runApp(Quests());
 
 class _QuestsState extends State<Quests> {
   var _questionIndex = 0;
+  var _totalScore = 0;
 
   final _questions = const [
     {
       'question': 'What is the supreme law of the land?',
       'answers': [
-        'the Constitution',
-        'incorrect',
-        'incorrect',
+        {'text': 'the Constitution', 'score': 1},
+        {'text': 'incorrect', 'score': 0},
+        {'text': 'incorrect', 'score': 0},
       ],
     },
     {
       'question': 'What does the Constitution do?',
       'answers': [
-        'incorrect',
-        'sets up the government',
-        'incorrect',
+        {'text': 'the Constitution', 'score': 0},
+        {'text': 'incorrect', 'score': 0},
+        {'text': 'sets up the government', 'score': 1},
       ],
     },
   ];
 
-  void _answerQuestion() {
+  void _answerQuestion(int score) {
+    _totalScore += score;
+
     setState(() {
       ++_questionIndex;
     });
