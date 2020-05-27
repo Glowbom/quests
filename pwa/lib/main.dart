@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(Quests());
 
-class QuestsState extends State<Quests> {
-  var questionIndex = 0;
+class _QuestsState extends State<Quests> {
+  var _questionIndex = 0;
 
-  void answerQuestion() {
+  void _answerQuestion() {
     setState(() {
-      ++questionIndex;
+      ++_questionIndex;
     });
     
-    print(questionIndex);
+    print(_questionIndex);
   }
 
   @override
@@ -26,18 +26,18 @@ class QuestsState extends State<Quests> {
         ),
         body: Column(
           children: <Widget>[
-            Text(questions[questionIndex]),
+            Text(questions[_questionIndex]),
             RaisedButton(
               child: Text('Answer 1'),
-              onPressed: answerQuestion,
+              onPressed: _answerQuestion,
             ),
             RaisedButton(
               child: Text('Answer 2'),
-              onPressed: answerQuestion,
+              onPressed: _answerQuestion,
             ),
             RaisedButton(
               child: Text('Answer 3'),
-              onPressed: answerQuestion,
+              onPressed: _answerQuestion,
             ),
           ],
         ),
@@ -49,6 +49,6 @@ class QuestsState extends State<Quests> {
 class Quests extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return QuestsState();
+    return _QuestsState();
   }
 }
