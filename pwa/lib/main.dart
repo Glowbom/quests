@@ -18,8 +18,22 @@ class _QuestsState extends State<Quests> {
   @override
   Widget build(BuildContext context) {
     var questions = [
-      'What is the supreme law of the land?',
-      'What does the Constitution do?',
+      {
+        'question': 'What is the supreme law of the land?',
+        'answers': [
+          'the Constitution',
+          'incorrect',
+          'incorrect',
+        ],
+      },
+      {
+        'question': 'What does the Constitution do?',
+        'answers': [
+          'incorrect',
+          'sets up the government',
+          'incorrect',
+        ],
+      },
     ];
     return MaterialApp(
       home: Scaffold(
@@ -29,11 +43,12 @@ class _QuestsState extends State<Quests> {
         body: Column(
           children: <Widget>[
             Question(
-              questions[_questionIndex],
+              questions[_questionIndex]['question'],
             ),
-            Answer(_answerQuestion),
-            Answer(_answerQuestion),
-            Answer(_answerQuestion),
+            ...(questions[_questionIndex]['answers'] as List<String>)
+                .map((answer) {
+              return Answer(_answerQuestion, answer);
+            }).toList()
           ],
         ),
       ),
