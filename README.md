@@ -112,12 +112,9 @@ This release is not compliant with the Google Play 64-bit requirement
 
 # References
 
-[Website](https://glowbom.com/)
-
-[YouTube Channel](https://www.youtube.com/channel/UCrYQEQPhAHmn7N8W58nNwOw)
-
-[Source](https://github.com/Glowbom)
-
-[App Example](https://globalsculptor.com/apps/countries.html)
+- [Website](https://glowbom.com/)
+- [YouTube Channel](https://www.youtube.com/channel/UCrYQEQPhAHmn7N8W58nNwOw)
+- [Source](https://github.com/Glowbom)
+- [App Example](https://globalsculptor.com/apps/countries.html)
 
 
